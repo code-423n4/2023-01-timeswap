@@ -69,8 +69,15 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Overview
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
-
+- A Timeswap pool uses the Duration Weighted Constant Product automated market maker (AMM) similar to Uniswap. It is designed specifically for pricing of Timeswap options.
+  Let 𝑥 be the borrow position with token0 as collateral, Let y be the borrow position with token1 as collateral. Let 𝑧 be the lending position per second in the pool.
+  Let 𝑑 be the duration of the pool, thus 𝑑𝑧 is the total number of lending positions in the pool.
+  Let 𝐿 be the square root of the constant product of the AMM. (𝑘 = 𝐿2) Let 𝐼 be the marginal interest rate per second of the Short per total Long.
+  (𝑥 + 𝑦)𝑧 =𝐿(square)
+- The token does not conform to ERC20 standard, it uses ERC1155 standard.
+- As this is a monorepo, where remappings are required for compilation there might be [issues](https://github.com/crytic/crytic-compile/issues/279) when running slither
+- [Link to Documentation](https://petal-cornflower-1db.notion.site/Timeswap-V2-Product-Spec-08ec22e83bb94c0dbb619c8d252c3dc2) (Note: this requires a notion account to view)
+- [Link to whitepaper](https://github.com/code-423n4/2022-10-timeswap/blob/main/whitepaper.pdf)
 # Scope
 
 *List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
@@ -125,7 +132,7 @@ The C4audit output for the contest can be found [here](add link to report) withi
 ## Out of scope
 
 *List any files/contracts that are out of scope for this audit.*
-
+Any test file i.e.`**.t.sol`
 # Additional Context
 
 *Describe any novel or unique curve logic or mathematical models implemented in the contracts*
@@ -141,7 +148,7 @@ The C4audit output for the contest can be found [here](add link to report) withi
 - How many separate interfaces and struct definitions are there for the contracts within scope?: 19 and 38
 - Does most of your code generally use composition or inheritance?: Primarily inheritance, but composition is also leveraged up to some degree.  
 - How many external calls?: 0
-  - What is the overall line coverage percentage provided by your tests?: 50
+  - What is the overall line coverage percentage provided by your tests?: ~50 (`forge coverage` currently throws a "stack too deep" error on large codebases)
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: No  
 - Please describe required context: N/A  
 - Does it use an oracle?: No
