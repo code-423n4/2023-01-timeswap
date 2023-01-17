@@ -1,0 +1,46 @@
+{
+  "name": "@timeswap-labs/v2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "yarn && yarn workspaces run build",
+    "format": "(lerna exec  --parallel -- prettier -w .) && prettier -w .",
+    "format-check": "(lerna exec  --parallel -- prettier -c .) && prettier -c . ",
+    "lint-contracts": "lerna exec --parallel -- yarn  prettier **/*.sol",
+    "lint-js": "yarn rome check .",
+    "lint": "  yarn lint-js && yarn lint-contracts ",
+    "list-packages": "lerna exec --parallel pwd",
+    "validate-branch-name": "validate-branch-name",
+    "commit-msg": "commit-msg"
+  },
+  "devDependencies": {
+    "commitlint": "^17.4.2",
+    "husky": "^8.0.2",
+    "lerna": "^5.4.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.13",
+    "rome": "^10.0.1",
+    "solhint-plugin-prettier": "^0.0.5",
+    "validate-branch-name": "^1.3.0"
+  },
+
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn validate-branch-name",
+      "lint-staged": "yarn lint-staged",
+      "commit-msg": "yarn commit-msg"
+    }
+  },
+  "validate-branch-name": {
+    "pattern": "^(main|devel){1}$|^(feature|fix|hotfix|release|audit|experiment|version|debug)/.+$",
+    "errorMsg": "Does not follow the branch naming guidelines, kindly ensure the name is either `main/devel` or prefixed with `feature|fix|hotfix|release|audit|experiment|version`"
+  },
+  "workspaces": [
+    "packages/v2-library",
+    "packages/v2-option",
+    "packages/v2-pool",
+    "packages/v2-token"
+
+  ]
+}
