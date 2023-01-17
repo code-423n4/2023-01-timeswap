@@ -117,7 +117,7 @@ Any test file i.e.`**.t.sol`
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here: N/A
-- How many contracts are in scope?: 4 
+- How many contracts are in scope?: 70 
 - Total SLoC for these contracts?: 3659
 - How many external imports are there?: 4
 - How many separate interfaces and struct definitions are there for the contracts within scope?: 19 and 38
