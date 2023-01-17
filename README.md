@@ -47,7 +47,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 ---
 
 # Timeswap contest details
-- Total Prize Pool: $90,000 USDC
+- Total Prize Pool: $90,500 USDC
   - HM awards: $63,750 USDC 
   - QA report awards: $7,500 USDC 
   - Gas report awards: $3,750 USDC 
@@ -69,8 +69,15 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Overview
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
-
+- A Timeswap pool uses the Duration Weighted Constant Product automated market maker (AMM) similar to Uniswap. It is designed specifically for pricing of Timeswap options.
+  Let 𝑥 be the borrow position with token0 as collateral, Let y be the borrow position with token1 as collateral. Let 𝑧 be the lending position per second in the pool.
+  Let 𝑑 be the duration of the pool, thus 𝑑𝑧 is the total number of lending positions in the pool.
+  Let 𝐿 be the square root of the constant product of the AMM. (𝑘 = 𝐿2) Let 𝐼 be the marginal interest rate per second of the Short per total Long.
+  (𝑥 + 𝑦)𝑧 =𝐿(square)
+- The token does not conform to ERC20 standard, it uses ERC1155 standard.
+- As this is a monorepo, where remappings are required for compilation there might be [issues](https://github.com/crytic/crytic-compile/issues/279) when running slither
+- [Link to Documentation](https://petal-cornflower-1db.notion.site/Timeswap-V2-Product-Spec-08ec22e83bb94c0dbb619c8d252c3dc2) (Note: this requires a notion account to view)
+- [Link to whitepaper](https://github.com/code-423n4/2022-10-timeswap/blob/main/whitepaper.pdf)
 # Scope
 
 *List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
@@ -116,13 +123,45 @@ The C4audit output for the contest can be found [here](add link to report) withi
 |[packages/v2-pool/contracts/libraries/PoolPair.sol](packages/v2-pool/contracts/libraries/PoolPair.sol) | 11 | Pool pair library |  |
 |[packages/v2-pool/contracts/libraries/ReentrancyGuard.sol](packages/v2-pool/contracts/libraries/ReentrancyGuard.sol) | 12 | Reentrancy guard library |  |
 |[packages/v2-pool/contracts/enums/Transaction.sol](packages/v2-pool/contracts/enums/Transaction.sol) | 50 | Transaction enum |  |
-
+| [packages/v2-token/contracts/interfaces/ITimeswapV2Token.sol](packages/v2-token/contracts/interfaces/ITimeswapV2Token.sol) | 6 |Interface Timeswap Token  | "openzeppelin/*"  |
+| [packages/v2-token/contracts/interfaces/ITimeswapV2LiquidityToken.sol](packages/v2-token/contracts/interfaces/ITimeswapV2LiquidityToken.sol) | 15 |Interface Timeswap Liquidity Token  |  |
+| [packages/v2-token/contracts/interfaces/IERC1155Enumerable.sol](packages/v2-token/contracts/interfaces/IERC1155Enumerable.sol)| 6 | Interface Helper Enumerable  | "openzeppelin/*"   |
+| [packages/v2-token/contracts/base/ERC1155Enumerable.sol](packages/v2-token/contracts/base/ERC1155Enumerable.sol) | 86 | Helper Enumerable  |  "openzeppelin/*"  |
+| [packages/v2-token/contracts/TimeswapV2LiquidityToken.sol](packages/v2-token/contracts/TimeswapV2LiquidityToken.sol) | 200 | Timeswap Liquidity Token   | "openzeppelin/*" , "timeswap-labs/v2-pool/*", "@timeswap-labs/v2-library/*"  |
+| [packages/v2-token/contracts/TimeswapV2Token.sol](packages/v2-token/contracts/TimeswapV2Token.sol) | 222 |Timeswap Token | "openzeppelin/*" , "timeswap-labs/v2-pool/*", "@timeswap-labs/v2-option/*" , "@timeswap-labs/v2-library/*"  |
+| [packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2LiquidityTokenMintCallback.sol](packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2LiquidityTokenMintCallback.sol) | 4 |Interface Liquidity Token Mint Callback  |  |
+| [packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2TokenMintCallback.sol](packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2TokenMintCallback.sol) | 4 |Interface Token Mint Callback  |  |
+| [packages/v2-token/contracts/structs/CallbackParam.sol](packages/v2-token/contracts/structs/CallbackParam.sol) | 19 |Callback Params Structure |  |
+| [packages/v2-token/contracts/structs/FeesPosition.sol](packages/v2-token/contracts/structs/FeesPosition.sol) | 44 |Fees Positions Structure   |  "timeswap-labs/v2-pool/*", "@timeswap-labs/v2-library/*"  |
+| [packages/v2-token/contracts/structs/Param.sol](packages/v2-token/contracts/structs/Param.sol)| 76 | Params Structure  |  "@timeswap-labs/v2-library/*"  |
+| [packages/v2-token/contracts/structs/Position.sol](packages/v2-token/contracts/structs/Position.sol) | 23 | Position Structure  | "@timeswap-labs/v2-option/*"   |
+| [packages/v2-option/contracts/interfaces/ITimeswapV2Option.sol](packages/v2-option/contracts/interfaces/ITimeswapV2Option.sol) | 55 |Option Interface  |  |
+| [packages/v2-option/contracts/interfaces/ITimeswapV2OptionDeployer.sol](packages/v2-option/contracts/interfaces/ITimeswapV2OptionDeployer.sol) | 3 |Option deployer interface |  |
+| [packages/v2-option/contracts/interfaces/ITimeswapV2OptionFactory.sol](packages/v2-option/contracts/interfaces/ITimeswapV2OptionFactory.sol)| 4 | Option factory interface |  |
+| [packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionSwapCallback.sol](packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionSwapCallback.sol) | 4 | Option swap callback interface  |  |
+| [	packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionMintCallback.sol](packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionMintCallback.sol) | 4 | Option mint callback interface  |  |
+| [packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionCollectCallback.sol](packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionCollectCallback.sol) | 4 | Option collect callback interface  |  |
+| [packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionBurnCallback.sol](packages/v2-option/contracts/interfaces/callbacks/ITimeswapV2OptionBurnCallback.sol) | 4 | Option burn callback interface  |  |
+| [packages/v2-option/contracts/TimeswapV2OptionDeployer.sol](packages/v2-option/contracts/TimeswapV2OptionDeployer.sol) | 16 | Option Deployer  |  |
+| [packages/v2-option/contracts/structs/Process.sol](packages/v2-option/contracts/structs/Process.sol) | 25 |Process libary  |  |
+| [packages/v2-option/contracts/structs/CallbackParam.sol](packages/v2-option/contracts/structs/CallbackParam.sol) | 33 |Callback param structs  |  |
+| [packages/v2-option/contracts/structs/StrikeAndMaturity.sol](packages/v2-option/contracts/structs/StrikeAndMaturity.sol) | 5 | Strike and Maturity utils  |  |
+| [packages/v2-option/contracts/structs/Option.sol](packages/v2-option/contracts/structs/Option.sol) | 117 | Option struct library  |  "@timeswap-labs/v2-library/*" |
+| [packages/v2-option/contracts/structs/Param.sol](packages/v2-option/contracts/structs/Param.sol) | 82 | Params for the contract |  "@timeswap-labs/v2-library/*"   |
+| [packages/v2-option/contracts/NoDelegateCall.sol](packages/v2-option/contracts/NoDelegateCall.sol) | 15 | To ensure delegate call is not made  |  |
+| [packages/v2-option/contracts/TimeswapV2OptionFactory.sol](packages/v2-option/contracts/TimeswapV2OptionFactory.sol) | 29 | Option Factory contract  |  "openzeppelin/*", "@timeswap-labs/v2-library/*"  |
+| [packages/v2-option/contracts/libraries/Proportion.sol](packages/v2-option/contracts/libraries/Proportion.sol) | 7 | Proprtion util contract  | "@timeswap-labs/v2-library/*"  |
+| [packages/v2-option/contracts/libraries/OptionPair.sol](packages/v2-option/contracts/libraries/OptionPair.sol) | 15 | Option related functions  |  |
+| [packages/v2-option/contracts/libraries/OptionFactory.sol](packages/v2-option/contracts/libraries/OptionFactory.sol) | 18 | Library for option factory  |  "@timeswap-labs/v2-library/*" |
+| [packages/v2-option/contracts/enums/Transaction.sol](packages/v2-option/contracts/enums/Transaction.sol) | 33 | Different transaction types enum  |  |
+| [packages/v2-option/contracts/enums/Position.sol](packages/v2-option/contracts/enums/Position.sol) | 12 | Option position types enum |  |
+| [packages/v2-option/contracts/TimeswapV2Option.sol](packages/v2-option/contracts/TimeswapV2Option.sol) | 234 | Different transaction types enum  | "openzeppelin/*" , "@timeswap-labs/v2-library/"   |
 
 
 ## Out of scope
 
 *List any files/contracts that are out of scope for this audit.*
-
+Any test file i.e.`**.t.sol`
 # Additional Context
 
 *Describe any novel or unique curve logic or mathematical models implemented in the contracts*
@@ -138,7 +177,7 @@ The C4audit output for the contest can be found [here](add link to report) withi
 - How many separate interfaces and struct definitions are there for the contracts within scope?: 19 and 38
 - Does most of your code generally use composition or inheritance?: Primarily inheritance, but composition is also leveraged up to some degree.  
 - How many external calls?: 0
-  - What is the overall line coverage percentage provided by your tests?: 50
+  - What is the overall line coverage percentage provided by your tests?: ~50 (`forge coverage` currently throws a "stack too deep" error on large codebases)
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: No  
 - Please describe required context: N/A  
 - Does it use an oracle?: No
