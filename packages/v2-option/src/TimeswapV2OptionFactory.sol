@@ -4,7 +4,7 @@ pragma solidity =0.8.8;
 import {IERC20} from '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import {SafeERC20} from '@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol';
 
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
+import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
 
 import {ITimeswapV2OptionFactory} from './interfaces/ITimeswapV2OptionFactory.sol';
 

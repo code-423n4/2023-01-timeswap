@@ -1,20 +1,20 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity =0.8.8;
 
-import 'forge-std/src/Test.sol';
-import 'forge-std/src/console.sol';
-import '../../contracts/TimeswapV2OptionFactory.sol';
-import '../../contracts/TimeswapV2Option.sol';
-import '../../contracts/interfaces/ITimeswapV2Option.sol';
-import {TimeswapV2OptionPosition} from '../../contracts/enums/Position.sol';
+import 'forge-std/Test.sol';
+import 'forge-std/console.sol';
+import '../src/TimeswapV2OptionFactory.sol';
+import '../src/TimeswapV2Option.sol';
+import '../src/interfaces/ITimeswapV2Option.sol';
+import {TimeswapV2OptionPosition} from '../src/enums/Position.sol';
 import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
-import {TimeswapV2OptionMintParam, TimeswapV2OptionBurnParam, TimeswapV2OptionSwapParam, TimeswapV2OptionCollectParam, ParamLibrary} from '../../contracts/structs/Param.sol';
-import {TimeswapV2OptionMint, TimeswapV2OptionBurn, TimeswapV2OptionSwap, TimeswapV2OptionCollect, TransactionLibrary} from '../../contracts/enums/Transaction.sol';
-import {StrikeConversion} from '@timeswap-labs/v2-library/contracts/StrikeConversion.sol';
-import {Math} from '@timeswap-labs/v2-library/contracts/Math.sol';
-import {FullMath} from '@timeswap-labs/v2-library/contracts/FullMath.sol';
+import {TimeswapV2OptionMintParam, TimeswapV2OptionBurnParam, TimeswapV2OptionSwapParam, TimeswapV2OptionCollectParam, ParamLibrary} from '../src/structs/Param.sol';
+import {TimeswapV2OptionMint, TimeswapV2OptionBurn, TimeswapV2OptionSwap, TimeswapV2OptionCollect, TransactionLibrary} from '../src/enums/Transaction.sol';
+import {StrikeConversion} from '@timeswap-labs/v2-library/src/StrikeConversion.sol';
+import {Math} from '@timeswap-labs/v2-library/src/Math.sol';
+import {FullMath} from '@timeswap-labs/v2-library/src/FullMath.sol';
 
-import {Proportion} from '../../contracts/libraries/Proportion.sol';
+import {Proportion} from '../src/libraries/Proportion.sol';
 
 contract HelperERC20 is ERC20 {
   constructor(string memory _name, string memory _symbol) ERC20(_name, _symbol) {
@@ -221,7 +221,7 @@ contract TimeswapV2OptionTest is Test {
     );
   }
 
-  function testMintGivenShorts(
+    function testMintGivenShorts(
     uint256 strike,
     address long0To,
     address long1To,
@@ -244,15 +244,15 @@ contract TimeswapV2OptionTest is Test {
     if (strike >= type(uint128).max) {
       unchecked {
         vm.assume(
-          // isAddable(amount0, amount1) &&
-          amount0 + amount1 > amount0 && amount0 + amount1 > amount1 && isMulDivPossible(amount1, strike, (1 << 128))
+        isAddable(amount0, amount1) &&
+        isMulDivPossible(amount1, strike, (1 << 128))
         );
       }
     } else {
       unchecked {
         vm.assume(
-          // isAddable(amount0, amount1) &&
-          amount0 + amount1 > amount0 && amount0 + amount1 > amount1 && isMulDivPossible(amount0, (1 << 128), strike)
+          isAddable(amount0, amount1) &&
+          isMulDivPossible(amount0, (1 << 128), strike)
         );
       }
     }
@@ -290,6 +290,8 @@ contract TimeswapV2OptionTest is Test {
     );
     assertOutputAndPositionsShort(amount0 + amount1, res.short, res.maturity, shortTo, res.strike);
   }
+
+
 
   function testSwapGivenToken0(
     uint256 amount0,
@@ -496,7 +498,8 @@ contract TimeswapV2OptionTest is Test {
       token0To: token0To,
       token1To: token1To,
       transaction: TimeswapV2OptionCollect.GivenShort,
-      amount: amount
+      amount: amount,
+      data: ""
     });
 
     uint256 totalLong0 = opPair.totalPosition(strike, block.timestamp + 100, TimeswapV2OptionPosition.Long0);
@@ -519,7 +522,7 @@ contract TimeswapV2OptionTest is Test {
     vm.assume(isMulDivPossible(amount, totalLong0, denominator) && isMulDivPossible(amount, totalLong1, denominator));
 
     CollectData memory output;
-    (output.token0, output.token1, output.short) = opPair.collect(cparam);
+    (output.token0, output.token1, output.short, ) = opPair.collect(cparam);
     delete cparam;
     delete strike;
     assertEq(output.short, amount);
@@ -585,7 +588,8 @@ contract TimeswapV2OptionTest is Test {
       token1To: token1To,
       transaction: TimeswapV2OptionCollect.GivenToken0,
       //amount: amount0
-      amount: amount
+      amount: amount,
+      data: ""
     });
 
     uint256 totalLong0 = opPair.totalPosition(strike, block.timestamp + 100, TimeswapV2OptionPosition.Long0);
@@ -607,7 +611,7 @@ contract TimeswapV2OptionTest is Test {
     vm.warp(block.timestamp + 101);
 
     CollectData memory output;
-    (output.token0, output.token1, output.short) = opPair.collect(cparam);
+    (output.token0, output.token1, output.short, ) = opPair.collect(cparam);
     delete cparam;
     delete strike;
     assertEq(output.short, shortAmount);
@@ -672,7 +676,8 @@ contract TimeswapV2OptionTest is Test {
       token0To: token0To,
       token1To: token1To,
       transaction: TimeswapV2OptionCollect.GivenToken1,
-      amount: amount
+      amount: amount,
+      data: ""
     });
 
     uint256 totalLong0 = opPair.totalPosition(strike, block.timestamp + 100, TimeswapV2OptionPosition.Long0);
@@ -699,84 +704,239 @@ contract TimeswapV2OptionTest is Test {
 
     vm.warp(block.timestamp + 101);
     CollectData memory output;
-    (output.token0, output.token1, output.short) = opPair.collect(cparam);
+    (output.token0, output.token1, output.short, ) = opPair.collect(cparam);
     delete cparam;
     delete strike;
     assertEq(output.short, shortAmount);
     assertCollectedToken0Value(token0Amount, output.token0, token0To);
     assertCollectedToken1Value(amount, output.token1, token1To);
   }
+   function assertOutputAndPositionsBurnt(
+     uint256 mintedAmount0,
+     uint256 mintedAmount1,
+     uint256 mintedShort,
+     uint256 burntAmount0,
+     uint256 burntAmount1,
+     uint256 burntShort
+   ) internal {
+     assertGe(mintedAmount0, burntAmount0);
+     assertGe(mintedAmount1, burntAmount1);
+     assertGe(mintedShort, burntShort);
+   }
 
-  //   function assertOutputAndPositionsLong0Burnt(
-  //     uint256 expectedAmount,
-  //     uint256 mintedAmount,
-  //     uint256 outputAmount
-  //   ) internal {
-  //     assertGe(1, mintedAmount - outputAmount);
-  //     assertGe(1, opPair.positionOf(strike, maturity, address(this), ))
-  //     assertEq(outputAmount, expectedAmount);
-  //   }
+   function testBurnGivenShorts(
+       uint256 strike,
+       uint256 amount0,
+       uint256 amount1,
+       uint256 burnAmount0,
+       uint256 burnAmount1
+   ) public {
+     //vm.assume(amount0 != 0 && amount1 != 0 && strike != 0);
+     //vm.assume(amount0 < (1 << 128) && amount1 < (1 << 128));
+    vm.assume(
+      //long0To != address(0) &&
+      //long1To != address(0) &&
+      //shortTo != address(0) &&
+      amount0 != 0 &&
+      amount1 != 0 &&
+      strike != 0
+      // && strike >= type(uint128).max
+    );
 
-  //   function testBurnGivenShorts(
-  //       uint256 strike,
-  //       uint256 amount0,
-  //       uint256 amount1
-  //   ) public {
-  //     vm.assume(amount0 != 0 && amount1 != 0 && strike != 0);
-  //     vm.assume(amount0 < (1 << 128) && amount1 < (1 << 128));
+    if(strike >= type(uint128).max){
+      unchecked {
+        vm.assume(
+           isAddable(amount0, amount1) &&
+          //amount0 + amount1 > amount0 &&
+          //amount0 + amount1 > amount1 &&
+          isMulDivPossible(amount1, strike, (1 << 128))
+        );
+      }
+    } else {
+      unchecked {
+        vm.assume(
+           isAddable(amount0, amount1) &&
+          //amount0 + amount1 > amount0 &&
+          //amount0 + amount1 > amount1 &&
+          isMulDivPossible(amount0, (1 << 128), strike)
+        );
+      }
+    }
+    vm.assume(
+      burnAmount1 < amount1 &&
+      burnAmount0 < amount0 &&
+      burnAmount0 != 0 &&
+      burnAmount1 != 0
+    );
 
-  //     bytes memory data;
+ 
 
-  //     TimeswapV2OptionMintParam memory mintParam = TimeswapV2OptionMintParam({
-  //         strike: strike,
-  //         long0To: address(this),
-  //         maturity: block.timestamp + 100,
-  //         long1To: address(this),
-  //         shortTo: address(this),
-  //         transaction: TimeswapV2OptionMint.GivenShorts,
-  //         amount0: amount0,
-  //         amount1: amount1,
-  //         data:data
-  //     });
+    TimeswapV2OptionMintParam memory mintParam = TimeswapV2OptionMintParam({
+       strike: strike,
+       long0To: address(this),
+       maturity: block.timestamp + 100,
+       long1To: address(this),
+       shortTo: address(this),
+       transaction: TimeswapV2OptionMint.GivenShorts,
+       amount0: amount0,
+       amount1: amount1,
+       data:""
+    });
 
-  //     MintData memory mintRes = MintData(0, 0, 0, strike, block.timestamp + 100, bytes(''));
+     MintData memory mintRes = MintData(0, 0, 0, strike, block.timestamp + 100, bytes(''));
 
-  //     (mintRes.token0, mintRes.token1, mintRes.short, ) = opPair.mint(mintParam);
+     (mintRes.token0, mintRes.token1, mintRes.short, ) = opPair.mint(mintParam);
 
-  //     TimeswapV2OptionBurnParam memory burnParam = TimeswapV2OptionBurnParam({
-  //         strike: strike,
-  //         token0To: address(this),
-  //         maturity: block.timestamp + 100,
-  //         token1To: address(this),
-  //         transaction: TimeswapV2OptionBurn.GivenShorts,
-  //         amount0: amount0,
-  //         amount1: amount1
-  //     });
+     TimeswapV2OptionBurnParam memory burnParam = TimeswapV2OptionBurnParam({
+         strike: strike,
+         token0To: address(this),
+         maturity: block.timestamp + 100,
+         token1To: address(this),
+         transaction: TimeswapV2OptionBurn.GivenShorts,
+         amount0: burnAmount0,
+         amount1: burnAmount1,
+         data: ""
+     });
 
-  //     vm.expectEmit(false, false, false, true);
-  //     emit Burn(
-  //         strike,
-  //         block.timestamp + 100,
-  //         address(this),
-  //         address(this),
-  //         address(this),
-  //         StrikeConversion.turn(amount0, strike, false, false),
-  //         StrikeConversion.turn(amount1, strike, true, false),
-  //         amount1 + amount0
-  //     );
+     //vm.expectEmit(false, false, false, true);
+     //emit Burn(
+         //strike,
+         //block.timestamp + 100,
+         //address(this),
+         //address(this),
+         //address(this),
+         //StrikeConversion.turn(amount0, strike, false, false),
+         //StrikeConversion.turn(amount1, strike, true, false),
+         //amount1 + amount0
+     //);
+    
+     BurnData memory burnRes;
+     // OptionData memory prevOption;
 
-  //     BurnData memory burnRes;
-  //     // OptionData memory prevOption;
+     // prevOption.token0 = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Long0);
+     // prevOption.token1 = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Long1);
+     // prevOption.short = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Short);
 
-  //     // prevOption.token0 = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Long0);
-  //     // prevOption.token1 = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Long1);
-  //     // prevOption.short = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Short);
+     (burnRes.token0AndLong0Amount, burnRes.token1AndLong1Amount, burnRes.shortAmount, ) = opPair.burn(burnParam);
 
-  //     (burnRes.token0AndLong0Amount, burnRes.token1AndLong1Amount, burnRes.shortAmount) = opPair.burn(burnParam);
+     //assertGe(mintRes.token0, burnRes.token0AndLong0Amount);
+     //assertGe(mintRes.token1, burnRes.token1AndLong1Amount);
+     //assertGe(mintRes.short, burnRes.shortAmount);
+     assertOutputAndPositionsBurnt(
+       mintRes.token0,
+       mintRes.token1,
+       mintRes.short,
+       burnRes.token0AndLong0Amount,
+       burnRes.token1AndLong1Amount,
+       burnRes.shortAmount
+      );
+    
 
-  //     assertGe(mintRes.token0, burnRes.token0AndLong0Amount);
-  //     assertGe(mintRes.token1, burnRes.token1AndLong1Amount);
-  //     assertGe(mintRes.short, burnRes.shortAmount);
+   }
+   function testBurnGivenTokensAndLongs(
+       uint256 strike,
+       uint256 amount0,
+       uint256 amount1,
+       uint256 burnAmount0,
+       uint256 burnAmount1
+   ) public {
+     //vm.assume(amount0 != 0 && amount1 != 0 && strike != 0);
+     //vm.assume(amount0 < (1 << 128) && amount1 < (1 << 128));
+    vm.assume(
+      //long0To != address(0) &&
+      //long1To != address(0) &&
+      //shortTo != address(0) &&
+      amount0 != 0 &&
+      amount1 != 0 &&
+      strike != 0
+      // && strike >= type(uint128).max
+    );
 
-  //   }
+    vm.assume(
+      burnAmount1 < amount1 &&
+      burnAmount0 < amount0 &&
+      burnAmount0 != 0 &&
+      burnAmount1 != 0
+    );
+
+     if(strike >= type(uint128).max){
+      unchecked{
+        vm.assume(
+          isMulDivPossible(amount1, (uint256(1) << 128), strike) &&
+          isAddable(amount0, StrikeConversion.convert(amount1, strike, false, false))
+        );
+      }
+    } else {
+      unchecked{
+        vm.assume(
+          isMulDivPossible(amount0, strike, (uint256(1) << 128)) &&
+          isAddable(amount1,StrikeConversion.convert(amount0, strike, true, false))
+        );
+      }
+    }
+
+
+
+    TimeswapV2OptionMintParam memory mintParam = TimeswapV2OptionMintParam({
+       strike: strike,
+       long0To: address(this),
+       maturity: block.timestamp + 100,
+       long1To: address(this),
+       shortTo: address(this),
+       transaction: TimeswapV2OptionMint.GivenTokensAndLongs,
+       amount0: amount0,
+       amount1: amount1,
+       data:""
+    });
+
+     MintData memory mintRes = MintData(0, 0, 0, strike, block.timestamp + 100, bytes(''));
+
+     (mintRes.token0, mintRes.token1, mintRes.short, ) = opPair.mint(mintParam);
+
+     TimeswapV2OptionBurnParam memory burnParam = TimeswapV2OptionBurnParam({
+         strike: strike,
+         token0To: address(this),
+         maturity: block.timestamp + 100,
+         token1To: address(this),
+         transaction: TimeswapV2OptionBurn.GivenTokensAndLongs,
+         amount0: burnAmount0,
+         amount1: burnAmount1,
+         data: ""
+     });
+
+     //vm.expectEmit(false, false, false, true);
+     //emit Burn(
+         //strike,
+         //block.timestamp + 100,
+         //address(this),
+         //address(this),
+         //address(this),
+         //StrikeConversion.turn(amount0, strike, false, false),
+         //StrikeConversion.turn(amount1, strike, true, false),
+         //amount1 + amount0
+     //);
+    
+     BurnData memory burnRes;
+     // OptionData memory prevOption;
+
+     // prevOption.token0 = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Long0);
+     // prevOption.token1 = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Long1);
+     // prevOption.short = opPair.positionOf(strike, block.timestamp+100, address(this), TimeswapV2OptionPosition.Short);
+
+     (burnRes.token0AndLong0Amount, burnRes.token1AndLong1Amount, burnRes.shortAmount, ) = opPair.burn(burnParam);
+
+     //assertGe(mintRes.token0, burnRes.token0AndLong0Amount);
+     //assertGe(mintRes.token1, burnRes.token1AndLong1Amount);
+     //assertGe(mintRes.short, burnRes.shortAmount);
+     assertOutputAndPositionsBurnt(
+       mintRes.token0,
+       mintRes.token1,
+       mintRes.short,
+       burnRes.token0AndLong0Amount,
+       burnRes.token1AndLong1Amount,
+       burnRes.shortAmount
+      );
+    
+
+   }
 }

@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {StrikeConversion} from '@timeswap-labs/v2-library/contracts/StrikeConversion.sol';
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
-import {Math} from '@timeswap-labs/v2-library/contracts/Math.sol';
+import {StrikeConversion} from '@timeswap-labs/v2-library/src/StrikeConversion.sol';
+import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
+import {Math} from '@timeswap-labs/v2-library/src/Math.sol';
 
 import {Proportion} from '../libraries/Proportion.sol';
 
