@@ -52,8 +52,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
   - QA report awards: $7,500 USDC 
   - Gas report awards: $3,750 USDC 
   - Judge + presort awards: $15,000 USDC
-  - Scout awards: $500 USDC (this field doesn't exist in Notion yet, usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation review contest: XXX XXX (*Opportunity goes to top X certified wardens based on placement in this contest.*)
+  - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-01-timeswap-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
