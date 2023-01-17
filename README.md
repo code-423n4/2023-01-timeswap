@@ -109,17 +109,17 @@ The C4audit output for the contest can be found [here](add link to report) withi
 | [packages/v2-option/contracts/TimeswapV2OptionDeployer.sol](packages/v2-option/contracts/TimeswapV2OptionDeployer.sol) | 16 | Option Deployer  |  |
 | [packages/v2-option/contracts/structs/Process.sol](packages/v2-option/contracts/structs/Process.sol) | 25 |Process libary  |  |
 | [packages/v2-option/contracts/structs/CallbackParam.sol](packages/v2-option/contracts/structs/CallbackParam.sol) | 33 |Callback param structs  |  |
-| [packages/v2-option/contracts/structs/StrikeAndMaturity.sol](packages/packages/v2-option/contracts/structs/StrikeAndMaturity.sol) | 5 | Strike and Maturity utils  |  |
-| [packages/v2-option/contracts/structs/Option.sol](packages/v2-option/contracts/structs/Option.sol) | 117 | Option struct library  |  |
-| [packages/v2-option/contracts/structs/Param.sol](packages/v2-option/contracts/structs/Param.sol) | 82 | Params for the contract |  |
+| [packages/v2-option/contracts/structs/StrikeAndMaturity.sol](packages/v2-option/contracts/structs/StrikeAndMaturity.sol) | 5 | Strike and Maturity utils  |  |
+| [packages/v2-option/contracts/structs/Option.sol](packages/v2-option/contracts/structs/Option.sol) | 117 | Option struct library  |  "@timeswap-labs/v2-library/*" |
+| [packages/v2-option/contracts/structs/Param.sol](packages/v2-option/contracts/structs/Param.sol) | 82 | Params for the contract |  "@timeswap-labs/v2-library/*"   |
 | [packages/v2-option/contracts/NoDelegateCall.sol](packages/v2-option/contracts/NoDelegateCall.sol) | 15 | To ensure delegate call is not made  |  |
-| [packages/v2-option/contracts/TimeswapV2OptionFactory.sol](packages/v2-option/contracts/TimeswapV2OptionFactory.sol) | 29 | Option Factory contract  |  |
-| [packages/v2-option/contracts/libraries/Proportion.sol](packages/v2-option/contracts/libraries/Proportion.sol) | 7 | Proprtion util contract  |  |
+| [packages/v2-option/contracts/TimeswapV2OptionFactory.sol](packages/v2-option/contracts/TimeswapV2OptionFactory.sol) | 29 | Option Factory contract  |  "openzeppelin/*", "@timeswap-labs/v2-library/*"  |
+| [packages/v2-option/contracts/libraries/Proportion.sol](packages/v2-option/contracts/libraries/Proportion.sol) | 7 | Proprtion util contract  | "@timeswap-labs/v2-library/*"  |
 | [packages/v2-option/contracts/libraries/OptionPair.sol](packages/v2-option/contracts/libraries/OptionPair.sol) | 15 | Option related functions  |  |
-| [packages/v2-option/contracts/libraries/OptionFactory.sol](packages/v2-option/contracts/libraries/OptionFactory.sol) | 18 | Library for option factory  |  |
+| [packages/v2-option/contracts/libraries/OptionFactory.sol](packages/v2-option/contracts/libraries/OptionFactory.sol) | 18 | Library for option factory  |  "@timeswap-labs/v2-library/*" |
 | [packages/v2-option/contracts/enums/Transaction.sol](packages/v2-option/contracts/enums/Transaction.sol) | 33 | Different transaction types enum  |  |
 | [packages/v2-option/contracts/enums/Position.sol](packages/v2-option/contracts/enums/Position.sol) | 12 | Option position types enum |  |
-| [packages/v2-option/contracts/TimeswapV2Option.sol](packages/v2-option/contracts/TimeswapV2Option.sol) | 234 | Different transaction types enum  |  |
+| [packages/v2-option/contracts/TimeswapV2Option.sol](packages/v2-option/contracts/TimeswapV2Option.sol) | 234 | Different transaction types enum  | "openzeppelin/*" , "@timeswap-labs/v2-library/"   |
 
 
 ## Out of scope
