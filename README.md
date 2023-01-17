@@ -47,7 +47,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 ---
 
 # Timeswap contest details
-- Total Prize Pool: $90,000 USDC
+- Total Prize Pool: $90,500 USDC
   - HM awards: $63,750 USDC 
   - QA report awards: $7,500 USDC 
   - Gas report awards: $3,750 USDC 
