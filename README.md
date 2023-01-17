@@ -79,7 +79,14 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| [packages/v2-library/contracts/BytesLib.sol](packages/v2-library/contracts/BytesLib.sol) | 33 |Bytes Array utils  |  |
+| [packages/v2-library/contracts/SafeCast.sol](packages/v2-library/contracts/SafeCast.sol) | 18 |Library for castings  |  |
+| [packages/v2-library/contracts/FullMath.sol](packages/v2-library/contracts/FullMath.sol)| 140 |Math utils  |  |
+| [packages/v2-library/contracts/Error.sol](packages/v2-library/contracts/Error.sol) | 63 | Error utils  |  |
+| [packages/v2-library/contracts/Math.sol](packages/v2-library/contracts/Math.sol) | 91 | Math utils  |  |
+| [packages/v2-library/contracts/Ownership.sol](packages/v2-library/contracts/Ownership.sol) | 20 |Ownership utils  |  |
+| [packages/v2-library/contracts/StrikeConversion.sol](packages/v2-library/contracts/StrikeConversion.sol) | 28 |Strike conversion utils  |  |
+| [packages/v2-library/contracts/CatchError.sol](packages/v2-library/contracts/CatchError.sol) | 6 |Error utils  |  |
 
 ## Out of scope
 
@@ -100,7 +107,7 @@ The C4audit output for the contest can be found [here](add link to report) withi
 - How many separate interfaces and struct definitions are there for the contracts within scope?: 19 and 38
 - Does most of your code generally use composition or inheritance?: Primarily inheritance, but composition is also leveraged up to some degree.  
 - How many external calls?: 0
-- What is the overall line coverage percentage provided by your tests?: 50
+  - What is the overall line coverage percentage provided by your tests?: 50
 - Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: No  
 - Please describe required context: N/A  
 - Does it use an oracle?: No
@@ -117,6 +124,4 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
-
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+Tests are currently work in progress, the setup to run the tests is described below
