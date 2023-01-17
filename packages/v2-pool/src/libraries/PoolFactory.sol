@@ -1,11 +1,11 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {OptionFactoryLibrary} from '@timeswap-labs/v2-option/contracts/libraries/OptionFactory.sol';
+import {OptionFactoryLibrary} from '@timeswap-labs/v2-option/src/libraries/OptionFactory.sol';
 
 import {ITimeswapV2PoolFactory} from '../interfaces/ITimeswapV2PoolFactory.sol';
 
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
+import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
 
 library PoolFactoryLibrary {
   using OptionFactoryLibrary for address;

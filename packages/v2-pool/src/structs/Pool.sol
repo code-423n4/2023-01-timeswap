@@ -1,13 +1,13 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {SafeCast} from '@timeswap-labs/v2-library/contracts/SafeCast.sol';
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
-import {Math} from '@timeswap-labs/v2-library/contracts/Math.sol';
+import {SafeCast} from '@timeswap-labs/v2-library/src/SafeCast.sol';
+import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
+import {Math} from '@timeswap-labs/v2-library/src/Math.sol';
 
-import {ITimeswapV2Option} from '@timeswap-labs/v2-option/contracts/interfaces/ITimeswapV2Option.sol';
+import {ITimeswapV2Option} from '@timeswap-labs/v2-option/src/interfaces/ITimeswapV2Option.sol';
 
-import {StrikeConversion} from '@timeswap-labs/v2-library/contracts/StrikeConversion.sol';
+import {StrikeConversion} from '@timeswap-labs/v2-library/src/StrikeConversion.sol';
 
 import {DurationCalculation} from '../libraries/DurationCalculation.sol';
 import {DurationWeight} from '../libraries/DurationWeight.sol';

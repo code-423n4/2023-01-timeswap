@@ -1,15 +1,15 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {Ownership} from '@timeswap-labs/v2-library/contracts/Ownership.sol';
+import {Ownership} from '@timeswap-labs/v2-library/src/Ownership.sol';
 
-import {OptionPairLibrary} from '@timeswap-labs/v2-option/contracts/libraries/OptionPair.sol';
+import {OptionPairLibrary} from '@timeswap-labs/v2-option/src/libraries/OptionPair.sol';
 
 import {ITimeswapV2PoolFactory} from './interfaces/ITimeswapV2PoolFactory.sol';
 
 import {TimeswapV2PoolDeployer} from './TimeswapV2PoolDeployer.sol';
 
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
+import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
 
 import {OwnableTwoSteps} from './base/OwnableTwoSteps.sol';
 

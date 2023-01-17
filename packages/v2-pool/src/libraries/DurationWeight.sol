@@ -2,7 +2,7 @@
 pragma solidity =0.8.8;
 
 import {FeeCalculation} from './FeeCalculation.sol';
-import {Math} from '@timeswap-labs/v2-library/contracts/Math.sol';
+import {Math} from '@timeswap-labs/v2-library/src/Math.sol';
 
 library DurationWeight {
   using Math for uint256;

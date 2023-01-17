@@ -1,8 +1,8 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
-import {Ownership} from '@timeswap-labs/v2-library/contracts/Ownership.sol';
+import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
+import {Ownership} from '@timeswap-labs/v2-library/src/Ownership.sol';
 
 import {IOwnableTwoSteps} from '../interfaces/IOwnableTwoSteps.sol';
 

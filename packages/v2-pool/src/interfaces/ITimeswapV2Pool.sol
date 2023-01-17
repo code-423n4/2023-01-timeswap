@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {StrikeAndMaturity} from '@timeswap-labs/v2-option/contracts/structs/StrikeAndMaturity.sol';
+import {StrikeAndMaturity} from '@timeswap-labs/v2-option/src/structs/StrikeAndMaturity.sol';
 
 import {TimeswapV2PoolCollectParam, TimeswapV2PoolMintParam, TimeswapV2PoolBurnParam, TimeswapV2PoolDeleverageParam, TimeswapV2PoolLeverageParam, TimeswapV2PoolRebalanceParam} from '../structs/Param.sol';
 

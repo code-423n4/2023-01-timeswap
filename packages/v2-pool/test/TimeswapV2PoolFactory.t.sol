@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity =0.8.8;
 
-import 'forge-std/src/Test.sol';
-import 'forge-std/src/console.sol';
-import '../../contracts/TimeswapV2PoolFactory.sol';
-import '../../contracts/interfaces/ITimeswapV2Pool.sol';
-import '@timeswap-labs/v2-option/contracts/TimeswapV2OptionFactory.sol';
-import '@timeswap-labs/v2-option/contracts/interfaces/ITimeswapV2Option.sol';
+import 'forge-std/Test.sol';
+import 'forge-std/console.sol';
+import '../src/TimeswapV2PoolFactory.sol';
+import '../src/interfaces/ITimeswapV2Pool.sol';
+import '@timeswap-labs/v2-option/src/TimeswapV2OptionFactory.sol';
+import '@timeswap-labs/v2-option/src/interfaces/ITimeswapV2Option.sol';
 
 contract TimeswapV2PoolFactoryTest is Test {
   TimeswapV2OptionFactory optionFactory;

@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
+import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
 
 import {TimeswapV2PoolMint, TimeswapV2PoolBurn, TimeswapV2PoolDeleverage, TimeswapV2PoolLeverage, TimeswapV2PoolRebalance, TransactionLibrary} from '../enums/Transaction.sol';
 

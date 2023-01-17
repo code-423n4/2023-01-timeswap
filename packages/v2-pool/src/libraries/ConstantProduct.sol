@@ -1,10 +1,10 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {Math} from '@timeswap-labs/v2-library/contracts/Math.sol';
-import {FullMath} from '@timeswap-labs/v2-library/contracts/FullMath.sol';
+import {Math} from '@timeswap-labs/v2-library/src/Math.sol';
+import {FullMath} from '@timeswap-labs/v2-library/src/FullMath.sol';
 
-import {SafeCast} from '@timeswap-labs/v2-library/contracts/SafeCast.sol';
+import {SafeCast} from '@timeswap-labs/v2-library/src/SafeCast.sol';
 
 import {FeeCalculation} from './FeeCalculation.sol';
 
