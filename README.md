@@ -87,18 +87,18 @@ The C4audit output for the contest can be found [here](add link to report) withi
 | [packages/v2-library/contracts/Ownership.sol](packages/v2-library/contracts/Ownership.sol) | 20 |Ownership utils  |  |
 | [packages/v2-library/contracts/StrikeConversion.sol](packages/v2-library/contracts/StrikeConversion.sol) | 28 |Strike conversion utils  |  |
 | [packages/v2-library/contracts/CatchError.sol](packages/v2-library/contracts/CatchError.sol) | 6 |Error utils  |  |
-| [packages/v2-token/contracts/interfaces/ITimeswapV2Token.sol](packages/v2-token/contracts/interfaces/ITimeswapV2Token.sol) | 6 |Interface Timeswap Token  |  |
+| [packages/v2-token/contracts/interfaces/ITimeswapV2Token.sol](packages/v2-token/contracts/interfaces/ITimeswapV2Token.sol) | 6 |Interface Timeswap Token  | "openzeppelin/*"  |
 | [packages/v2-token/contracts/interfaces/ITimeswapV2LiquidityToken.sol](packages/v2-token/contracts/interfaces/ITimeswapV2LiquidityToken.sol) | 15 |Interface Timeswap Liquidity Token  |  |
-| [packages/v2-token/contracts/interfaces/IERC1155Enumerable.sol](packages/v2-token/contracts/interfaces/IERC1155Enumerable.sol)| 6 | Interface Helper Enumerable  |  |
-| [packages/v2-token/contracts/base/ERC1155Enumerable.sol](packages/v2-token/contracts/base/ERC1155Enumerable.sol) | 86 | Helper Enumerable  |  |
-| [packages/v2-token/contracts/TimeswapV2LiquidityToken.sol](packages/v2-token/contracts/TimeswapV2LiquidityToken.sol) | 200 | Timeswap Liquidity Token   |  |
-| [packages/v2-token/contracts/TimeswapV2Token.sol](packages/v2-token/contracts/TimeswapV2Token.sol) | 222 |Timeswap Token |  |
+| [packages/v2-token/contracts/interfaces/IERC1155Enumerable.sol](packages/v2-token/contracts/interfaces/IERC1155Enumerable.sol)| 6 | Interface Helper Enumerable  | "openzeppelin/*"   |
+| [packages/v2-token/contracts/base/ERC1155Enumerable.sol](packages/v2-token/contracts/base/ERC1155Enumerable.sol) | 86 | Helper Enumerable  |  "openzeppelin/*"  |
+| [packages/v2-token/contracts/TimeswapV2LiquidityToken.sol](packages/v2-token/contracts/TimeswapV2LiquidityToken.sol) | 200 | Timeswap Liquidity Token   | "openzeppelin/*" , "timeswap-labs/v2-pool/*", "@timeswap-labs/v2-library/*"  |
+| [packages/v2-token/contracts/TimeswapV2Token.sol](packages/v2-token/contracts/TimeswapV2Token.sol) | 222 |Timeswap Token | "openzeppelin/*" , "timeswap-labs/v2-pool/*", "@timeswap-labs/v2-option/*" , "@timeswap-labs/v2-library/*"  |
 | [packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2LiquidityTokenMintCallback.sol](packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2LiquidityTokenMintCallback.sol) | 4 |Interface Liquidity Token Mint Callback  |  |
 | [packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2TokenMintCallback.sol](packages/v2-token/contracts/interfaces/callbacks/ITimeswapV2TokenMintCallback.sol) | 4 |Interface Token Mint Callback  |  |
 | [packages/v2-token/contracts/structs/CallbackParam.sol](packages/v2-token/contracts/structs/CallbackParam.sol) | 19 |Callback Params Structure |  |
-| [packages/v2-token/contracts/structs/FeesPosition.sol](packages/v2-token/contracts/structs/FeesPosition.sol) | 44 |Fees Positions Structure   |  |
-| [packages/v2-token/contracts/structs/Param.sol](packages/v2-token/contracts/structs/Param.sol)| 76 | Params Structure  |  |
-| [packages/v2-token/contracts/structs/Position.sol](packages/v2-token/contracts/structs/Position.sol) | 23 | Position Structure  |  |
+| [packages/v2-token/contracts/structs/FeesPosition.sol](packages/v2-token/contracts/structs/FeesPosition.sol) | 44 |Fees Positions Structure   |  "timeswap-labs/v2-pool/*", "@timeswap-labs/v2-library/*"  |
+| [packages/v2-token/contracts/structs/Param.sol](packages/v2-token/contracts/structs/Param.sol)| 76 | Params Structure  |  "@timeswap-labs/v2-library/*"  |
+| [packages/v2-token/contracts/structs/Position.sol](packages/v2-token/contracts/structs/Position.sol) | 23 | Position Structure  | "@timeswap-labs/v2-option/*"   |
 
 
 ## Out of scope
