@@ -25,6 +25,9 @@ dotenv.config();
 
 const config = {
   solidity: '0.8.8',
+  paths: {
+    sources: './src',
+  },
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || '',
