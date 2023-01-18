@@ -1,0 +1,340 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "parameter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "poolFactory",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "optionPair",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "transactionFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "protocolFee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "parameter()": "ad4d4e29"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"parameter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"poolFactory\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"optionPair\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"transactionFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"protocolFee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This is used to avoid having constructor arguments in the pair contract, which results in the init code hash of the pair being constant allowing the CREATE2 address of the pair to be cheaply computed on-chain.\",\"kind\":\"dev\",\"methods\":{\"parameter()\":{\"details\":\"Called by the pair constructor to fetch the parameters of the pair.\",\"params\":{\"optionPair\":\"The Timeswap V2 OptionPair address.\",\"protocolFee\":\"The protocol fee earned by the DAO.\",\"transactionFee\":\"The transaction fee earned by the liquidity providers.\"},\"returns\":{\"poolFactory\":\"The poolFactory address.\"}}},\"title\":\"An interface for a contract that is capable of deploying Timeswap V2 Pool\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"parameter()\":{\"notice\":\"Get the parameters to be used in constructing the pair, set transiently during pair creation.\"}},\"notice\":\"A contract that constructs a pair must implement this to pass arguments to the pair.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/ITimeswapV2PoolDeployer.sol\":\"ITimeswapV2PoolDeployer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/interfaces/ITimeswapV2PoolDeployer.sol\":{\"keccak256\":\"0x8f5aca37488d109f2bd43cfcecc9bc3e48a8acd84065df32cf5ce1a82d547114\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://5abe62518fa57ea576dea96c86289187f144c7fb82c2696ca4d23afabbf7d69a\",\"dweb:/ipfs/QmSDoaN9Zc3BqL8BnR7iMJjPa4Z5EM5ftTbzaYXBoHRSjT\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "parameter",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "poolFactory",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "optionPair",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "transactionFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "protocolFee",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "parameter()": {
+            "details": "Called by the pair constructor to fetch the parameters of the pair.",
+            "params": {
+              "optionPair": "The Timeswap V2 OptionPair address.",
+              "protocolFee": "The protocol fee earned by the DAO.",
+              "transactionFee": "The transaction fee earned by the liquidity providers."
+            },
+            "returns": {
+              "poolFactory": "The poolFactory address."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "parameter()": {
+            "notice": "Get the parameters to be used in constructing the pair, set transiently during pair creation."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/ITimeswapV2PoolDeployer.sol": "ITimeswapV2PoolDeployer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/ITimeswapV2PoolDeployer.sol": {
+        "keccak256": "0x8f5aca37488d109f2bd43cfcecc9bc3e48a8acd84065df32cf5ce1a82d547114",
+        "urls": [
+          "bzz-raw://5abe62518fa57ea576dea96c86289187f144c7fb82c2696ca4d23afabbf7d69a",
+          "dweb:/ipfs/QmSDoaN9Zc3BqL8BnR7iMJjPa4Z5EM5ftTbzaYXBoHRSjT"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/ITimeswapV2PoolDeployer.sol",
+    "id": 37046,
+    "exportedSymbols": {
+      "ITimeswapV2PoolDeployer": [
+        37045
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1081:82",
+    "nodes": [
+      {
+        "id": 37031,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:82",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 37045,
+        "nodeType": "ContractDefinition",
+        "src": "467:650:82",
+        "nodes": [
+          {
+            "id": 37044,
+            "nodeType": "FunctionDefinition",
+            "src": "973:142:82",
+            "nodes": [],
+            "documentation": {
+              "id": 37033,
+              "nodeType": "StructuredDocumentation",
+              "src": "531:439:82",
+              "text": "@notice Get the parameters to be used in constructing the pair, set transiently during pair creation.\n @dev Called by the pair constructor to fetch the parameters of the pair.\n @return poolFactory The poolFactory address.\n @param optionPair The Timeswap V2 OptionPair address.\n @param transactionFee The transaction fee earned by the liquidity providers.\n @param protocolFee The protocol fee earned by the DAO."
+            },
+            "functionSelector": "ad4d4e29",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "parameter",
+            "nameLocation": "982:9:82",
+            "parameters": {
+              "id": 37034,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "991:2:82"
+            },
+            "returnParameters": {
+              "id": 37043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37036,
+                  "mutability": "mutable",
+                  "name": "poolFactory",
+                  "nameLocation": "1037:11:82",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37044,
+                  "src": "1029:19:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 37035,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1029:7:82",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37038,
+                  "mutability": "mutable",
+                  "name": "optionPair",
+                  "nameLocation": "1058:10:82",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37044,
+                  "src": "1050:18:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 37037,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1050:7:82",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37040,
+                  "mutability": "mutable",
+                  "name": "transactionFee",
+                  "nameLocation": "1078:14:82",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37044,
+                  "src": "1070:22:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 37039,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1070:7:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37042,
+                  "mutability": "mutable",
+                  "name": "protocolFee",
+                  "nameLocation": "1102:11:82",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37044,
+                  "src": "1094:19:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 37041,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1094:7:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1028:86:82"
+            },
+            "scope": 37045,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 37032,
+          "nodeType": "StructuredDocumentation",
+          "src": "62:405:82",
+          "text": "@title An interface for a contract that is capable of deploying Timeswap V2 Pool\n @notice A contract that constructs a pair must implement this to pass arguments to the pair.\n @dev This is used to avoid having constructor arguments in the pair contract, which results in the init code hash\n of the pair being constant allowing the CREATE2 address of the pair to be cheaply computed on-chain."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          37045
+        ],
+        "name": "ITimeswapV2PoolDeployer",
+        "nameLocation": "477:23:82",
+        "scope": 37046,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 82
+}
