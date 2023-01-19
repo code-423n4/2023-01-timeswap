@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
 
-import {FullMathExt} from "../src/wrapped/FullMathExt.sol";
+import {FullMathExt} from "./wrapped/FullMathExt.sol";
 import "../src/Math.sol";
 
 // import "../../../contracts/utils/math/SafeMath.sol";

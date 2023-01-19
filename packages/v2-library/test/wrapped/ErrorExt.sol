@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
-import "../Error.sol";
+import "../../src/Error.sol";
 
 /// @dev Common error messages
 library ErrorExt {

@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
-import "../SafeCast.sol";
+import "../../src/SafeCast.sol";
 
 library SafeCastExt {
     function toUint16(uint256 value) external pure returns (uint16 result) {
