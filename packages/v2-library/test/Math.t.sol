@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
 
-import "../src/wrapped/MathExt.sol";
+import "./wrapped/MathExt.sol";
 
 contract MathTest is Test {
     function testUnsafeAdd(uint256 addend1, uint256 addend2) public pure {
@@ -12,10 +12,10 @@ contract MathTest is Test {
     }
 
     function testUnsafeSub(uint256 minuend, uint256 subtrahend) public pure {
-        MathExt.unsafeAdd(minuend, subtrahend);
+        MathExt.unsafeSub(minuend, subtrahend);
     }
 
-    function unsafeMul(uint256 multiplicand, uint256 multiplier) public pure {
+    function testUnsafeMul(uint256 multiplicand, uint256 multiplier) public pure {
         MathExt.unsafeMul(multiplicand, multiplier);
     }
 

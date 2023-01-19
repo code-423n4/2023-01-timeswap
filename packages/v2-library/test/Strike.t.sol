@@ -2,7 +2,7 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
 
-import "../src/wrapped/StrikeConversionExt.sol";
+import "./wrapped/StrikeConversionExt.sol";
 
 contract StrikeTest is Test {
     function testConvert(uint256 amount, uint256 strike, bool zeroToOne) public {

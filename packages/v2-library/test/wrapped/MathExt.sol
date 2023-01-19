@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.0;
-import "../Math.sol";
+import "../../src/Math.sol";
 
 library MathExt {
     function unsafeAdd(uint256 addend1, uint256 addend2) external pure returns (uint256 sum) {

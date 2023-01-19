@@ -3,7 +3,7 @@
 pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
-import {SafeCastExt} from "../src/wrapped/SafeCastExt.sol";
+import {SafeCastExt} from "./wrapped/SafeCastExt.sol";
 
 contract SafeCastTest is Test {
     function testToUint16(uint256 value) public pure {

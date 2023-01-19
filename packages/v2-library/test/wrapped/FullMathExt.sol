@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {FullMath} from "../FullMath.sol";
+import {FullMath} from "../../src/FullMath.sol";
 
 library FullMathExt {
     function add512(uint256 addendA0, uint256 addendA1, uint256 addendB0, uint256 addendB1) external pure returns (uint256 sum0, uint256 sum1) {
