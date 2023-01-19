@@ -1,9 +1,10 @@
 [profile.default]
-src = 'contracts'
+src = 'src'
 out = 'out'
 libs = ['node_modules', 'lib', '../../node_modules', 'artifacts']
-test = 'test/foundry'
+test = 'test'
 cache_path  = 'forge-cache'
+gas_reports = ["*"]
 
 [profile.default.fuzz]
 max_test_rejects = 100000000

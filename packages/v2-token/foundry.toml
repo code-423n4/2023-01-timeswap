@@ -1,0 +1,12 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['node_modules', 'lib', '../../node_modules', 'artifacts']
+allow_paths = ["../v2-option/src/structs", "../v2-option/src/interfaces", "../v2-option/src/enums", "../v2-option/src/","../v2-pool/src/structs", "../v2-pool/src/interfaces", "../v2-pool/src/enums", "../v2-pool/src/"]
+test = 'test'
+cache_path  = 'forge-cache'
+
+[profile.default.fuzz]
+max_test_rejects = 100000000
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
