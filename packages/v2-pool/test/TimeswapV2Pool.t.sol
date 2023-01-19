@@ -63,10 +63,10 @@ contract TimeswapV2PoolTest is Test {
     bytes data;
   }
 
-  struct CalculatedAmount {
-    uint256 liquidityAmount;
-    uint256 longAmount;
-    uint256 shortAmount;
+  struct Fees {
+    uint256 token0;
+    uint256 token1;
+    uint256 shorts;
   }
 
   function timeswapV2OptionMintCallback(
@@ -136,6 +136,144 @@ contract TimeswapV2PoolTest is Test {
     uint256 timeNow;
   }
 
+  function testPoolList(
+    uint256 strike,
+    uint256 maturity,
+    uint160 rate,
+    uint256 _chosenTransactionFee,
+    uint256 _chosenProtocolFee
+  ) public {
+    vm.assume(
+      _chosenTransactionFee <= type(uint16).max &&
+      _chosenProtocolFee <= type(uint16).max &&
+      maturity > block.timestamp &&
+      strike != 0 &&
+      rate !=0
+    );
+    chosenTransactionFee = _chosenTransactionFee;
+    chosenProtocolFee = _chosenProtocolFee;
+    setUp();
+    pool.initialize(strike, maturity, rate);
+    assertEq(pool.getByIndex(0).strike, strike);
+    assertEq(pool.getByIndex(0).maturity, maturity);
+  }
+
+  function testNumberOfPools(
+    uint256 strike,
+    uint256 maturity,
+    uint160 rate,
+    uint256 _chosenTransactionFee,
+    uint256 _chosenProtocolFee
+  ) public {
+    vm.assume(
+      _chosenTransactionFee <= type(uint16).max &&
+      _chosenProtocolFee <= type(uint16).max &&
+      maturity > block.timestamp &&
+      strike != 0 &&
+      rate !=0
+    );
+    chosenTransactionFee = _chosenTransactionFee;
+    chosenProtocolFee = _chosenProtocolFee;
+    setUp();
+    pool.initialize(strike, maturity, rate);
+    assertEq(pool.numberOfPools(), 1);
+  }
+
+
+  function testLiquidity(
+    uint256 strike,
+    address to,
+    Timestamps calldata time,
+    // uint256 maturity,
+    // uint256 currentTimestamp,
+    uint256 _chosenTransactionFee,
+    uint256 _chosenProtocolFee,
+    uint160 rate,
+    uint256 delta
+  ) public {
+    vm.assume(
+      time.maturity < type(uint96).max &&
+      _chosenTransactionFee <= type(uint16).max &&
+      _chosenProtocolFee <= type(uint16).max &&
+      to != address(0) &&
+      strike != 0 &&
+      delta != 0 &&
+      time.maturity > block.timestamp &&
+      time.maturity < type(uint96).max && //confirmation needed
+      rate > 0 &&
+      isMulDivPossible(rate, delta, uint256(1) << 96) &&
+      FullMath.mulDiv(rate, delta, uint256(1) << 96, true) < type(uint160).max
+      && isMulDivPossible(
+        FullMath.mulDiv(rate, delta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
+        rate,
+        uint256(1) << 192
+      )
+    );
+    chosenTransactionFee = _chosenTransactionFee;
+    chosenProtocolFee = _chosenProtocolFee;
+    setUp();
+    pool.initialize(strike, time.maturity, rate);
+    
+    TimeswapV2PoolMintParam memory param = TimeswapV2PoolMintParam({
+      strike: strike,
+      maturity: time.maturity,
+      to: to,
+      transaction: TimeswapV2PoolMint.GivenLong,
+      delta: delta,
+      data: ''
+    });
+
+    MintOutput memory response;
+    (response.liquidityAmount, response.long0Amount, response.long1Amount, response.shortAmount, response.data) = pool
+      .mint(param);
+    assertEq(pool.totalLiquidity(strike, time.maturity), response.liquidityAmount);
+    assertEq(pool.sqrtInterestRate(strike, time.maturity), rate);
+    assertEq(pool.liquidityOf(strike, time.maturity, to), response.liquidityAmount);
+
+    Fees memory f;
+    (f.token0, f.token1, f.shorts) = pool.feeGrowth(strike, time.maturity);
+    assertEq(f.token0, 0);
+    assertEq(f.token1, 0);
+    (f.token0, f.token1, f.shorts) = pool.protocolFeesEarned(strike, time.maturity);
+    assertEq(f.token0, 0);
+    assertEq(f.token1, 0);
+    (f.token0, f.token1) = pool.totalLongBalance(strike, time.maturity);
+    assertEq(f.token0, response.long0Amount);
+    assertEq(f.token1, response.long1Amount);
+    (f.token0, f.token1) = pool.totalLongBalanceAdjustFees(strike, time.maturity);
+    assertTrue(f.token0 != 0);
+    assertTrue(f.token1 != 0);
+    vm.prank(to);
+    // test if this function passes or not, also to get back the liquidity tokens
+    pool.transferLiquidity(strike, time.maturity, address(this), response.liquidityAmount);
+    (f.token0, f.token1, f.shorts) = pool.collectProtocolFees(TimeswapV2PoolCollectParam({
+      strike: strike,
+      maturity: time.maturity,
+      long0To: address(this),
+      long1To: address(this),
+      shortTo: address(this),
+      long0Requested: 1,
+      long1Requested: 1,
+      shortRequested: 1
+    }));
+    assertGe(f.token0, 0);
+    assertGe(f.token1, 0);
+    assertGe(f.shorts, 0);
+    (f.token0, f.token1, f.shorts) = pool.collectTransactionFees(TimeswapV2PoolCollectParam({
+      strike: strike,
+      maturity: time.maturity,
+      long0To: address(this),
+      long1To: address(this),
+      shortTo: address(this),
+      long0Requested: 1,
+      long1Requested: 1,
+      shortRequested: 1
+    }));
+    assertGe(f.token0, 0);
+    assertGe(f.token1, 0);
+    assertGe(f.shorts, 0);
+  }
+
   function testMintGivenLong(
     uint256 strike,
     address to,
@@ -203,6 +341,7 @@ contract TimeswapV2PoolTest is Test {
     assertTrue(shortAmount != 0);
     assertLe(delta, StrikeConversion.combine(response.long0Amount, response.long1Amount, strike, false));
   }
+
 
   function testMintGivenShort(
     uint256 strike,
@@ -328,4 +467,137 @@ contract TimeswapV2PoolTest is Test {
     assertLe(longAmount, StrikeConversion.combine(response.long0Amount, response.long1Amount, strike, false));
   }
 
+struct BurnOutput {
+    uint160 liquidityAmount;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    bytes data;
+  }
+
+  struct BurnToAddress {
+    address to;
+    address long0To;
+    address long1To;
+    address shortTo;
+  }
+
+  function timeswapV2PoolBurnChoiceCallback(
+    TimeswapV2PoolBurnChoiceCallbackParam calldata param
+  ) external returns (uint256 long0Amount, uint256 long1Amount, bytes memory data) {
+    long0Amount = StrikeConversion.turn(param.longAmount / 2, param.strike, false, true);
+    long1Amount = StrikeConversion.turn(param.longAmount / 2, param.strike, true, true) ;
+    if (param.strike >= type(uint128).max) {
+      unchecked {
+        vm.assume(
+          isMulDivPossible(long1Amount, (uint256(1) << 128), param.strike) &&
+            isAddable(long0Amount, StrikeConversion.convert(long1Amount, param.strike, false, false))
+        );
+      }
+    } else {
+      unchecked {
+        vm.assume(
+          isMulDivPossible(long0Amount, param.strike, (uint256(1) << 128)) &&
+            isAddable(long1Amount, StrikeConversion.convert(long0Amount, param.strike, true, false))
+        );
+      }
+    }
+    // vm.assume(
+    //   param.longAmount > StrikeConversion.combine(long0Amount, long1Amount, param.strike, false)
+    //     // && param.shortAmount < StrikeConversion.combine(long0Amount, long1Amount, param.strike, false)
+    // );
+  }
+
+  // NOT DONE
+  struct CalculatedAmount {
+    uint256 liquidityAmount;
+    uint256 longAmount;
+    uint256 shortAmount;
+  }
+
+  function testBurnGivenLong(
+    uint256 strike,
+    // address to,
+    Timestamps calldata time,
+    // uint256 maturity,
+    // uint256 currentTimestamp,
+    uint256 _chosenTransactionFee,
+    uint256 _chosenProtocolFee,
+    uint160 rate,
+    uint256 delta,
+    uint256 burnDelta
+  ) public {
+    // uint256 burnDelta = 10;
+    vm.assume(
+      time.maturity < type(uint96).max &&
+      _chosenTransactionFee <= type(uint16).max &&
+      _chosenProtocolFee <= type(uint16).max &&
+      // to != address(0) &&
+      strike != 0 &&
+      delta != 0 &&
+      time.maturity > block.timestamp &&
+      time.maturity < type(uint96).max && //confirmation needed
+      rate > 0 &&
+      burnDelta < delta &&
+      burnDelta > 0 &&
+      isMulDivPossible(rate, delta, uint256(1) << 96) &&
+      FullMath.mulDiv(rate, delta, uint256(1) << 96, true) < type(uint160).max
+      && FullMath.mulDiv(rate, delta, uint256(1) << 96, false) > FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) 
+      && FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) > 0
+      && isMulDivPossible(
+        FullMath.mulDiv(rate, delta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
+        rate,
+        uint256(1) << 192
+      )
+      && FullMath.mulDiv(
+        FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
+        rate,
+        uint256(1) << 192,
+        false
+      ) > 0
+    );
+
+    // Hacky way to do fuzzing during init, as setUp doesn't take fuzz params
+    chosenTransactionFee = _chosenTransactionFee;
+    chosenProtocolFee = _chosenProtocolFee;
+    setUp();
+    pool.initialize(strike, time.maturity, rate);
+    
+    TimeswapV2PoolMintParam memory param = TimeswapV2PoolMintParam({
+      strike: strike,
+      maturity: time.maturity,
+      to: address(this),
+      transaction: TimeswapV2PoolMint.GivenLong,
+      delta: delta,
+      data: ''
+    });
+
+    // MintOutput memory response;
+    // (response.liquidityAmount, response.long0Amount, response.long1Amount, response.shortAmount, response.data) = pool
+    //   .mint(param);
+    pool.mint(param);
+
+    TimeswapV2PoolBurnParam memory param2 = TimeswapV2PoolBurnParam({
+      strike: strike,
+      maturity: time.maturity,
+      long0To: address(this),
+      long1To: address(this),
+      shortTo: address(this),
+      transaction: TimeswapV2PoolBurn.GivenLong,
+      delta: burnDelta,
+      data: ''
+    });
+
+    BurnOutput memory burnResponse;
+    (
+      burnResponse.liquidityAmount,
+      burnResponse.long0Amount,
+      burnResponse.long1Amount,
+      burnResponse.shortAmount,
+      burnResponse.data
+    ) = pool.burn(param2);
+    delete param;
+  }
+
+  }
 }
