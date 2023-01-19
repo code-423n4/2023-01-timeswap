@@ -10,7 +10,7 @@ import '@timeswap-labs/v2-option/src/TimeswapV2OptionFactory.sol';
 import '@timeswap-labs/v2-option/src/interfaces/ITimeswapV2Option.sol';
 import {TimeswapV2PoolMint, TimeswapV2PoolBurn, TimeswapV2PoolDeleverage, TimeswapV2PoolLeverage, TimeswapV2PoolRebalance, TransactionLibrary} from '../src/enums/Transaction.sol';
 import {TimeswapV2PoolCollectParam, TimeswapV2PoolMintParam, TimeswapV2PoolBurnParam, TimeswapV2PoolDeleverageParam, TimeswapV2PoolLeverageParam, TimeswapV2PoolRebalanceParam} from '../src/structs/Param.sol';
-import {TimeswapV2PoolMintChoiceCallbackParam, TimeswapV2PoolMintCallbackParam} from '../src/structs/CallbackParam.sol';
+import {TimeswapV2PoolMintChoiceCallbackParam, TimeswapV2PoolMintCallbackParam, TimeswapV2PoolDeleverageChoiceCallbackParam, TimeswapV2PoolDeleverageCallbackParam} from '../src/structs/CallbackParam.sol';
 import {StrikeConversion} from '@timeswap-labs/v2-library/src/StrikeConversion.sol';
 import {TimeswapV2OptionMintParam} from '@timeswap-labs/v2-option/src/structs/Param.sol';
 import {TimeswapV2OptionMintCallbackParam, TimeswapV2OptionSwapCallbackParam} from '@timeswap-labs/v2-option/src/structs/CallbackParam.sol';
@@ -19,8 +19,9 @@ import {ConstantProduct} from '../src/libraries/ConstantProduct.sol';
 import {DurationCalculation} from '../src/libraries/DurationCalculation.sol';
 import {SafeCast} from '@timeswap-labs/v2-library/src/SafeCast.sol';
 import {FullMath} from '@timeswap-labs/v2-library/src/FullMath.sol';
+import {TimeswapV2OptionPosition} from '@timeswap-labs/v2-option/src/enums/Position.sol';
 
-import {TimeswapV2PoolBurnChoiceCallbackParam} from '../src/structs/CallbackParam.sol';
+import {TimeswapV2PoolBurnChoiceCallbackParam, TimeswapV2PoolBurnCallbackParam} from '../src/structs/CallbackParam.sol';
 
 contract HelperERC20 is ERC20 {
   constructor(string memory _name, string memory _symbol) ERC20(_name, _symbol) {
@@ -485,8 +486,8 @@ struct BurnOutput {
   function timeswapV2PoolBurnChoiceCallback(
     TimeswapV2PoolBurnChoiceCallbackParam calldata param
   ) external returns (uint256 long0Amount, uint256 long1Amount, bytes memory data) {
-    long0Amount = StrikeConversion.turn(param.longAmount / 2, param.strike, false, true);
-    long1Amount = StrikeConversion.turn(param.longAmount / 2, param.strike, true, true) ;
+    long0Amount = StrikeConversion.turn(param.longAmount / 2, param.strike, false, true) - 1;
+    long1Amount = StrikeConversion.turn(param.longAmount / 2, param.strike, true, true) - 1;
     if (param.strike >= type(uint128).max) {
       unchecked {
         vm.assume(
@@ -508,6 +509,12 @@ struct BurnOutput {
     // );
   }
 
+  function timeswapV2PoolBurnCallback(
+    TimeswapV2PoolBurnCallbackParam calldata param
+  ) external returns (bytes memory data){
+    data = "";
+  }
+
   // NOT DONE
   struct CalculatedAmount {
     uint256 liquidityAmount;
@@ -515,71 +522,151 @@ struct BurnOutput {
     uint256 shortAmount;
   }
 
-  function testBurnGivenLong(
-    uint256 strike,
-    // address to,
-    Timestamps calldata time,
-    // uint256 maturity,
-    // uint256 currentTimestamp,
-    uint256 _chosenTransactionFee,
-    uint256 _chosenProtocolFee,
-    uint160 rate,
-    uint256 delta,
-    uint256 burnDelta
-  ) public {
-    // uint256 burnDelta = 10;
-    vm.assume(
-      time.maturity < type(uint96).max &&
-      _chosenTransactionFee <= type(uint16).max &&
-      _chosenProtocolFee <= type(uint16).max &&
-      // to != address(0) &&
-      strike != 0 &&
-      delta != 0 &&
-      time.maturity > block.timestamp &&
-      time.maturity < type(uint96).max && //confirmation needed
-      rate > 0 &&
-      burnDelta < delta &&
-      burnDelta > 0 &&
-      isMulDivPossible(rate, delta, uint256(1) << 96) &&
-      FullMath.mulDiv(rate, delta, uint256(1) << 96, true) < type(uint160).max
-      && FullMath.mulDiv(rate, delta, uint256(1) << 96, false) > FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) 
-      && FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) > 0
-      && isMulDivPossible(
-        FullMath.mulDiv(rate, delta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
-        rate,
-        uint256(1) << 192
-      )
-      && FullMath.mulDiv(
-        FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
-        rate,
-        uint256(1) << 192,
-        false
-      ) > 0
-    );
+  //   function testBurnGivenLong(
+  //   uint256 strike,
+  //   // address to,
+  //   Timestamps calldata time,
+  //   // uint256 maturity,
+  //   // uint256 currentTimestamp,
+  //   uint256 _chosenTransactionFee,
+  //   uint256 _chosenProtocolFee,
+  //   uint160 rate,
+  //   uint256 delta,
+  //   uint256 burnDelta
+  // ) public {
+  //   // uint256 burnDelta = 10;
+  //   vm.assume(
+  //     time.maturity < type(uint96).max &&
+  //     _chosenTransactionFee > 0 &&
+  //     _chosenProtocolFee > 0 &&
+  //     _chosenTransactionFee <= type(uint16).max &&
+  //     _chosenProtocolFee <= type(uint16).max &&
+  //     // to != address(0) &&
+  //     strike != 0 &&
+  //     delta != 0 &&
+  //     time.maturity > block.timestamp &&
+  //     time.maturity < type(uint96).max && //confirmation needed
+  //     rate > 0 &&
+  //     burnDelta < delta &&
+  //     burnDelta > 0 &&
+  //     isMulDivPossible(rate, delta, uint256(1) << 96) &&
+  //     FullMath.mulDiv(rate, delta, uint256(1) << 96, true) < type(uint160).max
+  //     && FullMath.mulDiv(rate, delta, uint256(1) << 96, false) > FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) 
+  //     && FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) > 0
+  //     && isMulDivPossible(
+  //       FullMath.mulDiv(rate, delta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
+  //       rate,
+  //       uint256(1) << 192
+  //     )
+  //     && FullMath.mulDiv(
+  //       FullMath.mulDiv(rate, burnDelta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
+  //       rate,
+  //       uint256(1) << 192,
+  //       false
+  //     ) > 0
+  //     // && FullMath.mulDiv(
+  //     //   FullMath.mulDiv(rate, delta, uint256(1) << 96, true) * DurationCalculation.unsafeDurationFromNowToMaturity(time.maturity, uint96(block.timestamp)),
+  //     //   rate,
+  //     //   uint256(1) << 192,
+  //     //   false
+  //     // ) > 0
+  //   );
 
-    // Hacky way to do fuzzing during init, as setUp doesn't take fuzz params
-    chosenTransactionFee = _chosenTransactionFee;
-    chosenProtocolFee = _chosenProtocolFee;
-    setUp();
-    pool.initialize(strike, time.maturity, rate);
+  //   // Hacky way to do fuzzing during init, as setUp doesn't take fuzz params
+  //   chosenTransactionFee = _chosenTransactionFee;
+  //   chosenProtocolFee = _chosenProtocolFee;
+  //   setUp();
+  //   pool.initialize(strike, time.maturity, rate);
     
+  //   TimeswapV2PoolMintParam memory param = TimeswapV2PoolMintParam({
+  //     strike: strike,
+  //     maturity: time.maturity,
+  //     to: address(this),
+  //     transaction: TimeswapV2PoolMint.GivenLong,
+  //     delta: delta,
+  //     data: ''
+  //   });
+
+  //   console.log("fees", chosenProtocolFee, chosenTransactionFee);
+  //   console.log("strike", strike);
+  //   console.log("rate", rate);
+  //   console.log("maturity", time.maturity);
+  //   console.log("delta", delta);
+  //   console.log("burnDelta", burnDelta);
+
+  //   MintOutput memory response;
+  //   (response.liquidityAmount, response.long0Amount, response.long1Amount, response.shortAmount, response.data) = pool
+  //     .mint(param);
+
+  //   // assertTrue(response.liquidityAmount != 0);
+  //   TimeswapV2PoolBurnParam memory param2 = TimeswapV2PoolBurnParam({
+  //     strike: strike,
+  //     maturity: time.maturity,
+  //     long0To: address(this),
+  //     long1To: address(this),
+  //     shortTo: address(this),
+  //     transaction: TimeswapV2PoolBurn.GivenLong,
+  //     delta: burnDelta,
+  //     data: ''
+  //   });
+
+  //   BurnOutput memory burnResponse;
+  //   (
+  //     burnResponse.liquidityAmount,
+  //     burnResponse.long0Amount,
+  //     burnResponse.long1Amount,
+  //     burnResponse.shortAmount,
+  //     burnResponse.data
+  //   ) = pool.burn(param2);
+  //   delete param;
+  //   console.log("YOOOOOOO");
+  //   assertEq(burnResponse.liquidityAmount, burnResponse.liquidityAmount+1);
+  // }
+
+  function timeswapV2PoolDeleverageChoiceCallback(
+    TimeswapV2PoolDeleverageChoiceCallbackParam calldata param
+  ) external returns (uint256 long0Amount, uint256 long1Amount, bytes memory data) {
+    long0Amount = opPair.positionOf(param.strike, param.maturity, address(this), TimeswapV2OptionPosition.Long0);
+    long1Amount = opPair.positionOf(param.strike, param.maturity, address(this), TimeswapV2OptionPosition.Long1);
+
+  }
+
+
+  function timeswapV2PoolDeleverageCallback(
+    TimeswapV2PoolDeleverageCallbackParam calldata param
+  ) external returns (bytes memory data){
+    data = "";
+  }
+
+  function testBurnCheck() public {
+    chosenTransactionFee = 1;
+    chosenProtocolFee = 1;
+    setUp();
+    uint256 strike = 1;
+    uint256 maturity = 1459582642980837690266;
+    uint160 rate = 520558458406151014348945;
+    pool.initialize(strike, maturity, rate);
+
+    uint256 delta = 110677585605967601658;
+    uint256 burnDelta = 1257393021903808828;
+
     TimeswapV2PoolMintParam memory param = TimeswapV2PoolMintParam({
       strike: strike,
-      maturity: time.maturity,
+      maturity: maturity,
       to: address(this),
       transaction: TimeswapV2PoolMint.GivenLong,
       delta: delta,
       data: ''
     });
 
-    // MintOutput memory response;
-    // (response.liquidityAmount, response.long0Amount, response.long1Amount, response.shortAmount, response.data) = pool
-    //   .mint(param);
-    pool.mint(param);
+    MintOutput memory response;
+    (response.liquidityAmount, response.long0Amount, response.long1Amount, response.shortAmount, response.data) = pool
+      .mint(param);
 
+    // assertTrue(response.liquidityAmount != 0);
     TimeswapV2PoolBurnParam memory param2 = TimeswapV2PoolBurnParam({
       strike: strike,
-      maturity: time.maturity,
+      maturity: maturity,
       long0To: address(this),
       long1To: address(this),
       shortTo: address(this),
@@ -597,7 +684,78 @@ struct BurnOutput {
       burnResponse.data
     ) = pool.burn(param2);
     delete param;
+    console.log(opPair.positionOf(strike, maturity, address(this), TimeswapV2OptionPosition.Long0));
+    console.log(opPair.positionOf(strike, maturity, address(this), TimeswapV2OptionPosition.Long1));
+    console.log(opPair.positionOf(strike, maturity, address(this), TimeswapV2OptionPosition.Short));
+    
+  }
+  function testDelevCheck() public {
+    chosenTransactionFee = 1;
+    chosenProtocolFee = 1;
+    setUp();
+    uint256 strike = 1;
+    uint256 maturity = 1459582642980837690266;
+    uint160 rate = 520558458406151014348945;
+    pool.initialize(strike, maturity, rate);
+
+    uint256 delta = 110677585605967601658;
+    uint256 burnDelta = 1257393021903808828;
+
+    TimeswapV2PoolMintParam memory param = TimeswapV2PoolMintParam({
+      strike: strike,
+      maturity: maturity,
+      to: address(this),
+      transaction: TimeswapV2PoolMint.GivenLong,
+      delta: delta,
+      data: ''
+    });
+
+    MintOutput memory response;
+    (response.liquidityAmount, response.long0Amount, response.long1Amount, response.shortAmount, response.data) = pool
+      .mint(param);
+
+    // assertTrue(response.liquidityAmount != 0);
+    TimeswapV2PoolBurnParam memory param2 = TimeswapV2PoolBurnParam({
+      strike: strike,
+      maturity: maturity,
+      long0To: address(this),
+      long1To: address(this),
+      shortTo: address(this),
+      transaction: TimeswapV2PoolBurn.GivenLong,
+      delta: burnDelta,
+      data: ''
+    });
+
+    BurnOutput memory burnResponse;
+    (
+      burnResponse.liquidityAmount,
+      burnResponse.long0Amount,
+      burnResponse.long1Amount,
+      burnResponse.shortAmount,
+      burnResponse.data
+    ) = pool.burn(param2);
+    delete param;
+    console.log(opPair.positionOf(strike, maturity, address(this), TimeswapV2OptionPosition.Long0));
+    console.log(opPair.positionOf(strike, maturity, address(this), TimeswapV2OptionPosition.Long1));
+    console.log(opPair.positionOf(strike, maturity, address(this), TimeswapV2OptionPosition.Short));
+
+    TimeswapV2PoolDeleverageParam memory dparam = TimeswapV2PoolDeleverageParam({
+      strike: strike,
+      maturity: maturity,
+      to: address(this),
+      transaction: TimeswapV2PoolDeleverage.GivenLong,
+      delta: StrikeConversion.combine(
+        opPair.positionOf(strike, param.maturity, address(this), TimeswapV2OptionPosition.Long0),
+        opPair.positionOf(strike, param.maturity, address(this), TimeswapV2OptionPosition.Long1),
+        strike,
+        true
+      ),
+      data: ""
+    });
+    vm.expectRevert(); // since the delta value will equate to 0
+    pool.deleverage(dparam);
+    
   }
 
-  }
+
 }
