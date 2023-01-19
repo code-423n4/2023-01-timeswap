@@ -3,10 +3,10 @@ pragma solidity ^0.8.8;
 
 import {ERC1155} from "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 
-import {ITimeswapV2Pool} from "@timeswap-labs/v2-pool/contracts/interfaces/ITimeswapV2Pool.sol";
+import {ITimeswapV2Pool} from "@timeswap-labs/v2-pool/src/interfaces/ITimeswapV2Pool.sol";
 
-import {PoolFactoryLibrary} from "@timeswap-labs/v2-pool/contracts/libraries/PoolFactory.sol";
-import {ReentrancyGuard} from "@timeswap-labs/v2-pool/contracts/libraries/ReentrancyGuard.sol";
+import {PoolFactoryLibrary} from "@timeswap-labs/v2-pool/src/libraries/PoolFactory.sol";
+import {ReentrancyGuard} from "@timeswap-labs/v2-pool/src/libraries/ReentrancyGuard.sol";
 
 import {ITimeswapV2LiquidityToken} from "./interfaces/ITimeswapV2LiquidityToken.sol";
 
@@ -20,7 +20,7 @@ import {TimeswapV2LiquidityTokenPosition, PositionLibrary} from "./structs/Posit
 import {FeesPosition, FeesPositionLibrary} from "./structs/FeesPosition.sol";
 import {TimeswapV2LiquidityTokenMintParam, TimeswapV2LiquidityTokenBurnParam, TimeswapV2LiquidityTokenCollectParam, ParamLibrary} from "./structs/Param.sol";
 import {TimeswapV2LiquidityTokenMintCallbackParam, TimeswapV2LiquidityTokenBurnCallbackParam, TimeswapV2LiquidityTokenCollectCallbackParam} from "./structs/CallbackParam.sol";
-import {Error} from "@timeswap-labs/v2-library/contracts/Error.sol";
+import {Error} from "@timeswap-labs/v2-library/src/Error.sol";
 
 /// @title An implementation for TS-V2 liquidity token system
 /// @author Timeswap Labs

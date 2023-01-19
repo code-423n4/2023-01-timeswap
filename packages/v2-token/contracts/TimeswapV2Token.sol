@@ -3,12 +3,12 @@ pragma solidity ^0.8.8;
 
 import {ERC1155} from "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
 
-import {ITimeswapV2Option} from "@timeswap-labs/v2-option/contracts/interfaces/ITimeswapV2Option.sol";
+import {ITimeswapV2Option} from "@timeswap-labs/v2-option/src/interfaces/ITimeswapV2Option.sol";
 
-import {OptionFactoryLibrary} from "@timeswap-labs/v2-option/contracts/libraries/OptionFactory.sol";
-import {ReentrancyGuard} from "@timeswap-labs/v2-pool/contracts/libraries/ReentrancyGuard.sol";
+import {OptionFactoryLibrary} from "@timeswap-labs/v2-option/src/libraries/OptionFactory.sol";
+import {ReentrancyGuard} from "@timeswap-labs/v2-pool/src/libraries/ReentrancyGuard.sol";
 
-import {TimeswapV2OptionPosition} from "@timeswap-labs/v2-option/contracts/enums/Position.sol";
+import {TimeswapV2OptionPosition} from "@timeswap-labs/v2-option/src/enums/Position.sol";
 
 import {ITimeswapV2Token} from "./interfaces/ITimeswapV2Token.sol";
 
@@ -20,7 +20,7 @@ import {ERC1155Enumerable} from "./base/ERC1155Enumerable.sol";
 import {TimeswapV2TokenPosition, PositionLibrary} from "./structs/Position.sol";
 import {TimeswapV2TokenMintParam, TimeswapV2TokenBurnParam, ParamLibrary} from "./structs/Param.sol";
 import {TimeswapV2TokenMintCallbackParam, TimeswapV2TokenBurnCallbackParam} from "./structs/CallbackParam.sol";
-import {Error} from "@timeswap-labs/v2-library/contracts/Error.sol";
+import {Error} from "@timeswap-labs/v2-library/src/Error.sol";
 
 /// @title
 /// @author Timeswap Labs

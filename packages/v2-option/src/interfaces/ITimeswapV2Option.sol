@@ -18,7 +18,7 @@ interface ITimeswapV2Option {
     /// @param to The address of the receipient of the position.
     /// @param position The type of position transferred. More information in the Position module.
     /// @param amount The amount of balance transferred.
-    event TransferPosition(uint256 strike, uint256 maturity, address from, address to, TimeswapV2OptionPosition position, uint256 amount);
+    event TransferPosition(uint256 indexed strike, uint256 indexed maturity, address indexed from, address to, TimeswapV2OptionPosition position, uint256 amount);
 
     /// @dev Emits when a mint transaction is called.
     /// @param strike The strike ratio of token1 per token0 of the option.
@@ -30,7 +30,17 @@ interface ITimeswapV2Option {
     /// @param token0AndLong0Amount The amount of token0 deposited and long0 minted.
     /// @param token1AndLong1Amount The amount of token1 deposited and long1 minted.
     /// @param shortAmount The amount of short minted.
-    event Mint(uint256 strike, uint256 maturity, address caller, address long0To, address long1To, address shortTo, uint256 token0AndLong0Amount, uint256 token1AndLong1Amount, uint256 shortAmount);
+    event Mint(
+        uint256 indexed strike,
+        uint256 indexed maturity,
+        address indexed caller,
+        address long0To,
+        address long1To,
+        address shortTo,
+        uint256 token0AndLong0Amount,
+        uint256 token1AndLong1Amount,
+        uint256 shortAmount
+    );
 
     /// @dev Emits when a burn transaction is called.
     /// @param strike The strike ratio of token1 per token0 of the option.
@@ -41,7 +51,16 @@ interface ITimeswapV2Option {
     /// @param token0AndLong0Amount The amount of token0 withdrawn and long0 burnt.
     /// @param token1AndLong1Amount The amount of token1 withdrawn and long1 burnt.
     /// @param shortAmount The amount of short burnt.
-    event Burn(uint256 strike, uint256 maturity, address caller, address token0To, address token1To, uint256 token0AndLong0Amount, uint256 token1AndLong1Amount, uint256 shortAmount);
+    event Burn(
+        uint256 indexed strike,
+        uint256 indexed maturity,
+        address indexed caller,
+        address token0To,
+        address token1To,
+        uint256 token0AndLong0Amount,
+        uint256 token1AndLong1Amount,
+        uint256 shortAmount
+    );
 
     /// @dev Emits when a swap transaction is called.
     /// @param strike The strike ratio of token1 per token0 of the option.
@@ -54,7 +73,16 @@ interface ITimeswapV2Option {
     /// If the direction is from long1 to long0, the amount of token0 deposited and long0 minted.
     /// @param token1AndLong1Amount If the direction is from long0 to long1, the amount of token1 deposited and long1 minted.
     /// If the direction is from long1 to long0, the amount of token1 withdrawn and long1 burnt.
-    event Swap(uint256 strike, uint256 maturity, address caller, address tokenTo, address longTo, bool isLong0toLong1, uint256 token0AndLong0Amount, uint256 token1AndLong1Amount);
+    event Swap(
+        uint256 indexed strike,
+        uint256 indexed maturity,
+        address indexed caller,
+        address tokenTo,
+        address longTo,
+        bool isLong0toLong1,
+        uint256 token0AndLong0Amount,
+        uint256 token1AndLong1Amount
+    );
 
     /// @dev Emits when a collect transaction is called.
     /// @param strike The strike ratio of token1 per token0 of the option.
@@ -65,7 +93,16 @@ interface ITimeswapV2Option {
     /// @param long0AndToken0Amount The amount of token0 withdrawn.
     /// @param long1Amount The sum of long0AndToken0Amount and this amount is the total short amount burnt.
     /// @param token1Amount The amount of token1 withdrawn.
-    event Collect(uint256 strike, uint256 maturity, address caller, address token0To, address token1To, uint256 long0AndToken0Amount, uint256 long1Amount, uint256 token1Amount);
+    event Collect(
+        uint256 indexed strike,
+        uint256 indexed maturity,
+        address indexed caller,
+        address token0To,
+        address token1To,
+        uint256 long0AndToken0Amount,
+        uint256 long1Amount,
+        uint256 token1Amount
+    );
 
     /* ===== VIEW ===== */
 

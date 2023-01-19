@@ -11,7 +11,7 @@ interface ITimeswapV2OptionFactory {
     /// @param token0 The first ERC20 token address of the pair.
     /// @param token1 The second ERC20 token address of the pair.
     /// @param optionPair The address of the Timeswap V2 Option contract created.
-    event Create(address caller, address token0, address token1, address optionPair);
+    event Create(address indexed caller, address indexed token0, address indexed token1, address optionPair);
 
     /* ===== VIEW ===== */
 

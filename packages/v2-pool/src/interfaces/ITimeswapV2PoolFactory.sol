@@ -12,7 +12,7 @@ interface ITimeswapV2PoolFactory is IOwnableTwoSteps {
   /// @param caller The address of the caller of create function.
   /// @param option The address of the option contract used by the pool.
   /// @param poolPair The address of the Timeswap V2 Pool contract created.
-  event Create(address caller, address option, address poolPair);
+  event Create(address  indexed caller, address indexed option, address  indexed poolPair);
 
   /* ===== VIEW ===== */
 

@@ -13,7 +13,7 @@ interface ITimeswapV2Pool {
   /// @param from The sender of liquidity position.
   /// @param to The receipeint of liquidity position.
   /// @param liquidityAmount The amount of liquidity position transferred.
-  event TransferLiquidity(uint256 strike, uint256 maturity, address from, address to, uint160 liquidityAmount);
+  event TransferLiquidity(uint256 indexed strike, uint256 indexed maturity, address indexed from, address to, uint160  liquidityAmount);
 
   /// @dev Emits when fees is transferred.
   /// @param strike The strike of the option and pool.
@@ -24,9 +24,9 @@ interface ITimeswapV2Pool {
   /// @param long1Fees The amount of long1 position fees transferred.
   /// @param shortFees The amount of short position fees transferred.
   event TransferFees(
-    uint256 strike,
-    uint256 maturity,
-    address from,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed from,
     address to,
     uint256 long0Fees,
     uint256 long1Fees,
@@ -44,9 +44,9 @@ interface ITimeswapV2Pool {
   /// @param long1Amount The amount of long1 position fees withdrawn.
   /// @param shortAmount The amount of short position fees withdrawn.
   event CollectProtocolFees(
-    uint256 strike,
-    uint256 maturity,
-    address caller,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed caller,
     address long0To,
     address long1To,
     address shortTo,
@@ -66,9 +66,9 @@ interface ITimeswapV2Pool {
   /// @param long1Amount The amount of long1 position fees withdrawn.
   /// @param shortAmount The amount of short position fees withdrawn.
   event CollectTransactionFee(
-    uint256 strike,
-    uint256 maturity,
-    address caller,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed caller,
     address long0To,
     address long1To,
     address shortTo,
@@ -87,9 +87,9 @@ interface ITimeswapV2Pool {
   /// @param long1Amount The amount of long1 positions deposited.
   /// @param shortAmount The amount of short positions deposited.
   event Mint(
-    uint256 strike,
-    uint256 maturity,
-    address caller,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed caller,
     address to,
     uint160 liquidityAmount,
     uint256 long0Amount,
@@ -109,9 +109,9 @@ interface ITimeswapV2Pool {
   /// @param long1Amount The amount of long1 positions withdrawn.
   /// @param shortAmount The amount of short positions withdrawn.
   event Burn(
-    uint256 strike,
-    uint256 maturity,
-    address caller,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed caller,
     address long0To,
     address long1To,
     address shortTo,
@@ -130,9 +130,9 @@ interface ITimeswapV2Pool {
   /// @param long1Amount The amount of long1 positions deposited.
   /// @param shortAmount The amount of short positions withdrawn.
   event Deleverage(
-    uint256 strike,
-    uint256 maturity,
-    address caller,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed caller,
     address to,
     uint256 long0Amount,
     uint256 long1Amount,
@@ -149,9 +149,9 @@ interface ITimeswapV2Pool {
   /// @param long1Amount The amount of long1 positions withdrawn.
   /// @param shortAmount The amount of short positions deposited.
   event Leverage(
-    uint256 strike,
-    uint256 maturity,
-    address caller,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed caller,
     address long0To,
     address long1To,
     uint256 long0Amount,
@@ -170,9 +170,9 @@ interface ITimeswapV2Pool {
   /// @param long1Amount If isLong0ToLong1, amount of long1 positions withdrawn.
   /// If isLong1ToLong0, amount of long1 positions deposited.
   event Rebalance(
-    uint256 strike,
-    uint256 maturity,
-    address caller,
+    uint256 indexed strike,
+    uint256 indexed maturity,
+    address indexed caller,
     address to,
     bool isLong0ToLong1,
     uint256 long0Amount,

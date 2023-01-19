@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 
-import {TimeswapV2OptionPosition} from "@timeswap-labs/v2-option/contracts/enums/Position.sol";
+import {TimeswapV2OptionPosition} from "@timeswap-labs/v2-option/src/enums/Position.sol";
 
 /// @dev Struct for Token
 /// @param token0 The first ERC20 token address of the pair.
