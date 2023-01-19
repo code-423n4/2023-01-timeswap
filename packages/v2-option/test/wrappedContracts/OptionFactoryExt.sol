@@ -13,6 +13,3 @@ library OptionFactoryExt{
       return OptionFactoryLibrary.getWithCheck(optionFactory, token0, token1);
     }
 }
-
-
-        
