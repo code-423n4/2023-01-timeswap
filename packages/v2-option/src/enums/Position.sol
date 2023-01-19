@@ -7,19 +7,19 @@ pragma solidity =0.8.8;
 /// @dev When strike greater than uint128 then Short is denominated as Token0 (the base token denomination).
 /// @dev When strike is uint128 then Short is denominated as Token1 (the base token denomination).
 enum TimeswapV2OptionPosition {
-  Long0,
-  Long1,
-  Short
+    Long0,
+    Long1,
+    Short
 }
 
 /// @dev Helper functions for the TimeswapOptionPosition enum.
 library PositionLibrary {
-  /// @dev Reverts when the given type of position is invalid.
-  error InvalidPosition();
+    /// @dev Reverts when the given type of position is invalid.
+    error InvalidPosition();
 
-  /// @dev Checks that the position input is correct.
-  /// @param position The position input.
-  function check(TimeswapV2OptionPosition position) internal pure {
-    if (uint256(position) >= 3) revert InvalidPosition();
-  }
+    /// @dev Checks that the position input is correct.
+    /// @param position The position input.
+    function check(TimeswapV2OptionPosition position) internal pure {
+        if (uint256(position) >= 3) revert InvalidPosition();
+    }
 }

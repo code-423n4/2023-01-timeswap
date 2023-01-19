@@ -16,43 +16,31 @@ pragma solidity =0.8.8;
 /// @param balance0Target The required balance of token0 to be held in the option.
 /// @param balance1Target The required balance of token1 to be held in the option.
 struct Process {
-  uint256 strike;
-  uint256 maturity;
-  uint256 balance0Target;
-  uint256 balance1Target;
+    uint256 strike;
+    uint256 maturity;
+    uint256 balance0Target;
+    uint256 balance1Target;
 }
 
 library ProcessLibrary {
-  /// @dev update process for managing how many tokens required from msg.sender.
-  /// @dev reentrancy safety as well.
-  /// @param processing The current array of processes.
-  /// @param token0Amount If isAddToken0 then token0 amount to be deposited, else the token0 amount withdrawn.
-  /// @param token1Amount If isAddToken1 then token1 amount to be deposited, else the token1 amount withdrawn.
-  /// @param isAddToken0 IsAddToken0 if true. IsSubToken0 if false.
-  /// @param isAddToken1 IsAddToken1 if true. IsSubToken0 if false.
-  function updateProcess(
-    Process[] storage processing,
-    uint256 token0Amount,
-    uint256 token1Amount,
-    bool isAddToken0,
-    bool isAddToken1
-  ) internal {
-    for (uint256 i; i < processing.length; ) {
-      Process storage process = processing[i];
+    /// @dev update process for managing how many tokens required from msg.sender.
+    /// @dev reentrancy safety as well.
+    /// @param processing The current array of processes.
+    /// @param token0Amount If isAddToken0 then token0 amount to be deposited, else the token0 amount withdrawn.
+    /// @param token1Amount If isAddToken1 then token1 amount to be deposited, else the token1 amount withdrawn.
+    /// @param isAddToken0 IsAddToken0 if true. IsSubToken0 if false.
+    /// @param isAddToken1 IsAddToken1 if true. IsSubToken0 if false.
+    function updateProcess(Process[] storage processing, uint256 token0Amount, uint256 token1Amount, bool isAddToken0, bool isAddToken1) internal {
+        for (uint256 i; i < processing.length; ) {
+            Process storage process = processing[i];
 
-      if (token0Amount != 0)
-        process.balance0Target = isAddToken0
-          ? process.balance0Target + token0Amount
-          : process.balance0Target - token0Amount;
+            if (token0Amount != 0) process.balance0Target = isAddToken0 ? process.balance0Target + token0Amount : process.balance0Target - token0Amount;
 
-      if (token1Amount != 0)
-        process.balance1Target = isAddToken1
-          ? process.balance1Target + token1Amount
-          : process.balance1Target - token1Amount;
+            if (token1Amount != 0) process.balance1Target = isAddToken1 ? process.balance1Target + token1Amount : process.balance1Target - token1Amount;
 
-      unchecked {
-        i++;
-      }
+            unchecked {
+                i++;
+            }
+        }
     }
-  }
 }

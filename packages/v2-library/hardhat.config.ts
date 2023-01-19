@@ -1,12 +1,12 @@
-import * as dotenv from 'dotenv';
-import { HardhatUserConfig, task } from 'hardhat/config';
-import '@nomiclabs/hardhat-ethers';
-import '@nomiclabs/hardhat-etherscan';
-import '@nomiclabs/hardhat-waffle';
-import '@typechain/hardhat';
-import 'hardhat-contract-sizer';
-import 'hardhat-gas-reporter';
-import 'solidity-coverage';
+import * as dotenv from "dotenv";
+import { HardhatUserConfig, task } from "hardhat/config";
+import "@nomiclabs/hardhat-ethers";
+import "@nomiclabs/hardhat-etherscan";
+import "@nomiclabs/hardhat-waffle";
+import "@typechain/hardhat";
+import "hardhat-contract-sizer";
+import "hardhat-gas-reporter";
+import "solidity-coverage";
 
 dotenv.config();
 
@@ -24,19 +24,20 @@ dotenv.config();
 // Go to https://hardhat.org/config/ to learn more
 
 const config = {
-  solidity: '0.8.8',
+  solidity: "0.8.8",
   paths: {
-    sources: './src',
+    sources: "./src",
   },
   networks: {
     ropsten: {
-      url: process.env.ROPSTEN_URL || '',
-      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      url: process.env.ROPSTEN_URL || "",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
-    currency: 'USD',
+    currency: "USD",
   },
   contractSizer: {
     disambiguatePaths: false,
