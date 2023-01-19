@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 
-import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
+import {Error} from "@timeswap-labs/v2-library/contracts/Error.sol";
 
 /// @dev paramater for minting Timeswap V2 Tokens
 /// @param token0 The first ERC20 token address of the pair.
@@ -16,17 +16,17 @@ import {Error} from '@timeswap-labs/v2-library/contracts/Error.sol';
 /// @param shortAmount The amount of short deposited.
 /// @param data Arbitrary data passed to the callback.
 struct TimeswapV2TokenMintParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  address long0To;
-  address long1To;
-  address shortTo;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    address long0To;
+    address long1To;
+    address shortTo;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev paramater for burning Timeswap V2 Tokens
@@ -42,17 +42,17 @@ struct TimeswapV2TokenMintParam {
 /// @param shortAmount The amount of TimeswapV2Token short deposited and equivalent short position is withdrawn,
 /// @param data Arbitrary data passed to the callback, initalize as empty if not required.
 struct TimeswapV2TokenBurnParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  address long0To;
-  address long1To;
-  address shortTo;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    address long0To;
+    address long1To;
+    address shortTo;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev paramater for minting Timeswap V2 Liquidity Tokens
@@ -64,13 +64,13 @@ struct TimeswapV2TokenBurnParam {
 /// @param liquidityAmount The amount of liquidity token deposited.
 /// @param data Arbitrary data passed to the callback.
 struct TimeswapV2LiquidityTokenMintParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  address to;
-  uint160 liquidityAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    address to;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @dev paramater for burning Timeswap V2 Liquidity Tokens
@@ -82,13 +82,13 @@ struct TimeswapV2LiquidityTokenMintParam {
 /// @param liquidityAmount The amount of liquidity token withdrawn.
 /// @param data Arbitrary data passed to the callback, initalize as empty if not required.
 struct TimeswapV2LiquidityTokenBurnParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  address to;
-  uint160 liquidityAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    address to;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @dev paramater for collecting fees from Timeswap V2 Liquidity Tokens
@@ -102,50 +102,50 @@ struct TimeswapV2LiquidityTokenBurnParam {
 /// @param shortFeesDesired The maximum amount of shortFees desired to be withdrawn.
 /// @param data Arbitrary data passed to the callback, initalize as empty if not required.
 struct TimeswapV2LiquidityTokenCollectParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  address to;
-  uint256 long0FeesDesired;
-  uint256 long1FeesDesired;
-  uint256 shortFeesDesired;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    address to;
+    uint256 long0FeesDesired;
+    uint256 long1FeesDesired;
+    uint256 shortFeesDesired;
+    bytes data;
 }
 
 library ParamLibrary {
-  /// @dev Sanity checks for token mint.
-  function check(TimeswapV2TokenMintParam memory param) internal pure {
-    if (param.long0To == address(0) || param.long1To == address(0) || param.shortTo == address(0)) Error.zeroAddress();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.long0Amount == 0 && param.long1Amount == 0 && param.shortAmount == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks for token mint.
+    function check(TimeswapV2TokenMintParam memory param) internal pure {
+        if (param.long0To == address(0) || param.long1To == address(0) || param.shortTo == address(0)) Error.zeroAddress();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.long0Amount == 0 && param.long1Amount == 0 && param.shortAmount == 0) Error.zeroInput();
+    }
 
-  /// @dev Sanity checks for token burn.
-  function check(TimeswapV2TokenBurnParam memory param) internal pure {
-    if (param.long0To == address(0) || param.long1To == address(0) || param.shortTo == address(0)) Error.zeroAddress();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.long0Amount == 0 && param.long1Amount == 0 && param.shortAmount == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks for token burn.
+    function check(TimeswapV2TokenBurnParam memory param) internal pure {
+        if (param.long0To == address(0) || param.long1To == address(0) || param.shortTo == address(0)) Error.zeroAddress();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.long0Amount == 0 && param.long1Amount == 0 && param.shortAmount == 0) Error.zeroInput();
+    }
 
-  /// @dev Sanity checks for liquidity token mint.
-  function check(TimeswapV2LiquidityTokenMintParam memory param) internal pure {
-    if (param.to == address(0)) Error.zeroAddress();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.liquidityAmount == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks for liquidity token mint.
+    function check(TimeswapV2LiquidityTokenMintParam memory param) internal pure {
+        if (param.to == address(0)) Error.zeroAddress();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.liquidityAmount == 0) Error.zeroInput();
+    }
 
-  /// @dev Sanity checks for liquidity token burn.
-  function check(TimeswapV2LiquidityTokenBurnParam memory param) internal pure {
-    if (param.to == address(0)) Error.zeroAddress();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.liquidityAmount == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks for liquidity token burn.
+    function check(TimeswapV2LiquidityTokenBurnParam memory param) internal pure {
+        if (param.to == address(0)) Error.zeroAddress();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.liquidityAmount == 0) Error.zeroInput();
+    }
 
-  /// @dev Sanity checks for liquidity token collect.
-  function check(TimeswapV2LiquidityTokenCollectParam memory param) internal pure {
-    if (param.to == address(0)) Error.zeroAddress();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.long0FeesDesired == 0 && param.long1FeesDesired == 0 && param.shortFeesDesired == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks for liquidity token collect.
+    function check(TimeswapV2LiquidityTokenCollectParam memory param) internal pure {
+        if (param.to == address(0)) Error.zeroAddress();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.long0FeesDesired == 0 && param.long1FeesDesired == 0 && param.shortFeesDesired == 0) Error.zeroInput();
+    }
 }

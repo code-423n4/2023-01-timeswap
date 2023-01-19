@@ -1,9 +1,9 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
 
-import {Error} from '@timeswap-labs/v2-library/src/Error.sol';
+import {Error} from "@timeswap-labs/v2-library/src/Error.sol";
 
-import {TimeswapV2OptionMint, TimeswapV2OptionBurn, TimeswapV2OptionSwap, TimeswapV2OptionCollect, TransactionLibrary} from '../enums/Transaction.sol';
+import {TimeswapV2OptionMint, TimeswapV2OptionBurn, TimeswapV2OptionSwap, TimeswapV2OptionCollect, TransactionLibrary} from "../enums/Transaction.sol";
 
 /// @dev The parameter to call the mint function.
 /// @param strike The strike of the option.
@@ -18,15 +18,15 @@ import {TimeswapV2OptionMint, TimeswapV2OptionBurn, TimeswapV2OptionSwap, Timesw
 /// If transaction is givenShorts, the amount of short minted, where the equivalent strike converted amount is long1 positions.
 /// @param data The data to be sent to the function, which will go to the mint callback.
 struct TimeswapV2OptionMintParam {
-  uint256 strike;
-  uint256 maturity;
-  address long0To;
-  address long1To;
-  address shortTo;
-  TimeswapV2OptionMint transaction;
-  uint256 amount0;
-  uint256 amount1;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    address long0To;
+    address long1To;
+    address shortTo;
+    TimeswapV2OptionMint transaction;
+    uint256 amount0;
+    uint256 amount1;
+    bytes data;
 }
 
 /// @dev The parameter to call the burn function.
@@ -42,14 +42,14 @@ struct TimeswapV2OptionMintParam {
 /// @param data The data to be sent to the function, which will go to the burn callback.
 /// @notice If data length is zero, skips the calback.
 struct TimeswapV2OptionBurnParam {
-  uint256 strike;
-  uint256 maturity;
-  address token0To;
-  address token1To;
-  TimeswapV2OptionBurn transaction;
-  uint256 amount0;
-  uint256 amount1;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    address token0To;
+    address token1To;
+    TimeswapV2OptionBurn transaction;
+    uint256 amount0;
+    uint256 amount1;
+    bytes data;
 }
 
 /// @dev The parameter to call the swap function.
@@ -65,14 +65,14 @@ struct TimeswapV2OptionBurnParam {
 /// If isLong1ToLong0 and transaction is GivenToken1AndLong1, this is the amount of token1 withdrawn, and the amount of long1 position burnt.
 /// @param data The data to be sent to the function, which will go to the swap callback.
 struct TimeswapV2OptionSwapParam {
-  uint256 strike;
-  uint256 maturity;
-  address tokenTo;
-  address longTo;
-  bool isLong0ToLong1;
-  TimeswapV2OptionSwap transaction;
-  uint256 amount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    address tokenTo;
+    address longTo;
+    bool isLong0ToLong1;
+    TimeswapV2OptionSwap transaction;
+    uint256 amount;
+    bytes data;
 }
 
 /// @dev The parameter to call the collect function.
@@ -87,66 +87,66 @@ struct TimeswapV2OptionSwapParam {
 /// @param data The data to be sent to the function, which will go to the collect callback.
 /// @notice If data length is zero, skips the calback.
 struct TimeswapV2OptionCollectParam {
-  uint256 strike;
-  uint256 maturity;
-  address token0To;
-  address token1To;
-  TimeswapV2OptionCollect transaction;
-  uint256 amount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    address token0To;
+    address token1To;
+    TimeswapV2OptionCollect transaction;
+    uint256 amount;
+    bytes data;
 }
 
 library ParamLibrary {
-  /// @dev Sanity checks
-  /// @param param the parameter for mint transaction.
-  /// @param blockTimestamp the current block timestamp.
-  function check(TimeswapV2OptionMintParam memory param, uint96 blockTimestamp) internal pure {
-    if (param.strike == 0) Error.zeroInput();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.maturity <= blockTimestamp) Error.alreadyMatured(param.maturity, blockTimestamp);
-    if (param.shortTo == address(0)) Error.zeroAddress();
-    if (param.long0To == address(0)) Error.zeroAddress();
-    if (param.long1To == address(0)) Error.zeroAddress();
-    TransactionLibrary.check(param.transaction);
-    if (param.amount0 == 0 && param.amount1 == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks
+    /// @param param the parameter for mint transaction.
+    /// @param blockTimestamp the current block timestamp.
+    function check(TimeswapV2OptionMintParam memory param, uint96 blockTimestamp) internal pure {
+        if (param.strike == 0) Error.zeroInput();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.maturity <= blockTimestamp) Error.alreadyMatured(param.maturity, blockTimestamp);
+        if (param.shortTo == address(0)) Error.zeroAddress();
+        if (param.long0To == address(0)) Error.zeroAddress();
+        if (param.long1To == address(0)) Error.zeroAddress();
+        TransactionLibrary.check(param.transaction);
+        if (param.amount0 == 0 && param.amount1 == 0) Error.zeroInput();
+    }
 
-  /// @dev Sanity checks
-  /// @param param the parameter for burn transaction.
-  /// @param blockTimestamp the current block timestamp.
-  function check(TimeswapV2OptionBurnParam memory param, uint96 blockTimestamp) internal pure {
-    if (param.strike == 0) Error.zeroInput();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.maturity <= blockTimestamp) Error.alreadyMatured(param.maturity, blockTimestamp);
-    if (param.token0To == address(0)) Error.zeroAddress();
-    if (param.token1To == address(0)) Error.zeroAddress();
-    TransactionLibrary.check(param.transaction);
-    if (param.amount0 == 0 && param.amount1 == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks
+    /// @param param the parameter for burn transaction.
+    /// @param blockTimestamp the current block timestamp.
+    function check(TimeswapV2OptionBurnParam memory param, uint96 blockTimestamp) internal pure {
+        if (param.strike == 0) Error.zeroInput();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.maturity <= blockTimestamp) Error.alreadyMatured(param.maturity, blockTimestamp);
+        if (param.token0To == address(0)) Error.zeroAddress();
+        if (param.token1To == address(0)) Error.zeroAddress();
+        TransactionLibrary.check(param.transaction);
+        if (param.amount0 == 0 && param.amount1 == 0) Error.zeroInput();
+    }
 
-  /// @dev Sanity checks
-  /// @param param the parameter for swap transaction.
-  /// @param blockTimestamp the current block timestamp.
-  function check(TimeswapV2OptionSwapParam memory param, uint96 blockTimestamp) internal pure {
-    if (param.strike == 0) Error.zeroInput();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.maturity <= blockTimestamp) Error.alreadyMatured(param.maturity, blockTimestamp);
-    if (param.tokenTo == address(0)) Error.zeroAddress();
-    if (param.longTo == address(0)) Error.zeroAddress();
-    TransactionLibrary.check(param.transaction);
-    if (param.amount == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks
+    /// @param param the parameter for swap transaction.
+    /// @param blockTimestamp the current block timestamp.
+    function check(TimeswapV2OptionSwapParam memory param, uint96 blockTimestamp) internal pure {
+        if (param.strike == 0) Error.zeroInput();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.maturity <= blockTimestamp) Error.alreadyMatured(param.maturity, blockTimestamp);
+        if (param.tokenTo == address(0)) Error.zeroAddress();
+        if (param.longTo == address(0)) Error.zeroAddress();
+        TransactionLibrary.check(param.transaction);
+        if (param.amount == 0) Error.zeroInput();
+    }
 
-  /// @dev Sanity checks
-  /// @param param the parameter for collect transaction.
-  /// @param blockTimestamp the current block timestamp.
-  function check(TimeswapV2OptionCollectParam memory param, uint96 blockTimestamp) internal pure {
-    if (param.strike == 0) Error.zeroInput();
-    if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
-    if (param.maturity > blockTimestamp) Error.stillActive(param.maturity, blockTimestamp);
-    if (param.token0To == address(0)) Error.zeroAddress();
-    if (param.token1To == address(0)) Error.zeroAddress();
-    TransactionLibrary.check(param.transaction);
-    if (param.amount == 0) Error.zeroInput();
-  }
+    /// @dev Sanity checks
+    /// @param param the parameter for collect transaction.
+    /// @param blockTimestamp the current block timestamp.
+    function check(TimeswapV2OptionCollectParam memory param, uint96 blockTimestamp) internal pure {
+        if (param.strike == 0) Error.zeroInput();
+        if (param.maturity > type(uint96).max) Error.incorrectMaturity(param.maturity);
+        if (param.maturity > blockTimestamp) Error.stillActive(param.maturity, blockTimestamp);
+        if (param.token0To == address(0)) Error.zeroAddress();
+        if (param.token1To == address(0)) Error.zeroAddress();
+        TransactionLibrary.check(param.transaction);
+        if (param.amount == 0) Error.zeroInput();
+    }
 }

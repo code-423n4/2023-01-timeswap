@@ -5,6 +5,6 @@ pragma solidity =0.8.8;
 /// @param strike The strike.
 /// @param maturity The maturity.
 struct StrikeAndMaturity {
-  uint256 strike;
-  uint256 maturity;
+    uint256 strike;
+    uint256 maturity;
 }

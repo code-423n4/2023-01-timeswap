@@ -11,14 +11,14 @@ pragma solidity ^0.8.8;
 /// @param shortAmount The amount of short deposited.
 /// @param data Arbitrary data passed to the callback.
 struct TimeswapV2TokenMintCallbackParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev paramater for burning Timeswap V2 Tokens
@@ -31,14 +31,14 @@ struct TimeswapV2TokenMintCallbackParam {
 /// @param shortAmount The amount of short withdrawn.
 /// @param data Arbitrary data passed to the callback, initalize as empty if not required.
 struct TimeswapV2TokenBurnCallbackParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @param token0 The first ERC20 token address of the pair.
@@ -48,12 +48,12 @@ struct TimeswapV2TokenBurnCallbackParam {
 /// @param liquidity The amount of liquidity increase.
 /// @param data data
 struct TimeswapV2LiquidityTokenMintCallbackParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  uint160 liquidityAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @param token0 The first ERC20 token address of the pair.
@@ -63,12 +63,12 @@ struct TimeswapV2LiquidityTokenMintCallbackParam {
 /// @param liquidity The amount of liquidity decrease.
 /// @param data data
 struct TimeswapV2LiquidityTokenBurnCallbackParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  uint160 liquidityAmount;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @param token0 The first ERC20 token address of the pair.
@@ -80,12 +80,12 @@ struct TimeswapV2LiquidityTokenBurnCallbackParam {
 /// @param shortFees The amount of short fees withdrawn.
 /// @param data data
 struct TimeswapV2LiquidityTokenCollectCallbackParam {
-  address token0;
-  address token1;
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Fees;
-  uint256 long1Fees;
-  uint256 shortFees;
-  bytes data;
+    address token0;
+    address token1;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Fees;
+    uint256 long1Fees;
+    uint256 shortFees;
+    bytes data;
 }

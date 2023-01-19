@@ -9,12 +9,12 @@ pragma solidity =0.8.8;
 /// @param shortAmount The short amount minted.
 /// @param data The bytes code data sent to the callback.
 struct TimeswapV2OptionMintCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 token0AndLong0Amount;
-  uint256 token1AndLong1Amount;
-  uint256 shortAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 token0AndLong0Amount;
+    uint256 token1AndLong1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev Parameter for the burn callback.
@@ -25,12 +25,12 @@ struct TimeswapV2OptionMintCallbackParam {
 /// @param shortAmount The short amount burnt.
 /// @param data The bytes code data sent to the callback.
 struct TimeswapV2OptionBurnCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 token0AndLong0Amount;
-  uint256 token1AndLong1Amount;
-  uint256 shortAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 token0AndLong0Amount;
+    uint256 token1AndLong1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev Parameter for the swap callback.
@@ -43,12 +43,12 @@ struct TimeswapV2OptionBurnCallbackParam {
 /// If isLong0ToLong1 is false, the amount of long1 burnt and token1 to be withdrawn.
 /// @param data The bytes code data sent to the callback.
 struct TimeswapV2OptionSwapCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  bool isLong0ToLong1;
-  uint256 token0AndLong0Amount;
-  uint256 token1AndLong1Amount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    bool isLong0ToLong1;
+    uint256 token0AndLong0Amount;
+    uint256 token1AndLong1Amount;
+    bytes data;
 }
 
 /// @dev Parameter for the collect callback.
@@ -59,10 +59,10 @@ struct TimeswapV2OptionSwapCallbackParam {
 /// @param shortAmount The short amount burnt.
 /// @param data The bytes code data sent to the callback.
 struct TimeswapV2OptionCollectCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 token0Amount;
-  uint256 token1Amount;
-  uint256 shortAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 token0Amount;
+    uint256 token1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
