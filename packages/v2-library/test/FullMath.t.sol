@@ -4,16 +4,16 @@ pragma solidity ^0.8.0;
 
 import "forge-std/Test.sol";
 
-import "../src/FullMath.sol";
+import {FullMathExt} from "../src/wrapped/FullMathExt.sol";
 import "../src/Math.sol";
 
 // import "../../../contracts/utils/math/SafeMath.sol";
 
-contract MathTest is Test {
+contract FullMathTest is Test {
     //ADD512
     function testAdd512(uint256 a0, uint256 a1, uint256 b0, uint256 b1) public {
         vm.assume(checkAdd512Overflow(a0, a1, b0, b1) == true);
-        (uint256 r0, uint256 r1) = FullMath.add512(a0, a1, b0, b1);
+        (uint256 r0, uint256 r1) = FullMathExt.add512(a0, a1, b0, b1);
         (uint256 rPrime0, uint256 carry) = _addCarry(a0, b0);
         uint256 rPrime1 = carry + a1 + b1;
         assertGe(rPrime1, a1 + b1);
@@ -25,7 +25,7 @@ contract MathTest is Test {
     //SUB512
     function testSub512(uint256 a0, uint256 a1, uint256 b0, uint256 b1) public {
         vm.assume(checkSub512Underflow(a0, a1, b0, b1) == true);
-        (uint256 r0, uint256 r1) = FullMath.sub512(a0, a1, b0, b1);
+        (uint256 r0, uint256 r1) = FullMathExt.sub512(a0, a1, b0, b1);
         assertLe(r1, a1);
         if (b0 > a0) {
             assertGe(r0, a0);
@@ -36,17 +36,18 @@ contract MathTest is Test {
 
     //DIV512
     // function testDiv512to256(uint256 a0, uint256 a1, uint256 b) public {
-    //   vm.assume(b != 0);
-    //   (uint256 quotient, uint256 quotient1) = div512(a0, a1, b);
-    //   vm.assume(quotient1 == 0 && (quotient < (1 << 255)));
-    //   (uint256 resDown, uint256 resUp) = (FullMath.div512To256(a0, a1, b, false), FullMath.div512To256(a0, a1, b, true));
-    //   assertGe(1, resUp - resDown);
+    //     vm.assume(b != 0);
+
+    //     (uint256 quotient, uint256 quotient1) = div512(a0, a1, b);
+    //     vm.assume(quotient1 == 0 && (quotient < (1 << 255)));
+    //     (uint256 resDown, uint256 resUp) = (FullMathExt.div512To256(a0, a1, b, false), FullMathExt.div512To256(a0, a1, b, true));
+    //     assertGe(1, resUp - resDown);
     // }
 
     function testSqrt512(uint256 a0, uint256 a1) public {
         vm.assume((a1 == 1 && a0 == 0) || a1 == 0);
-        uint256 resultDown = FullMath.sqrt512(a0, a1, false);
-        uint256 resultUp = FullMath.sqrt512(a0, a1, true);
+        uint256 resultDown = FullMathExt.sqrt512(a0, a1, false);
+        uint256 resultUp = FullMathExt.sqrt512(a0, a1, true);
 
         assertGe(1, resultUp - resultDown);
     }
@@ -61,7 +62,7 @@ contract MathTest is Test {
         vm.assume(xyHi < d);
 
         // Perform muldiv
-        uint256 q = FullMath.mulDiv(x, y, d, false);
+        uint256 q = FullMathExt.mulDiv(x, y, d, false);
 
         // Full precision for q * d
         (uint256 qdHi, uint256 qdLo) = _mulHighLow(q, d);
@@ -145,11 +146,11 @@ contract MathTest is Test {
             uint256 r = mod256(b);
             while (a1 != 0) {
                 (uint256 t0, uint256 t1) = mul512(a1, q);
-                (x0, x1) = FullMath.add512(x0, x1, t0, t1);
-                (t0, t1) = FullMath.mul512(a1, r);
-                (a0, a1) = FullMath.add512(t0, t1, a0, 0);
+                (x0, x1) = FullMathExt.add512(x0, x1, t0, t1);
+                (t0, t1) = FullMathExt.mul512(a1, r);
+                (a0, a1) = FullMathExt.add512(t0, t1, a0, 0);
             }
-            (x0, x1) = FullMath.add512(x0, x1, a0 / b, 0);
+            (x0, x1) = FullMathExt.add512(x0, x1, a0 / b, 0);
         }
     }
 
