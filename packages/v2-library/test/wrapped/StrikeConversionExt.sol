@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity =0.8.8;
-import "../StrikeConversion.sol";
+import "../../src/StrikeConversion.sol";
 
 library StrikeConversionExt {
     function convert(uint256 amount, uint256 strike, bool zeroToOne, bool roundUp) external pure returns (uint256) {
