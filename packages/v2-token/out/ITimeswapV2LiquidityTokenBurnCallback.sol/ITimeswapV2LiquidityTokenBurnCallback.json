@@ -1,0 +1,356 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint160",
+              "name": "liquidityAmount",
+              "type": "uint160"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2LiquidityTokenBurnCallbackParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "timeswapV2LiquidityTokenBurnCallback",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "timeswapV2LiquidityTokenBurnCallback((address,address,uint256,uint256,uint160,bytes))": "aef2b334"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"uint160\",\"name\":\"liquidityAmount\",\"type\":\"uint160\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2LiquidityTokenBurnCallbackParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"timeswapV2LiquidityTokenBurnCallback\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"timeswapV2LiquidityTokenBurnCallback((address,address,uint256,uint256,uint160,bytes))\":{\"details\":\"Callback for `ITimeswapV2LiquidityToken.burn`\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/callbacks/ITimeswapV2LiquidityTokenBurnCallback.sol\":\"ITimeswapV2LiquidityTokenBurnCallback\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/interfaces/callbacks/ITimeswapV2LiquidityTokenBurnCallback.sol\":{\"keccak256\":\"0x479abf65d3715ddd38e3ffa857bc152c4fec591ee07b1ddea1d3625c0f727c9a\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://7334f5ba217ae17d8f71cce5282ef16fb349034b039f20a56850c62f12300c7c\",\"dweb:/ipfs/QmVWMJckm5ujVJgJkXf9JeBeRuJR1mwWja3rYCF5ytEbaF\"]},\"src/structs/CallbackParam.sol\":{\"keccak256\":\"0x9dfea774832aeb4e968674b4d875557a328d040d1c67cdd77ac7dfeed1ba81ee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d675677462c3639b43ddd8210712284418ad08c3e2a493eb0079988e5529bb71\",\"dweb:/ipfs/QmNmqLe3Heda5dxdgUfdDa2ynRXTrwDP2AJwXWsxSQ258f\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2LiquidityTokenBurnCallbackParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token0",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token1",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint160",
+                  "name": "liquidityAmount",
+                  "type": "uint160"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "timeswapV2LiquidityTokenBurnCallback",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "timeswapV2LiquidityTokenBurnCallback((address,address,uint256,uint256,uint160,bytes))": {
+            "details": "Callback for `ITimeswapV2LiquidityToken.burn`"
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/callbacks/ITimeswapV2LiquidityTokenBurnCallback.sol": "ITimeswapV2LiquidityTokenBurnCallback"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/callbacks/ITimeswapV2LiquidityTokenBurnCallback.sol": {
+        "keccak256": "0x479abf65d3715ddd38e3ffa857bc152c4fec591ee07b1ddea1d3625c0f727c9a",
+        "urls": [
+          "bzz-raw://7334f5ba217ae17d8f71cce5282ef16fb349034b039f20a56850c62f12300c7c",
+          "dweb:/ipfs/QmVWMJckm5ujVJgJkXf9JeBeRuJR1mwWja3rYCF5ytEbaF"
+        ],
+        "license": "Unlicense"
+      },
+      "src/structs/CallbackParam.sol": {
+        "keccak256": "0x9dfea774832aeb4e968674b4d875557a328d040d1c67cdd77ac7dfeed1ba81ee",
+        "urls": [
+          "bzz-raw://d675677462c3639b43ddd8210712284418ad08c3e2a493eb0079988e5529bb71",
+          "dweb:/ipfs/QmNmqLe3Heda5dxdgUfdDa2ynRXTrwDP2AJwXWsxSQ258f"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/callbacks/ITimeswapV2LiquidityTokenBurnCallback.sol",
+    "id": 35363,
+    "exportedSymbols": {
+      "ITimeswapV2LiquidityTokenBurnCallback": [
+        35362
+      ],
+      "TimeswapV2LiquidityTokenBurnCallbackParam": [
+        35480
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:374:66",
+    "nodes": [
+      {
+        "id": 35350,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:66",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 35352,
+        "nodeType": "ImportDirective",
+        "src": "62:90:66",
+        "nodes": [],
+        "absolutePath": "src/structs/CallbackParam.sol",
+        "file": "../../structs/CallbackParam.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 35363,
+        "sourceUnit": 35498,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 35351,
+              "name": "TimeswapV2LiquidityTokenBurnCallbackParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:41:66",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 35362,
+        "nodeType": "ContractDefinition",
+        "src": "154:256:66",
+        "nodes": [
+          {
+            "id": 35361,
+            "nodeType": "FunctionDefinition",
+            "src": "267:141:66",
+            "nodes": [],
+            "documentation": {
+              "id": 35353,
+              "nodeType": "StructuredDocumentation",
+              "src": "208:54:66",
+              "text": "@dev Callback for `ITimeswapV2LiquidityToken.burn`"
+            },
+            "functionSelector": "aef2b334",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "timeswapV2LiquidityTokenBurnCallback",
+            "nameLocation": "276:36:66",
+            "parameters": {
+              "id": 35357,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35356,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "364:5:66",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35361,
+                  "src": "313:56:66",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenBurnCallbackParam_$35480_calldata_ptr",
+                    "typeString": "struct TimeswapV2LiquidityTokenBurnCallbackParam"
+                  },
+                  "typeName": {
+                    "id": 35355,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 35354,
+                      "name": "TimeswapV2LiquidityTokenBurnCallbackParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 35480,
+                      "src": "313:41:66"
+                    },
+                    "referencedDeclaration": 35480,
+                    "src": "313:41:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenBurnCallbackParam_$35480_storage_ptr",
+                      "typeString": "struct TimeswapV2LiquidityTokenBurnCallbackParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "312:58:66"
+            },
+            "returnParameters": {
+              "id": 35360,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35359,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "402:4:66",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35361,
+                  "src": "389:17:66",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 35358,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "389:5:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "388:19:66"
+            },
+            "scope": 35362,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          35362
+        ],
+        "name": "ITimeswapV2LiquidityTokenBurnCallback",
+        "nameLocation": "164:37:66",
+        "scope": 35363,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 66
+}

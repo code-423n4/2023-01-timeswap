@@ -1,0 +1,376 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2TokenBurnCallbackParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "timeswapV2TokenBurnCallback",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "timeswapV2TokenBurnCallback((address,address,uint256,uint256,uint256,uint256,uint256,bytes))": "fb05b8fe"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"long0Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"long1Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"shortAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2TokenBurnCallbackParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"timeswapV2TokenBurnCallback\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"timeswapV2TokenBurnCallback((address,address,uint256,uint256,uint256,uint256,uint256,bytes))\":{\"details\":\"Callback for `ITimeswapV2Token.burn`\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/callbacks/ITimeswapV2TokenBurnCallback.sol\":\"ITimeswapV2TokenBurnCallback\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/interfaces/callbacks/ITimeswapV2TokenBurnCallback.sol\":{\"keccak256\":\"0xd1058eba7241ba032b9521ba97645f1dbf3d844c6b2906968e7decc396b2f029\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://b6bf555543db5c59735099c3596365b01918dec7ef4a604afb11d76d2b0d6c78\",\"dweb:/ipfs/QmP5JGxkmik91NiB9crCkyAhrvRmgMWK31sYHjLBEcHwck\"]},\"src/structs/CallbackParam.sol\":{\"keccak256\":\"0x9dfea774832aeb4e968674b4d875557a328d040d1c67cdd77ac7dfeed1ba81ee\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d675677462c3639b43ddd8210712284418ad08c3e2a493eb0079988e5529bb71\",\"dweb:/ipfs/QmNmqLe3Heda5dxdgUfdDa2ynRXTrwDP2AJwXWsxSQ258f\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2TokenBurnCallbackParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token0",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token1",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "long0Amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "long1Amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "shortAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "timeswapV2TokenBurnCallback",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "timeswapV2TokenBurnCallback((address,address,uint256,uint256,uint256,uint256,uint256,bytes))": {
+            "details": "Callback for `ITimeswapV2Token.burn`"
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/callbacks/ITimeswapV2TokenBurnCallback.sol": "ITimeswapV2TokenBurnCallback"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/callbacks/ITimeswapV2TokenBurnCallback.sol": {
+        "keccak256": "0xd1058eba7241ba032b9521ba97645f1dbf3d844c6b2906968e7decc396b2f029",
+        "urls": [
+          "bzz-raw://b6bf555543db5c59735099c3596365b01918dec7ef4a604afb11d76d2b0d6c78",
+          "dweb:/ipfs/QmP5JGxkmik91NiB9crCkyAhrvRmgMWK31sYHjLBEcHwck"
+        ],
+        "license": "Unlicense"
+      },
+      "src/structs/CallbackParam.sol": {
+        "keccak256": "0x9dfea774832aeb4e968674b4d875557a328d040d1c67cdd77ac7dfeed1ba81ee",
+        "urls": [
+          "bzz-raw://d675677462c3639b43ddd8210712284418ad08c3e2a493eb0079988e5529bb71",
+          "dweb:/ipfs/QmNmqLe3Heda5dxdgUfdDa2ynRXTrwDP2AJwXWsxSQ258f"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/callbacks/ITimeswapV2TokenBurnCallback.sol",
+    "id": 35405,
+    "exportedSymbols": {
+      "ITimeswapV2TokenBurnCallback": [
+        35404
+      ],
+      "TimeswapV2TokenBurnCallbackParam": [
+        35454
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:329:69",
+    "nodes": [
+      {
+        "id": 35392,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:69",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 35394,
+        "nodeType": "ImportDirective",
+        "src": "62:81:69",
+        "nodes": [],
+        "absolutePath": "src/structs/CallbackParam.sol",
+        "file": "../../structs/CallbackParam.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 35405,
+        "sourceUnit": 35498,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 35393,
+              "name": "TimeswapV2TokenBurnCallbackParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:32:69",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 35404,
+        "nodeType": "ContractDefinition",
+        "src": "145:220:69",
+        "nodes": [
+          {
+            "id": 35403,
+            "nodeType": "FunctionDefinition",
+            "src": "240:123:69",
+            "nodes": [],
+            "documentation": {
+              "id": 35395,
+              "nodeType": "StructuredDocumentation",
+              "src": "190:45:69",
+              "text": "@dev Callback for `ITimeswapV2Token.burn`"
+            },
+            "functionSelector": "fb05b8fe",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "timeswapV2TokenBurnCallback",
+            "nameLocation": "249:27:69",
+            "parameters": {
+              "id": 35399,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35398,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "319:5:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35403,
+                  "src": "277:47:69",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2TokenBurnCallbackParam_$35454_calldata_ptr",
+                    "typeString": "struct TimeswapV2TokenBurnCallbackParam"
+                  },
+                  "typeName": {
+                    "id": 35397,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 35396,
+                      "name": "TimeswapV2TokenBurnCallbackParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 35454,
+                      "src": "277:32:69"
+                    },
+                    "referencedDeclaration": 35454,
+                    "src": "277:32:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2TokenBurnCallbackParam_$35454_storage_ptr",
+                      "typeString": "struct TimeswapV2TokenBurnCallbackParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "276:49:69"
+            },
+            "returnParameters": {
+              "id": 35402,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35401,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "357:4:69",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35403,
+                  "src": "344:17:69",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 35400,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "344:5:69",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "343:19:69"
+            },
+            "scope": 35404,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          35404
+        ],
+        "name": "ITimeswapV2TokenBurnCallback",
+        "nameLocation": "155:28:69",
+        "scope": 35405,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 69
+}

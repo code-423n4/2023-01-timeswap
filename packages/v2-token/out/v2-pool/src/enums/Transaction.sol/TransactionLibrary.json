@@ -1,0 +1,1449 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InvalidTransaction",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220199bae0c774dbfddf2ba4c418e737450d492dae91e3f7c6af365a0eee2e5726264736f6c63430008080033",
+    "sourceMap": "769:1227:19:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;769:1227:19;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220199bae0c774dbfddf2ba4c418e737450d492dae91e3f7c6af365a0eee2e5726264736f6c63430008080033",
+    "sourceMap": "769:1227:19:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidTransaction\",\"type\":\"error\"}],\"devdoc\":{\"errors\":{\"InvalidTransaction()\":[{\"details\":\"Reverts when the given type of transaction is invalid.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"../v2-pool/src/enums/Transaction.sol\":\"TransactionLibrary\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"../v2-pool/src/enums/Transaction.sol\":{\"keccak256\":\"0xb41c51615d22512dade35baf4eb2743ba630449de343e6772cbaafec7342638e\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://daee04dd698d030ff0aa62d513be238674ad58551ac910a6ac3d493fbaf07272\",\"dweb:/ipfs/QmYpD3aHV2ipSFBDkjGqCsjhghS3LStHZnh8raeVwxdUzT\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InvalidTransaction"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "../v2-pool/src/enums/Transaction.sol": "TransactionLibrary"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "../v2-pool/src/enums/Transaction.sol": {
+        "keccak256": "0xb41c51615d22512dade35baf4eb2743ba630449de343e6772cbaafec7342638e",
+        "urls": [
+          "bzz-raw://daee04dd698d030ff0aa62d513be238674ad58551ac910a6ac3d493fbaf07272",
+          "dweb:/ipfs/QmYpD3aHV2ipSFBDkjGqCsjhghS3LStHZnh8raeVwxdUzT"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "../v2-pool/src/enums/Transaction.sol",
+    "id": 38127,
+    "exportedSymbols": {
+      "TimeswapV2PoolBurn": [
+        38011
+      ],
+      "TimeswapV2PoolDeleverage": [
+        38016
+      ],
+      "TimeswapV2PoolLeverage": [
+        38021
+      ],
+      "TimeswapV2PoolMint": [
+        38006
+      ],
+      "TimeswapV2PoolRebalance": [
+        38024
+      ],
+      "TransactionLibrary": [
+        38126
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1960:19",
+    "nodes": [
+      {
+        "id": 38001,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:19",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 38006,
+        "nodeType": "EnumDefinition",
+        "src": "112:86:19",
+        "nodes": [],
+        "canonicalName": "TimeswapV2PoolMint",
+        "members": [
+          {
+            "id": 38002,
+            "name": "GivenLiquidity",
+            "nameLocation": "140:14:19",
+            "nodeType": "EnumValue",
+            "src": "140:14:19"
+          },
+          {
+            "id": 38003,
+            "name": "GivenLong",
+            "nameLocation": "158:9:19",
+            "nodeType": "EnumValue",
+            "src": "158:9:19"
+          },
+          {
+            "id": 38004,
+            "name": "GivenShort",
+            "nameLocation": "171:10:19",
+            "nodeType": "EnumValue",
+            "src": "171:10:19"
+          },
+          {
+            "id": 38005,
+            "name": "GivenLarger",
+            "nameLocation": "185:11:19",
+            "nodeType": "EnumValue",
+            "src": "185:11:19"
+          }
+        ],
+        "name": "TimeswapV2PoolMint",
+        "nameLocation": "117:18:19"
+      },
+      {
+        "id": 38011,
+        "nodeType": "EnumDefinition",
+        "src": "250:87:19",
+        "nodes": [],
+        "canonicalName": "TimeswapV2PoolBurn",
+        "members": [
+          {
+            "id": 38007,
+            "name": "GivenLiquidity",
+            "nameLocation": "278:14:19",
+            "nodeType": "EnumValue",
+            "src": "278:14:19"
+          },
+          {
+            "id": 38008,
+            "name": "GivenLong",
+            "nameLocation": "296:9:19",
+            "nodeType": "EnumValue",
+            "src": "296:9:19"
+          },
+          {
+            "id": 38009,
+            "name": "GivenShort",
+            "nameLocation": "309:10:19",
+            "nodeType": "EnumValue",
+            "src": "309:10:19"
+          },
+          {
+            "id": 38010,
+            "name": "GivenSmaller",
+            "nameLocation": "323:12:19",
+            "nodeType": "EnumValue",
+            "src": "323:12:19"
+          }
+        ],
+        "name": "TimeswapV2PoolBurn",
+        "nameLocation": "255:18:19"
+      },
+      {
+        "id": 38016,
+        "nodeType": "EnumDefinition",
+        "src": "395:101:19",
+        "nodes": [],
+        "canonicalName": "TimeswapV2PoolDeleverage",
+        "members": [
+          {
+            "id": 38012,
+            "name": "GivenDeltaSqrtInterestRate",
+            "nameLocation": "429:26:19",
+            "nodeType": "EnumValue",
+            "src": "429:26:19"
+          },
+          {
+            "id": 38013,
+            "name": "GivenLong",
+            "nameLocation": "459:9:19",
+            "nodeType": "EnumValue",
+            "src": "459:9:19"
+          },
+          {
+            "id": 38014,
+            "name": "GivenShort",
+            "nameLocation": "472:10:19",
+            "nodeType": "EnumValue",
+            "src": "472:10:19"
+          },
+          {
+            "id": 38015,
+            "name": "GivenSum",
+            "nameLocation": "486:8:19",
+            "nodeType": "EnumValue",
+            "src": "486:8:19"
+          }
+        ],
+        "name": "TimeswapV2PoolDeleverage",
+        "nameLocation": "400:24:19"
+      },
+      {
+        "id": 38021,
+        "nodeType": "EnumDefinition",
+        "src": "552:99:19",
+        "nodes": [],
+        "canonicalName": "TimeswapV2PoolLeverage",
+        "members": [
+          {
+            "id": 38017,
+            "name": "GivenDeltaSqrtInterestRate",
+            "nameLocation": "584:26:19",
+            "nodeType": "EnumValue",
+            "src": "584:26:19"
+          },
+          {
+            "id": 38018,
+            "name": "GivenLong",
+            "nameLocation": "614:9:19",
+            "nodeType": "EnumValue",
+            "src": "614:9:19"
+          },
+          {
+            "id": 38019,
+            "name": "GivenShort",
+            "nameLocation": "627:10:19",
+            "nodeType": "EnumValue",
+            "src": "627:10:19"
+          },
+          {
+            "id": 38020,
+            "name": "GivenSum",
+            "nameLocation": "641:8:19",
+            "nodeType": "EnumValue",
+            "src": "641:8:19"
+          }
+        ],
+        "name": "TimeswapV2PoolLeverage",
+        "nameLocation": "557:22:19"
+      },
+      {
+        "id": 38024,
+        "nodeType": "EnumDefinition",
+        "src": "708:59:19",
+        "nodes": [],
+        "canonicalName": "TimeswapV2PoolRebalance",
+        "members": [
+          {
+            "id": 38022,
+            "name": "GivenLong0",
+            "nameLocation": "741:10:19",
+            "nodeType": "EnumValue",
+            "src": "741:10:19"
+          },
+          {
+            "id": 38023,
+            "name": "GivenLong1",
+            "nameLocation": "755:10:19",
+            "nodeType": "EnumValue",
+            "src": "755:10:19"
+          }
+        ],
+        "name": "TimeswapV2PoolRebalance",
+        "nameLocation": "713:23:19"
+      },
+      {
+        "id": 38126,
+        "nodeType": "ContractDefinition",
+        "src": "769:1227:19",
+        "nodes": [
+          {
+            "id": 38027,
+            "nodeType": "ErrorDefinition",
+            "src": "866:27:19",
+            "nodes": [],
+            "documentation": {
+              "id": 38025,
+              "nodeType": "StructuredDocumentation",
+              "src": "800:63:19",
+              "text": "@dev Reverts when the given type of transaction is invalid."
+            },
+            "name": "InvalidTransaction",
+            "nameLocation": "872:18:19",
+            "parameters": {
+              "id": 38026,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "890:2:19"
+            }
+          },
+          {
+            "id": 38035,
+            "nodeType": "FunctionDefinition",
+            "src": "962:82:19",
+            "nodes": [],
+            "body": {
+              "id": 38034,
+              "nodeType": "Block",
+              "src": "1006:38:19",
+              "nodes": [],
+              "statements": [
+                {
+                  "errorCall": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 38031,
+                      "name": "InvalidTransaction",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38027,
+                      "src": "1019:18:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 38032,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1019:20:19",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 38033,
+                  "nodeType": "RevertStatement",
+                  "src": "1012:27:19"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38028,
+              "nodeType": "StructuredDocumentation",
+              "src": "897:62:19",
+              "text": "@dev Function to revert with the error InvalidTransaction."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "invalidTransaction",
+            "nameLocation": "971:18:19",
+            "parameters": {
+              "id": 38029,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "989:2:19"
+            },
+            "returnParameters": {
+              "id": 38030,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1006:0:19"
+            },
+            "scope": 38126,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38053,
+            "nodeType": "FunctionDefinition",
+            "src": "1098:130:19",
+            "nodes": [],
+            "body": {
+              "id": 38052,
+              "nodeType": "Block",
+              "src": "1159:69:19",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 38047,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 38044,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38039,
+                          "src": "1177:11:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolMint_$38006",
+                            "typeString": "enum TimeswapV2PoolMint"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolMint_$38006",
+                            "typeString": "enum TimeswapV2PoolMint"
+                          }
+                        ],
+                        "id": 38043,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1169:7:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 38042,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1169:7:19",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 38045,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1169:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "34",
+                      "id": 38046,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1193:1:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "src": "1169:25:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 38051,
+                  "nodeType": "IfStatement",
+                  "src": "1165:58:19",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 38048,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38027,
+                        "src": "1203:18:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 38049,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1203:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 38050,
+                    "nodeType": "RevertStatement",
+                    "src": "1196:27:19"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38036,
+              "nodeType": "StructuredDocumentation",
+              "src": "1048:47:19",
+              "text": "@dev Sanity checks for the mint parameters."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1107:5:19",
+            "parameters": {
+              "id": 38040,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38039,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1132:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38053,
+                  "src": "1113:30:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2PoolMint_$38006",
+                    "typeString": "enum TimeswapV2PoolMint"
+                  },
+                  "typeName": {
+                    "id": 38038,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38037,
+                      "name": "TimeswapV2PoolMint",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 38006,
+                      "src": "1113:18:19"
+                    },
+                    "referencedDeclaration": 38006,
+                    "src": "1113:18:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2PoolMint_$38006",
+                      "typeString": "enum TimeswapV2PoolMint"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1112:32:19"
+            },
+            "returnParameters": {
+              "id": 38041,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1159:0:19"
+            },
+            "scope": 38126,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38071,
+            "nodeType": "FunctionDefinition",
+            "src": "1282:130:19",
+            "nodes": [],
+            "body": {
+              "id": 38070,
+              "nodeType": "Block",
+              "src": "1343:69:19",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 38065,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 38062,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38057,
+                          "src": "1361:11:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolBurn_$38011",
+                            "typeString": "enum TimeswapV2PoolBurn"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolBurn_$38011",
+                            "typeString": "enum TimeswapV2PoolBurn"
+                          }
+                        ],
+                        "id": 38061,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1353:7:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 38060,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1353:7:19",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 38063,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1353:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "34",
+                      "id": 38064,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1377:1:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "src": "1353:25:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 38069,
+                  "nodeType": "IfStatement",
+                  "src": "1349:58:19",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 38066,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38027,
+                        "src": "1387:18:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 38067,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1387:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 38068,
+                    "nodeType": "RevertStatement",
+                    "src": "1380:27:19"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38054,
+              "nodeType": "StructuredDocumentation",
+              "src": "1232:47:19",
+              "text": "@dev Sanity checks for the burn parameters."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1291:5:19",
+            "parameters": {
+              "id": 38058,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38057,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1316:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38071,
+                  "src": "1297:30:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2PoolBurn_$38011",
+                    "typeString": "enum TimeswapV2PoolBurn"
+                  },
+                  "typeName": {
+                    "id": 38056,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38055,
+                      "name": "TimeswapV2PoolBurn",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 38011,
+                      "src": "1297:18:19"
+                    },
+                    "referencedDeclaration": 38011,
+                    "src": "1297:18:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2PoolBurn_$38011",
+                      "typeString": "enum TimeswapV2PoolBurn"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1296:32:19"
+            },
+            "returnParameters": {
+              "id": 38059,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1343:0:19"
+            },
+            "scope": 38126,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38089,
+            "nodeType": "FunctionDefinition",
+            "src": "1472:136:19",
+            "nodes": [],
+            "body": {
+              "id": 38088,
+              "nodeType": "Block",
+              "src": "1539:69:19",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 38083,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 38080,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38075,
+                          "src": "1557:11:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolDeleverage_$38016",
+                            "typeString": "enum TimeswapV2PoolDeleverage"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolDeleverage_$38016",
+                            "typeString": "enum TimeswapV2PoolDeleverage"
+                          }
+                        ],
+                        "id": 38079,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1549:7:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 38078,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1549:7:19",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 38081,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1549:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "34",
+                      "id": 38082,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1573:1:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "src": "1549:25:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 38087,
+                  "nodeType": "IfStatement",
+                  "src": "1545:58:19",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 38084,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38027,
+                        "src": "1583:18:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 38085,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1583:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 38086,
+                    "nodeType": "RevertStatement",
+                    "src": "1576:27:19"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38072,
+              "nodeType": "StructuredDocumentation",
+              "src": "1416:53:19",
+              "text": "@dev Sanity checks for the deleverage parameters."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1481:5:19",
+            "parameters": {
+              "id": 38076,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38075,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1512:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38089,
+                  "src": "1487:36:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2PoolDeleverage_$38016",
+                    "typeString": "enum TimeswapV2PoolDeleverage"
+                  },
+                  "typeName": {
+                    "id": 38074,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38073,
+                      "name": "TimeswapV2PoolDeleverage",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 38016,
+                      "src": "1487:24:19"
+                    },
+                    "referencedDeclaration": 38016,
+                    "src": "1487:24:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2PoolDeleverage_$38016",
+                      "typeString": "enum TimeswapV2PoolDeleverage"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1486:38:19"
+            },
+            "returnParameters": {
+              "id": 38077,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1539:0:19"
+            },
+            "scope": 38126,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38107,
+            "nodeType": "FunctionDefinition",
+            "src": "1666:134:19",
+            "nodes": [],
+            "body": {
+              "id": 38106,
+              "nodeType": "Block",
+              "src": "1731:69:19",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 38101,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 38098,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38093,
+                          "src": "1749:11:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolLeverage_$38021",
+                            "typeString": "enum TimeswapV2PoolLeverage"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolLeverage_$38021",
+                            "typeString": "enum TimeswapV2PoolLeverage"
+                          }
+                        ],
+                        "id": 38097,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1741:7:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 38096,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1741:7:19",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 38099,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1741:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "34",
+                      "id": 38100,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1765:1:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_4_by_1",
+                        "typeString": "int_const 4"
+                      },
+                      "value": "4"
+                    },
+                    "src": "1741:25:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 38105,
+                  "nodeType": "IfStatement",
+                  "src": "1737:58:19",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 38102,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38027,
+                        "src": "1775:18:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 38103,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1775:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 38104,
+                    "nodeType": "RevertStatement",
+                    "src": "1768:27:19"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38090,
+              "nodeType": "StructuredDocumentation",
+              "src": "1612:51:19",
+              "text": "@dev Sanity checks for the leverage parameters."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1675:5:19",
+            "parameters": {
+              "id": 38094,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38093,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1704:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38107,
+                  "src": "1681:34:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2PoolLeverage_$38021",
+                    "typeString": "enum TimeswapV2PoolLeverage"
+                  },
+                  "typeName": {
+                    "id": 38092,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38091,
+                      "name": "TimeswapV2PoolLeverage",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 38021,
+                      "src": "1681:22:19"
+                    },
+                    "referencedDeclaration": 38021,
+                    "src": "1681:22:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2PoolLeverage_$38021",
+                      "typeString": "enum TimeswapV2PoolLeverage"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1680:36:19"
+            },
+            "returnParameters": {
+              "id": 38095,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1731:0:19"
+            },
+            "scope": 38126,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38125,
+            "nodeType": "FunctionDefinition",
+            "src": "1859:135:19",
+            "nodes": [],
+            "body": {
+              "id": 38124,
+              "nodeType": "Block",
+              "src": "1925:69:19",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 38119,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 38116,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38111,
+                          "src": "1943:11:19",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolRebalance_$38024",
+                            "typeString": "enum TimeswapV2PoolRebalance"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2PoolRebalance_$38024",
+                            "typeString": "enum TimeswapV2PoolRebalance"
+                          }
+                        ],
+                        "id": 38115,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1935:7:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 38114,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1935:7:19",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 38117,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1935:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "32",
+                      "id": 38118,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1959:1:19",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "1935:25:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 38123,
+                  "nodeType": "IfStatement",
+                  "src": "1931:58:19",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 38120,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38027,
+                        "src": "1969:18:19",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 38121,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1969:20:19",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 38122,
+                    "nodeType": "RevertStatement",
+                    "src": "1962:27:19"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38108,
+              "nodeType": "StructuredDocumentation",
+              "src": "1804:52:19",
+              "text": "@dev Sanity checks for the rebalance parameters."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1868:5:19",
+            "parameters": {
+              "id": 38112,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38111,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1898:11:19",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38125,
+                  "src": "1874:35:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2PoolRebalance_$38024",
+                    "typeString": "enum TimeswapV2PoolRebalance"
+                  },
+                  "typeName": {
+                    "id": 38110,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 38109,
+                      "name": "TimeswapV2PoolRebalance",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 38024,
+                      "src": "1874:23:19"
+                    },
+                    "referencedDeclaration": 38024,
+                    "src": "1874:23:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2PoolRebalance_$38024",
+                      "typeString": "enum TimeswapV2PoolRebalance"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1873:37:19"
+            },
+            "returnParameters": {
+              "id": 38113,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1925:0:19"
+            },
+            "scope": 38126,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          38126
+        ],
+        "name": "TransactionLibrary",
+        "nameLocation": "777:18:19",
+        "scope": 38127,
+        "usedErrors": [
+          38027
+        ]
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 19
+}

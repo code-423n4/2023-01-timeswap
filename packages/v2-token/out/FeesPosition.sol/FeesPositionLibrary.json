@@ -1,0 +1,3325 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220cc529267fe06da9445423c2ebb0ce45fb3f22319215856c3011b7e4120601a5064736f6c63430008080033",
+    "sourceMap": "385:2409:72:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;385:2409:72;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220cc529267fe06da9445423c2ebb0ce45fb3f22319215856c3011b7e4120601a5064736f6c63430008080033",
+    "sourceMap": "385:2409:72:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/structs/FeesPosition.sol\":\"FeesPositionLibrary\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"../v2-library/src/FullMath.sol\":{\"keccak256\":\"0x1ea76b3f9856ad86b519ee7343344b76f5faa382b346aee07b173187cd65a392\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://2b72580c71fecd9a01e8ef565d5f2e84bc67f73d8efb5617aeacb90f314d7aee\",\"dweb:/ipfs/QmateUT5UChm2vg7RphgCKjMWeJsFS2LN6xhrMcjTLpqRs\"]},\"../v2-library/src/Math.sol\":{\"keccak256\":\"0x7a640f746544617728e1a9f44e1bafa238d7fde996910251b209cd1caf4330cc\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://0c6fd02ad6d102dc9dcdf2400fbb488f792b55b2c5b5567229b7481c726f68a7\",\"dweb:/ipfs/QmfA2mpi7BGfMzS5ZuvCGewjHhb8ZSoGjwd6RTXhd2167c\"]},\"../v2-pool/src/libraries/FeeCalculation.sol\":{\"keccak256\":\"0x7f7f5afcefc5df9819ab2a27a1da8521ee8b096ce7f6f6f1e142d323c984c368\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://f9b949ae38bcff94fbf26d53b943b5f642d4673dde539311c8e11ac23e9b184d\",\"dweb:/ipfs/QmVBkoRG4ZNHHY8brWxAt9MRsUWuSg6eswyw4wesGvyTJK\"]},\"src/structs/FeesPosition.sol\":{\"keccak256\":\"0x385e6c88cce2c8ef58828f5b8462cd51b822a081d0dfe65db6c1825a97c7054d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://106ac422ca1e4a077bb859af00281fec544449bc2348bfa9410adabe3bd00bd1\",\"dweb:/ipfs/QmPG31A2pgiRtHqmNPzsy22bAjemB8QbZ6jWDaYVAwafj5\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/structs/FeesPosition.sol": "FeesPositionLibrary"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "../v2-library/src/FullMath.sol": {
+        "keccak256": "0x1ea76b3f9856ad86b519ee7343344b76f5faa382b346aee07b173187cd65a392",
+        "urls": [
+          "bzz-raw://2b72580c71fecd9a01e8ef565d5f2e84bc67f73d8efb5617aeacb90f314d7aee",
+          "dweb:/ipfs/QmateUT5UChm2vg7RphgCKjMWeJsFS2LN6xhrMcjTLpqRs"
+        ],
+        "license": "Unlicense"
+      },
+      "../v2-library/src/Math.sol": {
+        "keccak256": "0x7a640f746544617728e1a9f44e1bafa238d7fde996910251b209cd1caf4330cc",
+        "urls": [
+          "bzz-raw://0c6fd02ad6d102dc9dcdf2400fbb488f792b55b2c5b5567229b7481c726f68a7",
+          "dweb:/ipfs/QmfA2mpi7BGfMzS5ZuvCGewjHhb8ZSoGjwd6RTXhd2167c"
+        ],
+        "license": "Unlicense"
+      },
+      "../v2-pool/src/libraries/FeeCalculation.sol": {
+        "keccak256": "0x7f7f5afcefc5df9819ab2a27a1da8521ee8b096ce7f6f6f1e142d323c984c368",
+        "urls": [
+          "bzz-raw://f9b949ae38bcff94fbf26d53b943b5f642d4673dde539311c8e11ac23e9b184d",
+          "dweb:/ipfs/QmVBkoRG4ZNHHY8brWxAt9MRsUWuSg6eswyw4wesGvyTJK"
+        ],
+        "license": "Unlicense"
+      },
+      "src/structs/FeesPosition.sol": {
+        "keccak256": "0x385e6c88cce2c8ef58828f5b8462cd51b822a081d0dfe65db6c1825a97c7054d",
+        "urls": [
+          "bzz-raw://106ac422ca1e4a077bb859af00281fec544449bc2348bfa9410adabe3bd00bd1",
+          "dweb:/ipfs/QmPG31A2pgiRtHqmNPzsy22bAjemB8QbZ6jWDaYVAwafj5"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/structs/FeesPosition.sol",
+    "id": 35760,
+    "exportedSymbols": {
+      "FeeCalculation": [
+        3661
+      ],
+      "FeesPosition": [
+        35516
+      ],
+      "FeesPositionLibrary": [
+        35759
+      ],
+      "Math": [
+        2506
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2763:72",
+    "nodes": [
+      {
+        "id": 35499,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:72",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 35501,
+        "nodeType": "ImportDirective",
+        "src": "57:87:72",
+        "nodes": [],
+        "absolutePath": "../v2-pool/src/libraries/FeeCalculation.sol",
+        "file": "@timeswap-labs/v2-pool/src/libraries/FeeCalculation.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 35760,
+        "sourceUnit": 3662,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 35500,
+              "name": "FeeCalculation",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "65:14:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 35503,
+        "nodeType": "ImportDirective",
+        "src": "145:60:72",
+        "nodes": [],
+        "absolutePath": "../v2-library/src/Math.sol",
+        "file": "@timeswap-labs/v2-library/src/Math.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 35760,
+        "sourceUnit": 2507,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 35502,
+              "name": "Math",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "153:4:72",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 35516,
+        "nodeType": "StructDefinition",
+        "src": "207:176:72",
+        "nodes": [],
+        "canonicalName": "FeesPosition",
+        "members": [
+          {
+            "constant": false,
+            "id": 35505,
+            "mutability": "mutable",
+            "name": "long0FeeGrowth",
+            "nameLocation": "241:14:72",
+            "nodeType": "VariableDeclaration",
+            "scope": 35516,
+            "src": "233:22:72",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35504,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "233:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 35507,
+            "mutability": "mutable",
+            "name": "long1FeeGrowth",
+            "nameLocation": "269:14:72",
+            "nodeType": "VariableDeclaration",
+            "scope": 35516,
+            "src": "261:22:72",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35506,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "261:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 35509,
+            "mutability": "mutable",
+            "name": "shortFeeGrowth",
+            "nameLocation": "297:14:72",
+            "nodeType": "VariableDeclaration",
+            "scope": 35516,
+            "src": "289:22:72",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35508,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "289:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 35511,
+            "mutability": "mutable",
+            "name": "long0Fees",
+            "nameLocation": "325:9:72",
+            "nodeType": "VariableDeclaration",
+            "scope": 35516,
+            "src": "317:17:72",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35510,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "317:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 35513,
+            "mutability": "mutable",
+            "name": "long1Fees",
+            "nameLocation": "348:9:72",
+            "nodeType": "VariableDeclaration",
+            "scope": 35516,
+            "src": "340:17:72",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35512,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "340:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 35515,
+            "mutability": "mutable",
+            "name": "shortFees",
+            "nameLocation": "371:9:72",
+            "nodeType": "VariableDeclaration",
+            "scope": 35516,
+            "src": "363:17:72",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 35514,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "363:7:72",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "FeesPosition",
+        "nameLocation": "214:12:72",
+        "scope": 35760,
+        "visibility": "public"
+      },
+      {
+        "id": 35759,
+        "nodeType": "ContractDefinition",
+        "src": "385:2409:72",
+        "nodes": [
+          {
+            "id": 35576,
+            "nodeType": "FunctionDefinition",
+            "src": "419:649:72",
+            "nodes": [],
+            "body": {
+              "id": 35575,
+              "nodeType": "Block",
+              "src": "689:379:72",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 35547,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 35536,
+                      "name": "long0Fee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35530,
+                      "src": "699:8:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 35546,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "expression": {
+                          "id": 35537,
+                          "name": "feesPosition",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 35519,
+                          "src": "710:12:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FeesPosition_$35516_memory_ptr",
+                            "typeString": "struct FeesPosition memory"
+                          }
+                        },
+                        "id": 35538,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "long0Fees",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 35511,
+                        "src": "710:22:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "arguments": [
+                          {
+                            "id": 35541,
+                            "name": "liquidity",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35521,
+                            "src": "758:9:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint160",
+                              "typeString": "uint160"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 35542,
+                              "name": "feesPosition",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 35519,
+                              "src": "769:12:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeesPosition_$35516_memory_ptr",
+                                "typeString": "struct FeesPosition memory"
+                              }
+                            },
+                            "id": 35543,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "long0FeeGrowth",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 35505,
+                            "src": "769:27:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 35544,
+                            "name": "long0FeeGrowth",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35523,
+                            "src": "798:14:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint160",
+                              "typeString": "uint160"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 35539,
+                            "name": "FeeCalculation",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3661,
+                            "src": "735:14:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_FeeCalculation_$3661_$",
+                              "typeString": "type(library FeeCalculation)"
+                            }
+                          },
+                          "id": 35540,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "getFees",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 3517,
+                          "src": "735:22:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function (uint160,uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 35545,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "735:78:72",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "710:103:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "699:114:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35548,
+                  "nodeType": "ExpressionStatement",
+                  "src": "699:114:72"
+                },
+                {
+                  "expression": {
+                    "id": 35560,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 35549,
+                      "name": "long1Fee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35532,
+                      "src": "823:8:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 35559,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "expression": {
+                          "id": 35550,
+                          "name": "feesPosition",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 35519,
+                          "src": "834:12:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FeesPosition_$35516_memory_ptr",
+                            "typeString": "struct FeesPosition memory"
+                          }
+                        },
+                        "id": 35551,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "long1Fees",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 35513,
+                        "src": "834:22:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "arguments": [
+                          {
+                            "id": 35554,
+                            "name": "liquidity",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35521,
+                            "src": "882:9:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint160",
+                              "typeString": "uint160"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 35555,
+                              "name": "feesPosition",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 35519,
+                              "src": "893:12:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeesPosition_$35516_memory_ptr",
+                                "typeString": "struct FeesPosition memory"
+                              }
+                            },
+                            "id": 35556,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "long1FeeGrowth",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 35507,
+                            "src": "893:27:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 35557,
+                            "name": "long1FeeGrowth",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35525,
+                            "src": "922:14:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint160",
+                              "typeString": "uint160"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 35552,
+                            "name": "FeeCalculation",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3661,
+                            "src": "859:14:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_FeeCalculation_$3661_$",
+                              "typeString": "type(library FeeCalculation)"
+                            }
+                          },
+                          "id": 35553,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "getFees",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 3517,
+                          "src": "859:22:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function (uint160,uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 35558,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "859:78:72",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "834:103:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "823:114:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35561,
+                  "nodeType": "ExpressionStatement",
+                  "src": "823:114:72"
+                },
+                {
+                  "expression": {
+                    "id": 35573,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 35562,
+                      "name": "shortFee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35534,
+                      "src": "947:8:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 35572,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "expression": {
+                          "id": 35563,
+                          "name": "feesPosition",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 35519,
+                          "src": "958:12:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_FeesPosition_$35516_memory_ptr",
+                            "typeString": "struct FeesPosition memory"
+                          }
+                        },
+                        "id": 35564,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "shortFees",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 35515,
+                        "src": "958:22:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "arguments": [
+                          {
+                            "id": 35567,
+                            "name": "liquidity",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35521,
+                            "src": "1006:9:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint160",
+                              "typeString": "uint160"
+                            }
+                          },
+                          {
+                            "expression": {
+                              "id": 35568,
+                              "name": "feesPosition",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 35519,
+                              "src": "1017:12:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeesPosition_$35516_memory_ptr",
+                                "typeString": "struct FeesPosition memory"
+                              }
+                            },
+                            "id": 35569,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "shortFeeGrowth",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 35509,
+                            "src": "1017:27:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "id": 35570,
+                            "name": "shortFeeGrowth",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35527,
+                            "src": "1046:14:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint160",
+                              "typeString": "uint160"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 35565,
+                            "name": "FeeCalculation",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 3661,
+                            "src": "983:14:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_contract$_FeeCalculation_$3661_$",
+                              "typeString": "type(library FeeCalculation)"
+                            }
+                          },
+                          "id": 35566,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "getFees",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 3517,
+                          "src": "983:22:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                            "typeString": "function (uint160,uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 35571,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "983:78:72",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "958:103:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "947:114:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35574,
+                  "nodeType": "ExpressionStatement",
+                  "src": "947:114:72"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "feesEarnedOf",
+            "nameLocation": "428:12:72",
+            "parameters": {
+              "id": 35528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35519,
+                  "mutability": "mutable",
+                  "name": "feesPosition",
+                  "nameLocation": "470:12:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "450:32:72",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FeesPosition_$35516_memory_ptr",
+                    "typeString": "struct FeesPosition"
+                  },
+                  "typeName": {
+                    "id": 35518,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 35517,
+                      "name": "FeesPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 35516,
+                      "src": "450:12:72"
+                    },
+                    "referencedDeclaration": 35516,
+                    "src": "450:12:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                      "typeString": "struct FeesPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35521,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "500:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "492:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 35520,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "492:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35523,
+                  "mutability": "mutable",
+                  "name": "long0FeeGrowth",
+                  "nameLocation": "527:14:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "519:22:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35522,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "519:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35525,
+                  "mutability": "mutable",
+                  "name": "long1FeeGrowth",
+                  "nameLocation": "559:14:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "551:22:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35524,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "551:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35527,
+                  "mutability": "mutable",
+                  "name": "shortFeeGrowth",
+                  "nameLocation": "591:14:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "583:22:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35526,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "583:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "440:171:72"
+            },
+            "returnParameters": {
+              "id": 35535,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35530,
+                  "mutability": "mutable",
+                  "name": "long0Fee",
+                  "nameLocation": "643:8:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "635:16:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35529,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "635:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35532,
+                  "mutability": "mutable",
+                  "name": "long1Fee",
+                  "nameLocation": "661:8:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "653:16:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35531,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "653:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35534,
+                  "mutability": "mutable",
+                  "name": "shortFee",
+                  "nameLocation": "679:8:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35576,
+                  "src": "671:16:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35533,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "671:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:54:72"
+            },
+            "scope": 35759,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 35650,
+            "nodeType": "FunctionDefinition",
+            "src": "1074:715:72",
+            "nodes": [],
+            "body": {
+              "id": 35649,
+              "nodeType": "Block",
+              "src": "1225:564:72",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    },
+                    "id": 35592,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 35590,
+                      "name": "liquidity",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35581,
+                      "src": "1239:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint160",
+                        "typeString": "uint160"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 35591,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1252:1:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "1239:14:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 35630,
+                  "nodeType": "IfStatement",
+                  "src": "1235:385:72",
+                  "trueBody": {
+                    "id": 35629,
+                    "nodeType": "Block",
+                    "src": "1255:365:72",
+                    "statements": [
+                      {
+                        "expression": {
+                          "id": 35603,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "expression": {
+                              "id": 35593,
+                              "name": "feesPosition",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 35579,
+                              "src": "1269:12:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                                "typeString": "struct FeesPosition storage pointer"
+                              }
+                            },
+                            "id": 35595,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "long0Fees",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 35511,
+                            "src": "1269:22:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "+=",
+                          "rightHandSide": {
+                            "arguments": [
+                              {
+                                "id": 35598,
+                                "name": "liquidity",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 35581,
+                                "src": "1318:9:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint160",
+                                  "typeString": "uint160"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 35599,
+                                  "name": "feesPosition",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 35579,
+                                  "src": "1329:12:72",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                                    "typeString": "struct FeesPosition storage pointer"
+                                  }
+                                },
+                                "id": 35600,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "long0FeeGrowth",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 35505,
+                                "src": "1329:27:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              {
+                                "id": 35601,
+                                "name": "long0FeeGrowth",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 35583,
+                                "src": "1358:14:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint160",
+                                  "typeString": "uint160"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "expression": {
+                                "id": 35596,
+                                "name": "FeeCalculation",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3661,
+                                "src": "1295:14:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_FeeCalculation_$3661_$",
+                                  "typeString": "type(library FeeCalculation)"
+                                }
+                              },
+                              "id": 35597,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "getFees",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 3517,
+                              "src": "1295:22:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                                "typeString": "function (uint160,uint256,uint256) pure returns (uint256)"
+                              }
+                            },
+                            "id": 35602,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1295:78:72",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1269:104:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 35604,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1269:104:72"
+                      },
+                      {
+                        "expression": {
+                          "id": 35615,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "expression": {
+                              "id": 35605,
+                              "name": "feesPosition",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 35579,
+                              "src": "1387:12:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                                "typeString": "struct FeesPosition storage pointer"
+                              }
+                            },
+                            "id": 35607,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "long1Fees",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 35513,
+                            "src": "1387:22:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "+=",
+                          "rightHandSide": {
+                            "arguments": [
+                              {
+                                "id": 35610,
+                                "name": "liquidity",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 35581,
+                                "src": "1436:9:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint160",
+                                  "typeString": "uint160"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 35611,
+                                  "name": "feesPosition",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 35579,
+                                  "src": "1447:12:72",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                                    "typeString": "struct FeesPosition storage pointer"
+                                  }
+                                },
+                                "id": 35612,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "long1FeeGrowth",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 35507,
+                                "src": "1447:27:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              {
+                                "id": 35613,
+                                "name": "long1FeeGrowth",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 35585,
+                                "src": "1476:14:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint160",
+                                  "typeString": "uint160"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "expression": {
+                                "id": 35608,
+                                "name": "FeeCalculation",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3661,
+                                "src": "1413:14:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_FeeCalculation_$3661_$",
+                                  "typeString": "type(library FeeCalculation)"
+                                }
+                              },
+                              "id": 35609,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "getFees",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 3517,
+                              "src": "1413:22:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                                "typeString": "function (uint160,uint256,uint256) pure returns (uint256)"
+                              }
+                            },
+                            "id": 35614,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1413:78:72",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1387:104:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 35616,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1387:104:72"
+                      },
+                      {
+                        "expression": {
+                          "id": 35627,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "expression": {
+                              "id": 35617,
+                              "name": "feesPosition",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 35579,
+                              "src": "1505:12:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                                "typeString": "struct FeesPosition storage pointer"
+                              }
+                            },
+                            "id": 35619,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": true,
+                            "memberName": "shortFees",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 35515,
+                            "src": "1505:22:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "+=",
+                          "rightHandSide": {
+                            "arguments": [
+                              {
+                                "id": 35622,
+                                "name": "liquidity",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 35581,
+                                "src": "1554:9:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint160",
+                                  "typeString": "uint160"
+                                }
+                              },
+                              {
+                                "expression": {
+                                  "id": 35623,
+                                  "name": "feesPosition",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 35579,
+                                  "src": "1565:12:72",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                                    "typeString": "struct FeesPosition storage pointer"
+                                  }
+                                },
+                                "id": 35624,
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "shortFeeGrowth",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 35509,
+                                "src": "1565:27:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              {
+                                "id": 35625,
+                                "name": "shortFeeGrowth",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 35587,
+                                "src": "1594:14:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint160",
+                                  "typeString": "uint160"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "expression": {
+                                "id": 35620,
+                                "name": "FeeCalculation",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 3661,
+                                "src": "1531:14:72",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_contract$_FeeCalculation_$3661_$",
+                                  "typeString": "type(library FeeCalculation)"
+                                }
+                              },
+                              "id": 35621,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "memberName": "getFees",
+                              "nodeType": "MemberAccess",
+                              "referencedDeclaration": 3517,
+                              "src": "1531:22:72",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                                "typeString": "function (uint160,uint256,uint256) pure returns (uint256)"
+                              }
+                            },
+                            "id": 35626,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1531:78:72",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1505:104:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 35628,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1505:104:72"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "id": 35635,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35631,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35579,
+                        "src": "1630:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35633,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "long0FeeGrowth",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35505,
+                      "src": "1630:27:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 35634,
+                      "name": "long0FeeGrowth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35583,
+                      "src": "1660:14:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1630:44:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35636,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1630:44:72"
+                },
+                {
+                  "expression": {
+                    "id": 35641,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35637,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35579,
+                        "src": "1684:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35639,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "long1FeeGrowth",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35507,
+                      "src": "1684:27:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 35640,
+                      "name": "long1FeeGrowth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35585,
+                      "src": "1714:14:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1684:44:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35642,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1684:44:72"
+                },
+                {
+                  "expression": {
+                    "id": 35647,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35643,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35579,
+                        "src": "1738:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35645,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "shortFeeGrowth",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35509,
+                      "src": "1738:27:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 35646,
+                      "name": "shortFeeGrowth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35587,
+                      "src": "1768:14:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1738:44:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35648,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1738:44:72"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "update",
+            "nameLocation": "1083:6:72",
+            "parameters": {
+              "id": 35588,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35579,
+                  "mutability": "mutable",
+                  "name": "feesPosition",
+                  "nameLocation": "1111:12:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35650,
+                  "src": "1090:33:72",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                    "typeString": "struct FeesPosition"
+                  },
+                  "typeName": {
+                    "id": 35578,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 35577,
+                      "name": "FeesPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 35516,
+                      "src": "1090:12:72"
+                    },
+                    "referencedDeclaration": 35516,
+                    "src": "1090:12:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                      "typeString": "struct FeesPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35581,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "1133:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35650,
+                  "src": "1125:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 35580,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1125:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35583,
+                  "mutability": "mutable",
+                  "name": "long0FeeGrowth",
+                  "nameLocation": "1152:14:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35650,
+                  "src": "1144:22:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35582,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1144:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35585,
+                  "mutability": "mutable",
+                  "name": "long1FeeGrowth",
+                  "nameLocation": "1176:14:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35650,
+                  "src": "1168:22:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35584,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1168:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35587,
+                  "mutability": "mutable",
+                  "name": "shortFeeGrowth",
+                  "nameLocation": "1200:14:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35650,
+                  "src": "1192:22:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35586,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1192:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1089:126:72"
+            },
+            "returnParameters": {
+              "id": 35589,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1225:0:72"
+            },
+            "scope": 35759,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 35696,
+            "nodeType": "FunctionDefinition",
+            "src": "1795:471:72",
+            "nodes": [],
+            "body": {
+              "id": 35695,
+              "nodeType": "Block",
+              "src": "2043:223:72",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 35675,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 35668,
+                      "name": "long0Fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35662,
+                      "src": "2053:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "expression": {
+                            "id": 35671,
+                            "name": "feesPosition",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35653,
+                            "src": "2074:12:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                              "typeString": "struct FeesPosition storage pointer"
+                            }
+                          },
+                          "id": 35672,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "long0Fees",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 35511,
+                          "src": "2074:22:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 35673,
+                          "name": "long0FeesDesired",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 35655,
+                          "src": "2098:16:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "id": 35669,
+                          "name": "Math",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2506,
+                          "src": "2065:4:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_Math_$2506_$",
+                            "typeString": "type(library Math)"
+                          }
+                        },
+                        "id": 35670,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "min",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2505,
+                        "src": "2065:8:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 35674,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2065:50:72",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2053:62:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35676,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2053:62:72"
+                },
+                {
+                  "expression": {
+                    "id": 35684,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 35677,
+                      "name": "long1Fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35664,
+                      "src": "2125:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "expression": {
+                            "id": 35680,
+                            "name": "feesPosition",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35653,
+                            "src": "2146:12:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                              "typeString": "struct FeesPosition storage pointer"
+                            }
+                          },
+                          "id": 35681,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "long1Fees",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 35513,
+                          "src": "2146:22:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 35682,
+                          "name": "long1FeesDesired",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 35657,
+                          "src": "2170:16:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "id": 35678,
+                          "name": "Math",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2506,
+                          "src": "2137:4:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_Math_$2506_$",
+                            "typeString": "type(library Math)"
+                          }
+                        },
+                        "id": 35679,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "min",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2505,
+                        "src": "2137:8:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 35683,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2137:50:72",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2125:62:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35685,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2125:62:72"
+                },
+                {
+                  "expression": {
+                    "id": 35693,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 35686,
+                      "name": "shortFees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35666,
+                      "src": "2197:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "expression": {
+                            "id": 35689,
+                            "name": "feesPosition",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35653,
+                            "src": "2218:12:72",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                              "typeString": "struct FeesPosition storage pointer"
+                            }
+                          },
+                          "id": 35690,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "shortFees",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 35515,
+                          "src": "2218:22:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "id": 35691,
+                          "name": "shortFeesDesired",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 35659,
+                          "src": "2242:16:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "id": 35687,
+                          "name": "Math",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2506,
+                          "src": "2209:4:72",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_Math_$2506_$",
+                            "typeString": "type(library Math)"
+                          }
+                        },
+                        "id": 35688,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "min",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2505,
+                        "src": "2209:8:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 35692,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2209:50:72",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2197:62:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35694,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2197:62:72"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFees",
+            "nameLocation": "1804:7:72",
+            "parameters": {
+              "id": 35660,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35653,
+                  "mutability": "mutable",
+                  "name": "feesPosition",
+                  "nameLocation": "1842:12:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35696,
+                  "src": "1821:33:72",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                    "typeString": "struct FeesPosition"
+                  },
+                  "typeName": {
+                    "id": 35652,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 35651,
+                      "name": "FeesPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 35516,
+                      "src": "1821:12:72"
+                    },
+                    "referencedDeclaration": 35516,
+                    "src": "1821:12:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                      "typeString": "struct FeesPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35655,
+                  "mutability": "mutable",
+                  "name": "long0FeesDesired",
+                  "nameLocation": "1872:16:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35696,
+                  "src": "1864:24:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35654,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1864:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35657,
+                  "mutability": "mutable",
+                  "name": "long1FeesDesired",
+                  "nameLocation": "1906:16:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35696,
+                  "src": "1898:24:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35656,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1898:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35659,
+                  "mutability": "mutable",
+                  "name": "shortFeesDesired",
+                  "nameLocation": "1940:16:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35696,
+                  "src": "1932:24:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35658,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1932:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1811:151:72"
+            },
+            "returnParameters": {
+              "id": 35667,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35662,
+                  "mutability": "mutable",
+                  "name": "long0Fees",
+                  "nameLocation": "1994:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35696,
+                  "src": "1986:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35661,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1986:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35664,
+                  "mutability": "mutable",
+                  "name": "long1Fees",
+                  "nameLocation": "2013:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35696,
+                  "src": "2005:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35663,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2005:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35666,
+                  "mutability": "mutable",
+                  "name": "shortFees",
+                  "nameLocation": "2032:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35696,
+                  "src": "2024:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35665,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2024:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1985:57:72"
+            },
+            "scope": 35759,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 35727,
+            "nodeType": "FunctionDefinition",
+            "src": "2272:257:72",
+            "nodes": [],
+            "body": {
+              "id": 35726,
+              "nodeType": "Block",
+              "src": "2387:142:72",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 35712,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35708,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35699,
+                        "src": "2397:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35710,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "long0Fees",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35511,
+                      "src": "2397:22:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "id": 35711,
+                      "name": "long0Fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35701,
+                      "src": "2423:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2397:35:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35713,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2397:35:72"
+                },
+                {
+                  "expression": {
+                    "id": 35718,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35714,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35699,
+                        "src": "2442:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35716,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "long1Fees",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35513,
+                      "src": "2442:22:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "id": 35717,
+                      "name": "long1Fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35703,
+                      "src": "2468:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2442:35:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35719,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2442:35:72"
+                },
+                {
+                  "expression": {
+                    "id": 35724,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35720,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35699,
+                        "src": "2487:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35722,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "shortFees",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35515,
+                      "src": "2487:22:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "id": 35723,
+                      "name": "shortFees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35705,
+                      "src": "2513:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2487:35:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35725,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2487:35:72"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "2281:4:72",
+            "parameters": {
+              "id": 35706,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35699,
+                  "mutability": "mutable",
+                  "name": "feesPosition",
+                  "nameLocation": "2307:12:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35727,
+                  "src": "2286:33:72",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                    "typeString": "struct FeesPosition"
+                  },
+                  "typeName": {
+                    "id": 35698,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 35697,
+                      "name": "FeesPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 35516,
+                      "src": "2286:12:72"
+                    },
+                    "referencedDeclaration": 35516,
+                    "src": "2286:12:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                      "typeString": "struct FeesPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35701,
+                  "mutability": "mutable",
+                  "name": "long0Fees",
+                  "nameLocation": "2329:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35727,
+                  "src": "2321:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35700,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2321:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35703,
+                  "mutability": "mutable",
+                  "name": "long1Fees",
+                  "nameLocation": "2348:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35727,
+                  "src": "2340:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35702,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2340:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35705,
+                  "mutability": "mutable",
+                  "name": "shortFees",
+                  "nameLocation": "2367:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35727,
+                  "src": "2359:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35704,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2359:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2285:92:72"
+            },
+            "returnParameters": {
+              "id": 35707,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2387:0:72"
+            },
+            "scope": 35759,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 35758,
+            "nodeType": "FunctionDefinition",
+            "src": "2535:257:72",
+            "nodes": [],
+            "body": {
+              "id": 35757,
+              "nodeType": "Block",
+              "src": "2650:142:72",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 35743,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35739,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35730,
+                        "src": "2660:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35741,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "long0Fees",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35511,
+                      "src": "2660:22:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "id": 35742,
+                      "name": "long0Fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35732,
+                      "src": "2686:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2660:35:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35744,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2660:35:72"
+                },
+                {
+                  "expression": {
+                    "id": 35749,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35745,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35730,
+                        "src": "2705:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35747,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "long1Fees",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35513,
+                      "src": "2705:22:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "id": 35748,
+                      "name": "long1Fees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35734,
+                      "src": "2731:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2705:35:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35750,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2705:35:72"
+                },
+                {
+                  "expression": {
+                    "id": 35755,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "expression": {
+                        "id": 35751,
+                        "name": "feesPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 35730,
+                        "src": "2750:12:72",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                          "typeString": "struct FeesPosition storage pointer"
+                        }
+                      },
+                      "id": 35753,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "shortFees",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 35515,
+                      "src": "2750:22:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "id": 35754,
+                      "name": "shortFees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35736,
+                      "src": "2776:9:72",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "2750:35:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 35756,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2750:35:72"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "2544:4:72",
+            "parameters": {
+              "id": 35737,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 35730,
+                  "mutability": "mutable",
+                  "name": "feesPosition",
+                  "nameLocation": "2570:12:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35758,
+                  "src": "2549:33:72",
+                  "stateVariable": false,
+                  "storageLocation": "storage",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                    "typeString": "struct FeesPosition"
+                  },
+                  "typeName": {
+                    "id": 35729,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 35728,
+                      "name": "FeesPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 35516,
+                      "src": "2549:12:72"
+                    },
+                    "referencedDeclaration": 35516,
+                    "src": "2549:12:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_FeesPosition_$35516_storage_ptr",
+                      "typeString": "struct FeesPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35732,
+                  "mutability": "mutable",
+                  "name": "long0Fees",
+                  "nameLocation": "2592:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35758,
+                  "src": "2584:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35731,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2584:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35734,
+                  "mutability": "mutable",
+                  "name": "long1Fees",
+                  "nameLocation": "2611:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35758,
+                  "src": "2603:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35733,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2603:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 35736,
+                  "mutability": "mutable",
+                  "name": "shortFees",
+                  "nameLocation": "2630:9:72",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35758,
+                  "src": "2622:17:72",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 35735,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2622:7:72",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2548:92:72"
+            },
+            "returnParameters": {
+              "id": 35738,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2650:0:72"
+            },
+            "scope": 35759,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          35759
+        ],
+        "name": "FeesPositionLibrary",
+        "nameLocation": "393:19:72",
+        "scope": 35760,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 72
+}

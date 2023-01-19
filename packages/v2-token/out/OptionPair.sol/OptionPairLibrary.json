@@ -1,0 +1,1125 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        }
+      ],
+      "name": "InvalidOptionPair",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "optionPair",
+          "type": "address"
+        }
+      ],
+      "name": "OptionPairAlreadyExisted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroOptionAddress",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208aa1b2c22ce1f8b6f3c151b64fa7332450a7c8e08cbc8278cb9b3282d634a9e864736f6c63430008080033",
+    "sourceMap": "62:1899:33:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;62:1899:33;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212208aa1b2c22ce1f8b6f3c151b64fa7332450a7c8e08cbc8278cb9b3282d634a9e864736f6c63430008080033",
+    "sourceMap": "62:1899:33:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"}],\"name\":\"InvalidOptionPair\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"optionPair\",\"type\":\"address\"}],\"name\":\"OptionPairAlreadyExisted\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroOptionAddress\",\"type\":\"error\"}],\"devdoc\":{\"errors\":{\"InvalidOptionPair(address,address)\":[{\"details\":\"Reverts when the pair has incorrect format.\",\"params\":{\"token0\":\"The first ERC20 token address of the pair.\",\"token1\":\"The second ERC20 token address of the pair.\"}}],\"OptionPairAlreadyExisted(address,address,address)\":[{\"details\":\"Reverts when the Timeswap V2 Option already exist.\",\"params\":{\"optionPair\":\"The address of the existed Pair contract.\",\"token0\":\"The first ERC20 token address of the pair.\",\"token1\":\"The second ERC20 token address of the pair.\"}}],\"ZeroOptionAddress()\":[{\"details\":\"Reverts when option address is zero.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"../v2-option/src/libraries/OptionPair.sol\":\"OptionPairLibrary\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"../v2-option/src/libraries/OptionPair.sol\":{\"keccak256\":\"0x3e557cd8b92e0ad860026f6dfbe4cee5e8734b5054f3afb639407af1e70b9720\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://1338d1645191e50ff6c51eb9c2afa8ecbf14219b679e7575eedb8a8e6856b2a3\",\"dweb:/ipfs/QmUSDT9RyrwKg9tJ2gisTThvqQ7HRt4WC6n3c4wBSynbhy\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "InvalidOptionPair"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "optionPair",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "OptionPairAlreadyExisted"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroOptionAddress"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "../v2-option/src/libraries/OptionPair.sol": "OptionPairLibrary"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "../v2-option/src/libraries/OptionPair.sol": {
+        "keccak256": "0x3e557cd8b92e0ad860026f6dfbe4cee5e8734b5054f3afb639407af1e70b9720",
+        "urls": [
+          "bzz-raw://1338d1645191e50ff6c51eb9c2afa8ecbf14219b679e7575eedb8a8e6856b2a3",
+          "dweb:/ipfs/QmUSDT9RyrwKg9tJ2gisTThvqQ7HRt4WC6n3c4wBSynbhy"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "../v2-option/src/libraries/OptionPair.sol",
+    "id": 4509,
+    "exportedSymbols": {
+      "OptionPairLibrary": [
+        4508
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1925:33",
+    "nodes": [
+      {
+        "id": 4429,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:33",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 4508,
+        "nodeType": "ContractDefinition",
+        "src": "62:1899:33",
+        "nodes": [
+          {
+            "id": 4432,
+            "nodeType": "ErrorDefinition",
+            "src": "144:26:33",
+            "nodes": [],
+            "documentation": {
+              "id": 4430,
+              "nodeType": "StructuredDocumentation",
+              "src": "94:45:33",
+              "text": "@dev Reverts when option address is zero."
+            },
+            "name": "ZeroOptionAddress",
+            "nameLocation": "150:17:33",
+            "parameters": {
+              "id": 4431,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "167:2:33"
+            }
+          },
+          {
+            "id": 4439,
+            "nodeType": "ErrorDefinition",
+            "src": "364:56:33",
+            "nodes": [],
+            "documentation": {
+              "id": 4433,
+              "nodeType": "StructuredDocumentation",
+              "src": "176:183:33",
+              "text": "@dev Reverts when the pair has incorrect format.\n @param token0 The first ERC20 token address of the pair.\n @param token1 The second ERC20 token address of the pair."
+            },
+            "name": "InvalidOptionPair",
+            "nameLocation": "370:17:33",
+            "parameters": {
+              "id": 4438,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4435,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "396:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4439,
+                  "src": "388:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4434,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4437,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "412:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4439,
+                  "src": "404:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4436,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "404:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "387:32:33"
+            }
+          },
+          {
+            "id": 4448,
+            "nodeType": "ErrorDefinition",
+            "src": "689:83:33",
+            "nodes": [],
+            "documentation": {
+              "id": 4440,
+              "nodeType": "StructuredDocumentation",
+              "src": "426:258:33",
+              "text": "@dev Reverts when the Timeswap V2 Option already exist.\n @param token0 The first ERC20 token address of the pair.\n @param token1 The second ERC20 token address of the pair.\n @param optionPair The address of the existed Pair contract."
+            },
+            "name": "OptionPairAlreadyExisted",
+            "nameLocation": "695:24:33",
+            "parameters": {
+              "id": 4447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4442,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "728:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4448,
+                  "src": "720:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4441,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "720:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4444,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "744:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4448,
+                  "src": "736:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4443,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "736:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4446,
+                  "mutability": "mutable",
+                  "name": "optionPair",
+                  "nameLocation": "760:10:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4448,
+                  "src": "752:18:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4445,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "752:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:52:33"
+            }
+          },
+          {
+            "id": 4465,
+            "nodeType": "FunctionDefinition",
+            "src": "895:136:33",
+            "nodes": [],
+            "body": {
+              "id": 4464,
+              "nodeType": "Block",
+              "src": "958:73:33",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 4459,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 4454,
+                      "name": "optionPair",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4451,
+                      "src": "972:10:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "hexValue": "30",
+                          "id": 4457,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "994:1:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 4456,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "986:7:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 4455,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "986:7:33",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 4458,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "986:10:33",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "972:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4463,
+                  "nodeType": "IfStatement",
+                  "src": "968:56:33",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 4460,
+                        "name": "ZeroOptionAddress",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4432,
+                        "src": "1005:17:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 4461,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1005:19:33",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 4462,
+                    "nodeType": "RevertStatement",
+                    "src": "998:26:33"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 4449,
+              "nodeType": "StructuredDocumentation",
+              "src": "778:112:33",
+              "text": "@dev Checks if option address is not zero.\n @param optionPair The option pair address being inquired."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkNotZeroAddress",
+            "nameLocation": "904:19:33",
+            "parameters": {
+              "id": 4452,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4451,
+                  "mutability": "mutable",
+                  "name": "optionPair",
+                  "nameLocation": "932:10:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4465,
+                  "src": "924:18:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4450,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "924:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "923:20:33"
+            },
+            "returnParameters": {
+              "id": 4453,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "958:0:33"
+            },
+            "scope": 4508,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 4483,
+            "nodeType": "FunctionDefinition",
+            "src": "1295:153:33",
+            "nodes": [],
+            "body": {
+              "id": 4482,
+              "nodeType": "Block",
+              "src": "1369:79:33",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 4475,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 4473,
+                      "name": "token0",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4468,
+                      "src": "1383:6:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "id": 4474,
+                      "name": "token1",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4470,
+                      "src": "1393:6:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1383:16:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4481,
+                  "nodeType": "IfStatement",
+                  "src": "1379:62:33",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [
+                        {
+                          "id": 4477,
+                          "name": "token0",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4468,
+                          "src": "1426:6:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "id": 4478,
+                          "name": "token1",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4470,
+                          "src": "1434:6:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 4476,
+                        "name": "InvalidOptionPair",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4439,
+                        "src": "1408:17:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$_t_address_$_t_address_$returns$__$",
+                          "typeString": "function (address,address) pure"
+                        }
+                      },
+                      "id": 4479,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1408:33:33",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 4480,
+                    "nodeType": "RevertStatement",
+                    "src": "1401:40:33"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 4466,
+              "nodeType": "StructuredDocumentation",
+              "src": "1037:253:33",
+              "text": "@dev Check if the pair tokens is in correct format.\n @notice Reverts if token0 is greater than or equal token1.\n @param token0 The first ERC20 token address of the pair.\n @param token1 The second ERC20 token address of the pair."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkCorrectFormat",
+            "nameLocation": "1304:18:33",
+            "parameters": {
+              "id": 4471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4468,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "1331:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4483,
+                  "src": "1323:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4467,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1323:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4470,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "1347:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4483,
+                  "src": "1339:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4469,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1339:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1322:32:33"
+            },
+            "returnParameters": {
+              "id": 4472,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1369:0:33"
+            },
+            "scope": 4508,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 4507,
+            "nodeType": "FunctionDefinition",
+            "src": "1760:199:33",
+            "nodes": [],
+            "body": {
+              "id": 4506,
+              "nodeType": "Block",
+              "src": "1853:106:33",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    },
+                    "id": 4498,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 4493,
+                      "name": "optionPair",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4490,
+                      "src": "1867:10:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "!=",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "hexValue": "30",
+                          "id": 4496,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1889:1:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 4495,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1881:7:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 4494,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1881:7:33",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 4497,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1881:10:33",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1867:24:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4505,
+                  "nodeType": "IfStatement",
+                  "src": "1863:89:33",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [
+                        {
+                          "id": 4500,
+                          "name": "token0",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4486,
+                          "src": "1925:6:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "id": 4501,
+                          "name": "token1",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4488,
+                          "src": "1933:6:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        {
+                          "id": 4502,
+                          "name": "optionPair",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 4490,
+                          "src": "1941:10:33",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 4499,
+                        "name": "OptionPairAlreadyExisted",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4448,
+                        "src": "1900:24:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$_t_address_$_t_address_$_t_address_$returns$__$",
+                          "typeString": "function (address,address,address) pure"
+                        }
+                      },
+                      "id": 4503,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1900:52:33",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 4504,
+                    "nodeType": "RevertStatement",
+                    "src": "1893:59:33"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 4484,
+              "nodeType": "StructuredDocumentation",
+              "src": "1454:301:33",
+              "text": "@dev Check if the pair already existed.\n @notice Reverts if the pair is not a zero address.\n @param token0 The first ERC20 token address of the pair.\n @param token1 The second ERC20 token address of the pair.\n @param optionPair The address of the existed Pair contract."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkDoesNotExist",
+            "nameLocation": "1769:17:33",
+            "parameters": {
+              "id": 4491,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4486,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "1795:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4507,
+                  "src": "1787:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4485,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1787:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4488,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "1811:6:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4507,
+                  "src": "1803:14:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4487,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1803:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4490,
+                  "mutability": "mutable",
+                  "name": "optionPair",
+                  "nameLocation": "1827:10:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4507,
+                  "src": "1819:18:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4489,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1819:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1786:52:33"
+            },
+            "returnParameters": {
+              "id": 4492,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1853:0:33"
+            },
+            "scope": 4508,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          4508
+        ],
+        "name": "OptionPairLibrary",
+        "nameLocation": "70:17:33",
+        "scope": 4509,
+        "usedErrors": [
+          4432,
+          4439,
+          4448
+        ]
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 33
+}
