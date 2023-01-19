@@ -174,5 +174,9 @@ The `Timeswap V2 Liquidit Token` just holds the different liquidity position tha
 Tests are currently work in progress
 To run the tests for code in each of the directories, run the following command at that directory
 ```
+yarn
+yarn hardhat clean
+yarn hardhat compile
+forge build
 forge test
 ```

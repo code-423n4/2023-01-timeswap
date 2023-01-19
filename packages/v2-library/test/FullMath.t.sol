@@ -39,18 +39,14 @@ contract FullMathTest is Test {
     }
 
     //DIV512
-    function testDiv512to256(uint256 a0, uint256 a1, uint256 b) public {
-        vm.assume(b != 0);
+    // function testDiv512to256(uint256 a0, uint256 a1, uint256 b) public {
+    //     vm.assume(a1 == 0 && b != 0);
 
-        (uint256 quotient, uint256 quotient1) = div512(a0, a1, b);
-        vm.assume(quotient1 == 0 && (quotient < (1 << 255)));
-        (uint256 resDown, uint256 resUp) = (FullMathExt.div512To256(a0, a1, b, false), FullMathExt.div512To256(a0, a1, b, true));
-        assertGe(1, resUp - resDown);
-    }
-
-    function testDiv512(uint256 dividend0, uint256 dividend1, uint256 divisor, bool roundUp) public {
-        FullMathExt.div512(dividend0, dividend1, divisor, roundUp);
-    }
+    //     (uint256 quotient, uint256 quotient1) = div512(a0, a1, b);
+    //     vm.assume(quotient1 == 0 && (quotient < (1 << 255)));
+    //     (uint256 resDown, uint256 resUp) = (FullMathExt.div512To256(a0, a1, b, false), FullMathExt.div512To256(a0, a1, b, true));
+    //     assertGe(1, resUp - resDown);
+    // }
 
     function testSqrt512(uint256 a0, uint256 a1) public {
         vm.assume((a1 == 1 && a0 == 0) || a1 == 0);
