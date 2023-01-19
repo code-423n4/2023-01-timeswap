@@ -8,12 +8,15 @@ import './wrappedContracts/OptionFactoryExt.sol';
 
 contract OptionFactoryTest is Test {
     function testCheckNotZeroFactory() public {
-        assertEq(OptionFactoryExt.checkNotZeroFactory(address(0)), 0);
+      OptionFactoryExt.checkNotZeroFactory(address(0));
+      assertEq(OptionFactoryExt.checkNotZeroFactory(address(0)), 0);
     }
     function testGet(address optionFactory, address token0, address token1) public {
-        assertEq(OptionFactoryExt.get(address(0), address(0), address(0)), address(0));
+      OptionFactoryExt.get(address(0), address(0), address(0));
+      assertEq(OptionFactoryExt.get(address(0), address(0), address(0)), address(0));
     }
     function testGetWithCheck(address optionFactory, address token0, address token1) public {
-        assertEq(OptionFactoryExt.getWithCheck(address(0), address(0), address(0)), address(0));
+      OptionFactoryExt.getWithCheck(address(0), address(0), address(0));
+      assertEq(OptionFactoryExt.getWithCheck(address(0), address(0), address(0)), address(0));
     }
 }
