@@ -7,6 +7,8 @@ import './wrappedContracts/ProportionExt.sol';
 
 contract ProportionTest is Test {
     function testProportion() public {
-        assertEq(ProportionExt.proportion(0, 0, 0, false), 0);
+      vm.expectRevert();
+      ProportionExt.proportion(0, 0, 0, false);
+
     }
 }

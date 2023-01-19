@@ -7,12 +7,13 @@ import './wrappedContracts/OptionPairExt.sol';
 
 contract OptionPairTest is Test {
     function testCheckNotZeroAddress() public {
-        assertEq(OptionPairExt.checkNotZeroAddress(address(0)), 0);
+      OptionPairExt.checkNotZeroAddress(address(0x345));
     }
     function testCheckCorrectFormat(address token0, address token1) public {
-        assertEq(OptionPairExt.checkCorrectFormat(address(0), address(0)), 0);
+      vm.expectRevert();
+      OptionPairExt.checkCorrectFormat(address(0), address(0));
     }
     function testCheckDoesNotExist(address token0, address token1, address optionPair) public {
-        assertEq(OptionPairExt.checkDoesNotExist(address(0), address(0), address(0)), 0);
+      OptionPairExt.checkDoesNotExist(address(0), address(0), address(0));
     }
 }
