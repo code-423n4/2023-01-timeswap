@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 
-import {FeeCalculation} from "@timeswap-labs/v2-pool/contracts/libraries/FeeCalculation.sol";
-import {Math} from "@timeswap-labs/v2-library/contracts/Math.sol";
+import {FeeCalculation} from "@timeswap-labs/v2-pool/src/libraries/FeeCalculation.sol";
+import {Math} from "@timeswap-labs/v2-library/src/Math.sol";
 
 struct FeesPosition {
     uint256 long0FeeGrowth;

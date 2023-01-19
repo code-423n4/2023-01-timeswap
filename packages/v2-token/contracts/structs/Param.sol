@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 
-import {Error} from "@timeswap-labs/v2-library/contracts/Error.sol";
+import {Error} from "@timeswap-labs/v2-library/src/Error.sol";
 
 /// @dev paramater for minting Timeswap V2 Tokens
 /// @param token0 The first ERC20 token address of the pair.

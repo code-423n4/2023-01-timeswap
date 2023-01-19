@@ -1,0 +1,128 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ITimeswapV2PoolLeverageCallback",
+  "sourceName": "src/interfaces/callbacks/ITimeswapV2PoolLeverageCallback.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2PoolLeverageCallbackParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "timeswapV2PoolLeverageCallback",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long0Balance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long1Balance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "longAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2PoolLeverageChoiceCallbackParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "timeswapV2PoolLeverageChoiceCallback",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "long0Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "long1Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
