@@ -5,7 +5,7 @@ import '../../src/libraries/PoolFactory.sol';
 
 library PoolFactoryExt{
     
-    function checkNotZeroFactory(address poolFactory) internal pure {
+    function checkNotZeroFactory(address poolFactory) public pure {
         PoolFactoryLibrary.checkNotZeroFactory(poolFactory);
     }
 
@@ -14,7 +14,7 @@ library PoolFactoryExt{
         address poolFactory,
         address token0,
         address token1
-    ) internal view returns (address optionPair, address poolPair) {
+    ) public view returns (address optionPair, address poolPair) {
         (optionPair, poolPair) = PoolFactoryLibrary.get(optionFactory, poolFactory, token0, token1);
     }
 
@@ -23,7 +23,7 @@ library PoolFactoryExt{
         address poolFactory,
         address token0,
         address token1
-    ) internal view returns (address optionPair, address poolPair) {
+    ) public view returns (address optionPair, address poolPair) {
         (optionPair, poolPair) = PoolFactoryLibrary.getWithCheck(optionFactory, poolFactory, token0, token1);
     }
 
