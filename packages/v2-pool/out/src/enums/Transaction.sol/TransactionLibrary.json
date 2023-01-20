@@ -1,0 +1,1096 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InvalidTransaction",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212207a951aa77d6b20edabf1d3b0cea744285865392599727981ef65ebd4c2995e1264736f6c63430008080033",
+    "sourceMap": "652:1144:18:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;652:1144:18;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212207a951aa77d6b20edabf1d3b0cea744285865392599727981ef65ebd4c2995e1264736f6c63430008080033",
+    "sourceMap": "652:1144:18:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidTransaction\",\"type\":\"error\"}],\"devdoc\":{\"details\":\"Helper functions for the all enums in this module.\",\"errors\":{\"InvalidTransaction()\":[{\"details\":\"Reverts when the given type of transaction is invalid.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"../v2-option/src/enums/Transaction.sol\":\"TransactionLibrary\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"../v2-option/src/enums/Transaction.sol\":{\"keccak256\":\"0xab4b7b9edb7d23e5bfb3964f53aa844707583131d811219bbcff378fbeccb7ed\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://9a3ae97999a16f13a6e24dd6e6da3c454c749790c7a62697cb71495f5417151a\",\"dweb:/ipfs/QmTSTsTmytBxLUuDgExKfB83gfoG3PrwtvgeHuvYepmNQs\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InvalidTransaction"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "../v2-option/src/enums/Transaction.sol": "TransactionLibrary"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "../v2-option/src/enums/Transaction.sol": {
+        "keccak256": "0xab4b7b9edb7d23e5bfb3964f53aa844707583131d811219bbcff378fbeccb7ed",
+        "urls": [
+          "bzz-raw://9a3ae97999a16f13a6e24dd6e6da3c454c749790c7a62697cb71495f5417151a",
+          "dweb:/ipfs/QmTSTsTmytBxLUuDgExKfB83gfoG3PrwtvgeHuvYepmNQs"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "../v2-option/src/enums/Transaction.sol",
+    "id": 2746,
+    "exportedSymbols": {
+      "TimeswapV2OptionBurn": [
+        2661
+      ],
+      "TimeswapV2OptionCollect": [
+        2668
+      ],
+      "TimeswapV2OptionMint": [
+        2658
+      ],
+      "TimeswapV2OptionSwap": [
+        2664
+      ],
+      "TransactionLibrary": [
+        2745
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1760:18",
+    "nodes": [
+      {
+        "id": 2655,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:18",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 2658,
+        "nodeType": "EnumDefinition",
+        "src": "117:70:18",
+        "nodes": [],
+        "canonicalName": "TimeswapV2OptionMint",
+        "members": [
+          {
+            "id": 2656,
+            "name": "GivenTokensAndLongs",
+            "nameLocation": "149:19:18",
+            "nodeType": "EnumValue",
+            "src": "149:19:18"
+          },
+          {
+            "id": 2657,
+            "name": "GivenShorts",
+            "nameLocation": "174:11:18",
+            "nodeType": "EnumValue",
+            "src": "174:11:18"
+          }
+        ],
+        "name": "TimeswapV2OptionMint",
+        "nameLocation": "122:20:18"
+      },
+      {
+        "id": 2661,
+        "nodeType": "EnumDefinition",
+        "src": "244:70:18",
+        "nodes": [],
+        "canonicalName": "TimeswapV2OptionBurn",
+        "members": [
+          {
+            "id": 2659,
+            "name": "GivenTokensAndLongs",
+            "nameLocation": "276:19:18",
+            "nodeType": "EnumValue",
+            "src": "276:19:18"
+          },
+          {
+            "id": 2660,
+            "name": "GivenShorts",
+            "nameLocation": "301:11:18",
+            "nodeType": "EnumValue",
+            "src": "301:11:18"
+          }
+        ],
+        "name": "TimeswapV2OptionBurn",
+        "nameLocation": "249:20:18"
+      },
+      {
+        "id": 2664,
+        "nodeType": "EnumDefinition",
+        "src": "371:78:18",
+        "nodes": [],
+        "canonicalName": "TimeswapV2OptionSwap",
+        "members": [
+          {
+            "id": 2662,
+            "name": "GivenToken0AndLong0",
+            "nameLocation": "403:19:18",
+            "nodeType": "EnumValue",
+            "src": "403:19:18"
+          },
+          {
+            "id": 2663,
+            "name": "GivenToken1AndLong1",
+            "nameLocation": "428:19:18",
+            "nodeType": "EnumValue",
+            "src": "428:19:18"
+          }
+        ],
+        "name": "TimeswapV2OptionSwap",
+        "nameLocation": "376:20:18"
+      },
+      {
+        "id": 2668,
+        "nodeType": "EnumDefinition",
+        "src": "509:81:18",
+        "nodes": [],
+        "canonicalName": "TimeswapV2OptionCollect",
+        "members": [
+          {
+            "id": 2665,
+            "name": "GivenShort",
+            "nameLocation": "544:10:18",
+            "nodeType": "EnumValue",
+            "src": "544:10:18"
+          },
+          {
+            "id": 2666,
+            "name": "GivenToken0",
+            "nameLocation": "560:11:18",
+            "nodeType": "EnumValue",
+            "src": "560:11:18"
+          },
+          {
+            "id": 2667,
+            "name": "GivenToken1",
+            "nameLocation": "577:11:18",
+            "nodeType": "EnumValue",
+            "src": "577:11:18"
+          }
+        ],
+        "name": "TimeswapV2OptionCollect",
+        "nameLocation": "514:23:18"
+      },
+      {
+        "id": 2745,
+        "nodeType": "ContractDefinition",
+        "src": "652:1144:18",
+        "nodes": [
+          {
+            "id": 2672,
+            "nodeType": "ErrorDefinition",
+            "src": "753:27:18",
+            "nodes": [],
+            "documentation": {
+              "id": 2670,
+              "nodeType": "StructuredDocumentation",
+              "src": "685:63:18",
+              "text": "@dev Reverts when the given type of transaction is invalid."
+            },
+            "name": "InvalidTransaction",
+            "nameLocation": "759:18:18",
+            "parameters": {
+              "id": 2671,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "777:2:18"
+            }
+          },
+          {
+            "id": 2690,
+            "nodeType": "FunctionDefinition",
+            "src": "894:138:18",
+            "nodes": [],
+            "body": {
+              "id": 2689,
+              "nodeType": "Block",
+              "src": "957:75:18",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2684,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 2681,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2676,
+                          "src": "979:11:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionMint_$2658",
+                            "typeString": "enum TimeswapV2OptionMint"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionMint_$2658",
+                            "typeString": "enum TimeswapV2OptionMint"
+                          }
+                        ],
+                        "id": 2680,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "971:7:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 2679,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "971:7:18",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 2682,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "971:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "32",
+                      "id": 2683,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "995:1:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "971:25:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2688,
+                  "nodeType": "IfStatement",
+                  "src": "967:58:18",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2685,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2672,
+                        "src": "1005:18:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2686,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1005:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2687,
+                    "nodeType": "RevertStatement",
+                    "src": "998:27:18"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2673,
+              "nodeType": "StructuredDocumentation",
+              "src": "786:103:18",
+              "text": "@dev checks that the given input is correct.\n @param transaction the mint transaction input."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "903:5:18",
+            "parameters": {
+              "id": 2677,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2676,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "930:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2690,
+                  "src": "909:32:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionMint_$2658",
+                    "typeString": "enum TimeswapV2OptionMint"
+                  },
+                  "typeName": {
+                    "id": 2675,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2674,
+                      "name": "TimeswapV2OptionMint",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2658,
+                      "src": "909:20:18"
+                    },
+                    "referencedDeclaration": 2658,
+                    "src": "909:20:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionMint_$2658",
+                      "typeString": "enum TimeswapV2OptionMint"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "908:34:18"
+            },
+            "returnParameters": {
+              "id": 2678,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "957:0:18"
+            },
+            "scope": 2745,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2708,
+            "nodeType": "FunctionDefinition",
+            "src": "1146:138:18",
+            "nodes": [],
+            "body": {
+              "id": 2707,
+              "nodeType": "Block",
+              "src": "1209:75:18",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2702,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 2699,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2694,
+                          "src": "1231:11:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionBurn_$2661",
+                            "typeString": "enum TimeswapV2OptionBurn"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionBurn_$2661",
+                            "typeString": "enum TimeswapV2OptionBurn"
+                          }
+                        ],
+                        "id": 2698,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1223:7:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 2697,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1223:7:18",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 2700,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1223:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "32",
+                      "id": 2701,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1247:1:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "1223:25:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2706,
+                  "nodeType": "IfStatement",
+                  "src": "1219:58:18",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2703,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2672,
+                        "src": "1257:18:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2704,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1257:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2705,
+                    "nodeType": "RevertStatement",
+                    "src": "1250:27:18"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2691,
+              "nodeType": "StructuredDocumentation",
+              "src": "1038:103:18",
+              "text": "@dev checks that the given input is correct.\n @param transaction the burn transaction input."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1155:5:18",
+            "parameters": {
+              "id": 2695,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2694,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1182:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2708,
+                  "src": "1161:32:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionBurn_$2661",
+                    "typeString": "enum TimeswapV2OptionBurn"
+                  },
+                  "typeName": {
+                    "id": 2693,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2692,
+                      "name": "TimeswapV2OptionBurn",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2661,
+                      "src": "1161:20:18"
+                    },
+                    "referencedDeclaration": 2661,
+                    "src": "1161:20:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionBurn_$2661",
+                      "typeString": "enum TimeswapV2OptionBurn"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1160:34:18"
+            },
+            "returnParameters": {
+              "id": 2696,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1209:0:18"
+            },
+            "scope": 2745,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2726,
+            "nodeType": "FunctionDefinition",
+            "src": "1398:138:18",
+            "nodes": [],
+            "body": {
+              "id": 2725,
+              "nodeType": "Block",
+              "src": "1461:75:18",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2720,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 2717,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2712,
+                          "src": "1483:11:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionSwap_$2664",
+                            "typeString": "enum TimeswapV2OptionSwap"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionSwap_$2664",
+                            "typeString": "enum TimeswapV2OptionSwap"
+                          }
+                        ],
+                        "id": 2716,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1475:7:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 2715,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1475:7:18",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 2718,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1475:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "32",
+                      "id": 2719,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1499:1:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "1475:25:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2724,
+                  "nodeType": "IfStatement",
+                  "src": "1471:58:18",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2721,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2672,
+                        "src": "1509:18:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2722,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1509:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2723,
+                    "nodeType": "RevertStatement",
+                    "src": "1502:27:18"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2709,
+              "nodeType": "StructuredDocumentation",
+              "src": "1290:103:18",
+              "text": "@dev checks that the given input is correct.\n @param transaction the swap transaction input."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1407:5:18",
+            "parameters": {
+              "id": 2713,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2712,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1434:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2726,
+                  "src": "1413:32:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionSwap_$2664",
+                    "typeString": "enum TimeswapV2OptionSwap"
+                  },
+                  "typeName": {
+                    "id": 2711,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2710,
+                      "name": "TimeswapV2OptionSwap",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2664,
+                      "src": "1413:20:18"
+                    },
+                    "referencedDeclaration": 2664,
+                    "src": "1413:20:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionSwap_$2664",
+                      "typeString": "enum TimeswapV2OptionSwap"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1412:34:18"
+            },
+            "returnParameters": {
+              "id": 2714,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1461:0:18"
+            },
+            "scope": 2745,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 2744,
+            "nodeType": "FunctionDefinition",
+            "src": "1653:141:18",
+            "nodes": [],
+            "body": {
+              "id": 2743,
+              "nodeType": "Block",
+              "src": "1719:75:18",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 2738,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 2735,
+                          "name": "transaction",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2730,
+                          "src": "1741:11:18",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionCollect_$2668",
+                            "typeString": "enum TimeswapV2OptionCollect"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionCollect_$2668",
+                            "typeString": "enum TimeswapV2OptionCollect"
+                          }
+                        ],
+                        "id": 2734,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1733:7:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 2733,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1733:7:18",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 2736,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1733:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "33",
+                      "id": 2737,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1757:1:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_3_by_1",
+                        "typeString": "int_const 3"
+                      },
+                      "value": "3"
+                    },
+                    "src": "1733:25:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 2742,
+                  "nodeType": "IfStatement",
+                  "src": "1729:58:18",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 2739,
+                        "name": "InvalidTransaction",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2672,
+                        "src": "1767:18:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 2740,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1767:20:18",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 2741,
+                    "nodeType": "RevertStatement",
+                    "src": "1760:27:18"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 2727,
+              "nodeType": "StructuredDocumentation",
+              "src": "1542:106:18",
+              "text": "@dev checks that the given input is correct.\n @param transaction the collect transaction input."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "1662:5:18",
+            "parameters": {
+              "id": 2731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2730,
+                  "mutability": "mutable",
+                  "name": "transaction",
+                  "nameLocation": "1692:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2744,
+                  "src": "1668:35:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionCollect_$2668",
+                    "typeString": "enum TimeswapV2OptionCollect"
+                  },
+                  "typeName": {
+                    "id": 2729,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 2728,
+                      "name": "TimeswapV2OptionCollect",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2668,
+                      "src": "1668:23:18"
+                    },
+                    "referencedDeclaration": 2668,
+                    "src": "1668:23:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionCollect_$2668",
+                      "typeString": "enum TimeswapV2OptionCollect"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1667:37:18"
+            },
+            "returnParameters": {
+              "id": 2732,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1719:0:18"
+            },
+            "scope": 2745,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 2669,
+          "nodeType": "StructuredDocumentation",
+          "src": "592:60:18",
+          "text": "@dev Helper functions for the all enums in this module."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          2745
+        ],
+        "name": "TransactionLibrary",
+        "nameLocation": "660:18:18",
+        "scope": 2746,
+        "usedErrors": [
+          2672
+        ]
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 18
+}

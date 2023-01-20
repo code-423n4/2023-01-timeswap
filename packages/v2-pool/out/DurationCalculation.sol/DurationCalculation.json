@@ -1,0 +1,1443 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212207b40b4d58f54292ab7ec0aaaf92f0eadfa4b0bdd82f9590d4cdcabccdb2ef6e664736f6c63430008080033",
+    "sourceMap": "277:2230:92:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;277:2230:92;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea26469706673582212207b40b4d58f54292ab7ec0aaaf92f0eadfa4b0bdd82f9590d4cdcabccdb2ef6e664736f6c63430008080033",
+    "sourceMap": "277:2230:92:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"calculation of duration\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/libraries/DurationCalculation.sol\":\"DurationCalculation\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"../v2-library/src/Math.sol\":{\"keccak256\":\"0x7a640f746544617728e1a9f44e1bafa238d7fde996910251b209cd1caf4330cc\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://0c6fd02ad6d102dc9dcdf2400fbb488f792b55b2c5b5567229b7481c726f68a7\",\"dweb:/ipfs/QmfA2mpi7BGfMzS5ZuvCGewjHhb8ZSoGjwd6RTXhd2167c\"]},\"../v2-library/src/SafeCast.sol\":{\"keccak256\":\"0x753383aaa3a017b53bff6a19f6cae0e27773d3db58082f452df342287e96be7a\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://20e61fdea0b8e537bc88e06bb9fc2a45785ec535d5a72d9b483defa71c43c440\",\"dweb:/ipfs/QmewR9yYqsVWqTahTbUTKvCu5USsSoQic53dBwjwdivZN6\"]},\"src/libraries/Duration.sol\":{\"keccak256\":\"0x4eb36d6eb67c38e3bd83d6f32692387526e1376e39967a95bcccc8dae25183f2\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://e39360ce5fe3263eeacef5ac654fa34aaa0dc53cb4abce324ab39f33bd49e9a6\",\"dweb:/ipfs/QmbRzD3UdsTnBG7Xgsq2eubY9LuLzRooWJ59CsWAu76hDj\"]},\"src/libraries/DurationCalculation.sol\":{\"keccak256\":\"0xcc21f187b144eb706a1f5886f2a75fa4e9975f8dc7b5a92249cc80a481cec535\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://762d9d518cfdc421a4226d0753eeecb3c6fda1763be80bf60edc03c4969b38f2\",\"dweb:/ipfs/QmRvaoqydzLaKVCFZkQL4ZEDXSdJcqNQrmbkmkcDJ3AhsJ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/libraries/DurationCalculation.sol": "DurationCalculation"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "../v2-library/src/Math.sol": {
+        "keccak256": "0x7a640f746544617728e1a9f44e1bafa238d7fde996910251b209cd1caf4330cc",
+        "urls": [
+          "bzz-raw://0c6fd02ad6d102dc9dcdf2400fbb488f792b55b2c5b5567229b7481c726f68a7",
+          "dweb:/ipfs/QmfA2mpi7BGfMzS5ZuvCGewjHhb8ZSoGjwd6RTXhd2167c"
+        ],
+        "license": "Unlicense"
+      },
+      "../v2-library/src/SafeCast.sol": {
+        "keccak256": "0x753383aaa3a017b53bff6a19f6cae0e27773d3db58082f452df342287e96be7a",
+        "urls": [
+          "bzz-raw://20e61fdea0b8e537bc88e06bb9fc2a45785ec535d5a72d9b483defa71c43c440",
+          "dweb:/ipfs/QmewR9yYqsVWqTahTbUTKvCu5USsSoQic53dBwjwdivZN6"
+        ],
+        "license": "Unlicense"
+      },
+      "src/libraries/Duration.sol": {
+        "keccak256": "0x4eb36d6eb67c38e3bd83d6f32692387526e1376e39967a95bcccc8dae25183f2",
+        "urls": [
+          "bzz-raw://e39360ce5fe3263eeacef5ac654fa34aaa0dc53cb4abce324ab39f33bd49e9a6",
+          "dweb:/ipfs/QmbRzD3UdsTnBG7Xgsq2eubY9LuLzRooWJ59CsWAu76hDj"
+        ],
+        "license": "Unlicense"
+      },
+      "src/libraries/DurationCalculation.sol": {
+        "keccak256": "0xcc21f187b144eb706a1f5886f2a75fa4e9975f8dc7b5a92249cc80a481cec535",
+        "urls": [
+          "bzz-raw://762d9d518cfdc421a4226d0753eeecb3c6fda1763be80bf60edc03c4969b38f2",
+          "dweb:/ipfs/QmRvaoqydzLaKVCFZkQL4ZEDXSdJcqNQrmbkmkcDJ3AhsJ"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/libraries/DurationCalculation.sol",
+    "id": 38856,
+    "exportedSymbols": {
+      "DurationCalculation": [
+        38855
+      ],
+      "DurationLibrary": [
+        38748
+      ],
+      "Math": [
+        2099
+      ],
+      "SafeCast": [
+        2267
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:2471:92",
+    "nodes": [
+      {
+        "id": 38750,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:92",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 38752,
+        "nodeType": "ImportDirective",
+        "src": "62:60:92",
+        "nodes": [],
+        "absolutePath": "../v2-library/src/Math.sol",
+        "file": "@timeswap-labs/v2-library/src/Math.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38856,
+        "sourceUnit": 2100,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38751,
+              "name": "Math",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:4:92",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38754,
+        "nodeType": "ImportDirective",
+        "src": "123:68:92",
+        "nodes": [],
+        "absolutePath": "../v2-library/src/SafeCast.sol",
+        "file": "@timeswap-labs/v2-library/src/SafeCast.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38856,
+        "sourceUnit": 2268,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38753,
+              "name": "SafeCast",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "131:8:92",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38756,
+        "nodeType": "ImportDirective",
+        "src": "193:47:92",
+        "nodes": [],
+        "absolutePath": "src/libraries/Duration.sol",
+        "file": "./Duration.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 38856,
+        "sourceUnit": 38749,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38755,
+              "name": "DurationLibrary",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "201:15:92",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38855,
+        "nodeType": "ContractDefinition",
+        "src": "277:2230:92",
+        "nodes": [
+          {
+            "id": 38760,
+            "nodeType": "UsingForDirective",
+            "src": "311:23:92",
+            "nodes": [],
+            "libraryName": {
+              "id": 38758,
+              "name": "Math",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2099,
+              "src": "317:4:92"
+            },
+            "typeName": {
+              "id": 38759,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "326:7:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "id": 38763,
+            "nodeType": "UsingForDirective",
+            "src": "339:27:92",
+            "nodes": [],
+            "libraryName": {
+              "id": 38761,
+              "name": "SafeCast",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2267,
+              "src": "345:8:92"
+            },
+            "typeName": {
+              "id": 38762,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "358:7:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "id": 38786,
+            "nodeType": "FunctionDefinition",
+            "src": "666:218:92",
+            "nodes": [],
+            "body": {
+              "id": 38785,
+              "nodeType": "Block",
+              "src": "797:87:92",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 38783,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38773,
+                      "name": "duration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38771,
+                      "src": "807:8:92",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 38779,
+                              "name": "lastTimestamp",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38766,
+                              "src": "852:13:92",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint96",
+                                "typeString": "uint96"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint96",
+                                "typeString": "uint96"
+                              }
+                            ],
+                            "expression": {
+                              "arguments": [
+                                {
+                                  "id": 38776,
+                                  "name": "blockTimestamp",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 38768,
+                                  "src": "826:14:92",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint96",
+                                    "typeString": "uint96"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint96",
+                                    "typeString": "uint96"
+                                  }
+                                ],
+                                "id": 38775,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "818:7:92",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_uint256_$",
+                                  "typeString": "type(uint256)"
+                                },
+                                "typeName": {
+                                  "id": 38774,
+                                  "name": "uint256",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "818:7:92",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 38777,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "818:23:92",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 38778,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "unsafeSub",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1921,
+                            "src": "818:33:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 38780,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "818:48:92",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 38781,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "toUint96",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2239,
+                        "src": "818:57:92",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint96_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256) pure returns (uint96)"
+                        }
+                      },
+                      "id": 38782,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "818:59:92",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "src": "807:70:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "id": 38784,
+                  "nodeType": "ExpressionStatement",
+                  "src": "807:70:92"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38764,
+              "nodeType": "StructuredDocumentation",
+              "src": "372:289:92",
+              "text": "@dev gives the duration between the current block timestamp and the last timestamp\n @param lastTimestamp The last timestamp\n @param blockTimestamp The current block timestamp\n @return duration The duration between the current block timestamp and the last timestamp"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unsafeDurationFromLastTimestampToNow",
+            "nameLocation": "675:36:92",
+            "parameters": {
+              "id": 38769,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38766,
+                  "mutability": "mutable",
+                  "name": "lastTimestamp",
+                  "nameLocation": "719:13:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38786,
+                  "src": "712:20:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38765,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "712:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38768,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nameLocation": "741:14:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38786,
+                  "src": "734:21:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38767,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "734:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "711:45:92"
+            },
+            "returnParameters": {
+              "id": 38772,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38771,
+                  "mutability": "mutable",
+                  "name": "duration",
+                  "nameLocation": "787:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38786,
+                  "src": "780:15:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38770,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "780:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "779:17:92"
+            },
+            "scope": 38855,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38809,
+            "nodeType": "FunctionDefinition",
+            "src": "1173:204:92",
+            "nodes": [],
+            "body": {
+              "id": 38808,
+              "nodeType": "Block",
+              "src": "1295:82:92",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 38806,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38796,
+                      "name": "duration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38794,
+                      "src": "1305:8:92",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "id": 38801,
+                                  "name": "blockTimestamp",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 38791,
+                                  "src": "1343:14:92",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint96",
+                                    "typeString": "uint96"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint96",
+                                    "typeString": "uint96"
+                                  }
+                                ],
+                                "id": 38800,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "1335:7:92",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_uint256_$",
+                                  "typeString": "type(uint256)"
+                                },
+                                "typeName": {
+                                  "id": 38799,
+                                  "name": "uint256",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "1335:7:92",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 38802,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1335:23:92",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "id": 38797,
+                              "name": "maturity",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38789,
+                              "src": "1316:8:92",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 38798,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "unsafeSub",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1921,
+                            "src": "1316:18:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 38803,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1316:43:92",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 38804,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "toUint96",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2239,
+                        "src": "1316:52:92",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint96_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256) pure returns (uint96)"
+                        }
+                      },
+                      "id": 38805,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1316:54:92",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "src": "1305:65:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "id": 38807,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1305:65:92"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38787,
+              "nodeType": "StructuredDocumentation",
+              "src": "890:278:92",
+              "text": "@dev gives the duration between the maturity and the current block timestamp\n @param maturity The maturity of the pool\n @param blockTimestamp The current block timestamp\n @return duration The duration between the maturity and the current block timestamp"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unsafeDurationFromNowToMaturity",
+            "nameLocation": "1182:31:92",
+            "parameters": {
+              "id": 38792,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38789,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "1222:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38809,
+                  "src": "1214:16:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38788,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1214:7:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38791,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nameLocation": "1239:14:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38809,
+                  "src": "1232:21:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38790,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1232:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1213:41:92"
+            },
+            "returnParameters": {
+              "id": 38795,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38794,
+                  "mutability": "mutable",
+                  "name": "duration",
+                  "nameLocation": "1285:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38809,
+                  "src": "1278:15:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38793,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1278:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1277:17:92"
+            },
+            "scope": 38855,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38829,
+            "nodeType": "FunctionDefinition",
+            "src": "1638:203:92",
+            "nodes": [],
+            "body": {
+              "id": 38828,
+              "nodeType": "Block",
+              "src": "1769:72:92",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 38826,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38819,
+                      "name": "duration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38817,
+                      "src": "1779:8:92",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 38822,
+                              "name": "lastTimestamp",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38812,
+                              "src": "1809:13:92",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint96",
+                                "typeString": "uint96"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint96",
+                                "typeString": "uint96"
+                              }
+                            ],
+                            "expression": {
+                              "id": 38820,
+                              "name": "maturity",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38814,
+                              "src": "1790:8:92",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 38821,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "unsafeSub",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1921,
+                            "src": "1790:18:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 38823,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1790:33:92",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 38824,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "toUint96",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2239,
+                        "src": "1790:42:92",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint96_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256) pure returns (uint96)"
+                        }
+                      },
+                      "id": 38825,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1790:44:92",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "src": "1779:55:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "id": 38827,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1779:55:92"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38810,
+              "nodeType": "StructuredDocumentation",
+              "src": "1383:250:92",
+              "text": "@dev gives the duration between the maturity and the last timestamp\n @param lastTimestamp The last timestamp\n @param maturity The maturity of the pool\n @return duration The duration between the maturity and the last timestamp"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unsafeDurationFromLastTimestampToMaturity",
+            "nameLocation": "1647:41:92",
+            "parameters": {
+              "id": 38815,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38812,
+                  "mutability": "mutable",
+                  "name": "lastTimestamp",
+                  "nameLocation": "1696:13:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38829,
+                  "src": "1689:20:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38811,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1689:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38814,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "1719:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38829,
+                  "src": "1711:16:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38813,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1711:7:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1688:40:92"
+            },
+            "returnParameters": {
+              "id": 38818,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38817,
+                  "mutability": "mutable",
+                  "name": "duration",
+                  "nameLocation": "1759:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38829,
+                  "src": "1752:15:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38816,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1752:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1751:17:92"
+            },
+            "scope": 38855,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 38854,
+            "nodeType": "FunctionDefinition",
+            "src": "2254:251:92",
+            "nodes": [],
+            "body": {
+              "id": 38853,
+              "nodeType": "Block",
+              "src": "2413:92:92",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 38851,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38841,
+                      "name": "duration",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38839,
+                      "src": "2423:8:92",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 38847,
+                              "name": "lastTimestamp",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38832,
+                              "src": "2473:13:92",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint96",
+                                "typeString": "uint96"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint96",
+                                "typeString": "uint96"
+                              }
+                            ],
+                            "expression": {
+                              "arguments": [
+                                {
+                                  "id": 38844,
+                                  "name": "blockTimestamp",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 38836,
+                                  "src": "2447:14:92",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint96",
+                                    "typeString": "uint96"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint96",
+                                    "typeString": "uint96"
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 38842,
+                                  "name": "maturity",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 38834,
+                                  "src": "2434:8:92",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "id": 38843,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "min",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 2098,
+                                "src": "2434:12:92",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                  "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                }
+                              },
+                              "id": 38845,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "2434:28:92",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 38846,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "unsafeSub",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1921,
+                            "src": "2434:38:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 38848,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2434:53:92",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 38849,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "toUint96",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 2239,
+                        "src": "2434:62:92",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint96_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256) pure returns (uint96)"
+                        }
+                      },
+                      "id": 38850,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2434:64:92",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint96",
+                        "typeString": "uint96"
+                      }
+                    },
+                    "src": "2423:75:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "id": 38852,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2423:75:92"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38830,
+              "nodeType": "StructuredDocumentation",
+              "src": "1847:402:92",
+              "text": "@dev gives the duration between the maturity and the minimum of the last timestamp and the current block timestamp\n @param lastTimestamp The last timestamp\n @param maturity The maturity of the pool\n @param blockTimestamp The current block timestamp\n @return duration The duration between the maturity and the minimum of the last timestamp and the current block timestamp"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unsafeDurationFromLastTimestampToNowOrMaturity",
+            "nameLocation": "2263:46:92",
+            "parameters": {
+              "id": 38837,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38832,
+                  "mutability": "mutable",
+                  "name": "lastTimestamp",
+                  "nameLocation": "2317:13:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38854,
+                  "src": "2310:20:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38831,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2310:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38834,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "2340:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38854,
+                  "src": "2332:16:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38833,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2332:7:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38836,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nameLocation": "2357:14:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38854,
+                  "src": "2350:21:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38835,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2350:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2309:63:92"
+            },
+            "returnParameters": {
+              "id": 38840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38839,
+                  "mutability": "mutable",
+                  "name": "duration",
+                  "nameLocation": "2403:8:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38854,
+                  "src": "2396:15:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 38838,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2396:6:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2395:17:92"
+            },
+            "scope": 38855,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 38757,
+          "nodeType": "StructuredDocumentation",
+          "src": "242:35:92",
+          "text": "@title calculation of duration"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          38855
+        ],
+        "name": "DurationCalculation",
+        "nameLocation": "285:19:92",
+        "scope": 38856,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 92
+}

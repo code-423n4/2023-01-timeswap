@@ -1,0 +1,372 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "isLong0ToLong1",
+              "type": "bool"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token0AndLong0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1AndLong1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2OptionSwapCallbackParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "timeswapV2OptionSwapCallback",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "timeswapV2OptionSwapCallback((uint256,uint256,bool,uint256,uint256,bytes))": "dc4a4847"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isLong0ToLong1\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"token0AndLong0Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"token1AndLong1Amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2OptionSwapCallbackParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"timeswapV2OptionSwapCallback\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"timeswapV2OptionSwapCallback((uint256,uint256,bool,uint256,uint256,bytes))\":{\"details\":\"In the implementation, you must transfer token0 for the swap transaction. The caller of this method must be checked to be a Timeswap V2 Option pair deployed by the canonical Timeswap V2 Factory.The long0 positions or long1 positions will already minted to the receipients.\",\"params\":{\"param\":\"The param of the swap callback.\"},\"returns\":{\"data\":\"The bytes code returned from the callback.\"}}},\"title\":\"Callback for ITimeswapV2Option#swap\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"timeswapV2OptionSwapCallback((uint256,uint256,bool,uint256,uint256,bytes))\":{\"notice\":\"Called to `msg.sender` after initiating a swap from ITimeswapV2Option#swap.\"}},\"notice\":\"Any contract that calls ITimeswapV2Option#swap must implement this interface.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/callbacks/ITimeswapV2OptionSwapCallback.sol\":\"ITimeswapV2OptionSwapCallback\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/interfaces/callbacks/ITimeswapV2OptionSwapCallback.sol\":{\"keccak256\":\"0x7b947668a84246b833ff69205d8173e5510dc23debff1172d1d8375eb3f31bc4\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://2c451dfd74482ab55870b0f71c42a93a61e046e532e42b31ad00f13239b1e857\",\"dweb:/ipfs/QmcUQW74eofUuS6a88MeaC1EacSfsj7anvrkdAiN8BpyK6\"]},\"src/structs/CallbackParam.sol\":{\"keccak256\":\"0x981dbd1ff1e45f14fe6c7a8910908bc011f9645b589266aab14e9dc508fd1ead\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://044d6a6c0169d0cbb85e79750918f1b9c8436a4598ad08f3fb461fe6a454041a\",\"dweb:/ipfs/QmUbF6XrBWgKrUqEeTYSiF8Haap4kNJ3H678qbZVutJW6K\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2OptionSwapCallbackParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isLong0ToLong1",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "token0AndLong0Amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "token1AndLong1Amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "timeswapV2OptionSwapCallback",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "timeswapV2OptionSwapCallback((uint256,uint256,bool,uint256,uint256,bytes))": {
+            "details": "In the implementation, you must transfer token0 for the swap transaction. The caller of this method must be checked to be a Timeswap V2 Option pair deployed by the canonical Timeswap V2 Factory.The long0 positions or long1 positions will already minted to the receipients.",
+            "params": {
+              "param": "The param of the swap callback."
+            },
+            "returns": {
+              "data": "The bytes code returned from the callback."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "timeswapV2OptionSwapCallback((uint256,uint256,bool,uint256,uint256,bytes))": {
+            "notice": "Called to `msg.sender` after initiating a swap from ITimeswapV2Option#swap."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/callbacks/ITimeswapV2OptionSwapCallback.sol": "ITimeswapV2OptionSwapCallback"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/callbacks/ITimeswapV2OptionSwapCallback.sol": {
+        "keccak256": "0x7b947668a84246b833ff69205d8173e5510dc23debff1172d1d8375eb3f31bc4",
+        "urls": [
+          "bzz-raw://2c451dfd74482ab55870b0f71c42a93a61e046e532e42b31ad00f13239b1e857",
+          "dweb:/ipfs/QmcUQW74eofUuS6a88MeaC1EacSfsj7anvrkdAiN8BpyK6"
+        ],
+        "license": "Unlicense"
+      },
+      "src/structs/CallbackParam.sol": {
+        "keccak256": "0x981dbd1ff1e45f14fe6c7a8910908bc011f9645b589266aab14e9dc508fd1ead",
+        "urls": [
+          "bzz-raw://044d6a6c0169d0cbb85e79750918f1b9c8436a4598ad08f3fb461fe6a454041a",
+          "dweb:/ipfs/QmUbF6XrBWgKrUqEeTYSiF8Haap4kNJ3H678qbZVutJW6K"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/callbacks/ITimeswapV2OptionSwapCallback.sol",
+    "id": 30221,
+    "exportedSymbols": {
+      "ITimeswapV2OptionSwapCallback": [
+        30220
+      ],
+      "TimeswapV2OptionSwapCallbackParam": [
+        30458
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:937:44",
+    "nodes": [
+      {
+        "id": 30207,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:44",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 30209,
+        "nodeType": "ImportDirective",
+        "src": "62:82:44",
+        "nodes": [],
+        "absolutePath": "src/structs/CallbackParam.sol",
+        "file": "../../structs/CallbackParam.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 30221,
+        "sourceUnit": 30472,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 30208,
+              "name": "TimeswapV2OptionSwapCallbackParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:33:44",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 30220,
+        "nodeType": "ContractDefinition",
+        "src": "283:690:44",
+        "nodes": [
+          {
+            "id": 30219,
+            "nodeType": "FunctionDefinition",
+            "src": "846:125:44",
+            "nodes": [],
+            "documentation": {
+              "id": 30211,
+              "nodeType": "StructuredDocumentation",
+              "src": "329:512:44",
+              "text": "@notice Called to `msg.sender` after initiating a swap from ITimeswapV2Option#swap.\n @dev In the implementation, you must transfer token0 for the swap transaction.\n The caller of this method must be checked to be a Timeswap V2 Option pair deployed by the canonical Timeswap V2 Factory.\n @dev The long0 positions or long1 positions will already minted to the receipients.\n @param param The param of the swap callback.\n @return data The bytes code returned from the callback."
+            },
+            "functionSelector": "dc4a4847",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "timeswapV2OptionSwapCallback",
+            "nameLocation": "855:28:44",
+            "parameters": {
+              "id": 30215,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30214,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "927:5:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30219,
+                  "src": "884:48:44",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2OptionSwapCallbackParam_$30458_calldata_ptr",
+                    "typeString": "struct TimeswapV2OptionSwapCallbackParam"
+                  },
+                  "typeName": {
+                    "id": 30213,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30212,
+                      "name": "TimeswapV2OptionSwapCallbackParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 30458,
+                      "src": "884:33:44"
+                    },
+                    "referencedDeclaration": 30458,
+                    "src": "884:33:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2OptionSwapCallbackParam_$30458_storage_ptr",
+                      "typeString": "struct TimeswapV2OptionSwapCallbackParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "883:50:44"
+            },
+            "returnParameters": {
+              "id": 30218,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30217,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "965:4:44",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30219,
+                  "src": "952:17:44",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30216,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "952:5:44",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "951:19:44"
+            },
+            "scope": 30220,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 30210,
+          "nodeType": "StructuredDocumentation",
+          "src": "146:137:44",
+          "text": "@title Callback for ITimeswapV2Option#swap\n @notice Any contract that calls ITimeswapV2Option#swap must implement this interface."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          30220
+        ],
+        "name": "ITimeswapV2OptionSwapCallback",
+        "nameLocation": "293:29:44",
+        "scope": 30221,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 44
+}

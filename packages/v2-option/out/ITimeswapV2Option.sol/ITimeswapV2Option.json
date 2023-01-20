@@ -1,0 +1,4655 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token0To",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token1To",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "token0AndLong0Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "token1AndLong1Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shortAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token0To",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "token1To",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "long0AndToken0Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "long1Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "token1Amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Collect",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "long0To",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "long1To",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "shortTo",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "token0AndLong0Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "token1AndLong1Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "shortAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Mint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "tokenTo",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "longTo",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "isLong0toLong1",
+          "type": "bool"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "token0AndLong0Amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "token1AndLong1Amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Swap",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum TimeswapV2OptionPosition",
+          "name": "position",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TransferPosition",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "token0To",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1To",
+              "type": "address"
+            },
+            {
+              "internalType": "enum TimeswapV2OptionBurn",
+              "name": "transaction",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2OptionBurnParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "burn",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "token0AndLong0Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "token1AndLong1Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shortAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "token0To",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1To",
+              "type": "address"
+            },
+            {
+              "internalType": "enum TimeswapV2OptionCollect",
+              "name": "transaction",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2OptionCollectParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "collect",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "token0Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "token1Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shortAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getByIndex",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct StrikeAndMaturity",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "long0To",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "long1To",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "shortTo",
+              "type": "address"
+            },
+            {
+              "internalType": "enum TimeswapV2OptionMint",
+              "name": "transaction",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount0",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount1",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2OptionMintParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "token0AndLong0Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "token1AndLong1Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "shortAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "numberOfOptions",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "optionFactory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "enum TimeswapV2OptionPosition",
+          "name": "position",
+          "type": "uint8"
+        }
+      ],
+      "name": "positionOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "tokenTo",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "longTo",
+              "type": "address"
+            },
+            {
+              "internalType": "bool",
+              "name": "isLong0ToLong1",
+              "type": "bool"
+            },
+            {
+              "internalType": "enum TimeswapV2OptionSwap",
+              "name": "transaction",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2OptionSwapParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "swap",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "token0AndLong0Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "token1AndLong1Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token0",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token1",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum TimeswapV2OptionPosition",
+          "name": "position",
+          "type": "uint8"
+        }
+      ],
+      "name": "totalPosition",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "enum TimeswapV2OptionPosition",
+          "name": "position",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferPosition",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "burn((uint256,uint256,address,address,uint8,uint256,uint256,bytes))": "622fb68f",
+    "collect((uint256,uint256,address,address,uint8,uint256,bytes))": "7087c1f6",
+    "getByIndex(uint256)": "2d883a73",
+    "mint((uint256,uint256,address,address,address,uint8,uint256,uint256,bytes))": "80e06679",
+    "numberOfOptions()": "87ed3ecf",
+    "optionFactory()": "b3461c87",
+    "positionOf(uint256,uint256,address,uint8)": "af2f91ea",
+    "swap((uint256,uint256,address,address,bool,uint8,uint256,bytes))": "b084c252",
+    "token0()": "0dfe1681",
+    "token1()": "d21220a7",
+    "totalPosition(uint256,uint256,uint8)": "b7fb542d",
+    "transferPosition(uint256,uint256,address,uint8,uint256)": "b2ceca77"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token0To\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token1To\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"token0AndLong0Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"token1AndLong1Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"shortAmount\",\"type\":\"uint256\"}],\"name\":\"Burn\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token0To\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"token1To\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"long0AndToken0Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"long1Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"token1Amount\",\"type\":\"uint256\"}],\"name\":\"Collect\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"long0To\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"long1To\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"shortTo\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"token0AndLong0Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"token1AndLong1Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"shortAmount\",\"type\":\"uint256\"}],\"name\":\"Mint\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"caller\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"tokenTo\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"longTo\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isLong0toLong1\",\"type\":\"bool\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"token0AndLong0Amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"token1AndLong1Amount\",\"type\":\"uint256\"}],\"name\":\"Swap\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"enum TimeswapV2OptionPosition\",\"name\":\"position\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TransferPosition\",\"type\":\"event\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"token0To\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1To\",\"type\":\"address\"},{\"internalType\":\"enum TimeswapV2OptionBurn\",\"name\":\"transaction\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2OptionBurnParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"burn\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"token0AndLong0Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"token1AndLong1Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"shortAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"token0To\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1To\",\"type\":\"address\"},{\"internalType\":\"enum TimeswapV2OptionCollect\",\"name\":\"transaction\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2OptionCollectParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"collect\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"token0Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"token1Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"shortAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getByIndex\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"internalType\":\"struct StrikeAndMaturity\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"long0To\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"long1To\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"shortTo\",\"type\":\"address\"},{\"internalType\":\"enum TimeswapV2OptionMint\",\"name\":\"transaction\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount0\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"amount1\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2OptionMintParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"token0AndLong0Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"token1AndLong1Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"shortAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"numberOfOptions\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"optionFactory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"enum TimeswapV2OptionPosition\",\"name\":\"position\",\"type\":\"uint8\"}],\"name\":\"positionOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"tokenTo\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"longTo\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"isLong0ToLong1\",\"type\":\"bool\"},{\"internalType\":\"enum TimeswapV2OptionSwap\",\"name\":\"transaction\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2OptionSwapParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"swap\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"token0AndLong0Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"token1AndLong1Amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token0\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"enum TimeswapV2OptionPosition\",\"name\":\"position\",\"type\":\"uint8\"}],\"name\":\"totalPosition\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"enum TimeswapV2OptionPosition\",\"name\":\"position\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"transferPosition\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Burn(uint256,uint256,address,address,address,uint256,uint256,uint256)\":{\"details\":\"Emits when a burn transaction is called.\",\"params\":{\"caller\":\"The address of the caller of the mint function.\",\"maturity\":\"The maturity of the option.\",\"shortAmount\":\"The amount of short burnt.\",\"strike\":\"The strike ratio of token1 per token0 of the option.\",\"token0AndLong0Amount\":\"The amount of token0 withdrawn and long0 burnt.\",\"token0To\":\"The address of the receipient of token0.\",\"token1AndLong1Amount\":\"The amount of token1 withdrawn and long1 burnt.\",\"token1To\":\"The address of the receipient of token1.\"}},\"Collect(uint256,uint256,address,address,address,uint256,uint256,uint256)\":{\"details\":\"Emits when a collect transaction is called.\",\"params\":{\"caller\":\"The address of the caller of the mint function.\",\"long0AndToken0Amount\":\"The amount of token0 withdrawn.\",\"long1Amount\":\"The sum of long0AndToken0Amount and this amount is the total short amount burnt.\",\"maturity\":\"The maturity of the option.\",\"strike\":\"The strike ratio of token1 per token0 of the option.\",\"token0To\":\"The address of the receipient of token0.\",\"token1Amount\":\"The amount of token1 withdrawn.\",\"token1To\":\"The address of the receipient of token1.\"}},\"Mint(uint256,uint256,address,address,address,address,uint256,uint256,uint256)\":{\"details\":\"Emits when a mint transaction is called.\",\"params\":{\"caller\":\"The address of the caller of the mint function.\",\"long0To\":\"The address of the receipient of long token0 position.\",\"long1To\":\"The address of the receipient of long token1 position.\",\"maturity\":\"The maturity of the option.\",\"shortAmount\":\"The amount of short minted.\",\"shortTo\":\"The address of the receipient of short position.\",\"strike\":\"The strike ratio of token1 per token0 of the option.\",\"token0AndLong0Amount\":\"The amount of token0 deposited and long0 minted.\",\"token1AndLong1Amount\":\"The amount of token1 deposited and long1 minted.\"}},\"Swap(uint256,uint256,address,address,address,bool,uint256,uint256)\":{\"details\":\"Emits when a swap transaction is called.\",\"params\":{\"caller\":\"The address of the caller of the mint function.\",\"isLong0toLong1\":\"The direction of the swap. More information in the Transaction module.\",\"longTo\":\"The address of the receipient of long token0 or long token1.\",\"maturity\":\"The maturity of the option.\",\"strike\":\"The strike ratio of token1 per token0 of the option.\",\"token0AndLong0Amount\":\"If the direction is from long0 to long1, the amount of token0 withdrawn and long0 burnt. If the direction is from long1 to long0, the amount of token0 deposited and long0 minted.\",\"token1AndLong1Amount\":\"If the direction is from long0 to long1, the amount of token1 deposited and long1 minted. If the direction is from long1 to long0, the amount of token1 withdrawn and long1 burnt.\",\"tokenTo\":\"The address of the receipient of token0 or token1.\"}},\"TransferPosition(uint256,uint256,address,address,uint8,uint256)\":{\"details\":\"Emits when a position is transferred.\",\"params\":{\"amount\":\"The amount of balance transferred.\",\"from\":\"The address of the caller of the transferPosition function.\",\"maturity\":\"The maturity of the position.\",\"position\":\"The type of position transferred. More information in the Position module.\",\"strike\":\"The strike ratio of token1 per token0 of the position.\",\"to\":\"The address of the receipient of the position.\"}}},\"kind\":\"dev\",\"methods\":{\"burn((uint256,uint256,address,address,uint8,uint256,uint256,bytes))\":{\"details\":\"Burn short position. Withdraw token0, when long token0 is burnt. Withdraw token1, when long token1 is burnt.Can only be called before the maturity of the pool.\",\"params\":{\"param\":\"The parameters for the burn function.\"},\"returns\":{\"shortAmount\":\"The amount of short burnt.\",\"token0AndLong0Amount\":\"The amount of token0 withdrawn and long0 burnt.\",\"token1AndLong1Amount\":\"The amount of token1 withdrawn and long1 burnt.\"}},\"collect((uint256,uint256,address,address,uint8,uint256,bytes))\":{\"details\":\"Burn short position, withdraw token0 and token1.Can only be called after the maturity of the pool.\",\"params\":{\"param\":\"The parameters for the collect function.\"},\"returns\":{\"shortAmount\":\"The amount of short burnt.\",\"token0Amount\":\"The amount of token0 withdrawn.\",\"token1Amount\":\"The amount of token1 withdrawn.\"}},\"getByIndex(uint256)\":{\"details\":\"Get the strike and maturity of the option in the option enumeration list.\",\"params\":{\"id\":\"The chosen index.\"}},\"mint((uint256,uint256,address,address,address,uint8,uint256,uint256,bytes))\":{\"details\":\"Mint position. Mint long token0 position when token0 is deposited. Mint long token1 position when token1 is deposited.Can only be called before the maturity of the pool.\",\"params\":{\"param\":\"The parameters for the mint function.\"},\"returns\":{\"data\":\"The additional data return.\",\"shortAmount\":\"The amount of short minted.\",\"token0AndLong0Amount\":\"The amount of token0 deposited and long0 minted.\",\"token1AndLong1Amount\":\"The amount of token1 deposited and long1 minted.\"}},\"numberOfOptions()\":{\"details\":\"Number of options being interacted.\"},\"optionFactory()\":{\"details\":\"Returns the factory address that deployed this contract.\"},\"positionOf(uint256,uint256,address,uint8)\":{\"details\":\"Returns the position of an owner of the option.\",\"params\":{\"maturity\":\"The maturity of the position.\",\"owner\":\"The address of the owner of the position.\",\"position\":\"The type of position inquired. More information in the Position module.\",\"strike\":\"The strike ratio of token1 per token0 of the position.\"},\"returns\":{\"balance\":\"The user position.\"}},\"swap((uint256,uint256,address,address,bool,uint8,uint256,bytes))\":{\"details\":\"If the direction is from long token0 to long token1, burn long token0 and mint equivalent long token1, also deposit token1 and withdraw token0. If the direction is from long token1 to long token0, burn long token1 and mint equivalent long token0, also deposit token0 and withdraw token1.Can only be called before the maturity of the pool.\",\"params\":{\"param\":\"The parameters for the swap function.\"},\"returns\":{\"data\":\"The additional data return.\",\"token0AndLong0Amount\":\"If direction is Long0ToLong1, the amount of token0 withdrawn and long0 burnt. If direction is Long1ToLong0, the amount of token0 deposited and long0 minted.\",\"token1AndLong1Amount\":\"If direction is Long0ToLong1, the amount of token1 deposited and long1 minted. If direction is Long1ToLong0, the amount of token1 withdrawn and long1 burnt.\"}},\"token0()\":{\"details\":\"Returns the first ERC20 token address of the pair.\"},\"token1()\":{\"details\":\"Returns the second ERC20 token address of the pair.\"},\"totalPosition(uint256,uint256,uint8)\":{\"details\":\"Returns the total position of the option.\",\"params\":{\"maturity\":\"The maturity of the position.\",\"position\":\"The type of position inquired. More information in the Position module.\",\"strike\":\"The strike ratio of token1 per token0 of the position.\"},\"returns\":{\"balance\":\"The total position.\"}},\"transferPosition(uint256,uint256,address,uint8,uint256)\":{\"details\":\"Transfer position to another address.\",\"params\":{\"amount\":\"The amount of balance transferred.\",\"maturity\":\"The maturity of the position.\",\"position\":\"The type of position transferred. More information in the Position module.\",\"strike\":\"The strike ratio of token1 per token0 of the position.\",\"to\":\"The address of the receipient of the position.\"}}},\"title\":\"An interface for a contract that deploys Timeswap V2 Option pair contracts\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"A Timeswap V2 Option pair facilitates option mechanics between any two assets that strictly conform to the ERC20 specification.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/ITimeswapV2Option.sol\":\"ITimeswapV2Option\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"../v2-library/src/Error.sol\":{\"keccak256\":\"0x02d4c6920f04bab4f6721eac16a78774fc7c807daa2259b71d9a7d608e612b0a\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://0a11801e8ba760ff497ab16bee7b6659fd174dd78ca35ff450ab5cfa9071b62c\",\"dweb:/ipfs/QmXS8sBK6whSRmmz5AP5PV9sfVYkm5dKWrQJRb5MPdnv3n\"]},\"src/enums/Position.sol\":{\"keccak256\":\"0xdf9c1566d1b90293736ff2f685890126505b8eb23c56150710d7e20b675e5eff\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://634c3516495971a1038e6f57a1a141f4e834d88c973e843611db226cfc310713\",\"dweb:/ipfs/QmNuJR7btFoW8avGVJ98N3zdyk2tp7pQA7Ytm7EnRzjWa3\"]},\"src/enums/Transaction.sol\":{\"keccak256\":\"0xab4b7b9edb7d23e5bfb3964f53aa844707583131d811219bbcff378fbeccb7ed\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://9a3ae97999a16f13a6e24dd6e6da3c454c749790c7a62697cb71495f5417151a\",\"dweb:/ipfs/QmTSTsTmytBxLUuDgExKfB83gfoG3PrwtvgeHuvYepmNQs\"]},\"src/interfaces/ITimeswapV2Option.sol\":{\"keccak256\":\"0x112e19b29289505b8c023e02e25951776721311bd40dbe59332ea3ebc9d6fbbb\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://14fc79c6d7006a526f127ce4b0b8bb58dcf4aeb4add1f6968003d0a40450bc86\",\"dweb:/ipfs/QmNdHsNPHEeHitewnoY9Cpvye8g4Bm9P72CUSTTMnwA45P\"]},\"src/structs/Param.sol\":{\"keccak256\":\"0xb3ec244c58a1c56c777337fe57ad36e04063e97a03974f4658529b7d4fa43fed\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://c5b79884ec6e8ba823214db05b28679180d895b16c32210713442f5ccfae9b98\",\"dweb:/ipfs/QmRHFrzfi9ivXD2xB4ZGXdrC29tk9kKjkUhj2vy9t5m7cp\"]},\"src/structs/StrikeAndMaturity.sol\":{\"keccak256\":\"0x665bb65e496b7fd926aebba513695a21483b0a658feca4e35be5ededc8b62183\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://d4fcd62076b5dd2c629355403931b39b50fc16a6a7b71e9da51852ab288708d1\",\"dweb:/ipfs/QmZMtDovoYKeg3XLihaEfPZe4baCBHznMcokJiWMe9Qeym\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "token0To",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "token1To",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "token0AndLong0Amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1AndLong1Amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Burn",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "token0To",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "token1To",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "long0AndToken0Amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "long1Amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1Amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Collect",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "long0To",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "long1To",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "shortTo",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "token0AndLong0Amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1AndLong1Amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Mint",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "caller",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "tokenTo",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "address",
+              "name": "longTo",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "bool",
+              "name": "isLong0toLong1",
+              "type": "bool",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "token0AndLong0Amount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1AndLong1Amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Swap",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "from",
+              "type": "address",
+              "indexed": true
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "enum TimeswapV2OptionPosition",
+              "name": "position",
+              "type": "uint8",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "TransferPosition",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2OptionBurnParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token0To",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token1To",
+                  "type": "address"
+                },
+                {
+                  "internalType": "enum TimeswapV2OptionBurn",
+                  "name": "transaction",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burn",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "token0AndLong0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1AndLong1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2OptionCollectParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token0To",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "token1To",
+                  "type": "address"
+                },
+                {
+                  "internalType": "enum TimeswapV2OptionCollect",
+                  "name": "transaction",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "collect",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "token0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getByIndex",
+          "outputs": [
+            {
+              "internalType": "struct StrikeAndMaturity",
+              "name": "",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2OptionMintParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "long0To",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "long1To",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "shortTo",
+                  "type": "address"
+                },
+                {
+                  "internalType": "enum TimeswapV2OptionMint",
+                  "name": "transaction",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount0",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount1",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mint",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "token0AndLong0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1AndLong1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "numberOfOptions",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "optionFactory",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "enum TimeswapV2OptionPosition",
+              "name": "position",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "positionOf",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2OptionSwapParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "tokenTo",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "longTo",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "isLong0ToLong1",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "enum TimeswapV2OptionSwap",
+                  "name": "transaction",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "swap",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "token0AndLong0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1AndLong1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token0",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token1",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "enum TimeswapV2OptionPosition",
+              "name": "position",
+              "type": "uint8"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "totalPosition",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "to",
+              "type": "address"
+            },
+            {
+              "internalType": "enum TimeswapV2OptionPosition",
+              "name": "position",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferPosition"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "burn((uint256,uint256,address,address,uint8,uint256,uint256,bytes))": {
+            "details": "Burn short position. Withdraw token0, when long token0 is burnt. Withdraw token1, when long token1 is burnt.Can only be called before the maturity of the pool.",
+            "params": {
+              "param": "The parameters for the burn function."
+            },
+            "returns": {
+              "shortAmount": "The amount of short burnt.",
+              "token0AndLong0Amount": "The amount of token0 withdrawn and long0 burnt.",
+              "token1AndLong1Amount": "The amount of token1 withdrawn and long1 burnt."
+            }
+          },
+          "collect((uint256,uint256,address,address,uint8,uint256,bytes))": {
+            "details": "Burn short position, withdraw token0 and token1.Can only be called after the maturity of the pool.",
+            "params": {
+              "param": "The parameters for the collect function."
+            },
+            "returns": {
+              "shortAmount": "The amount of short burnt.",
+              "token0Amount": "The amount of token0 withdrawn.",
+              "token1Amount": "The amount of token1 withdrawn."
+            }
+          },
+          "getByIndex(uint256)": {
+            "details": "Get the strike and maturity of the option in the option enumeration list.",
+            "params": {
+              "id": "The chosen index."
+            }
+          },
+          "mint((uint256,uint256,address,address,address,uint8,uint256,uint256,bytes))": {
+            "details": "Mint position. Mint long token0 position when token0 is deposited. Mint long token1 position when token1 is deposited.Can only be called before the maturity of the pool.",
+            "params": {
+              "param": "The parameters for the mint function."
+            },
+            "returns": {
+              "data": "The additional data return.",
+              "shortAmount": "The amount of short minted.",
+              "token0AndLong0Amount": "The amount of token0 deposited and long0 minted.",
+              "token1AndLong1Amount": "The amount of token1 deposited and long1 minted."
+            }
+          },
+          "numberOfOptions()": {
+            "details": "Number of options being interacted."
+          },
+          "optionFactory()": {
+            "details": "Returns the factory address that deployed this contract."
+          },
+          "positionOf(uint256,uint256,address,uint8)": {
+            "details": "Returns the position of an owner of the option.",
+            "params": {
+              "maturity": "The maturity of the position.",
+              "owner": "The address of the owner of the position.",
+              "position": "The type of position inquired. More information in the Position module.",
+              "strike": "The strike ratio of token1 per token0 of the position."
+            },
+            "returns": {
+              "balance": "The user position."
+            }
+          },
+          "swap((uint256,uint256,address,address,bool,uint8,uint256,bytes))": {
+            "details": "If the direction is from long token0 to long token1, burn long token0 and mint equivalent long token1, also deposit token1 and withdraw token0. If the direction is from long token1 to long token0, burn long token1 and mint equivalent long token0, also deposit token0 and withdraw token1.Can only be called before the maturity of the pool.",
+            "params": {
+              "param": "The parameters for the swap function."
+            },
+            "returns": {
+              "data": "The additional data return.",
+              "token0AndLong0Amount": "If direction is Long0ToLong1, the amount of token0 withdrawn and long0 burnt. If direction is Long1ToLong0, the amount of token0 deposited and long0 minted.",
+              "token1AndLong1Amount": "If direction is Long0ToLong1, the amount of token1 deposited and long1 minted. If direction is Long1ToLong0, the amount of token1 withdrawn and long1 burnt."
+            }
+          },
+          "token0()": {
+            "details": "Returns the first ERC20 token address of the pair."
+          },
+          "token1()": {
+            "details": "Returns the second ERC20 token address of the pair."
+          },
+          "totalPosition(uint256,uint256,uint8)": {
+            "details": "Returns the total position of the option.",
+            "params": {
+              "maturity": "The maturity of the position.",
+              "position": "The type of position inquired. More information in the Position module.",
+              "strike": "The strike ratio of token1 per token0 of the position."
+            },
+            "returns": {
+              "balance": "The total position."
+            }
+          },
+          "transferPosition(uint256,uint256,address,uint8,uint256)": {
+            "details": "Transfer position to another address.",
+            "params": {
+              "amount": "The amount of balance transferred.",
+              "maturity": "The maturity of the position.",
+              "position": "The type of position transferred. More information in the Position module.",
+              "strike": "The strike ratio of token1 per token0 of the position.",
+              "to": "The address of the receipient of the position."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/ITimeswapV2Option.sol": "ITimeswapV2Option"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "../v2-library/src/Error.sol": {
+        "keccak256": "0x02d4c6920f04bab4f6721eac16a78774fc7c807daa2259b71d9a7d608e612b0a",
+        "urls": [
+          "bzz-raw://0a11801e8ba760ff497ab16bee7b6659fd174dd78ca35ff450ab5cfa9071b62c",
+          "dweb:/ipfs/QmXS8sBK6whSRmmz5AP5PV9sfVYkm5dKWrQJRb5MPdnv3n"
+        ],
+        "license": "Unlicense"
+      },
+      "src/enums/Position.sol": {
+        "keccak256": "0xdf9c1566d1b90293736ff2f685890126505b8eb23c56150710d7e20b675e5eff",
+        "urls": [
+          "bzz-raw://634c3516495971a1038e6f57a1a141f4e834d88c973e843611db226cfc310713",
+          "dweb:/ipfs/QmNuJR7btFoW8avGVJ98N3zdyk2tp7pQA7Ytm7EnRzjWa3"
+        ],
+        "license": "Unlicense"
+      },
+      "src/enums/Transaction.sol": {
+        "keccak256": "0xab4b7b9edb7d23e5bfb3964f53aa844707583131d811219bbcff378fbeccb7ed",
+        "urls": [
+          "bzz-raw://9a3ae97999a16f13a6e24dd6e6da3c454c749790c7a62697cb71495f5417151a",
+          "dweb:/ipfs/QmTSTsTmytBxLUuDgExKfB83gfoG3PrwtvgeHuvYepmNQs"
+        ],
+        "license": "Unlicense"
+      },
+      "src/interfaces/ITimeswapV2Option.sol": {
+        "keccak256": "0x112e19b29289505b8c023e02e25951776721311bd40dbe59332ea3ebc9d6fbbb",
+        "urls": [
+          "bzz-raw://14fc79c6d7006a526f127ce4b0b8bb58dcf4aeb4add1f6968003d0a40450bc86",
+          "dweb:/ipfs/QmNdHsNPHEeHitewnoY9Cpvye8g4Bm9P72CUSTTMnwA45P"
+        ],
+        "license": "Unlicense"
+      },
+      "src/structs/Param.sol": {
+        "keccak256": "0xb3ec244c58a1c56c777337fe57ad36e04063e97a03974f4658529b7d4fa43fed",
+        "urls": [
+          "bzz-raw://c5b79884ec6e8ba823214db05b28679180d895b16c32210713442f5ccfae9b98",
+          "dweb:/ipfs/QmRHFrzfi9ivXD2xB4ZGXdrC29tk9kKjkUhj2vy9t5m7cp"
+        ],
+        "license": "Unlicense"
+      },
+      "src/structs/StrikeAndMaturity.sol": {
+        "keccak256": "0x665bb65e496b7fd926aebba513695a21483b0a658feca4e35be5ededc8b62183",
+        "urls": [
+          "bzz-raw://d4fcd62076b5dd2c629355403931b39b50fc16a6a7b71e9da51852ab288708d1",
+          "dweb:/ipfs/QmZMtDovoYKeg3XLihaEfPZe4baCBHznMcokJiWMe9Qeym"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/ITimeswapV2Option.sol",
+    "id": 30098,
+    "exportedSymbols": {
+      "ITimeswapV2Option": [
+        30097
+      ],
+      "StrikeAndMaturity": [
+        31736
+      ],
+      "TimeswapV2OptionBurnParam": [
+        31216
+      ],
+      "TimeswapV2OptionCollectParam": [
+        31250
+      ],
+      "TimeswapV2OptionMintParam": [
+        31198
+      ],
+      "TimeswapV2OptionPosition": [
+        29741
+      ],
+      "TimeswapV2OptionSwapParam": [
+        31234
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:10549:38",
+    "nodes": [
+      {
+        "id": 29858,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:38",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 29860,
+        "nodeType": "ImportDirective",
+        "src": "62:63:38",
+        "nodes": [],
+        "absolutePath": "src/enums/Position.sol",
+        "file": "../enums/Position.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 30098,
+        "sourceUnit": 29765,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 29859,
+              "name": "TimeswapV2OptionPosition",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:24:38",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 29865,
+        "nodeType": "ImportDirective",
+        "src": "126:147:38",
+        "nodes": [],
+        "absolutePath": "src/structs/Param.sol",
+        "file": "../structs/Param.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 30098,
+        "sourceUnit": 31643,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 29861,
+              "name": "TimeswapV2OptionMintParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "134:25:38",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 29862,
+              "name": "TimeswapV2OptionBurnParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "161:25:38",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 29863,
+              "name": "TimeswapV2OptionSwapParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "188:25:38",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 29864,
+              "name": "TimeswapV2OptionCollectParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "215:28:38",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 29867,
+        "nodeType": "ImportDirective",
+        "src": "274:67:38",
+        "nodes": [],
+        "absolutePath": "src/structs/StrikeAndMaturity.sol",
+        "file": "../structs/StrikeAndMaturity.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 30098,
+        "sourceUnit": 31737,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 29866,
+              "name": "StrikeAndMaturity",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "282:17:38",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 30097,
+        "nodeType": "ContractDefinition",
+        "src": "573:10012:38",
+        "nodes": [
+          {
+            "id": 29884,
+            "nodeType": "EventDefinition",
+            "src": "1119:158:38",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 29869,
+              "nodeType": "StructuredDocumentation",
+              "src": "636:478:38",
+              "text": "@dev Emits when a position is transferred.\n @param strike The strike ratio of token1 per token0 of the position.\n @param maturity The maturity of the position.\n @param from The address of the caller of the transferPosition function.\n @param to The address of the receipient of the position.\n @param position The type of position transferred. More information in the Position module.\n @param amount The amount of balance transferred."
+            },
+            "name": "TransferPosition",
+            "nameLocation": "1125:16:38",
+            "parameters": {
+              "id": 29883,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29871,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "1158:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29884,
+                  "src": "1142:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29870,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1142:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29873,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "1182:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29884,
+                  "src": "1166:24:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29872,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1166:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29875,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "1208:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29884,
+                  "src": "1192:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29874,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1192:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29877,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1222:2:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29884,
+                  "src": "1214:10:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29876,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1214:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29880,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "position",
+                  "nameLocation": "1251:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29884,
+                  "src": "1226:33:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                    "typeString": "enum TimeswapV2OptionPosition"
+                  },
+                  "typeName": {
+                    "id": 29879,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 29878,
+                      "name": "TimeswapV2OptionPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 29741,
+                      "src": "1226:24:38"
+                    },
+                    "referencedDeclaration": 29741,
+                    "src": "1226:24:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                      "typeString": "enum TimeswapV2OptionPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29882,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1269:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29884,
+                  "src": "1261:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29881,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1261:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1141:135:38"
+            }
+          },
+          {
+            "id": 29905,
+            "nodeType": "EventDefinition",
+            "src": "1987:295:38",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 29885,
+              "nodeType": "StructuredDocumentation",
+              "src": "1283:699:38",
+              "text": "@dev Emits when a mint transaction is called.\n @param strike The strike ratio of token1 per token0 of the option.\n @param maturity The maturity of the option.\n @param caller The address of the caller of the mint function.\n @param long0To The address of the receipient of long token0 position.\n @param long1To The address of the receipient of long token1 position.\n @param shortTo The address of the receipient of short position.\n @param token0AndLong0Amount The amount of token0 deposited and long0 minted.\n @param token1AndLong1Amount The amount of token1 deposited and long1 minted.\n @param shortAmount The amount of short minted."
+            },
+            "name": "Mint",
+            "nameLocation": "1993:4:38",
+            "parameters": {
+              "id": 29904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29887,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "2023:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2007:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29886,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2007:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29889,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "2055:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2039:24:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2039:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29891,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "2089:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2073:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29890,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2073:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29893,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "long0To",
+                  "nameLocation": "2113:7:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2105:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2105:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29895,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "long1To",
+                  "nameLocation": "2138:7:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2130:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29894,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2130:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29897,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "shortTo",
+                  "nameLocation": "2163:7:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2155:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29896,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2155:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29899,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token0AndLong0Amount",
+                  "nameLocation": "2188:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2180:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29898,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2180:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29901,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token1AndLong1Amount",
+                  "nameLocation": "2226:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2218:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29900,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2218:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29903,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "shortAmount",
+                  "nameLocation": "2264:11:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29905,
+                  "src": "2256:19:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29902,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2256:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1997:284:38"
+            }
+          },
+          {
+            "id": 29924,
+            "nodeType": "EventDefinition",
+            "src": "2891:272:38",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 29906,
+              "nodeType": "StructuredDocumentation",
+              "src": "2288:598:38",
+              "text": "@dev Emits when a burn transaction is called.\n @param strike The strike ratio of token1 per token0 of the option.\n @param maturity The maturity of the option.\n @param caller The address of the caller of the mint function.\n @param token0To The address of the receipient of token0.\n @param token1To The address of the receipient of token1.\n @param token0AndLong0Amount The amount of token0 withdrawn and long0 burnt.\n @param token1AndLong1Amount The amount of token1 withdrawn and long1 burnt.\n @param shortAmount The amount of short burnt."
+            },
+            "name": "Burn",
+            "nameLocation": "2897:4:38",
+            "parameters": {
+              "id": 29923,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29908,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "2927:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "2911:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29907,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2911:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29910,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "2959:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "2943:24:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29909,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2943:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29912,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "2993:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "2977:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29911,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2977:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29914,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token0To",
+                  "nameLocation": "3017:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "3009:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29913,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3009:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29916,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token1To",
+                  "nameLocation": "3043:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "3035:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29915,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3035:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29918,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token0AndLong0Amount",
+                  "nameLocation": "3069:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "3061:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29917,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3061:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29920,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token1AndLong1Amount",
+                  "nameLocation": "3107:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "3099:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29919,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3099:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29922,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "shortAmount",
+                  "nameLocation": "3145:11:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29924,
+                  "src": "3137:19:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29921,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3137:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2901:261:38"
+            }
+          },
+          {
+            "id": 29943,
+            "nodeType": "EventDefinition",
+            "src": "4124:269:38",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 29925,
+              "nodeType": "StructuredDocumentation",
+              "src": "3169:950:38",
+              "text": "@dev Emits when a swap transaction is called.\n @param strike The strike ratio of token1 per token0 of the option.\n @param maturity The maturity of the option.\n @param caller The address of the caller of the mint function.\n @param tokenTo The address of the receipient of token0 or token1.\n @param longTo The address of the receipient of long token0 or long token1.\n @param isLong0toLong1 The direction of the swap. More information in the Transaction module.\n @param token0AndLong0Amount If the direction is from long0 to long1, the amount of token0 withdrawn and long0 burnt.\n If the direction is from long1 to long0, the amount of token0 deposited and long0 minted.\n @param token1AndLong1Amount If the direction is from long0 to long1, the amount of token1 deposited and long1 minted.\n If the direction is from long1 to long0, the amount of token1 withdrawn and long1 burnt."
+            },
+            "name": "Swap",
+            "nameLocation": "4130:4:38",
+            "parameters": {
+              "id": 29942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29927,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "4160:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4144:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29926,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4144:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29929,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "4192:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4176:24:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29928,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4176:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29931,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "4226:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4210:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29930,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4210:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29933,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenTo",
+                  "nameLocation": "4250:7:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4242:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29932,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4242:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29935,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "longTo",
+                  "nameLocation": "4275:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4267:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29934,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4267:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29937,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "isLong0toLong1",
+                  "nameLocation": "4296:14:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4291:19:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 29936,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4291:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29939,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token0AndLong0Amount",
+                  "nameLocation": "4328:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4320:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29938,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4320:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29941,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token1AndLong1Amount",
+                  "nameLocation": "4366:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29943,
+                  "src": "4358:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29940,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4358:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4134:258:38"
+            }
+          },
+          {
+            "id": 29962,
+            "nodeType": "EventDefinition",
+            "src": "5019:267:38",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 29944,
+              "nodeType": "StructuredDocumentation",
+              "src": "4399:615:38",
+              "text": "@dev Emits when a collect transaction is called.\n @param strike The strike ratio of token1 per token0 of the option.\n @param maturity The maturity of the option.\n @param caller The address of the caller of the mint function.\n @param token0To The address of the receipient of token0.\n @param token1To The address of the receipient of token1.\n @param long0AndToken0Amount The amount of token0 withdrawn.\n @param long1Amount The sum of long0AndToken0Amount and this amount is the total short amount burnt.\n @param token1Amount The amount of token1 withdrawn."
+            },
+            "name": "Collect",
+            "nameLocation": "5025:7:38",
+            "parameters": {
+              "id": 29961,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29946,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "5058:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5042:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29945,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5042:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29948,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "5090:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5074:24:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29947,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5074:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29950,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "caller",
+                  "nameLocation": "5124:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5108:22:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29949,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5108:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29952,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token0To",
+                  "nameLocation": "5148:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5140:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29951,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5140:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29954,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token1To",
+                  "nameLocation": "5174:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5166:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29953,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5166:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29956,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "long0AndToken0Amount",
+                  "nameLocation": "5200:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5192:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29955,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5192:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29958,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "long1Amount",
+                  "nameLocation": "5238:11:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5230:19:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29957,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5230:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29960,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "token1Amount",
+                  "nameLocation": "5267:12:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29962,
+                  "src": "5259:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29959,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5259:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5032:253:38"
+            }
+          },
+          {
+            "id": 29968,
+            "nodeType": "FunctionDefinition",
+            "src": "5390:57:38",
+            "nodes": [],
+            "documentation": {
+              "id": 29963,
+              "nodeType": "StructuredDocumentation",
+              "src": "5320:65:38",
+              "text": "@dev Returns the factory address that deployed this contract."
+            },
+            "functionSelector": "b3461c87",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "optionFactory",
+            "nameLocation": "5399:13:38",
+            "parameters": {
+              "id": 29964,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5412:2:38"
+            },
+            "returnParameters": {
+              "id": 29967,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29966,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29968,
+                  "src": "5438:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29965,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5438:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5437:9:38"
+            },
+            "scope": 30097,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 29974,
+            "nodeType": "FunctionDefinition",
+            "src": "5517:50:38",
+            "nodes": [],
+            "documentation": {
+              "id": 29969,
+              "nodeType": "StructuredDocumentation",
+              "src": "5453:59:38",
+              "text": "@dev Returns the first ERC20 token address of the pair."
+            },
+            "functionSelector": "0dfe1681",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token0",
+            "nameLocation": "5526:6:38",
+            "parameters": {
+              "id": 29970,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5532:2:38"
+            },
+            "returnParameters": {
+              "id": 29973,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29972,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29974,
+                  "src": "5558:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29971,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5558:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5557:9:38"
+            },
+            "scope": 30097,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 29980,
+            "nodeType": "FunctionDefinition",
+            "src": "5638:50:38",
+            "nodes": [],
+            "documentation": {
+              "id": 29975,
+              "nodeType": "StructuredDocumentation",
+              "src": "5573:60:38",
+              "text": "@dev Returns the second ERC20 token address of the pair."
+            },
+            "functionSelector": "d21220a7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token1",
+            "nameLocation": "5647:6:38",
+            "parameters": {
+              "id": 29976,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5653:2:38"
+            },
+            "returnParameters": {
+              "id": 29979,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29978,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29980,
+                  "src": "5679:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 29977,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5679:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5678:9:38"
+            },
+            "scope": 30097,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 29989,
+            "nodeType": "FunctionDefinition",
+            "src": "5817:81:38",
+            "nodes": [],
+            "documentation": {
+              "id": 29981,
+              "nodeType": "StructuredDocumentation",
+              "src": "5694:118:38",
+              "text": "@dev Get the strike and maturity of the option in the option enumeration list.\n @param id The chosen index."
+            },
+            "functionSelector": "2d883a73",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getByIndex",
+            "nameLocation": "5826:10:38",
+            "parameters": {
+              "id": 29984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29983,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "5845:2:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29989,
+                  "src": "5837:10:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29982,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "5837:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5836:12:38"
+            },
+            "returnParameters": {
+              "id": 29988,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29987,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29989,
+                  "src": "5872:24:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_StrikeAndMaturity_$31736_memory_ptr",
+                    "typeString": "struct StrikeAndMaturity"
+                  },
+                  "typeName": {
+                    "id": 29986,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 29985,
+                      "name": "StrikeAndMaturity",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 31736,
+                      "src": "5872:17:38"
+                    },
+                    "referencedDeclaration": 31736,
+                    "src": "5872:17:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_StrikeAndMaturity_$31736_storage_ptr",
+                      "typeString": "struct StrikeAndMaturity"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "5871:26:38"
+            },
+            "scope": 30097,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 29995,
+            "nodeType": "FunctionDefinition",
+            "src": "5953:59:38",
+            "nodes": [],
+            "documentation": {
+              "id": 29990,
+              "nodeType": "StructuredDocumentation",
+              "src": "5904:44:38",
+              "text": "@dev Number of options being interacted."
+            },
+            "functionSelector": "87ed3ecf",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "numberOfOptions",
+            "nameLocation": "5962:15:38",
+            "parameters": {
+              "id": 29991,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "5977:2:38"
+            },
+            "returnParameters": {
+              "id": 29994,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29993,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29995,
+                  "src": "6003:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29992,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6003:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6002:9:38"
+            },
+            "scope": 30097,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30008,
+            "nodeType": "FunctionDefinition",
+            "src": "6344:132:38",
+            "nodes": [],
+            "documentation": {
+              "id": 29996,
+              "nodeType": "StructuredDocumentation",
+              "src": "6018:321:38",
+              "text": "@dev Returns the total position of the option.\n @param strike The strike ratio of token1 per token0 of the position.\n @param maturity The maturity of the position.\n @param position The type of position inquired. More information in the Position module.\n @return balance The total position."
+            },
+            "functionSelector": "b7fb542d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "totalPosition",
+            "nameLocation": "6353:13:38",
+            "parameters": {
+              "id": 30004,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29998,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "6375:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30008,
+                  "src": "6367:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29997,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6367:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30000,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "6391:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30008,
+                  "src": "6383:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29999,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6383:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30003,
+                  "mutability": "mutable",
+                  "name": "position",
+                  "nameLocation": "6426:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30008,
+                  "src": "6401:33:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                    "typeString": "enum TimeswapV2OptionPosition"
+                  },
+                  "typeName": {
+                    "id": 30002,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30001,
+                      "name": "TimeswapV2OptionPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 29741,
+                      "src": "6401:24:38"
+                    },
+                    "referencedDeclaration": 29741,
+                    "src": "6401:24:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                      "typeString": "enum TimeswapV2OptionPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6366:69:38"
+            },
+            "returnParameters": {
+              "id": 30007,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30006,
+                  "mutability": "mutable",
+                  "name": "balance",
+                  "nameLocation": "6467:7:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30008,
+                  "src": "6459:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30005,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6459:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6458:17:38"
+            },
+            "scope": 30097,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30023,
+            "nodeType": "FunctionDefinition",
+            "src": "6876:144:38",
+            "nodes": [],
+            "documentation": {
+              "id": 30009,
+              "nodeType": "StructuredDocumentation",
+              "src": "6482:389:38",
+              "text": "@dev Returns the position of an owner of the option.\n @param strike The strike ratio of token1 per token0 of the position.\n @param maturity The maturity of the position.\n @param owner The address of the owner of the position.\n @param position The type of position inquired. More information in the Position module.\n @return balance The user position."
+            },
+            "functionSelector": "af2f91ea",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "positionOf",
+            "nameLocation": "6885:10:38",
+            "parameters": {
+              "id": 30019,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30011,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "6904:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30023,
+                  "src": "6896:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30010,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6896:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30013,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "6920:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30023,
+                  "src": "6912:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30012,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6912:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30015,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "6938:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30023,
+                  "src": "6930:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30014,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "6930:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30018,
+                  "mutability": "mutable",
+                  "name": "position",
+                  "nameLocation": "6970:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30023,
+                  "src": "6945:33:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                    "typeString": "enum TimeswapV2OptionPosition"
+                  },
+                  "typeName": {
+                    "id": 30017,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30016,
+                      "name": "TimeswapV2OptionPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 29741,
+                      "src": "6945:24:38"
+                    },
+                    "referencedDeclaration": 29741,
+                    "src": "6945:24:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                      "typeString": "enum TimeswapV2OptionPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "6895:84:38"
+            },
+            "returnParameters": {
+              "id": 30022,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30021,
+                  "mutability": "mutable",
+                  "name": "balance",
+                  "nameLocation": "7011:7:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30023,
+                  "src": "7003:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30020,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7003:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7002:17:38"
+            },
+            "scope": 30097,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30038,
+            "nodeType": "FunctionDefinition",
+            "src": "7459:132:38",
+            "nodes": [],
+            "documentation": {
+              "id": 30024,
+              "nodeType": "StructuredDocumentation",
+              "src": "7056:398:38",
+              "text": "@dev Transfer position to another address.\n @param strike The strike ratio of token1 per token0 of the position.\n @param maturity The maturity of the position.\n @param to The address of the receipient of the position.\n @param position The type of position transferred. More information in the Position module.\n @param amount The amount of balance transferred."
+            },
+            "functionSelector": "b2ceca77",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferPosition",
+            "nameLocation": "7468:16:38",
+            "parameters": {
+              "id": 30036,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30026,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "7493:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30038,
+                  "src": "7485:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30025,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7485:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30028,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "7509:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30038,
+                  "src": "7501:16:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30027,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7501:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30030,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "7527:2:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30038,
+                  "src": "7519:10:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30029,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7519:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30033,
+                  "mutability": "mutable",
+                  "name": "position",
+                  "nameLocation": "7556:8:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30038,
+                  "src": "7531:33:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                    "typeString": "enum TimeswapV2OptionPosition"
+                  },
+                  "typeName": {
+                    "id": 30032,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30031,
+                      "name": "TimeswapV2OptionPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 29741,
+                      "src": "7531:24:38"
+                    },
+                    "referencedDeclaration": 29741,
+                    "src": "7531:24:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                      "typeString": "enum TimeswapV2OptionPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30035,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "7574:6:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30038,
+                  "src": "7566:14:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30034,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "7566:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "7484:97:38"
+            },
+            "returnParameters": {
+              "id": 30037,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "7590:0:38"
+            },
+            "scope": 30097,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30053,
+            "nodeType": "FunctionDefinition",
+            "src": "8146:174:38",
+            "nodes": [],
+            "documentation": {
+              "id": 30039,
+              "nodeType": "StructuredDocumentation",
+              "src": "7597:544:38",
+              "text": "@dev Mint position.\n Mint long token0 position when token0 is deposited.\n Mint long token1 position when token1 is deposited.\n @dev Can only be called before the maturity of the pool.\n @param param The parameters for the mint function.\n @return token0AndLong0Amount The amount of token0 deposited and long0 minted.\n @return token1AndLong1Amount The amount of token1 deposited and long1 minted.\n @return shortAmount The amount of short minted.\n @return data The additional data return."
+            },
+            "functionSelector": "80e06679",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "8155:4:38",
+            "parameters": {
+              "id": 30043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30042,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "8195:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30053,
+                  "src": "8160:40:38",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2OptionMintParam_$31198_calldata_ptr",
+                    "typeString": "struct TimeswapV2OptionMintParam"
+                  },
+                  "typeName": {
+                    "id": 30041,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30040,
+                      "name": "TimeswapV2OptionMintParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 31198,
+                      "src": "8160:25:38"
+                    },
+                    "referencedDeclaration": 31198,
+                    "src": "8160:25:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2OptionMintParam_$31198_storage_ptr",
+                      "typeString": "struct TimeswapV2OptionMintParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8159:42:38"
+            },
+            "returnParameters": {
+              "id": 30052,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30045,
+                  "mutability": "mutable",
+                  "name": "token0AndLong0Amount",
+                  "nameLocation": "8228:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30053,
+                  "src": "8220:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30044,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8220:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30047,
+                  "mutability": "mutable",
+                  "name": "token1AndLong1Amount",
+                  "nameLocation": "8258:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30053,
+                  "src": "8250:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30046,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8250:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30049,
+                  "mutability": "mutable",
+                  "name": "shortAmount",
+                  "nameLocation": "8288:11:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30053,
+                  "src": "8280:19:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30048,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8280:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30051,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "8314:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30053,
+                  "src": "8301:17:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30050,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8301:5:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8219:100:38"
+            },
+            "scope": 30097,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30068,
+            "nodeType": "FunctionDefinition",
+            "src": "8813:174:38",
+            "nodes": [],
+            "documentation": {
+              "id": 30054,
+              "nodeType": "StructuredDocumentation",
+              "src": "8326:482:38",
+              "text": "@dev Burn short position.\n Withdraw token0, when long token0 is burnt.\n Withdraw token1, when long token1 is burnt.\n @dev Can only be called before the maturity of the pool.\n @param param The parameters for the burn function.\n @return token0AndLong0Amount The amount of token0 withdrawn and long0 burnt.\n @return token1AndLong1Amount The amount of token1 withdrawn and long1 burnt.\n @return shortAmount The amount of short burnt."
+            },
+            "functionSelector": "622fb68f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "8822:4:38",
+            "parameters": {
+              "id": 30058,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30057,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "8862:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30068,
+                  "src": "8827:40:38",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2OptionBurnParam_$31216_calldata_ptr",
+                    "typeString": "struct TimeswapV2OptionBurnParam"
+                  },
+                  "typeName": {
+                    "id": 30056,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30055,
+                      "name": "TimeswapV2OptionBurnParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 31216,
+                      "src": "8827:25:38"
+                    },
+                    "referencedDeclaration": 31216,
+                    "src": "8827:25:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2OptionBurnParam_$31216_storage_ptr",
+                      "typeString": "struct TimeswapV2OptionBurnParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8826:42:38"
+            },
+            "returnParameters": {
+              "id": 30067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30060,
+                  "mutability": "mutable",
+                  "name": "token0AndLong0Amount",
+                  "nameLocation": "8895:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30068,
+                  "src": "8887:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30059,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8887:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30062,
+                  "mutability": "mutable",
+                  "name": "token1AndLong1Amount",
+                  "nameLocation": "8925:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30068,
+                  "src": "8917:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30061,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8917:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30064,
+                  "mutability": "mutable",
+                  "name": "shortAmount",
+                  "nameLocation": "8955:11:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30068,
+                  "src": "8947:19:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30063,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8947:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30066,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "8981:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30068,
+                  "src": "8968:17:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30065,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "8968:5:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "8886:100:38"
+            },
+            "scope": 30097,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30081,
+            "nodeType": "FunctionDefinition",
+            "src": "9895:153:38",
+            "nodes": [],
+            "documentation": {
+              "id": 30069,
+              "nodeType": "StructuredDocumentation",
+              "src": "8993:897:38",
+              "text": "@dev If the direction is from long token0 to long token1, burn long token0 and mint equivalent long token1,\n also deposit token1 and withdraw token0.\n If the direction is from long token1 to long token0, burn long token1 and mint equivalent long token0,\n also deposit token0 and withdraw token1.\n @dev Can only be called before the maturity of the pool.\n @param param The parameters for the swap function.\n @return token0AndLong0Amount If direction is Long0ToLong1, the amount of token0 withdrawn and long0 burnt.\n If direction is Long1ToLong0, the amount of token0 deposited and long0 minted.\n @return token1AndLong1Amount If direction is Long0ToLong1, the amount of token1 deposited and long1 minted.\n If direction is Long1ToLong0, the amount of token1 withdrawn and long1 burnt.\n @return data The additional data return."
+            },
+            "functionSelector": "b084c252",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "swap",
+            "nameLocation": "9904:4:38",
+            "parameters": {
+              "id": 30073,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30072,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "9944:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30081,
+                  "src": "9909:40:38",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2OptionSwapParam_$31234_calldata_ptr",
+                    "typeString": "struct TimeswapV2OptionSwapParam"
+                  },
+                  "typeName": {
+                    "id": 30071,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30070,
+                      "name": "TimeswapV2OptionSwapParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 31234,
+                      "src": "9909:25:38"
+                    },
+                    "referencedDeclaration": 31234,
+                    "src": "9909:25:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2OptionSwapParam_$31234_storage_ptr",
+                      "typeString": "struct TimeswapV2OptionSwapParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9908:42:38"
+            },
+            "returnParameters": {
+              "id": 30080,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30075,
+                  "mutability": "mutable",
+                  "name": "token0AndLong0Amount",
+                  "nameLocation": "9977:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30081,
+                  "src": "9969:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30074,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9969:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30077,
+                  "mutability": "mutable",
+                  "name": "token1AndLong1Amount",
+                  "nameLocation": "10007:20:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30081,
+                  "src": "9999:28:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30076,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "9999:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30079,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "10042:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30081,
+                  "src": "10029:17:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30078,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10029:5:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "9968:79:38"
+            },
+            "scope": 30097,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30096,
+            "nodeType": "FunctionDefinition",
+            "src": "10419:164:38",
+            "nodes": [],
+            "documentation": {
+              "id": 30082,
+              "nodeType": "StructuredDocumentation",
+              "src": "10054:360:38",
+              "text": "@dev Burn short position, withdraw token0 and token1.\n @dev Can only be called after the maturity of the pool.\n @param param The parameters for the collect function.\n @return token0Amount The amount of token0 withdrawn.\n @return token1Amount The amount of token1 withdrawn.\n @return shortAmount The amount of short burnt."
+            },
+            "functionSelector": "7087c1f6",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collect",
+            "nameLocation": "10428:7:38",
+            "parameters": {
+              "id": 30086,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30085,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "10474:5:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30096,
+                  "src": "10436:43:38",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2OptionCollectParam_$31250_calldata_ptr",
+                    "typeString": "struct TimeswapV2OptionCollectParam"
+                  },
+                  "typeName": {
+                    "id": 30084,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 30083,
+                      "name": "TimeswapV2OptionCollectParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 31250,
+                      "src": "10436:28:38"
+                    },
+                    "referencedDeclaration": 31250,
+                    "src": "10436:28:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2OptionCollectParam_$31250_storage_ptr",
+                      "typeString": "struct TimeswapV2OptionCollectParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10435:45:38"
+            },
+            "returnParameters": {
+              "id": 30095,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30088,
+                  "mutability": "mutable",
+                  "name": "token0Amount",
+                  "nameLocation": "10507:12:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30096,
+                  "src": "10499:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30087,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10499:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30090,
+                  "mutability": "mutable",
+                  "name": "token1Amount",
+                  "nameLocation": "10529:12:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30096,
+                  "src": "10521:20:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30089,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10521:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30092,
+                  "mutability": "mutable",
+                  "name": "shortAmount",
+                  "nameLocation": "10551:11:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30096,
+                  "src": "10543:19:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30091,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10543:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30094,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "10577:4:38",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30096,
+                  "src": "10564:17:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 30093,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "10564:5:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "10498:84:38"
+            },
+            "scope": 30097,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 29868,
+          "nodeType": "StructuredDocumentation",
+          "src": "343:230:38",
+          "text": "@title An interface for a contract that deploys Timeswap V2 Option pair contracts\n @notice A Timeswap V2 Option pair facilitates option mechanics between any two assets that strictly conform\n to the ERC20 specification."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          30097
+        ],
+        "name": "ITimeswapV2Option",
+        "nameLocation": "583:17:38",
+        "scope": 30098,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 38
+}

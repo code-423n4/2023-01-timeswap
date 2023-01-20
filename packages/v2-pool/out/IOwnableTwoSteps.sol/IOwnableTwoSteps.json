@@ -1,0 +1,619 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "AcceptOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "pendingOwner",
+          "type": "address"
+        }
+      ],
+      "name": "SetOwner",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "acceptOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingOwner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "chosenPendingOwner",
+          "type": "address"
+        }
+      ],
+      "name": "setPendingOwner",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "acceptOwner()": "ebbc4965",
+    "owner()": "8da5cb5b",
+    "pendingOwner()": "e30c3978",
+    "setPendingOwner(address)": "c42069ec"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"AcceptOwner\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"pendingOwner\",\"type\":\"address\"}],\"name\":\"SetOwner\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"acceptOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pendingOwner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"chosenPendingOwner\",\"type\":\"address\"}],\"name\":\"setPendingOwner\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"AcceptOwner(address)\":{\"details\":\"Emits when the pending owner accepted and become the new owner.\",\"params\":{\"owner\":\"The new owner.\"}},\"SetOwner(address)\":{\"details\":\"Emits when the pending owner is chosen.\",\"params\":{\"pendingOwner\":\"The new pending owner.\"}}},\"kind\":\"dev\",\"methods\":{\"acceptOwner()\":{\"details\":\"The pending owner accepts being the new owner.\"},\"owner()\":{\"details\":\"The address of the current owner.\",\"returns\":{\"_0\":\"address\"}},\"pendingOwner()\":{\"details\":\"The address of the current pending owner.\",\"returns\":{\"_0\":\"address\"}},\"setPendingOwner(address)\":{\"details\":\"The owner sets the new pending owner.\",\"params\":{\"chosenPendingOwner\":\"The newly chosen pending owner.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"acceptOwner()\":{\"notice\":\"Can only be called by the pending owner.\"},\"pendingOwner()\":{\"notice\":\"The address can be zero which signifies no pending owner.\"},\"setPendingOwner(address)\":{\"notice\":\"Can only be called by the owner.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/IOwnableTwoSteps.sol\":\"IOwnableTwoSteps\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/interfaces/IOwnableTwoSteps.sol\":{\"keccak256\":\"0x7d8f131327b52c0680a98a94b3dfc273753c2189f76e0a557f543d98bd192209\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://e98e5d1cb554046f3afa82df5d16ca9c99244e220c9296ea0db143d964d000d2\",\"dweb:/ipfs/QmWog3j7JdEDKX5tJVQwo5HtWt1vhpPd8uc8Jjte3yVcFF\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "AcceptOwner",
+          "anonymous": false
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "pendingOwner",
+              "type": "address",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "SetOwner",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "acceptOwner"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "pendingOwner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "chosenPendingOwner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "setPendingOwner"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "acceptOwner()": {
+            "details": "The pending owner accepts being the new owner."
+          },
+          "owner()": {
+            "details": "The address of the current owner.",
+            "returns": {
+              "_0": "address"
+            }
+          },
+          "pendingOwner()": {
+            "details": "The address of the current pending owner.",
+            "returns": {
+              "_0": "address"
+            }
+          },
+          "setPendingOwner(address)": {
+            "details": "The owner sets the new pending owner.",
+            "params": {
+              "chosenPendingOwner": "The newly chosen pending owner."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "acceptOwner()": {
+            "notice": "Can only be called by the pending owner."
+          },
+          "pendingOwner()": {
+            "notice": "The address can be zero which signifies no pending owner."
+          },
+          "setPendingOwner(address)": {
+            "notice": "Can only be called by the owner."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/IOwnableTwoSteps.sol": "IOwnableTwoSteps"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/IOwnableTwoSteps.sol": {
+        "keccak256": "0x7d8f131327b52c0680a98a94b3dfc273753c2189f76e0a557f543d98bd192209",
+        "urls": [
+          "bzz-raw://e98e5d1cb554046f3afa82df5d16ca9c99244e220c9296ea0db143d964d000d2",
+          "dweb:/ipfs/QmWog3j7JdEDKX5tJVQwo5HtWt1vhpPd8uc8Jjte3yVcFF"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/IOwnableTwoSteps.sol",
+    "id": 36468,
+    "exportedSymbols": {
+      "IOwnableTwoSteps": [
+        36467
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1084:80",
+    "nodes": [
+      {
+        "id": 36434,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:80",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 36467,
+        "nodeType": "ContractDefinition",
+        "src": "62:1058:80",
+        "nodes": [
+          {
+            "id": 36439,
+            "nodeType": "EventDefinition",
+            "src": "199:37:80",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 36435,
+              "nodeType": "StructuredDocumentation",
+              "src": "95:99:80",
+              "text": "@dev Emits when the pending owner is chosen.\n @param pendingOwner The new pending owner."
+            },
+            "name": "SetOwner",
+            "nameLocation": "205:8:80",
+            "parameters": {
+              "id": 36438,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36437,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "pendingOwner",
+                  "nameLocation": "222:12:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36439,
+                  "src": "214:20:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36436,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "213:22:80"
+            }
+          },
+          {
+            "id": 36444,
+            "nodeType": "EventDefinition",
+            "src": "355:33:80",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 36440,
+              "nodeType": "StructuredDocumentation",
+              "src": "242:108:80",
+              "text": "@dev Emits when the pending owner accepted and become the new owner.\n @param owner The new owner."
+            },
+            "name": "AcceptOwner",
+            "nameLocation": "361:11:80",
+            "parameters": {
+              "id": 36443,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36442,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "381:5:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36444,
+                  "src": "373:13:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36441,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "373:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "372:15:80"
+            }
+          },
+          {
+            "id": 36450,
+            "nodeType": "FunctionDefinition",
+            "src": "465:49:80",
+            "nodes": [],
+            "documentation": {
+              "id": 36445,
+              "nodeType": "StructuredDocumentation",
+              "src": "394:66:80",
+              "text": "@dev The address of the current owner.\n @return address"
+            },
+            "functionSelector": "8da5cb5b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "owner",
+            "nameLocation": "474:5:80",
+            "parameters": {
+              "id": 36446,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "479:2:80"
+            },
+            "returnParameters": {
+              "id": 36449,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36448,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36450,
+                  "src": "505:7:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36447,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "505:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "504:9:80"
+            },
+            "scope": 36467,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36456,
+            "nodeType": "FunctionDefinition",
+            "src": "673:56:80",
+            "nodes": [],
+            "documentation": {
+              "id": 36451,
+              "nodeType": "StructuredDocumentation",
+              "src": "520:148:80",
+              "text": "@dev The address of the current pending owner.\n @notice The address can be zero which signifies no pending owner.\n @return address"
+            },
+            "functionSelector": "e30c3978",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pendingOwner",
+            "nameLocation": "682:12:80",
+            "parameters": {
+              "id": 36452,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "694:2:80"
+            },
+            "returnParameters": {
+              "id": 36455,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36454,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36456,
+                  "src": "720:7:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36453,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "720:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:9:80"
+            },
+            "scope": 36467,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36462,
+            "nodeType": "FunctionDefinition",
+            "src": "901:62:80",
+            "nodes": [],
+            "documentation": {
+              "id": 36457,
+              "nodeType": "StructuredDocumentation",
+              "src": "735:161:80",
+              "text": "@dev The owner sets the new pending owner.\n @notice Can only be called by the owner.\n @param chosenPendingOwner The newly chosen pending owner."
+            },
+            "functionSelector": "c42069ec",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPendingOwner",
+            "nameLocation": "910:15:80",
+            "parameters": {
+              "id": 36460,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36459,
+                  "mutability": "mutable",
+                  "name": "chosenPendingOwner",
+                  "nameLocation": "934:18:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36462,
+                  "src": "926:26:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36458,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "926:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "925:28:80"
+            },
+            "returnParameters": {
+              "id": 36461,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "962:0:80"
+            },
+            "scope": 36467,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36466,
+            "nodeType": "FunctionDefinition",
+            "src": "1086:32:80",
+            "nodes": [],
+            "documentation": {
+              "id": 36463,
+              "nodeType": "StructuredDocumentation",
+              "src": "969:112:80",
+              "text": "@dev The pending owner accepts being the new owner.\n @notice Can only be called by the pending owner."
+            },
+            "functionSelector": "ebbc4965",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptOwner",
+            "nameLocation": "1095:11:80",
+            "parameters": {
+              "id": 36464,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1106:2:80"
+            },
+            "returnParameters": {
+              "id": 36465,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1117:0:80"
+            },
+            "scope": 36467,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          36467
+        ],
+        "name": "IOwnableTwoSteps",
+        "nameLocation": "72:16:80",
+        "scope": 36468,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 80
+}

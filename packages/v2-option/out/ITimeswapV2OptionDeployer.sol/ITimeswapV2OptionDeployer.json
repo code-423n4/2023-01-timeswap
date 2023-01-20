@@ -1,0 +1,303 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "parameter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "optionFactory",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "parameter()": "ad4d4e29"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"parameter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"optionFactory\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This is used to avoid having constructor arguments in the pair contract, which results in the init code hash of the pair being constant allowing the CREATE2 address of the pair to be cheaply computed on-chain.\",\"kind\":\"dev\",\"methods\":{\"parameter()\":{\"details\":\"Called by the pair constructor to fetch the parameters of the pair.\",\"params\":{\"token0\":\"The first ERC20 token address of the pair.\",\"token1\":\"The second ERC20 token address of the pair.\"},\"returns\":{\"optionFactory\":\"The factory address.\"}}},\"title\":\"An interface for a contract that is capable of deploying Timeswap V2 Option\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"parameter()\":{\"notice\":\"Get the parameters to be used in constructing the pair, set transiently during pair creation.\"}},\"notice\":\"A contract that constructs a pair must implement this to pass arguments to the pair.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/ITimeswapV2OptionDeployer.sol\":\"ITimeswapV2OptionDeployer\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/interfaces/ITimeswapV2OptionDeployer.sol\":{\"keccak256\":\"0x85b4e8deafb8c13db01fc10b9936c399904f7e016e4d25b17d5d3c705dae8dc2\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://5484343fd38b8f8e4c73ded810be5902f38e5d39290d4c2e3823656db5bec16f\",\"dweb:/ipfs/QmUW4pxbqqAoJJBcxBQJJaQaH3whNdzQQi6wRgDkXV6P9c\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "parameter",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "optionFactory",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "parameter()": {
+            "details": "Called by the pair constructor to fetch the parameters of the pair.",
+            "params": {
+              "token0": "The first ERC20 token address of the pair.",
+              "token1": "The second ERC20 token address of the pair."
+            },
+            "returns": {
+              "optionFactory": "The factory address."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "parameter()": {
+            "notice": "Get the parameters to be used in constructing the pair, set transiently during pair creation."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/ITimeswapV2OptionDeployer.sol": "ITimeswapV2OptionDeployer"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/ITimeswapV2OptionDeployer.sol": {
+        "keccak256": "0x85b4e8deafb8c13db01fc10b9936c399904f7e016e4d25b17d5d3c705dae8dc2",
+        "urls": [
+          "bzz-raw://5484343fd38b8f8e4c73ded810be5902f38e5d39290d4c2e3823656db5bec16f",
+          "dweb:/ipfs/QmUW4pxbqqAoJJBcxBQJJaQaH3whNdzQQi6wRgDkXV6P9c"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/ITimeswapV2OptionDeployer.sol",
+    "id": 30112,
+    "exportedSymbols": {
+      "ITimeswapV2OptionDeployer": [
+        30111
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:977:39",
+    "nodes": [
+      {
+        "id": 30099,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:39",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 30111,
+        "nodeType": "ContractDefinition",
+        "src": "469:544:39",
+        "nodes": [
+          {
+            "id": 30110,
+            "nodeType": "FunctionDefinition",
+            "src": "912:99:39",
+            "nodes": [],
+            "documentation": {
+              "id": 30101,
+              "nodeType": "StructuredDocumentation",
+              "src": "539:368:39",
+              "text": "@notice Get the parameters to be used in constructing the pair, set transiently during pair creation.\n @dev Called by the pair constructor to fetch the parameters of the pair.\n @return optionFactory The factory address.\n @param token0 The first ERC20 token address of the pair.\n @param token1 The second ERC20 token address of the pair."
+            },
+            "functionSelector": "ad4d4e29",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "parameter",
+            "nameLocation": "921:9:39",
+            "parameters": {
+              "id": 30102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "930:2:39"
+            },
+            "returnParameters": {
+              "id": 30109,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30104,
+                  "mutability": "mutable",
+                  "name": "optionFactory",
+                  "nameLocation": "964:13:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30110,
+                  "src": "956:21:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30103,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "956:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30106,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "987:6:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30110,
+                  "src": "979:14:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30105,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "979:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30108,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "1003:6:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30110,
+                  "src": "995:14:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30107,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "995:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "955:55:39"
+            },
+            "scope": 30111,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 30100,
+          "nodeType": "StructuredDocumentation",
+          "src": "62:407:39",
+          "text": "@title An interface for a contract that is capable of deploying Timeswap V2 Option\n @notice A contract that constructs a pair must implement this to pass arguments to the pair.\n @dev This is used to avoid having constructor arguments in the pair contract, which results in the init code hash\n of the pair being constant allowing the CREATE2 address of the pair to be cheaply computed on-chain."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          30111
+        ],
+        "name": "ITimeswapV2OptionDeployer",
+        "nameLocation": "479:25:39",
+        "scope": 30112,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 39
+}

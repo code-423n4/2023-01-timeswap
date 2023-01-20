@@ -74,37 +74,50 @@
   },
   "ast": {
     "absolutePath": "src/structs/Position.sol",
-    "id": 52235,
+    "id": 52237,
     "exportedSymbols": {
-      "PositionLibrary": [52234],
-      "TimeswapV2LiquidityTokenPosition": [52199],
-      "TimeswapV2OptionPosition": [4026],
-      "TimeswapV2TokenPosition": [52190]
+      "PositionLibrary": [
+        52236
+      ],
+      "TimeswapV2LiquidityTokenPosition": [
+        52201
+      ],
+      "TimeswapV2OptionPosition": [
+        4026
+      ],
+      "TimeswapV2TokenPosition": [
+        52192
+      ]
     },
     "nodeType": "SourceUnit",
     "src": "32:1532:155",
     "nodes": [
       {
-        "id": 52176,
+        "id": 52178,
         "nodeType": "PragmaDirective",
         "src": "32:23:155",
         "nodes": [],
-        "literals": ["solidity", "^", "0.8", ".8"]
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".8"
+        ]
       },
       {
-        "id": 52178,
+        "id": 52180,
         "nodeType": "ImportDirective",
         "src": "57:89:155",
         "nodes": [],
         "absolutePath": "../v2-option/src/enums/Position.sol",
         "file": "@timeswap-labs/v2-option/src/enums/Position.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 52235,
+        "scope": 52237,
         "sourceUnit": 4050,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 52177,
+              "id": 52179,
               "name": "TimeswapV2OptionPosition",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
@@ -117,7 +130,7 @@
         "unitAlias": ""
       },
       {
-        "id": 52190,
+        "id": 52192,
         "nodeType": "StructDefinition",
         "src": "465:155:155",
         "nodes": [],
@@ -125,12 +138,12 @@
         "members": [
           {
             "constant": false,
-            "id": 52180,
+            "id": 52182,
             "mutability": "mutable",
             "name": "token0",
             "nameLocation": "510:6:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52190,
+            "scope": 52192,
             "src": "502:14:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -139,7 +152,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 52179,
+              "id": 52181,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "502:7:155",
@@ -153,12 +166,12 @@
           },
           {
             "constant": false,
-            "id": 52182,
+            "id": 52184,
             "mutability": "mutable",
             "name": "token1",
             "nameLocation": "530:6:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52190,
+            "scope": 52192,
             "src": "522:14:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -167,7 +180,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 52181,
+              "id": 52183,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "522:7:155",
@@ -181,12 +194,12 @@
           },
           {
             "constant": false,
-            "id": 52184,
+            "id": 52186,
             "mutability": "mutable",
             "name": "strike",
             "nameLocation": "550:6:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52190,
+            "scope": 52192,
             "src": "542:14:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -195,7 +208,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 52183,
+              "id": 52185,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "542:7:155",
@@ -208,12 +221,12 @@
           },
           {
             "constant": false,
-            "id": 52186,
+            "id": 52188,
             "mutability": "mutable",
             "name": "maturity",
             "nameLocation": "570:8:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52190,
+            "scope": 52192,
             "src": "562:16:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -222,7 +235,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 52185,
+              "id": 52187,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "562:7:155",
@@ -235,12 +248,12 @@
           },
           {
             "constant": false,
-            "id": 52189,
+            "id": 52191,
             "mutability": "mutable",
             "name": "position",
             "nameLocation": "609:8:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52190,
+            "scope": 52192,
             "src": "584:33:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -249,10 +262,10 @@
               "typeString": "enum TimeswapV2OptionPosition"
             },
             "typeName": {
-              "id": 52188,
+              "id": 52190,
               "nodeType": "UserDefinedTypeName",
               "pathNode": {
-                "id": 52187,
+                "id": 52189,
                 "name": "TimeswapV2OptionPosition",
                 "nodeType": "IdentifierPath",
                 "referencedDeclaration": 4026,
@@ -270,11 +283,11 @@
         ],
         "name": "TimeswapV2TokenPosition",
         "nameLocation": "472:23:155",
-        "scope": 52235,
+        "scope": 52237,
         "visibility": "public"
       },
       {
-        "id": 52199,
+        "id": 52201,
         "nodeType": "StructDefinition",
         "src": "901:125:155",
         "nodes": [],
@@ -282,12 +295,12 @@
         "members": [
           {
             "constant": false,
-            "id": 52192,
+            "id": 52194,
             "mutability": "mutable",
             "name": "token0",
             "nameLocation": "955:6:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52199,
+            "scope": 52201,
             "src": "947:14:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -296,7 +309,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 52191,
+              "id": 52193,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "947:7:155",
@@ -310,12 +323,12 @@
           },
           {
             "constant": false,
-            "id": 52194,
+            "id": 52196,
             "mutability": "mutable",
             "name": "token1",
             "nameLocation": "975:6:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52199,
+            "scope": 52201,
             "src": "967:14:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -324,7 +337,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 52193,
+              "id": 52195,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "967:7:155",
@@ -338,12 +351,12 @@
           },
           {
             "constant": false,
-            "id": 52196,
+            "id": 52198,
             "mutability": "mutable",
             "name": "strike",
             "nameLocation": "995:6:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52199,
+            "scope": 52201,
             "src": "987:14:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -352,7 +365,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 52195,
+              "id": 52197,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "987:7:155",
@@ -365,12 +378,12 @@
           },
           {
             "constant": false,
-            "id": 52198,
+            "id": 52200,
             "mutability": "mutable",
             "name": "maturity",
             "nameLocation": "1015:8:155",
             "nodeType": "VariableDeclaration",
-            "scope": 52199,
+            "scope": 52201,
             "src": "1007:16:155",
             "stateVariable": false,
             "storageLocation": "default",
@@ -379,7 +392,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 52197,
+              "id": 52199,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "1007:7:155",
@@ -393,21 +406,21 @@
         ],
         "name": "TimeswapV2LiquidityTokenPosition",
         "nameLocation": "908:32:155",
-        "scope": 52235,
+        "scope": 52237,
         "visibility": "public"
       },
       {
-        "id": 52234,
+        "id": 52236,
         "nodeType": "ContractDefinition",
         "src": "1028:535:155",
         "nodes": [
           {
-            "id": 52216,
+            "id": 52218,
             "nodeType": "FunctionDefinition",
             "src": "1115:173:155",
             "nodes": [],
             "body": {
-              "id": 52215,
+              "id": 52217,
               "nodeType": "Block",
               "src": "1218:70:155",
               "nodes": [],
@@ -418,14 +431,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 52211,
+                            "id": 52213,
                             "name": "timeswapV2TokenPosition",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 52203,
+                            "referencedDeclaration": 52205,
                             "src": "1256:23:155",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52190_memory_ptr",
+                              "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52192_memory_ptr",
                               "typeString": "struct TimeswapV2TokenPosition memory"
                             }
                           }
@@ -433,12 +446,12 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52190_memory_ptr",
+                              "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52192_memory_ptr",
                               "typeString": "struct TimeswapV2TokenPosition memory"
                             }
                           ],
                           "expression": {
-                            "id": 52209,
+                            "id": 52211,
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
@@ -449,7 +462,7 @@
                               "typeString": "abi"
                             }
                           },
-                          "id": 52210,
+                          "id": 52212,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -462,7 +475,7 @@
                             "typeString": "function () pure returns (bytes memory)"
                           }
                         },
-                        "id": 52212,
+                        "id": 52214,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -485,7 +498,7 @@
                           "typeString": "bytes memory"
                         }
                       ],
-                      "id": 52208,
+                      "id": 52210,
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -496,7 +509,7 @@
                         "typeString": "function (bytes memory) pure returns (bytes32)"
                       }
                     },
-                    "id": 52213,
+                    "id": 52215,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -511,15 +524,15 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 52207,
-                  "id": 52214,
+                  "functionReturnParameters": 52209,
+                  "id": 52216,
                   "nodeType": "Return",
                   "src": "1228:53:155"
                 }
               ]
             },
             "documentation": {
-              "id": 52200,
+              "id": 52202,
               "nodeType": "StructuredDocumentation",
               "src": "1058:52:155",
               "text": "@dev return keccak for key management for Token."
@@ -530,38 +543,38 @@
             "name": "toKey",
             "nameLocation": "1124:5:155",
             "parameters": {
-              "id": 52204,
+              "id": 52206,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 52203,
+                  "id": 52205,
                   "mutability": "mutable",
                   "name": "timeswapV2TokenPosition",
                   "nameLocation": "1161:23:155",
                   "nodeType": "VariableDeclaration",
-                  "scope": 52216,
+                  "scope": 52218,
                   "src": "1130:54:155",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52190_memory_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52192_memory_ptr",
                     "typeString": "struct TimeswapV2TokenPosition"
                   },
                   "typeName": {
-                    "id": 52202,
+                    "id": 52204,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 52201,
+                      "id": 52203,
                       "name": "TimeswapV2TokenPosition",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 52190,
+                      "referencedDeclaration": 52192,
                       "src": "1130:23:155"
                     },
-                    "referencedDeclaration": 52190,
+                    "referencedDeclaration": 52192,
                     "src": "1130:23:155",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52190_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2TokenPosition_$52192_storage_ptr",
                       "typeString": "struct TimeswapV2TokenPosition"
                     }
                   },
@@ -571,17 +584,17 @@
               "src": "1129:56:155"
             },
             "returnParameters": {
-              "id": 52207,
+              "id": 52209,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 52206,
+                  "id": 52208,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 52216,
+                  "scope": 52218,
                   "src": "1209:7:155",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -590,7 +603,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 52205,
+                    "id": 52207,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1209:7:155",
@@ -604,18 +617,18 @@
               ],
               "src": "1208:9:155"
             },
-            "scope": 52234,
+            "scope": 52236,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 52233,
+            "id": 52235,
             "nodeType": "FunctionDefinition",
             "src": "1361:200:155",
             "nodes": [],
             "body": {
-              "id": 52232,
+              "id": 52234,
               "nodeType": "Block",
               "src": "1482:79:155",
               "nodes": [],
@@ -626,14 +639,14 @@
                       {
                         "arguments": [
                           {
-                            "id": 52228,
+                            "id": 52230,
                             "name": "timeswapV2LiquidityTokenPosition",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 52220,
+                            "referencedDeclaration": 52222,
                             "src": "1520:32:155",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_memory_ptr",
+                              "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_memory_ptr",
                               "typeString": "struct TimeswapV2LiquidityTokenPosition memory"
                             }
                           }
@@ -641,12 +654,12 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_memory_ptr",
+                              "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_memory_ptr",
                               "typeString": "struct TimeswapV2LiquidityTokenPosition memory"
                             }
                           ],
                           "expression": {
-                            "id": 52226,
+                            "id": 52228,
                             "name": "abi",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
@@ -657,7 +670,7 @@
                               "typeString": "abi"
                             }
                           },
-                          "id": 52227,
+                          "id": 52229,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -670,7 +683,7 @@
                             "typeString": "function () pure returns (bytes memory)"
                           }
                         },
-                        "id": 52229,
+                        "id": 52231,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -693,7 +706,7 @@
                           "typeString": "bytes memory"
                         }
                       ],
-                      "id": 52225,
+                      "id": 52227,
                       "name": "keccak256",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -704,7 +717,7 @@
                         "typeString": "function (bytes memory) pure returns (bytes32)"
                       }
                     },
-                    "id": 52230,
+                    "id": 52232,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -719,15 +732,15 @@
                       "typeString": "bytes32"
                     }
                   },
-                  "functionReturnParameters": 52224,
-                  "id": 52231,
+                  "functionReturnParameters": 52226,
+                  "id": 52233,
                   "nodeType": "Return",
                   "src": "1492:62:155"
                 }
               ]
             },
             "documentation": {
-              "id": 52217,
+              "id": 52219,
               "nodeType": "StructuredDocumentation",
               "src": "1294:62:155",
               "text": "@dev return keccak for key management for Liquidity Token."
@@ -738,38 +751,38 @@
             "name": "toKey",
             "nameLocation": "1370:5:155",
             "parameters": {
-              "id": 52221,
+              "id": 52223,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 52220,
+                  "id": 52222,
                   "mutability": "mutable",
                   "name": "timeswapV2LiquidityTokenPosition",
                   "nameLocation": "1416:32:155",
                   "nodeType": "VariableDeclaration",
-                  "scope": 52233,
+                  "scope": 52235,
                   "src": "1376:72:155",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_memory_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_memory_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenPosition"
                   },
                   "typeName": {
-                    "id": 52219,
+                    "id": 52221,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 52218,
+                      "id": 52220,
                       "name": "TimeswapV2LiquidityTokenPosition",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 52199,
+                      "referencedDeclaration": 52201,
                       "src": "1376:32:155"
                     },
-                    "referencedDeclaration": 52199,
+                    "referencedDeclaration": 52201,
                     "src": "1376:32:155",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenPosition"
                     }
                   },
@@ -779,17 +792,17 @@
               "src": "1375:74:155"
             },
             "returnParameters": {
-              "id": 52224,
+              "id": 52226,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 52223,
+                  "id": 52225,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 52233,
+                  "scope": 52235,
                   "src": "1473:7:155",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -798,7 +811,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 52222,
+                    "id": 52224,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "1473:7:155",
@@ -812,7 +825,7 @@
               ],
               "src": "1472:9:155"
             },
-            "scope": 52234,
+            "scope": 52236,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
@@ -823,10 +836,12 @@
         "contractDependencies": [],
         "contractKind": "library",
         "fullyImplemented": true,
-        "linearizedBaseContracts": [52234],
+        "linearizedBaseContracts": [
+          52236
+        ],
         "name": "PositionLibrary",
         "nameLocation": "1036:15:155",
-        "scope": 52235,
+        "scope": 52237,
         "usedErrors": []
       }
     ],

@@ -1,0 +1,557 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "optionPair",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "poolPair",
+          "type": "address"
+        }
+      ],
+      "name": "PoolPairAlreadyExisted",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroSwapAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "optionPair",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "poolPair",
+          "type": "address"
+        }
+      ],
+      "name": "checkDoesNotExist",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "poolPair",
+          "type": "address"
+        }
+      ],
+      "name": "checkNotZeroAddress",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x61019461003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100405760003560e01c806360c330e314610045578063bc34214c1461005a575b600080fd5b610058610053366004610109565b61006d565b005b61005861006836600461013c565b61007b565b6100778282610087565b5050565b610084816100c6565b50565b6001600160a01b03811615610077576040516389f0f94160e01b81526001600160a01b0380841660048301528216602482015260440160405180910390fd5b6001600160a01b038116610084576040516303244f7b60e31b815260040160405180910390fd5b80356001600160a01b038116811461010457600080fd5b919050565b6000806040838503121561011c57600080fd5b610125836100ed565b9150610133602084016100ed565b90509250929050565b60006020828403121561014e57600080fd5b610157826100ed565b939250505056fea264697066735822122035ce3068d93ca766e876f05d2bc9f9034737ea1344ea28562d80f90e7cfa9fbb64736f6c63430008080033",
+    "sourceMap": "108:304:118:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;108:304:118;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600436106100405760003560e01c806360c330e314610045578063bc34214c1461005a575b600080fd5b610058610053366004610109565b61006d565b005b61005861006836600461013c565b61007b565b6100778282610087565b5050565b610084816100c6565b50565b6001600160a01b03811615610077576040516389f0f94160e01b81526001600160a01b0380841660048301528216602482015260440160405180910390fd5b6001600160a01b038116610084576040516303244f7b60e31b815260040160405180910390fd5b80356001600160a01b038116811461010457600080fd5b919050565b6000806040838503121561011c57600080fd5b610125836100ed565b9150610133602084016100ed565b90509250929050565b60006020828403121561014e57600080fd5b610157826100ed565b939250505056fea264697066735822122035ce3068d93ca766e876f05d2bc9f9034737ea1344ea28562d80f90e7cfa9fbb64736f6c63430008080033",
+    "sourceMap": "108:304:118:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;261:149;;;;;;:::i;:::-;;:::i;:::-;;134:121;;;;;;:::i;:::-;;:::i;261:149::-;348:55;382:10;394:8;348:33;:55::i;:::-;261:149;;:::o;134:121::-;203:45;239:8;203:35;:45::i;:::-;134:121;:::o;874:175:97:-;-1:-1:-1;;;;;967:22:97;;;963:79;;998:44;;-1:-1:-1;;;998:44:97;;-1:-1:-1;;;;;878:15:119;;;998:44:97;;;860:34:119;930:15;;910:18;;;903:43;795:18;;998:44:97;;;;;;;549:130;-1:-1:-1;;;;;624:22:97;;620:52;;655:17;;-1:-1:-1;;;655:17:97;;;;;;;;;;;14:173:119;82:20;;-1:-1:-1;;;;;131:31:119;;121:42;;111:70;;177:1;174;167:12;111:70;14:173;;;:::o;192:260::-;260:6;268;321:2;309:9;300:7;296:23;292:32;289:52;;;337:1;334;327:12;289:52;360:29;379:9;360:29;:::i;:::-;350:39;;408:38;442:2;431:9;427:18;408:38;:::i;:::-;398:48;;192:260;;;;;:::o;457:186::-;516:6;569:2;557:9;548:7;544:23;540:32;537:52;;;585:1;582;575:12;537:52;608:29;627:9;608:29;:::i;:::-;598:39;457:186;-1:-1:-1;;;457:186:119:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "checkDoesNotExist(address,address)": "60c330e3",
+    "checkNotZeroAddress(address)": "bc34214c"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"optionPair\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"poolPair\",\"type\":\"address\"}],\"name\":\"PoolPairAlreadyExisted\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroSwapAddress\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"optionPair\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"poolPair\",\"type\":\"address\"}],\"name\":\"checkDoesNotExist\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"poolPair\",\"type\":\"address\"}],\"name\":\"checkNotZeroAddress\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"errors\":{\"PoolPairAlreadyExisted(address,address)\":[{\"details\":\"Reverts when the Timeswap V2 Pool already exist.\",\"params\":{\"optionPair\":\"The Timeswap V2 Option parameter\",\"poolPair\":\"The address of the existed Timeswap V2 Pair contract.\"}}],\"ZeroSwapAddress()\":[{\"details\":\"Reverts when swap address is zero.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/wrappedContracts/PoolPairExt.sol\":\"PoolPairExt\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/libraries/PoolPair.sol\":{\"keccak256\":\"0x0cfe115c11bc99413d04c7d791b69d6a6bc18502c3e509366c4c3ca7721c69a6\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://8280aa393c8dfac6162e812f24e6815c707112b0c3bee800b83606cc1a110929\",\"dweb:/ipfs/QmRZb5YUVbKaxbV5kSGngomnPiZERVMM3qMP7TBE9Z7gGb\"]},\"test/wrappedContracts/PoolPairExt.sol\":{\"keccak256\":\"0x3196cb5b0a195aa2a6668a02ae1c6995b117013403f134b66465342811f415aa\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://f6a92e8796c913e2b946eb145b11a6f05c1e0318e60de0bcdcbeda5db1f8421d\",\"dweb:/ipfs/QmYKvY2oTT9r7HxEMf7AEAZELvEqheB9qYdTK2PKPSX1fa\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "optionPair",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "poolPair",
+              "type": "address"
+            }
+          ],
+          "type": "error",
+          "name": "PoolPairAlreadyExisted"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroSwapAddress"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "optionPair",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "poolPair",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "checkDoesNotExist"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "poolPair",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "checkNotZeroAddress"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/wrappedContracts/PoolPairExt.sol": "PoolPairExt"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/libraries/PoolPair.sol": {
+        "keccak256": "0x0cfe115c11bc99413d04c7d791b69d6a6bc18502c3e509366c4c3ca7721c69a6",
+        "urls": [
+          "bzz-raw://8280aa393c8dfac6162e812f24e6815c707112b0c3bee800b83606cc1a110929",
+          "dweb:/ipfs/QmRZb5YUVbKaxbV5kSGngomnPiZERVMM3qMP7TBE9Z7gGb"
+        ],
+        "license": "Unlicense"
+      },
+      "test/wrappedContracts/PoolPairExt.sol": {
+        "keccak256": "0x3196cb5b0a195aa2a6668a02ae1c6995b117013403f134b66465342811f415aa",
+        "urls": [
+          "bzz-raw://f6a92e8796c913e2b946eb145b11a6f05c1e0318e60de0bcdcbeda5db1f8421d",
+          "dweb:/ipfs/QmYKvY2oTT9r7HxEMf7AEAZELvEqheB9qYdTK2PKPSX1fa"
+        ],
+        "license": "UNLICENSED"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/wrappedContracts/PoolPairExt.sol",
+    "id": 48132,
+    "exportedSymbols": {
+      "PoolPairExt": [
+        48131
+      ],
+      "PoolPairLibrary": [
+        39323
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "39:374:118",
+    "nodes": [
+      {
+        "id": 48102,
+        "nodeType": "PragmaDirective",
+        "src": "39:23:118",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 48103,
+        "nodeType": "ImportDirective",
+        "src": "64:42:118",
+        "nodes": [],
+        "absolutePath": "src/libraries/PoolPair.sol",
+        "file": "../../src/libraries/PoolPair.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48132,
+        "sourceUnit": 39324,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 48131,
+        "nodeType": "ContractDefinition",
+        "src": "108:304:118",
+        "nodes": [
+          {
+            "id": 48115,
+            "nodeType": "FunctionDefinition",
+            "src": "134:121:118",
+            "nodes": [],
+            "body": {
+              "id": 48114,
+              "nodeType": "Block",
+              "src": "193:62:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 48111,
+                        "name": "poolPair",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48105,
+                        "src": "239:8:118",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 48108,
+                        "name": "PoolPairLibrary",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39323,
+                        "src": "203:15:118",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_PoolPairLibrary_$39323_$",
+                          "typeString": "type(library PoolPairLibrary)"
+                        }
+                      },
+                      "id": 48110,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "checkNotZeroAddress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 39301,
+                      "src": "203:35:118",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_address_$returns$__$",
+                        "typeString": "function (address) pure"
+                      }
+                    },
+                    "id": 48112,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "203:45:118",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 48113,
+                  "nodeType": "ExpressionStatement",
+                  "src": "203:45:118"
+                }
+              ]
+            },
+            "functionSelector": "bc34214c",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkNotZeroAddress",
+            "nameLocation": "143:19:118",
+            "parameters": {
+              "id": 48106,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48105,
+                  "mutability": "mutable",
+                  "name": "poolPair",
+                  "nameLocation": "171:8:118",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48115,
+                  "src": "163:16:118",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48104,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "163:7:118",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "162:18:118"
+            },
+            "returnParameters": {
+              "id": 48107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "193:0:118"
+            },
+            "scope": 48131,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 48130,
+            "nodeType": "FunctionDefinition",
+            "src": "261:149:118",
+            "nodes": [],
+            "body": {
+              "id": 48129,
+              "nodeType": "Block",
+              "src": "338:72:118",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 48125,
+                        "name": "optionPair",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48117,
+                        "src": "382:10:118",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 48126,
+                        "name": "poolPair",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48119,
+                        "src": "394:8:118",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "id": 48122,
+                        "name": "PoolPairLibrary",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39323,
+                        "src": "348:15:118",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_PoolPairLibrary_$39323_$",
+                          "typeString": "type(library PoolPairLibrary)"
+                        }
+                      },
+                      "id": 48124,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "checkDoesNotExist",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 39322,
+                      "src": "348:33:118",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address) pure"
+                      }
+                    },
+                    "id": 48127,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "348:55:118",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 48128,
+                  "nodeType": "ExpressionStatement",
+                  "src": "348:55:118"
+                }
+              ]
+            },
+            "functionSelector": "60c330e3",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkDoesNotExist",
+            "nameLocation": "270:17:118",
+            "parameters": {
+              "id": 48120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48117,
+                  "mutability": "mutable",
+                  "name": "optionPair",
+                  "nameLocation": "296:10:118",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48130,
+                  "src": "288:18:118",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48116,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "288:7:118",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48119,
+                  "mutability": "mutable",
+                  "name": "poolPair",
+                  "nameLocation": "316:8:118",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48130,
+                  "src": "308:16:118",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48118,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:7:118",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "287:38:118"
+            },
+            "returnParameters": {
+              "id": 48121,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "338:0:118"
+            },
+            "scope": 48131,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          48131
+        ],
+        "name": "PoolPairExt",
+        "nameLocation": "116:11:118",
+        "scope": 48132,
+        "usedErrors": [
+          39277,
+          39284
+        ]
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 118
+}
