@@ -130,17 +130,16 @@ The C4audit output for the contest can be found [here](add link to report) withi
 ### V2-Option
 | Contract | Library/Struct  | 
 | ----------- | ----------- |
-| [packages/v2-option/src/structs/Process.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Process.sol) | Library |  |
-| [packages/v2-option/src/structs/CallbackParam.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/CallbackParam.sol) | Struct |  |
-| [packages/v2-option/src/structs/StrikeAndMaturity.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/StrikeAndMaturity.sol) | Struct |  |
-| [packages/v2-option/src/structs/Option.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Option.sol) | Library |  |
-| [packages/v2-option/src/structs/Param.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Param.sol) | Library |   |
-| [packages/v2-option/src/libraries/Proportion.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/Proportion.sol) | Library |  |
-| [packages/v2-option/src/libraries/OptionPair.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionPair.sol) | Library |   |
-| [packages/v2-option/src/libraries/OptionFactory.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionFactory.sol) | Library |  |
-| [packages/v2-option/src/enums/Transaction.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Transaction.sol) | Library |  |
-| [packages/v2-option/src/enums/Position.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Position.sol) | Library | |
-fo
+| [packages/v2-option/src/structs/Process.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Process.sol) | Library |
+| [packages/v2-option/src/structs/CallbackParam.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/CallbackParam.sol) | Struct |
+| [packages/v2-option/src/structs/StrikeAndMaturity.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/StrikeAndMaturity.sol) | Struct |
+| [packages/v2-option/src/structs/Option.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Option.sol) | Library |
+| [packages/v2-option/src/structs/Param.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Param.sol) | Library | 
+| [packages/v2-option/src/libraries/Proportion.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/Proportion.sol) | Library |
+| [packages/v2-option/src/libraries/OptionPair.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionPair.sol) | Library | 
+| [packages/v2-option/src/libraries/OptionFactory.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionFactory.sol) | Library |
+| [packages/v2-option/src/enums/Transaction.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Transaction.sol) | Library |
+| [packages/v2-option/src/enums/Position.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Position.sol) | Library | 
 
 
 ## Out of scope
