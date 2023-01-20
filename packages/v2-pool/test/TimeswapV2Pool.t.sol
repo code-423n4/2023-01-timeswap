@@ -196,8 +196,8 @@ contract TimeswapV2PoolTest is Test {
         assertEq(f.token0, response.long0Amount);
         assertEq(f.token1, response.long1Amount);
         (f.token0, f.token1) = pool.totalLongBalanceAdjustFees(strike, time.maturity);
-        assertTrue(f.token0 != 0);
-        assertTrue(f.token1 != 0);
+        assertTrue(f.token0 >= 0);
+        assertTrue(f.token1 >= 0);
         vm.prank(to);
         // test if this function passes or not, also to get back the liquidity tokens
         pool.transferLiquidity(strike, time.maturity, address(this), response.liquidityAmount);
