@@ -50,20 +50,18 @@ contract StdChainsTest is Test {
     }
 
     function testChainNoDefault() public {
-        vm.expectRevert("StdChains getChain(string): Chain with alias \"does_not_exist\" not found.");
+        vm.expectRevert('StdChains getChain(string): Chain with alias "does_not_exist" not found.');
         getChain("does_not_exist");
     }
 
     function testSetChainFirstFails() public {
-        vm.expectRevert("StdChains setChain(string,ChainData): Chain ID 31337 already used by \"anvil\".");
+        vm.expectRevert('StdChains setChain(string,ChainData): Chain ID 31337 already used by "anvil".');
         setChain("anvil2", ChainData("Anvil", 31337, "URL"));
     }
 
     function testChainBubbleUp() public {
         setChain("needs_undefined_env_var", ChainData("", 123456789, ""));
-        vm.expectRevert(
-            "Failed to resolve env var `UNDEFINED_RPC_URL_PLACEHOLDER` in `${UNDEFINED_RPC_URL_PLACEHOLDER}`: environment variable not found"
-        );
+        vm.expectRevert("Failed to resolve env var `UNDEFINED_RPC_URL_PLACEHOLDER` in `${UNDEFINED_RPC_URL_PLACEHOLDER}`: environment variable not found");
         getChain("needs_undefined_env_var");
     }
 
@@ -122,7 +120,7 @@ contract StdChainsTest is Test {
     }
 
     function testChainIdNotFound() public {
-        vm.expectRevert("StdChains getChain(string): Chain with alias \"no_such_alias\" not found.");
+        vm.expectRevert('StdChains getChain(string): Chain with alias "no_such_alias" not found.');
         getChain("no_such_alias");
     }
 

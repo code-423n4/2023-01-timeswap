@@ -5,7 +5,6 @@ import "forge-std/Test.sol";
 import "../src/TimeswapV2OptionFactory.sol";
 import "../src/interfaces/ITimeswapV2Option.sol";
 
-
 contract TimeswapV2OptionFactoryTest is Test {
     TimeswapV2OptionFactory factory;
 

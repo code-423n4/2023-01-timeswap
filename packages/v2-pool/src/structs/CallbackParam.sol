@@ -9,12 +9,12 @@ pragma solidity =0.8.8;
 /// @param liquidityAmount The amount of liquidity position minted.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolMintChoiceCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 longAmount;
-  uint256 shortAmount;
-  uint160 liquidityAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 longAmount;
+    uint256 shortAmount;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the mint callback.
@@ -26,13 +26,13 @@ struct TimeswapV2PoolMintChoiceCallbackParam {
 /// @param liquidityAmount The amount of liquidity position minted.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolMintCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  uint160 liquidityAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the burn choice callback.
@@ -45,14 +45,14 @@ struct TimeswapV2PoolMintCallbackParam {
 /// @param liquidityAmount The amount of liquidity position burnt.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolBurnChoiceCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Balance;
-  uint256 long1Balance;
-  uint256 longAmount;
-  uint256 shortAmount;
-  uint160 liquidityAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Balance;
+    uint256 long1Balance;
+    uint256 longAmount;
+    uint256 shortAmount;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the burn callback.
@@ -64,13 +64,13 @@ struct TimeswapV2PoolBurnChoiceCallbackParam {
 /// @param liquidityAmount The amount of liquidity position burnt.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolBurnCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  uint160 liquidityAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    uint160 liquidityAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the deleverage choice callback.
@@ -81,11 +81,11 @@ struct TimeswapV2PoolBurnCallbackParam {
 /// @param shortAmount The amount of short position that will be withdrawn.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolDeleverageChoiceCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 longAmount;
-  uint256 shortAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 longAmount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the deleverage callback.
@@ -95,12 +95,12 @@ struct TimeswapV2PoolDeleverageChoiceCallbackParam {
 /// @param shortAmount The amount of short position that will be withdrawn.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolDeleverageCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the leverage choice callback.
@@ -112,13 +112,13 @@ struct TimeswapV2PoolDeleverageCallbackParam {
 /// @param shortAmount The amount of short position required by the pool from msg.sender.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolLeverageChoiceCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Balance;
-  uint256 long1Balance;
-  uint256 longAmount;
-  uint256 shortAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Balance;
+    uint256 long1Balance;
+    uint256 longAmount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the leverage choice callback.
@@ -129,12 +129,12 @@ struct TimeswapV2PoolLeverageChoiceCallbackParam {
 /// @param shortAmount The amount of short position required by the pool from msg.sender.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolLeverageCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  uint256 shortAmount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    uint256 shortAmount;
+    bytes data;
 }
 
 /// @dev The parameters for the rebalance callback.
@@ -147,10 +147,10 @@ struct TimeswapV2PoolLeverageCallbackParam {
 /// When Long1ToLong0, the amount of long1 position required by the pool from msg.sender.
 /// @param data The bytes of data to be sent to msg.sender.
 struct TimeswapV2PoolRebalanceCallbackParam {
-  uint256 strike;
-  uint256 maturity;
-  bool isLong0ToLong1;
-  uint256 long0Amount;
-  uint256 long1Amount;
-  bytes data;
+    uint256 strike;
+    uint256 maturity;
+    bool isLong0ToLong1;
+    uint256 long0Amount;
+    uint256 long1Amount;
+    bytes data;
 }

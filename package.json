@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "yarn && yarn workspaces run build",
-    "format": "(lerna exec  --parallel -- prettier -w .) && prettier -w .",
+    "format": "(lerna exec  --parallel -- prettier -w .) && prettier -w . ",
     "format-check": "(lerna exec  --parallel -- prettier -c .) && prettier -c . ",
     "lint-contracts": "lerna exec --parallel -- yarn  prettier **/*.sol",
     "lint-js": "yarn rome check .",

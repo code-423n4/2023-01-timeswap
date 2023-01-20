@@ -16,8 +16,7 @@ abstract contract CommonBase {
     // Deterministic deployment address of the Multicall3 contract.
     address internal constant MULTICALL3_ADDRESS = 0xcA11bde05977b3631167028862bE2a173976CA11;
 
-    uint256 internal constant UINT256_MAX =
-        115792089237316195423570985008687907853269984665640564039457584007913129639935;
+    uint256 internal constant UINT256_MAX = 115792089237316195423570985008687907853269984665640564039457584007913129639935;
 
     Vm internal constant vm = Vm(VM_ADDRESS);
     StdStorage internal stdstore;

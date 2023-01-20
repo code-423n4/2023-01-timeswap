@@ -220,12 +220,7 @@ abstract contract StdCheatsSafe {
         // forgefmt: disable-end
     }
 
-    function readEIP1559ScriptArtifact(string memory path)
-        internal
-        view
-        virtual
-        returns (EIP1559ScriptArtifact memory)
-    {
+    function readEIP1559ScriptArtifact(string memory path) internal view virtual returns (EIP1559ScriptArtifact memory) {
         string memory data = vm.readFile(path);
         bytes memory parsedData = vm.parseJson(data);
         RawEIP1559ScriptArtifact memory rawArtifact = abi.decode(parsedData, (RawEIP1559ScriptArtifact));
@@ -259,12 +254,7 @@ abstract contract StdCheatsSafe {
         return transaction;
     }
 
-    function rawToConvertedEIP1559Detail(RawTx1559Detail memory rawDetail)
-        internal
-        pure
-        virtual
-        returns (Tx1559Detail memory)
-    {
+    function rawToConvertedEIP1559Detail(RawTx1559Detail memory rawDetail) internal pure virtual returns (Tx1559Detail memory) {
         Tx1559Detail memory txDetail;
         txDetail.data = rawDetail.data;
         txDetail.from = rawDetail.from;
@@ -334,12 +324,7 @@ abstract contract StdCheatsSafe {
         return receipt;
     }
 
-    function rawToConvertedReceiptLogs(RawReceiptLog[] memory rawLogs)
-        internal
-        pure
-        virtual
-        returns (ReceiptLog[] memory)
-    {
+    function rawToConvertedReceiptLogs(RawReceiptLog[] memory rawLogs) internal pure virtual returns (ReceiptLog[] memory) {
         ReceiptLog[] memory logs = new ReceiptLog[](rawLogs.length);
         for (uint256 i; i < rawLogs.length; i++) {
             logs[i].logAddress = rawLogs[i].logAddress;
@@ -408,14 +393,10 @@ abstract contract StdCheatsSafe {
 
     // creates a labeled address
     function makeAddr(string memory name) internal virtual returns (address addr) {
-        (addr,) = makeAddrAndKey(name);
+        (addr, ) = makeAddrAndKey(name);
     }
 
-    function deriveRememberKey(string memory mnemonic, uint32 index)
-        internal
-        virtual
-        returns (address who, uint256 privateKey)
-    {
+    function deriveRememberKey(string memory mnemonic, uint32 index) internal virtual returns (address who, uint256 privateKey) {
         privateKey = vm.deriveKey(mnemonic, index);
         who = vm.rememberKey(privateKey);
     }
@@ -467,7 +448,7 @@ abstract contract StdCheatsSafe {
     // a cheat for fuzzing addresses that are payable only
     // see https://github.com/foundry-rs/foundry/issues/3631
     function assumePayable(address addr) internal virtual {
-        (bool success,) = payable(addr).call{value: 0}("");
+        (bool success, ) = payable(addr).call{value: 0}("");
         vm.assume(success);
     }
 }
