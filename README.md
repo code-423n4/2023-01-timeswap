@@ -180,3 +180,11 @@ yarn hardhat compile
 forge build
 forge test
 ```
+
+## Coverage
+Coverage can be checked by the following command
+```
+forge coverage
+```
+
+Do note that the method employed by forge to calculate the coverage isn't very accurate as it takes into account individual testing of helper and utility functions. Wherever felt necessary and possible, we have included tests for such functions by wrapping them.
