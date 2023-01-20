@@ -204,35 +204,44 @@
   },
   "ast": {
     "absolutePath": "src/interfaces/callbacks/ITimeswapV2TokenBurnCallback.sol",
-    "id": 51423,
+    "id": 51425,
     "exportedSymbols": {
-      "ITimeswapV2TokenBurnCallback": [51422],
-      "TimeswapV2TokenBurnCallbackParam": [51472]
+      "ITimeswapV2TokenBurnCallback": [
+        51424
+      ],
+      "TimeswapV2TokenBurnCallbackParam": [
+        51474
+      ]
     },
     "nodeType": "SourceUnit",
     "src": "37:329:150",
     "nodes": [
       {
-        "id": 51410,
+        "id": 51412,
         "nodeType": "PragmaDirective",
         "src": "37:23:150",
         "nodes": [],
-        "literals": ["solidity", "=", "0.8", ".8"]
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
       },
       {
-        "id": 51412,
+        "id": 51414,
         "nodeType": "ImportDirective",
         "src": "62:81:150",
         "nodes": [],
         "absolutePath": "src/structs/CallbackParam.sol",
         "file": "../../structs/CallbackParam.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 51423,
-        "sourceUnit": 51516,
+        "scope": 51425,
+        "sourceUnit": 51518,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 51411,
+              "id": 51413,
               "name": "TimeswapV2TokenBurnCallbackParam",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
@@ -245,17 +254,17 @@
         "unitAlias": ""
       },
       {
-        "id": 51422,
+        "id": 51424,
         "nodeType": "ContractDefinition",
         "src": "145:220:150",
         "nodes": [
           {
-            "id": 51421,
+            "id": 51423,
             "nodeType": "FunctionDefinition",
             "src": "240:123:150",
             "nodes": [],
             "documentation": {
-              "id": 51413,
+              "id": 51415,
               "nodeType": "StructuredDocumentation",
               "src": "190:45:150",
               "text": "@dev Callback for `ITimeswapV2Token.burn`"
@@ -267,38 +276,38 @@
             "name": "timeswapV2TokenBurnCallback",
             "nameLocation": "249:27:150",
             "parameters": {
-              "id": 51417,
+              "id": 51419,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51416,
+                  "id": 51418,
                   "mutability": "mutable",
                   "name": "param",
                   "nameLocation": "319:5:150",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51421,
+                  "scope": 51423,
                   "src": "277:47:150",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2TokenBurnCallbackParam_$51472_calldata_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2TokenBurnCallbackParam_$51474_calldata_ptr",
                     "typeString": "struct TimeswapV2TokenBurnCallbackParam"
                   },
                   "typeName": {
-                    "id": 51415,
+                    "id": 51417,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51414,
+                      "id": 51416,
                       "name": "TimeswapV2TokenBurnCallbackParam",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 51472,
+                      "referencedDeclaration": 51474,
                       "src": "277:32:150"
                     },
-                    "referencedDeclaration": 51472,
+                    "referencedDeclaration": 51474,
                     "src": "277:32:150",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2TokenBurnCallbackParam_$51472_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2TokenBurnCallbackParam_$51474_storage_ptr",
                       "typeString": "struct TimeswapV2TokenBurnCallbackParam"
                     }
                   },
@@ -308,17 +317,17 @@
               "src": "276:49:150"
             },
             "returnParameters": {
-              "id": 51420,
+              "id": 51422,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51419,
+                  "id": 51421,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "357:4:150",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51421,
+                  "scope": 51423,
                   "src": "344:17:150",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -327,7 +336,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 51418,
+                    "id": 51420,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "344:5:150",
@@ -341,7 +350,7 @@
               ],
               "src": "343:19:150"
             },
-            "scope": 51422,
+            "scope": 51424,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -352,10 +361,12 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "linearizedBaseContracts": [51422],
+        "linearizedBaseContracts": [
+          51424
+        ],
         "name": "ITimeswapV2TokenBurnCallback",
         "nameLocation": "155:28:150",
-        "scope": 51423,
+        "scope": 51425,
         "usedErrors": []
       }
     ],

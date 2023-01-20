@@ -1,0 +1,3003 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "liquidity",
+          "type": "uint160"
+        }
+      ],
+      "name": "AlreadyHaveLiquidity",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint96",
+          "name": "blockTimestamp",
+          "type": "uint96"
+        }
+      ],
+      "name": "AlreadyMatured",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "CannotBeZero",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        }
+      ],
+      "name": "DeadlineReached",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InactiveLiquidityTokenChoice",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "InactiveOption",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "InactivePool",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "IncorrectMaturity",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "minuend",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "subtrahend",
+          "type": "uint256"
+        }
+      ],
+      "name": "NotEnoughReceived",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "RequireLiquidity",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint96",
+          "name": "blockTimestamp",
+          "type": "uint96"
+        }
+      ],
+      "name": "StillActive",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroAddress",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroInput",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "ZeroOutput",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "ZeroSqrtInterestRate",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint160",
+          "name": "liquidity",
+          "type": "uint160"
+        }
+      ],
+      "name": "alreadyHaveLiquidity",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint96",
+          "name": "blockTimestamp",
+          "type": "uint96"
+        }
+      ],
+      "name": "alreadyMatured",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "cannotBeZero",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "balanceTarget",
+          "type": "uint256"
+        }
+      ],
+      "name": "checkEnough",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        }
+      ],
+      "name": "deadlineReached",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "inactiveLiquidityTokenChoice",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "inactiveOptionChoice",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "inactivePoolChoice",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "incorrectMaturity",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "requireLiquidity",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint96",
+          "name": "blockTimestamp",
+          "type": "uint96"
+        }
+      ],
+      "name": "stillActive",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "zeroAddress",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "zeroInput",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "zeroOutput",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "strike",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "maturity",
+          "type": "uint256"
+        }
+      ],
+      "name": "zeroSqrtInterestRate",
+      "outputs": [],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x61052f61003a600b82828239805160001a60731461002d57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100ff5760003560e01c8063412c407d116100a15780638e17b742116100705780638e17b742146101ab578063941ab741146101be578063bdb443b3146101d1578063ea78b152146101d957600080fd5b8063412c407d1461015f5780636c3c5eb41461017257806376f9be89146101855780638baa05611461019857600080fd5b80631bb6ccd1116100dd5780631bb6ccd1146101345780632aa4a0921461013c578063301110201461014f578063331fc1651461015757600080fd5b80630930907b14610104578063182b608b1461010e5780631a50474f14610121575b600080fd5b61010c6101e1565b005b61010c61011c366004610452565b6101eb565b61010c61012f36600461048e565b6101f9565b61010c610203565b61010c61014a3660046104b0565b61020b565b61010c610217565b61010c61021f565b61010c61016d3660046104c9565b610227565b61010c61018036600461048e565b610230565b61010c610193366004610452565b61023a565b61010c6101a636600461048e565b610244565b61010c6101b936600461048e565b61024e565b61010c6101cc3660046104b0565b610258565b61010c610261565b61010c610269565b6101e9610271565b565b6101f5828261028a565b5050565b6101f582826102ba565b6101e96102e5565b610214816102fe565b50565b6101e961031a565b6101e9610333565b6102148161034c565b6101f58282610370565b6101f58282610393565b6101f582826103be565b6101f582826103e1565b61021481610404565b6101e9610420565b6101e9610439565b60405163d92e233d60e01b815260040160405180910390fd5b60405163647284e960e11b8152600481018390526001600160601b03821660248201526044015b60405180910390fd5b808210156101f557604051631c22ff0160e21b815260048101839052602481018290526044016102b1565b60405163730c31bf60e11b815260040160405180910390fd5b6040516335f135d360e01b8152600481018290526024016102b1565b60405163277c720560e01b815260040160405180910390fd5b604051631e1d0ab560e01b815260040160405180910390fd5b6040516398c3044f60e01b81526001600160a01b03821660048201526024016102b1565b60405163e407078d60e01b815260048101839052602481018290526044016102b1565b60405163b9e0f8d560e01b8152600481018390526001600160601b03821660248201526044016102b1565b60405163ea2aa10360e01b815260048101839052602481018290526044016102b1565b60405163e3da2a0560e01b815260048101839052602481018290526044016102b1565b60405163070b57d960e41b8152600481018290526024016102b1565b604051638ba26bd760e01b815260040160405180910390fd5b60405163af458c0760e01b815260040160405180910390fd5b6000806040838503121561046557600080fd5b8235915060208301356001600160601b038116811461048357600080fd5b809150509250929050565b600080604083850312156104a157600080fd5b50508035926020909101359150565b6000602082840312156104c257600080fd5b5035919050565b6000602082840312156104db57600080fd5b81356001600160a01b03811681146104f257600080fd5b939250505056fea26469706673582212209fd4bec71f6919e1014b071fcdefc56e62e94bf37e9a13c3a9e6b546e503e48b64736f6c63430008080033",
+    "sourceMap": "123:3428:30:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;123:3428:30;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600436106100ff5760003560e01c8063412c407d116100a15780638e17b742116100705780638e17b742146101ab578063941ab741146101be578063bdb443b3146101d1578063ea78b152146101d957600080fd5b8063412c407d1461015f5780636c3c5eb41461017257806376f9be89146101855780638baa05611461019857600080fd5b80631bb6ccd1116100dd5780631bb6ccd1146101345780632aa4a0921461013c578063301110201461014f578063331fc1651461015757600080fd5b80630930907b14610104578063182b608b1461010e5780631a50474f14610121575b600080fd5b61010c6101e1565b005b61010c61011c366004610452565b6101eb565b61010c61012f36600461048e565b6101f9565b61010c610203565b61010c61014a3660046104b0565b61020b565b61010c610217565b61010c61021f565b61010c61016d3660046104c9565b610227565b61010c61018036600461048e565b610230565b61010c610193366004610452565b61023a565b61010c6101a636600461048e565b610244565b61010c6101b936600461048e565b61024e565b61010c6101cc3660046104b0565b610258565b61010c610261565b61010c610269565b6101e9610271565b565b6101f5828261028a565b5050565b6101f582826102ba565b6101e96102e5565b610214816102fe565b50565b6101e961031a565b6101e9610333565b6102148161034c565b6101f58282610370565b6101f58282610393565b6101f582826103be565b6101f582826103e1565b61021481610404565b6101e9610420565b6101e9610439565b60405163d92e233d60e01b815260040160405180910390fd5b60405163647284e960e11b8152600481018390526001600160601b03821660248201526044015b60405180910390fd5b808210156101f557604051631c22ff0160e21b815260048101839052602481018290526044016102b1565b60405163730c31bf60e11b815260040160405180910390fd5b6040516335f135d360e01b8152600481018290526024016102b1565b60405163277c720560e01b815260040160405180910390fd5b604051631e1d0ab560e01b815260040160405180910390fd5b6040516398c3044f60e01b81526001600160a01b03821660048201526024016102b1565b60405163e407078d60e01b815260048101839052602481018290526044016102b1565b60405163b9e0f8d560e01b8152600481018390526001600160601b03821660248201526044016102b1565b60405163ea2aa10360e01b815260048101839052602481018290526044016102b1565b60405163e3da2a0560e01b815260048101839052602481018290526044016102b1565b60405163070b57d960e41b8152600481018290526024016102b1565b604051638ba26bd760e01b815260040160405180910390fd5b60405163af458c0760e01b815260040160405180910390fd5b6000806040838503121561046557600080fd5b8235915060208301356001600160601b038116811461048357600080fd5b809150509250929050565b600080604083850312156104a157600080fd5b50508035926020909101359150565b6000602082840312156104c257600080fd5b5035919050565b6000602082840312156104db57600080fd5b81356001600160a01b03811681146104f257600080fd5b939250505056fea26469706673582212209fd4bec71f6919e1014b071fcdefc56e62e94bf37e9a13c3a9e6b546e503e48b64736f6c63430008080033",
+    "sourceMap": "123:3428:30:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1012:80;;;:::i;:::-;;1497:149;;;;;;:::i;:::-;;:::i;3409:140::-;;;;;;:::i;:::-;;:::i;311:78::-;;;:::i;1219:116::-;;;;;;:::i;:::-;;:::i;853:90::-;;;:::i;445:82::-;;;:::i;670:124::-;;;;;;:::i;:::-;;:::i;2300:146::-;;;;;;:::i;:::-;;:::i;1805:143::-;;;;;;:::i;:::-;;:::i;2919:146::-;;;;;;:::i;:::-;;:::i;2619:142::-;;;;;;:::i;:::-;;:::i;2057:112::-;;;;;;:::i;:::-;;:::i;3128:114::-;;;:::i;187:76::-;;;:::i;1012:80::-;1066:19;:17;:19::i;:::-;1012:80::o;1497:149::-;1593:46;1614:8;1624:14;1593:20;:46::i;:::-;1497:149;;:::o;3409:140::-;3501:41;3519:7;3528:13;3501:17;:41::i;311:78::-;364:18;:16;:18::i;1219:116::-;1295:33;1319:8;1295:23;:33::i;:::-;1219:116;:::o;853:90::-;912:24;:22;:24::i;445:82::-;500:20;:18;:20::i;670:124::-;750:37;777:9;750:26;:37::i;2300:146::-;2395:44;2422:6;2430:8;2395:26;:44::i;1805:143::-;1898:43;1916:8;1926:14;1898:17;:43::i;2919:146::-;3014:44;3041:6;3049:8;3014:26;:44::i;2619:142::-;2712:42;2737:6;2745:8;2712:24;:42::i;2057:112::-;2131:31;2153:8;2131:21;:31::i;3128:114::-;3199:36;:34;:36::i;187:76::-;239:17;:15;:17::i;3264:74:16:-;3318:13;;-1:-1:-1;;;3318:13:16;;;;;;;;;;;3737:143;3833:40;;-1:-1:-1;;;3833:40:16;;;;;1280:25:35;;;-1:-1:-1;;;;;1341:39:35;;1321:18;;;1314:67;1253:18;;3833:40:16;;;;;;;;5594:169;5693:13;5683:7;:23;5679:77;;;5715:41;;-1:-1:-1;;;5715:41:16;;;;;1566:25:35;;;1607:18;;;1600:34;;;1539:18;;5715:41:16;1392:248:35;2587:72:16;2640:12;;-1:-1:-1;;;2640:12:16;;;;;;;;;;;3465:110;3541:27;;-1:-1:-1;;;3541:27:16;;;;;1791:25:35;;;1764:18;;3541:27:16;1645:177:35;3111:84:16;3170:18;;-1:-1:-1;;;3170:18:16;;;;;;;;;;;2715:76;2770:14;;-1:-1:-1;;;2770:14:16;;;;;;;;;;;2934:118;3014:31;;-1:-1:-1;;;3014:31:16;;-1:-1:-1;;;;;1991:32:35;;3014:31:16;;;1973:51:35;1946:18;;3014:31:16;1827:203:35;4522:134:16;4617:32;;-1:-1:-1;;;4617:32:16;;;;;1566:25:35;;;1607:18;;;1600:34;;;1539:18;;4617:32:16;1392:248:35;4039:137:16;4132:37;;-1:-1:-1;;;4132:37:16;;;;;1280:25:35;;;-1:-1:-1;;;;;1341:39:35;;1321:18;;;1314:67;1253:18;;4132:37:16;1108:279:35;5116:140:16;5211:38;;-1:-1:-1;;;5211:38:16;;;;;1566:25:35;;;1607:18;;;1600:34;;;1539:18;;5211:38:16;1392:248:35;4829:130:16;4922:30;;-1:-1:-1;;;4922:30:16;;;;;1566:25:35;;;1607:18;;;1600:34;;;1539:18;;4922:30:16;1392:248:35;4285:106:16;4359:25;;-1:-1:-1;;;4359:25:16;;;;;1791::35;;;1764:18;;4359:25:16;1645:177:35;5319:108:16;5390:30;;-1:-1:-1;;;5390:30:16;;;;;;;;;;;2469:70;2521:11;;-1:-1:-1;;;2521:11:16;;;;;;;;;;;14:360:35;81:6;89;142:2;130:9;121:7;117:23;113:32;110:52;;;158:1;155;148:12;110:52;194:9;181:23;171:33;;254:2;243:9;239:18;226:32;-1:-1:-1;;;;;291:5:35;287:38;280:5;277:49;267:77;;340:1;337;330:12;267:77;363:5;353:15;;;14:360;;;;;:::o;379:248::-;447:6;455;508:2;496:9;487:7;483:23;479:32;476:52;;;524:1;521;514:12;476:52;-1:-1:-1;;547:23:35;;;617:2;602:18;;;589:32;;-1:-1:-1;379:248:35:o;632:180::-;691:6;744:2;732:9;723:7;719:23;715:32;712:52;;;760:1;757;750:12;712:52;-1:-1:-1;783:23:35;;632:180;-1:-1:-1;632:180:35:o;817:286::-;876:6;929:2;917:9;908:7;904:23;900:32;897:52;;;945:1;942;935:12;897:52;971:23;;-1:-1:-1;;;;;1023:31:35;;1013:42;;1003:70;;1069:1;1066;1059:12;1003:70;1092:5;817:286;-1:-1:-1;;;817:286:35:o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "alreadyHaveLiquidity(uint160)": "412c407d",
+    "alreadyMatured(uint256,uint96)": "182b608b",
+    "cannotBeZero()": "331fc165",
+    "checkEnough(uint256,uint256)": "1a50474f",
+    "deadlineReached(uint256)": "941ab741",
+    "inactiveLiquidityTokenChoice()": "bdb443b3",
+    "inactiveOptionChoice(uint256,uint256)": "6c3c5eb4",
+    "inactivePoolChoice(uint256,uint256)": "8e17b742",
+    "incorrectMaturity(uint256)": "2aa4a092",
+    "requireLiquidity()": "30111020",
+    "stillActive(uint256,uint96)": "76f9be89",
+    "zeroAddress()": "0930907b",
+    "zeroInput()": "ea78b152",
+    "zeroOutput()": "1bb6ccd1",
+    "zeroSqrtInterestRate(uint256,uint256)": "8baa0561"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"liquidity\",\"type\":\"uint160\"}],\"name\":\"AlreadyHaveLiquidity\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"uint96\",\"name\":\"blockTimestamp\",\"type\":\"uint96\"}],\"name\":\"AlreadyMatured\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"CannotBeZero\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"DeadlineReached\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InactiveLiquidityTokenChoice\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"InactiveOption\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"InactivePool\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"IncorrectMaturity\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"minuend\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"subtrahend\",\"type\":\"uint256\"}],\"name\":\"NotEnoughReceived\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"RequireLiquidity\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"uint96\",\"name\":\"blockTimestamp\",\"type\":\"uint96\"}],\"name\":\"StillActive\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroAddress\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroInput\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"ZeroOutput\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"ZeroSqrtInterestRate\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint160\",\"name\":\"liquidity\",\"type\":\"uint160\"}],\"name\":\"alreadyHaveLiquidity\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"uint96\",\"name\":\"blockTimestamp\",\"type\":\"uint96\"}],\"name\":\"alreadyMatured\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"cannotBeZero\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"balanceTarget\",\"type\":\"uint256\"}],\"name\":\"checkEnough\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"deadlineReached\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"inactiveLiquidityTokenChoice\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"inactiveOptionChoice\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"inactivePoolChoice\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"incorrectMaturity\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"requireLiquidity\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"uint96\",\"name\":\"blockTimestamp\",\"type\":\"uint96\"}],\"name\":\"stillActive\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"zeroAddress\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"zeroInput\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"zeroOutput\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"}],\"name\":\"zeroSqrtInterestRate\",\"outputs\":[],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Common error messages\",\"errors\":{\"AlreadyHaveLiquidity(uint160)\":[{\"details\":\"Reverts when a pool already have liquidity.\",\"params\":{\"liquidity\":\"The liquidity amount that already existed in the pool.\"}}],\"AlreadyMatured(uint256,uint96)\":[{\"details\":\"Reverts when the maturity is already matured.\",\"params\":{\"blockTimestamp\":\"The current block timestamp.\",\"maturity\":\"The maturity.\"}}],\"CannotBeZero()\":[{\"details\":\"Reverts when a value cannot be zero.\"}],\"DeadlineReached(uint256)\":[{\"details\":\"The deadline of a transaction has been reached.\",\"params\":{\"deadline\":\"The deadline set.\"}}],\"InactiveLiquidityTokenChoice()\":[{\"details\":\"Reverts when a liquidity token is inactive.\"}],\"InactiveOption(uint256,uint256)\":[{\"details\":\"Reverts when an option of given strike and maturity is still inactive.\",\"params\":{\"maturity\":\"The chosen maturity.\",\"strike\":\"The chosen strike.\"}}],\"InactivePool(uint256,uint256)\":[{\"details\":\"Reverts when a pool of given strike and maturity is still inactive.\",\"params\":{\"maturity\":\"The chosen maturity.\",\"strike\":\"The chosen strike.\"}}],\"IncorrectMaturity(uint256)\":[{\"details\":\"Reverts when the maturity given is not withing uint96.\",\"params\":{\"maturity\":\"The maturity being inquired.\"}}],\"NotEnoughReceived(uint256,uint256)\":[{\"details\":\"Token amount not received.\",\"params\":{\"minuend\":\"The amount being subtracted.\",\"subtrahend\":\"The amount subtracting.\"}}],\"RequireLiquidity()\":[{\"details\":\"Reverts when a pool requires liquidity.\"}],\"StillActive(uint256,uint96)\":[{\"details\":\"Reverts when the maturity is still active.\",\"params\":{\"blockTimestamp\":\"The current block timestamp.\",\"maturity\":\"The maturity.\"}}],\"ZeroAddress()\":[{\"details\":\"Reverts when a given address is the zero address.\"}],\"ZeroInput()\":[{\"details\":\"Reverts when input is zero.\"}],\"ZeroOutput()\":[{\"details\":\"Reverts when output is zero.\"}],\"ZeroSqrtInterestRate(uint256,uint256)\":[{\"details\":\"Reverts when the square root interest rate is zero.\",\"params\":{\"maturity\":\"The chosen maturity.\",\"strike\":\"The chosen strike.\"}}]},\"kind\":\"dev\",\"methods\":{\"alreadyHaveLiquidity(uint160)\":{\"details\":\"Reverts when a pool already have liquidity.\",\"params\":{\"liquidity\":\"The liquidity amount that already existed in the pool.\"}},\"alreadyMatured(uint256,uint96)\":{\"details\":\"Reverts when the maturity is already matured.\",\"params\":{\"blockTimestamp\":\"The current block timestamp.\",\"maturity\":\"The maturity.\"}},\"cannotBeZero()\":{\"details\":\"Reverts when a value cannot be zero.\"},\"checkEnough(uint256,uint256)\":{\"details\":\"Reverts when token amount not received.\",\"params\":{\"balance\":\"The balance amount being subtracted.\",\"balanceTarget\":\"The amount target.\"}},\"deadlineReached(uint256)\":{\"details\":\"The deadline of a transaction has been reached.\",\"params\":{\"deadline\":\"The deadline set.\"}},\"inactiveLiquidityTokenChoice()\":{\"details\":\"Reverts when a liquidity token is inactive.\"},\"inactiveOptionChoice(uint256,uint256)\":{\"details\":\"Reverts when an option of given strike and maturity is still inactive.\",\"params\":{\"strike\":\"The chosen strike.\"}},\"inactivePoolChoice(uint256,uint256)\":{\"details\":\"Reverts when a pool of given strike and maturity is still inactive.\",\"params\":{\"maturity\":\"The chosen maturity.\",\"strike\":\"The chosen strike.\"}},\"incorrectMaturity(uint256)\":{\"details\":\"Reverts when the maturity given is not withing uint96.\",\"params\":{\"maturity\":\"The maturity being inquired.\"}},\"requireLiquidity()\":{\"details\":\"Reverts when a pool requires liquidity.\"},\"stillActive(uint256,uint96)\":{\"details\":\"Reverts when the maturity is still active.\",\"params\":{\"blockTimestamp\":\"The current block timestamp.\",\"maturity\":\"The maturity.\"}},\"zeroAddress()\":{\"details\":\"Reverts when a given address is the zero address.\"},\"zeroInput()\":{\"details\":\"Reverts when input is zero.\"},\"zeroOutput()\":{\"details\":\"Reverts when output is zero.\"},\"zeroSqrtInterestRate(uint256,uint256)\":{\"details\":\"Reverts when the square root interest rate is zero.\",\"params\":{\"maturity\":\"The chosen maturity.s\",\"strike\":\"The chosen strike.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"test/wrapped/ErrorExt.sol\":\"ErrorExt\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/Error.sol\":{\"keccak256\":\"0x02d4c6920f04bab4f6721eac16a78774fc7c807daa2259b71d9a7d608e612b0a\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://0a11801e8ba760ff497ab16bee7b6659fd174dd78ca35ff450ab5cfa9071b62c\",\"dweb:/ipfs/QmXS8sBK6whSRmmz5AP5PV9sfVYkm5dKWrQJRb5MPdnv3n\"]},\"test/wrapped/ErrorExt.sol\":{\"keccak256\":\"0x8301178a39481acd8854fe1165ed13b174027ac1f60c98689d76ec0fb33bae06\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://98aa43590fde46c6a84a8e607f0b3b6f3c97eda91d148f41a7e0c5446da23f16\",\"dweb:/ipfs/QmSD3jqPoScfMA54nkAP4rZHkEJjLQSYThcouWZbJKLTST\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "liquidity",
+              "type": "uint160"
+            }
+          ],
+          "type": "error",
+          "name": "AlreadyHaveLiquidity"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint96",
+              "name": "blockTimestamp",
+              "type": "uint96"
+            }
+          ],
+          "type": "error",
+          "name": "AlreadyMatured"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "CannotBeZero"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "DeadlineReached"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InactiveLiquidityTokenChoice"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "InactiveOption"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "InactivePool"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "IncorrectMaturity"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "minuend",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "subtrahend",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "NotEnoughReceived"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "RequireLiquidity"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint96",
+              "name": "blockTimestamp",
+              "type": "uint96"
+            }
+          ],
+          "type": "error",
+          "name": "StillActive"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroAddress"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroInput"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "ZeroOutput"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "type": "error",
+          "name": "ZeroSqrtInterestRate"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint160",
+              "name": "liquidity",
+              "type": "uint160"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "alreadyHaveLiquidity"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint96",
+              "name": "blockTimestamp",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "alreadyMatured"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "cannotBeZero"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "balance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "balanceTarget",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "checkEnough"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "deadlineReached"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "inactiveLiquidityTokenChoice"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "inactiveOptionChoice"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "inactivePoolChoice"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "incorrectMaturity"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "requireLiquidity"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint96",
+              "name": "blockTimestamp",
+              "type": "uint96"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "stillActive"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "zeroAddress"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "zeroInput"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "zeroOutput"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "zeroSqrtInterestRate"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "alreadyHaveLiquidity(uint160)": {
+            "details": "Reverts when a pool already have liquidity.",
+            "params": {
+              "liquidity": "The liquidity amount that already existed in the pool."
+            }
+          },
+          "alreadyMatured(uint256,uint96)": {
+            "details": "Reverts when the maturity is already matured.",
+            "params": {
+              "blockTimestamp": "The current block timestamp.",
+              "maturity": "The maturity."
+            }
+          },
+          "cannotBeZero()": {
+            "details": "Reverts when a value cannot be zero."
+          },
+          "checkEnough(uint256,uint256)": {
+            "details": "Reverts when token amount not received.",
+            "params": {
+              "balance": "The balance amount being subtracted.",
+              "balanceTarget": "The amount target."
+            }
+          },
+          "deadlineReached(uint256)": {
+            "details": "The deadline of a transaction has been reached.",
+            "params": {
+              "deadline": "The deadline set."
+            }
+          },
+          "inactiveLiquidityTokenChoice()": {
+            "details": "Reverts when a liquidity token is inactive."
+          },
+          "inactiveOptionChoice(uint256,uint256)": {
+            "details": "Reverts when an option of given strike and maturity is still inactive.",
+            "params": {
+              "strike": "The chosen strike."
+            }
+          },
+          "inactivePoolChoice(uint256,uint256)": {
+            "details": "Reverts when a pool of given strike and maturity is still inactive.",
+            "params": {
+              "maturity": "The chosen maturity.",
+              "strike": "The chosen strike."
+            }
+          },
+          "incorrectMaturity(uint256)": {
+            "details": "Reverts when the maturity given is not withing uint96.",
+            "params": {
+              "maturity": "The maturity being inquired."
+            }
+          },
+          "requireLiquidity()": {
+            "details": "Reverts when a pool requires liquidity."
+          },
+          "stillActive(uint256,uint96)": {
+            "details": "Reverts when the maturity is still active.",
+            "params": {
+              "blockTimestamp": "The current block timestamp.",
+              "maturity": "The maturity."
+            }
+          },
+          "zeroAddress()": {
+            "details": "Reverts when a given address is the zero address."
+          },
+          "zeroInput()": {
+            "details": "Reverts when input is zero."
+          },
+          "zeroOutput()": {
+            "details": "Reverts when output is zero."
+          },
+          "zeroSqrtInterestRate(uint256,uint256)": {
+            "details": "Reverts when the square root interest rate is zero.",
+            "params": {
+              "maturity": "The chosen maturity.s",
+              "strike": "The chosen strike."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "test/wrapped/ErrorExt.sol": "ErrorExt"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/Error.sol": {
+        "keccak256": "0x02d4c6920f04bab4f6721eac16a78774fc7c807daa2259b71d9a7d608e612b0a",
+        "urls": [
+          "bzz-raw://0a11801e8ba760ff497ab16bee7b6659fd174dd78ca35ff450ab5cfa9071b62c",
+          "dweb:/ipfs/QmXS8sBK6whSRmmz5AP5PV9sfVYkm5dKWrQJRb5MPdnv3n"
+        ],
+        "license": "Unlicense"
+      },
+      "test/wrapped/ErrorExt.sol": {
+        "keccak256": "0x8301178a39481acd8854fe1165ed13b174027ac1f60c98689d76ec0fb33bae06",
+        "urls": [
+          "bzz-raw://98aa43590fde46c6a84a8e607f0b3b6f3c97eda91d148f41a7e0c5446da23f16",
+          "dweb:/ipfs/QmSD3jqPoScfMA54nkAP4rZHkEJjLQSYThcouWZbJKLTST"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "test/wrapped/ErrorExt.sol",
+    "id": 28197,
+    "exportedSymbols": {
+      "Error": [
+        24996
+      ],
+      "ErrorExt": [
+        28196
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:3515:30",
+    "nodes": [
+      {
+        "id": 28013,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:30",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 28014,
+        "nodeType": "ImportDirective",
+        "src": "61:29:30",
+        "nodes": [],
+        "absolutePath": "src/Error.sol",
+        "file": "../../src/Error.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 28197,
+        "sourceUnit": 24997,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 28196,
+        "nodeType": "ContractDefinition",
+        "src": "123:3428:30",
+        "nodes": [
+          {
+            "id": 28024,
+            "nodeType": "FunctionDefinition",
+            "src": "187:76:30",
+            "nodes": [],
+            "body": {
+              "id": 28023,
+              "nodeType": "Block",
+              "src": "222:41:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 28019,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "239:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28020,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "zeroInput",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24834,
+                      "src": "239:15:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 28021,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "239:17:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28018,
+                  "id": 28022,
+                  "nodeType": "Return",
+                  "src": "232:24:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28016,
+              "nodeType": "StructuredDocumentation",
+              "src": "146:36:30",
+              "text": "@dev Reverts when input is zero."
+            },
+            "functionSelector": "ea78b152",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "zeroInput",
+            "nameLocation": "196:9:30",
+            "parameters": {
+              "id": 28017,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "205:2:30"
+            },
+            "returnParameters": {
+              "id": 28018,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "222:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28033,
+            "nodeType": "FunctionDefinition",
+            "src": "311:78:30",
+            "nodes": [],
+            "body": {
+              "id": 28032,
+              "nodeType": "Block",
+              "src": "347:42:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 28028,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "364:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28029,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "zeroOutput",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24842,
+                      "src": "364:16:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 28030,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "364:18:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28027,
+                  "id": 28031,
+                  "nodeType": "Return",
+                  "src": "357:25:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28025,
+              "nodeType": "StructuredDocumentation",
+              "src": "269:37:30",
+              "text": "@dev Reverts when output is zero."
+            },
+            "functionSelector": "1bb6ccd1",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "zeroOutput",
+            "nameLocation": "320:10:30",
+            "parameters": {
+              "id": 28026,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "330:2:30"
+            },
+            "returnParameters": {
+              "id": 28027,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "347:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28042,
+            "nodeType": "FunctionDefinition",
+            "src": "445:82:30",
+            "nodes": [],
+            "body": {
+              "id": 28041,
+              "nodeType": "Block",
+              "src": "483:44:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 28037,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "500:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28038,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "cannotBeZero",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24850,
+                      "src": "500:18:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 28039,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "500:20:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28036,
+                  "id": 28040,
+                  "nodeType": "Return",
+                  "src": "493:27:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28034,
+              "nodeType": "StructuredDocumentation",
+              "src": "395:45:30",
+              "text": "@dev Reverts when a value cannot be zero."
+            },
+            "functionSelector": "331fc165",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cannotBeZero",
+            "nameLocation": "454:12:30",
+            "parameters": {
+              "id": 28035,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "466:2:30"
+            },
+            "returnParameters": {
+              "id": 28036,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "483:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28054,
+            "nodeType": "FunctionDefinition",
+            "src": "670:124:30",
+            "nodes": [],
+            "body": {
+              "id": 28053,
+              "nodeType": "Block",
+              "src": "733:61:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28050,
+                        "name": "liquidity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28045,
+                        "src": "777:9:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint160",
+                          "typeString": "uint160"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint160",
+                          "typeString": "uint160"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28048,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "750:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28049,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "alreadyHaveLiquidity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24861,
+                      "src": "750:26:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint160_$returns$__$",
+                        "typeString": "function (uint160) pure"
+                      }
+                    },
+                    "id": 28051,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "750:37:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28047,
+                  "id": 28052,
+                  "nodeType": "Return",
+                  "src": "743:44:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28043,
+              "nodeType": "StructuredDocumentation",
+              "src": "533:132:30",
+              "text": "@dev Reverts when a pool already have liquidity.\n @param liquidity The liquidity amount that already existed in the pool."
+            },
+            "functionSelector": "412c407d",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "alreadyHaveLiquidity",
+            "nameLocation": "679:20:30",
+            "parameters": {
+              "id": 28046,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28045,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "708:9:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28054,
+                  "src": "700:17:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 28044,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "700:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "699:19:30"
+            },
+            "returnParameters": {
+              "id": 28047,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "733:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28063,
+            "nodeType": "FunctionDefinition",
+            "src": "853:90:30",
+            "nodes": [],
+            "body": {
+              "id": 28062,
+              "nodeType": "Block",
+              "src": "895:48:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 28058,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "912:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28059,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "requireLiquidity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24869,
+                      "src": "912:22:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 28060,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "912:24:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28057,
+                  "id": 28061,
+                  "nodeType": "Return",
+                  "src": "905:31:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28055,
+              "nodeType": "StructuredDocumentation",
+              "src": "800:48:30",
+              "text": "@dev Reverts when a pool requires liquidity."
+            },
+            "functionSelector": "30111020",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requireLiquidity",
+            "nameLocation": "862:16:30",
+            "parameters": {
+              "id": 28056,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "878:2:30"
+            },
+            "returnParameters": {
+              "id": 28057,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "895:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28072,
+            "nodeType": "FunctionDefinition",
+            "src": "1012:80:30",
+            "nodes": [],
+            "body": {
+              "id": 28071,
+              "nodeType": "Block",
+              "src": "1049:43:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 28067,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "1066:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28068,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "zeroAddress",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24877,
+                      "src": "1066:17:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 28069,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1066:19:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28066,
+                  "id": 28070,
+                  "nodeType": "Return",
+                  "src": "1059:26:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28064,
+              "nodeType": "StructuredDocumentation",
+              "src": "949:58:30",
+              "text": "@dev Reverts when a given address is the zero address."
+            },
+            "functionSelector": "0930907b",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "zeroAddress",
+            "nameLocation": "1021:11:30",
+            "parameters": {
+              "id": 28065,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1032:2:30"
+            },
+            "returnParameters": {
+              "id": 28066,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1049:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28084,
+            "nodeType": "FunctionDefinition",
+            "src": "1219:116:30",
+            "nodes": [],
+            "body": {
+              "id": 28083,
+              "nodeType": "Block",
+              "src": "1278:57:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28080,
+                        "name": "maturity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28075,
+                        "src": "1319:8:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28078,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "1295:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28079,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "incorrectMaturity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24888,
+                      "src": "1295:23:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) pure"
+                      }
+                    },
+                    "id": 28081,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1295:33:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28077,
+                  "id": 28082,
+                  "nodeType": "Return",
+                  "src": "1288:40:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28073,
+              "nodeType": "StructuredDocumentation",
+              "src": "1098:116:30",
+              "text": "@dev Reverts when the maturity given is not withing uint96.\n @param maturity The maturity being inquired."
+            },
+            "functionSelector": "2aa4a092",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "incorrectMaturity",
+            "nameLocation": "1228:17:30",
+            "parameters": {
+              "id": 28076,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28075,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "1254:8:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28084,
+                  "src": "1246:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28074,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1246:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1245:18:30"
+            },
+            "returnParameters": {
+              "id": 28077,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1278:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28099,
+            "nodeType": "FunctionDefinition",
+            "src": "1497:149:30",
+            "nodes": [],
+            "body": {
+              "id": 28098,
+              "nodeType": "Block",
+              "src": "1576:70:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28094,
+                        "name": "maturity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28087,
+                        "src": "1614:8:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 28095,
+                        "name": "blockTimestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28089,
+                        "src": "1624:14:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint96",
+                          "typeString": "uint96"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint96",
+                          "typeString": "uint96"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28092,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "1593:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28093,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "alreadyMatured",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24902,
+                      "src": "1593:20:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint96_$returns$__$",
+                        "typeString": "function (uint256,uint96) pure"
+                      }
+                    },
+                    "id": 28096,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1593:46:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28091,
+                  "id": 28097,
+                  "nodeType": "Return",
+                  "src": "1586:53:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28085,
+              "nodeType": "StructuredDocumentation",
+              "src": "1341:151:30",
+              "text": "@dev Reverts when the maturity is already matured.\n @param maturity The maturity.\n @param blockTimestamp The current block timestamp."
+            },
+            "functionSelector": "182b608b",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "alreadyMatured",
+            "nameLocation": "1506:14:30",
+            "parameters": {
+              "id": 28090,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28087,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "1529:8:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28099,
+                  "src": "1521:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28086,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1521:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28089,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nameLocation": "1546:14:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28099,
+                  "src": "1539:21:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 28088,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1539:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1520:41:30"
+            },
+            "returnParameters": {
+              "id": 28091,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1576:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28114,
+            "nodeType": "FunctionDefinition",
+            "src": "1805:143:30",
+            "nodes": [],
+            "body": {
+              "id": 28113,
+              "nodeType": "Block",
+              "src": "1881:67:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28109,
+                        "name": "maturity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28102,
+                        "src": "1916:8:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 28110,
+                        "name": "blockTimestamp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28104,
+                        "src": "1926:14:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint96",
+                          "typeString": "uint96"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint96",
+                          "typeString": "uint96"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28107,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "1898:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28108,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "stillActive",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24916,
+                      "src": "1898:17:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint96_$returns$__$",
+                        "typeString": "function (uint256,uint96) pure"
+                      }
+                    },
+                    "id": 28111,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1898:43:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28106,
+                  "id": 28112,
+                  "nodeType": "Return",
+                  "src": "1891:50:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28100,
+              "nodeType": "StructuredDocumentation",
+              "src": "1652:148:30",
+              "text": "@dev Reverts when the maturity is still active.\n @param maturity The maturity.\n @param blockTimestamp The current block timestamp."
+            },
+            "functionSelector": "76f9be89",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stillActive",
+            "nameLocation": "1814:11:30",
+            "parameters": {
+              "id": 28105,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28102,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "1834:8:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28114,
+                  "src": "1826:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28101,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1826:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28104,
+                  "mutability": "mutable",
+                  "name": "blockTimestamp",
+                  "nameLocation": "1851:14:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28114,
+                  "src": "1844:21:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint96",
+                    "typeString": "uint96"
+                  },
+                  "typeName": {
+                    "id": 28103,
+                    "name": "uint96",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1844:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint96",
+                      "typeString": "uint96"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1825:41:30"
+            },
+            "returnParameters": {
+              "id": 28106,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1881:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28126,
+            "nodeType": "FunctionDefinition",
+            "src": "2057:112:30",
+            "nodes": [],
+            "body": {
+              "id": 28125,
+              "nodeType": "Block",
+              "src": "2114:55:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28122,
+                        "name": "deadline",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28117,
+                        "src": "2153:8:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28120,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "2131:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28121,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "deadlineReached",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24927,
+                      "src": "2131:21:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256) pure"
+                      }
+                    },
+                    "id": 28123,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2131:31:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28119,
+                  "id": 28124,
+                  "nodeType": "Return",
+                  "src": "2124:38:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28115,
+              "nodeType": "StructuredDocumentation",
+              "src": "1954:98:30",
+              "text": "@dev The deadline of a transaction has been reached.\n @param deadline The deadline set."
+            },
+            "functionSelector": "941ab741",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deadlineReached",
+            "nameLocation": "2066:15:30",
+            "parameters": {
+              "id": 28118,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28117,
+                  "mutability": "mutable",
+                  "name": "deadline",
+                  "nameLocation": "2090:8:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28126,
+                  "src": "2082:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28116,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2082:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2081:18:30"
+            },
+            "returnParameters": {
+              "id": 28119,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2114:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28141,
+            "nodeType": "FunctionDefinition",
+            "src": "2300:146:30",
+            "nodes": [],
+            "body": {
+              "id": 28140,
+              "nodeType": "Block",
+              "src": "2378:68:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28136,
+                        "name": "strike",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28129,
+                        "src": "2422:6:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 28137,
+                        "name": "maturity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28131,
+                        "src": "2430:8:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28134,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "2395:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28135,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "inactiveOptionChoice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24941,
+                      "src": "2395:26:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256) pure"
+                      }
+                    },
+                    "id": 28138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2395:44:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28133,
+                  "id": 28139,
+                  "nodeType": "Return",
+                  "src": "2388:51:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28127,
+              "nodeType": "StructuredDocumentation",
+              "src": "2175:120:30",
+              "text": "@dev Reverts when an option of given strike and maturity is still inactive.\n @param strike The chosen strike."
+            },
+            "functionSelector": "6c3c5eb4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "inactiveOptionChoice",
+            "nameLocation": "2309:20:30",
+            "parameters": {
+              "id": 28132,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28129,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "2338:6:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28141,
+                  "src": "2330:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28128,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2330:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28131,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "2354:8:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28141,
+                  "src": "2346:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28130,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2346:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2329:34:30"
+            },
+            "returnParameters": {
+              "id": 28133,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2378:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28156,
+            "nodeType": "FunctionDefinition",
+            "src": "2619:142:30",
+            "nodes": [],
+            "body": {
+              "id": 28155,
+              "nodeType": "Block",
+              "src": "2695:66:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28151,
+                        "name": "strike",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28144,
+                        "src": "2737:6:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 28152,
+                        "name": "maturity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28146,
+                        "src": "2745:8:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28149,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "2712:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28150,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "inactivePoolChoice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24955,
+                      "src": "2712:24:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256) pure"
+                      }
+                    },
+                    "id": 28153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2712:42:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28148,
+                  "id": 28154,
+                  "nodeType": "Return",
+                  "src": "2705:49:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28142,
+              "nodeType": "StructuredDocumentation",
+              "src": "2452:162:30",
+              "text": "@dev Reverts when a pool of given strike and maturity is still inactive.\n @param strike The chosen strike.\n @param maturity The chosen maturity."
+            },
+            "functionSelector": "8e17b742",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "inactivePoolChoice",
+            "nameLocation": "2628:18:30",
+            "parameters": {
+              "id": 28147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28144,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "2655:6:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28156,
+                  "src": "2647:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28143,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2647:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28146,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "2671:8:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28156,
+                  "src": "2663:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28145,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2663:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2646:34:30"
+            },
+            "returnParameters": {
+              "id": 28148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2695:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28171,
+            "nodeType": "FunctionDefinition",
+            "src": "2919:146:30",
+            "nodes": [],
+            "body": {
+              "id": 28170,
+              "nodeType": "Block",
+              "src": "2997:68:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28166,
+                        "name": "strike",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28159,
+                        "src": "3041:6:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 28167,
+                        "name": "maturity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28161,
+                        "src": "3049:8:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28164,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "3014:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28165,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "zeroSqrtInterestRate",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24969,
+                      "src": "3014:26:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256) pure"
+                      }
+                    },
+                    "id": 28168,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3014:44:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28163,
+                  "id": 28169,
+                  "nodeType": "Return",
+                  "src": "3007:51:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28157,
+              "nodeType": "StructuredDocumentation",
+              "src": "2767:147:30",
+              "text": "@dev Reverts when the square root interest rate is zero.\n @param strike The chosen strike.\n @param maturity The chosen maturity.s"
+            },
+            "functionSelector": "8baa0561",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "zeroSqrtInterestRate",
+            "nameLocation": "2928:20:30",
+            "parameters": {
+              "id": 28162,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28159,
+                  "mutability": "mutable",
+                  "name": "strike",
+                  "nameLocation": "2957:6:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28171,
+                  "src": "2949:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28158,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2949:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28161,
+                  "mutability": "mutable",
+                  "name": "maturity",
+                  "nameLocation": "2973:8:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28171,
+                  "src": "2965:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28160,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2965:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2948:34:30"
+            },
+            "returnParameters": {
+              "id": 28163,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2997:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28180,
+            "nodeType": "FunctionDefinition",
+            "src": "3128:114:30",
+            "nodes": [],
+            "body": {
+              "id": 28179,
+              "nodeType": "Block",
+              "src": "3182:60:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 28175,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "3199:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28176,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "inactiveLiquidityTokenChoice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24977,
+                      "src": "3199:34:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 28177,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3199:36:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28174,
+                  "id": 28178,
+                  "nodeType": "Return",
+                  "src": "3192:43:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28172,
+              "nodeType": "StructuredDocumentation",
+              "src": "3071:52:30",
+              "text": "@dev Reverts when a liquidity token is inactive."
+            },
+            "functionSelector": "bdb443b3",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "inactiveLiquidityTokenChoice",
+            "nameLocation": "3137:28:30",
+            "parameters": {
+              "id": 28173,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3165:2:30"
+            },
+            "returnParameters": {
+              "id": 28174,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3182:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 28195,
+            "nodeType": "FunctionDefinition",
+            "src": "3409:140:30",
+            "nodes": [],
+            "body": {
+              "id": 28194,
+              "nodeType": "Block",
+              "src": "3484:65:30",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 28190,
+                        "name": "balance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28183,
+                        "src": "3519:7:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 28191,
+                        "name": "balanceTarget",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 28185,
+                        "src": "3528:13:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "id": 28188,
+                        "name": "Error",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24996,
+                        "src": "3501:5:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Error_$24996_$",
+                          "typeString": "type(library Error)"
+                        }
+                      },
+                      "id": 28189,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "checkEnough",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 24995,
+                      "src": "3501:17:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256,uint256) pure"
+                      }
+                    },
+                    "id": 28192,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3501:41:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "functionReturnParameters": 28187,
+                  "id": 28193,
+                  "nodeType": "Return",
+                  "src": "3494:48:30"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 28181,
+              "nodeType": "StructuredDocumentation",
+              "src": "3248:156:30",
+              "text": "@dev Reverts when token amount not received.\n @param balance The balance amount being subtracted.\n @param balanceTarget The amount target."
+            },
+            "functionSelector": "1a50474f",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkEnough",
+            "nameLocation": "3418:11:30",
+            "parameters": {
+              "id": 28186,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28183,
+                  "mutability": "mutable",
+                  "name": "balance",
+                  "nameLocation": "3438:7:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28195,
+                  "src": "3430:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28182,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3430:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28185,
+                  "mutability": "mutable",
+                  "name": "balanceTarget",
+                  "nameLocation": "3455:13:30",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28195,
+                  "src": "3447:21:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28184,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3447:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3429:40:30"
+            },
+            "returnParameters": {
+              "id": 28187,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3484:0:30"
+            },
+            "scope": 28196,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 28015,
+          "nodeType": "StructuredDocumentation",
+          "src": "92:31:30",
+          "text": "@dev Common error messages"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          28196
+        ],
+        "name": "ErrorExt",
+        "nameLocation": "131:8:30",
+        "scope": 28197,
+        "usedErrors": [
+          24754,
+          24757,
+          24760,
+          24765,
+          24768,
+          24771,
+          24776,
+          24783,
+          24790,
+          24793,
+          24800,
+          24807,
+          24814,
+          24821,
+          24826
+        ]
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 30
+}

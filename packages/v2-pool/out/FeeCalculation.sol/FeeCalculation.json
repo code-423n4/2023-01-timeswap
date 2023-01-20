@@ -1,0 +1,3419 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "FeeOverflow",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c46d1d521d88ab65fbe4192931c4aaa3a62cab252e5b05883a6aea737fe4cf6064736f6c63430008080033",
+    "sourceMap": "241:3414:95:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;241:3414:95;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220c46d1d521d88ab65fbe4192931c4aaa3a62cab252e5b05883a6aea737fe4cf6064736f6c63430008080033",
+    "sourceMap": "241:3414:95:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"FeeOverflow\",\"type\":\"error\"}],\"devdoc\":{\"errors\":{\"FeeOverflow()\":[{\"details\":\"Reverts when fee overflow.\"}]},\"kind\":\"dev\",\"methods\":{},\"title\":\"library for fees related calculations\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/libraries/FeeCalculation.sol\":\"FeeCalculation\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"../v2-library/src/FullMath.sol\":{\"keccak256\":\"0x4e1f90b3f1d3748b9d78691955f37e738f598b08af0f20dd0905393b9a105fd3\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://6e30a7d0659d5e777f1f3665438d56d6676bb1f85ae9b0cc481c1b6ef9b8b34e\",\"dweb:/ipfs/QmbNDqjMeA8cRg1Eh3FrnTHnLVMv6ziWdbbeskLmnHXVpr\"]},\"../v2-library/src/Math.sol\":{\"keccak256\":\"0x7a640f746544617728e1a9f44e1bafa238d7fde996910251b209cd1caf4330cc\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://0c6fd02ad6d102dc9dcdf2400fbb488f792b55b2c5b5567229b7481c726f68a7\",\"dweb:/ipfs/QmfA2mpi7BGfMzS5ZuvCGewjHhb8ZSoGjwd6RTXhd2167c\"]},\"src/libraries/FeeCalculation.sol\":{\"keccak256\":\"0x8513532692ce59545481a8d294aee167dd73ddaf8362d12aea52396cd3d2afe0\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://1ae8ff5c610430fa3cc5c69ecc0f7a004b96c2eac02e56f1eace8b02a111c7f8\",\"dweb:/ipfs/QmdTBdecnPwhWW1SXDMeuFYgK8KQw3rxqwgxRLTpC4hnVg\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "FeeOverflow"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/libraries/FeeCalculation.sol": "FeeCalculation"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "../v2-library/src/FullMath.sol": {
+        "keccak256": "0x4e1f90b3f1d3748b9d78691955f37e738f598b08af0f20dd0905393b9a105fd3",
+        "urls": [
+          "bzz-raw://6e30a7d0659d5e777f1f3665438d56d6676bb1f85ae9b0cc481c1b6ef9b8b34e",
+          "dweb:/ipfs/QmbNDqjMeA8cRg1Eh3FrnTHnLVMv6ziWdbbeskLmnHXVpr"
+        ],
+        "license": "Unlicense"
+      },
+      "../v2-library/src/Math.sol": {
+        "keccak256": "0x7a640f746544617728e1a9f44e1bafa238d7fde996910251b209cd1caf4330cc",
+        "urls": [
+          "bzz-raw://0c6fd02ad6d102dc9dcdf2400fbb488f792b55b2c5b5567229b7481c726f68a7",
+          "dweb:/ipfs/QmfA2mpi7BGfMzS5ZuvCGewjHhb8ZSoGjwd6RTXhd2167c"
+        ],
+        "license": "Unlicense"
+      },
+      "src/libraries/FeeCalculation.sol": {
+        "keccak256": "0x8513532692ce59545481a8d294aee167dd73ddaf8362d12aea52396cd3d2afe0",
+        "urls": [
+          "bzz-raw://1ae8ff5c610430fa3cc5c69ecc0f7a004b96c2eac02e56f1eace8b02a111c7f8",
+          "dweb:/ipfs/QmdTBdecnPwhWW1SXDMeuFYgK8KQw3rxqwgxRLTpC4hnVg"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/libraries/FeeCalculation.sol",
+    "id": 39161,
+    "exportedSymbols": {
+      "FeeCalculation": [
+        39160
+      ],
+      "FullMath": [
+        1878
+      ],
+      "Math": [
+        2099
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:3619:95",
+    "nodes": [
+      {
+        "id": 38918,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:95",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 38920,
+        "nodeType": "ImportDirective",
+        "src": "62:60:95",
+        "nodes": [],
+        "absolutePath": "../v2-library/src/Math.sol",
+        "file": "@timeswap-labs/v2-library/src/Math.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 39161,
+        "sourceUnit": 2100,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38919,
+              "name": "Math",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:4:95",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 38922,
+        "nodeType": "ImportDirective",
+        "src": "123:68:95",
+        "nodes": [],
+        "absolutePath": "../v2-library/src/FullMath.sol",
+        "file": "@timeswap-labs/v2-library/src/FullMath.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 39161,
+        "sourceUnit": 1879,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 38921,
+              "name": "FullMath",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "131:8:95",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 39160,
+        "nodeType": "ContractDefinition",
+        "src": "241:3414:95",
+        "nodes": [
+          {
+            "id": 38926,
+            "nodeType": "UsingForDirective",
+            "src": "270:23:95",
+            "nodes": [],
+            "libraryName": {
+              "id": 38924,
+              "name": "Math",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 2099,
+              "src": "276:4:95"
+            },
+            "typeName": {
+              "id": 38925,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "285:7:95",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            }
+          },
+          {
+            "id": 38929,
+            "nodeType": "ErrorDefinition",
+            "src": "339:20:95",
+            "nodes": [],
+            "documentation": {
+              "id": 38927,
+              "nodeType": "StructuredDocumentation",
+              "src": "299:35:95",
+              "text": "@dev Reverts when fee overflow."
+            },
+            "name": "FeeOverflow",
+            "nameLocation": "345:11:95",
+            "parameters": {
+              "id": 38928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "356:2:95"
+            }
+          },
+          {
+            "id": 38937,
+            "nodeType": "FunctionDefinition",
+            "src": "403:73:95",
+            "nodes": [],
+            "body": {
+              "id": 38936,
+              "nodeType": "Block",
+              "src": "439:37:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "errorCall": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 38933,
+                      "name": "FeeOverflow",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38929,
+                      "src": "456:11:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                        "typeString": "function () pure"
+                      }
+                    },
+                    "id": 38934,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "456:13:95",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 38935,
+                  "nodeType": "RevertStatement",
+                  "src": "449:20:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38930,
+              "nodeType": "StructuredDocumentation",
+              "src": "365:33:95",
+              "text": "@dev reverts to overflow fee."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "feeOverflow",
+            "nameLocation": "412:11:95",
+            "parameters": {
+              "id": 38931,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "423:2:95"
+            },
+            "returnParameters": {
+              "id": 38932,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "439:0:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "private"
+          },
+          {
+            "id": 38982,
+            "nodeType": "FunctionDefinition",
+            "src": "989:425:95",
+            "nodes": [],
+            "body": {
+              "id": 38981,
+              "nodeType": "Block",
+              "src": "1170:244:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "assignments": [
+                    38956
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 38956,
+                      "mutability": "mutable",
+                      "name": "protocolFeesToAdd",
+                      "nameLocation": "1188:17:95",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 38981,
+                      "src": "1180:25:95",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 38955,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1180:7:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 38961,
+                  "initialValue": {
+                    "arguments": [
+                      {
+                        "id": 38958,
+                        "name": "fees",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38946,
+                        "src": "1223:4:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 38959,
+                        "name": "protocolFee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38948,
+                        "src": "1229:11:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 38957,
+                      "name": "getFeesRemoval",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 39107,
+                      "src": "1208:14:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 38960,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1208:33:95",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1180:61:95"
+                },
+                {
+                  "expression": {
+                    "id": 38973,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38962,
+                      "name": "newFeeGrowth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38951,
+                      "src": "1252:12:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "id": 38968,
+                                  "name": "protocolFeesToAdd",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 38956,
+                                  "src": "1315:17:95",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "id": 38966,
+                                  "name": "fees",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 38946,
+                                  "src": "1300:4:95",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "id": 38967,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "memberName": "unsafeSub",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": 1921,
+                                "src": "1300:14:95",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                                  "typeString": "function (uint256,uint256) pure returns (uint256)"
+                                }
+                              },
+                              "id": 38969,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1300:33:95",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            {
+                              "id": 38970,
+                              "name": "liquidity",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38940,
+                              "src": "1335:9:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint160",
+                                "typeString": "uint160"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              {
+                                "typeIdentifier": "t_uint160",
+                                "typeString": "uint160"
+                              }
+                            ],
+                            "id": 38965,
+                            "name": "getFeeGrowth",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39159,
+                            "src": "1287:12:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint160_$returns$_t_uint256_$",
+                              "typeString": "function (uint256,uint160) pure returns (uint256)"
+                            }
+                          },
+                          "id": 38971,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1287:58:95",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "expression": {
+                          "id": 38963,
+                          "name": "feeGrowth",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38942,
+                          "src": "1267:9:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 38964,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "unsafeAdd",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1903,
+                        "src": "1267:19:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                          "typeString": "function (uint256,uint256) pure returns (uint256)"
+                        }
+                      },
+                      "id": 38972,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1267:79:95",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1252:94:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 38974,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1252:94:95"
+                },
+                {
+                  "expression": {
+                    "id": 38979,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 38975,
+                      "name": "newProtocolFees",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 38953,
+                      "src": "1357:15:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 38978,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 38976,
+                        "name": "protocolFees",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38944,
+                        "src": "1375:12:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "id": 38977,
+                        "name": "protocolFeesToAdd",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38956,
+                        "src": "1390:17:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "1375:32:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1357:50:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 38980,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1357:50:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38938,
+              "nodeType": "StructuredDocumentation",
+              "src": "482:502:95",
+              "text": "@dev Updates the new fee growth and protocol fee given the current fee growth and protocol fee.\n @param liquidity The current liquidity in the pool.\n @param feeGrowth The current feeGrowth in the pool.\n @param protocolFees The current protocolFees in the pool.\n @param fees The fees to be earned.\n @param protocolFee The protocol fee rate.\n @return newFeeGrowth The newly updated fee growth.\n @return newProtocolFees The newly updated protocol fees."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "update",
+            "nameLocation": "998:6:95",
+            "parameters": {
+              "id": 38949,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38940,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "1013:9:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38982,
+                  "src": "1005:17:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 38939,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1005:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38942,
+                  "mutability": "mutable",
+                  "name": "feeGrowth",
+                  "nameLocation": "1032:9:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38982,
+                  "src": "1024:17:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38941,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1024:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38944,
+                  "mutability": "mutable",
+                  "name": "protocolFees",
+                  "nameLocation": "1051:12:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38982,
+                  "src": "1043:20:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38943,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1043:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38946,
+                  "mutability": "mutable",
+                  "name": "fees",
+                  "nameLocation": "1073:4:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38982,
+                  "src": "1065:12:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38945,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1065:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38948,
+                  "mutability": "mutable",
+                  "name": "protocolFee",
+                  "nameLocation": "1087:11:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38982,
+                  "src": "1079:19:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38947,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1079:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1004:95:95"
+            },
+            "returnParameters": {
+              "id": 38954,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38951,
+                  "mutability": "mutable",
+                  "name": "newFeeGrowth",
+                  "nameLocation": "1131:12:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38982,
+                  "src": "1123:20:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38950,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1123:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38953,
+                  "mutability": "mutable",
+                  "name": "newProtocolFees",
+                  "nameLocation": "1153:15:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38982,
+                  "src": "1145:23:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38952,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1145:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1122:47:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 39016,
+            "nodeType": "FunctionDefinition",
+            "src": "1784:273:95",
+            "nodes": [],
+            "body": {
+              "id": 39015,
+              "nodeType": "Block",
+              "src": "1900:157:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "condition": {
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 38996,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 38994,
+                        "name": "globalFeeGrowth",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38989,
+                        "src": "1917:15:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "!=",
+                      "rightExpression": {
+                        "id": 38995,
+                        "name": "lastFeeGrowth",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38987,
+                        "src": "1936:13:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "1917:32:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "falseExpression": {
+                      "hexValue": "30",
+                      "id": 39012,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2049:1:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "id": 39013,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "Conditional",
+                    "src": "1917:133:95",
+                    "trueExpression": {
+                      "arguments": [
+                        {
+                          "id": 38999,
+                          "name": "liquidity",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 38985,
+                          "src": "1968:9:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint160",
+                            "typeString": "uint160"
+                          }
+                        },
+                        {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 39005,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "arguments": [
+                              {
+                                "hexValue": "31",
+                                "id": 39002,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "number",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "1987:1:95",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_rational_1_by_1",
+                                  "typeString": "int_const 1"
+                                },
+                                "value": "1"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_1_by_1",
+                                  "typeString": "int_const 1"
+                                }
+                              ],
+                              "id": 39001,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "nodeType": "ElementaryTypeNameExpression",
+                              "src": "1979:7:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_uint256_$",
+                                "typeString": "type(uint256)"
+                              },
+                              "typeName": {
+                                "id": 39000,
+                                "name": "uint256",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "1979:7:95",
+                                "typeDescriptions": {}
+                              }
+                            },
+                            "id": 39003,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "typeConversion",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "1979:10:95",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "<<",
+                          "rightExpression": {
+                            "hexValue": "313238",
+                            "id": 39004,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1993:3:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_128_by_1",
+                              "typeString": "int_const 128"
+                            },
+                            "value": "128"
+                          },
+                          "src": "1979:17:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "arguments": [
+                            {
+                              "id": 39008,
+                              "name": "lastFeeGrowth",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38987,
+                              "src": "2024:13:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "expression": {
+                              "id": 39006,
+                              "name": "globalFeeGrowth",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 38989,
+                              "src": "1998:15:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "id": 39007,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "unsafeSub",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1921,
+                            "src": "1998:25:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                              "typeString": "function (uint256,uint256) pure returns (uint256)"
+                            }
+                          },
+                          "id": 39009,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1998:40:95",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        {
+                          "hexValue": "66616c7365",
+                          "id": 39010,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2040:5:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint160",
+                            "typeString": "uint160"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        ],
+                        "expression": {
+                          "id": 38997,
+                          "name": "FullMath",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1878,
+                          "src": "1952:8:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_contract$_FullMath_$1878_$",
+                            "typeString": "type(library FullMath)"
+                          }
+                        },
+                        "id": 38998,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "mulDiv",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 1747,
+                        "src": "1952:15:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_bool_$returns$_t_uint256_$",
+                          "typeString": "function (uint256,uint256,uint256,bool) pure returns (uint256)"
+                        }
+                      },
+                      "id": 39011,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1952:94:95",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 38993,
+                  "id": 39014,
+                  "nodeType": "Return",
+                  "src": "1910:140:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 38983,
+              "nodeType": "StructuredDocumentation",
+              "src": "1420:359:95",
+              "text": "@dev get the fee given the last fee growth and the global fee growth\n @notice returns zero if the last fee growth is equal to the global fee growth\n @param liquidity The current liquidity in the pool.\n @param lastFeeGrowth The previous global fee growth when owner enters.\n @param globalFeeGrowth The current global fee growth."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFees",
+            "nameLocation": "1793:7:95",
+            "parameters": {
+              "id": 38990,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38985,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "1809:9:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39016,
+                  "src": "1801:17:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 38984,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1801:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38987,
+                  "mutability": "mutable",
+                  "name": "lastFeeGrowth",
+                  "nameLocation": "1828:13:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39016,
+                  "src": "1820:21:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38986,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1820:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38989,
+                  "mutability": "mutable",
+                  "name": "globalFeeGrowth",
+                  "nameLocation": "1851:15:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39016,
+                  "src": "1843:23:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38988,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1843:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1800:67:95"
+            },
+            "returnParameters": {
+              "id": 38993,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38992,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39016,
+                  "src": "1891:7:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 38991,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1891:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1890:9:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 39050,
+            "nodeType": "FunctionDefinition",
+            "src": "2193:186:95",
+            "nodes": [],
+            "body": {
+              "id": 39049,
+              "nodeType": "Block",
+              "src": "2271:108:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 39028,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39019,
+                        "src": "2304:6:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "components": [
+                          {
+                            "commonType": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            },
+                            "id": 39034,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "arguments": [
+                                {
+                                  "hexValue": "31",
+                                  "id": 39031,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "2321:1:95",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_1_by_1",
+                                    "typeString": "int_const 1"
+                                  },
+                                  "value": "1"
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_rational_1_by_1",
+                                    "typeString": "int_const 1"
+                                  }
+                                ],
+                                "id": 39030,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "2313:7:95",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_uint256_$",
+                                  "typeString": "type(uint256)"
+                                },
+                                "typeName": {
+                                  "id": 39029,
+                                  "name": "uint256",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "2313:7:95",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 39032,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "2313:10:95",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "<<",
+                            "rightExpression": {
+                              "hexValue": "3136",
+                              "id": 39033,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "2327:2:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_16_by_1",
+                                "typeString": "int_const 16"
+                              },
+                              "value": "16"
+                            },
+                            "src": "2313:16:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "id": 39035,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "2312:18:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "id": 39044,
+                            "name": "fee",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39021,
+                            "src": "2361:3:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "components": [
+                              {
+                                "commonType": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                "id": 39041,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "leftExpression": {
+                                  "arguments": [
+                                    {
+                                      "hexValue": "31",
+                                      "id": 39038,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "kind": "number",
+                                      "lValueRequested": false,
+                                      "nodeType": "Literal",
+                                      "src": "2341:1:95",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_1_by_1",
+                                        "typeString": "int_const 1"
+                                      },
+                                      "value": "1"
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_rational_1_by_1",
+                                        "typeString": "int_const 1"
+                                      }
+                                    ],
+                                    "id": 39037,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "lValueRequested": false,
+                                    "nodeType": "ElementaryTypeNameExpression",
+                                    "src": "2333:7:95",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_uint256_$",
+                                      "typeString": "type(uint256)"
+                                    },
+                                    "typeName": {
+                                      "id": 39036,
+                                      "name": "uint256",
+                                      "nodeType": "ElementaryTypeName",
+                                      "src": "2333:7:95",
+                                      "typeDescriptions": {}
+                                    }
+                                  },
+                                  "id": 39039,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "typeConversion",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "2333:10:95",
+                                  "tryCall": false,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "nodeType": "BinaryOperation",
+                                "operator": "<<",
+                                "rightExpression": {
+                                  "hexValue": "3136",
+                                  "id": 39040,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "2347:2:95",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_16_by_1",
+                                    "typeString": "int_const 16"
+                                  },
+                                  "value": "16"
+                                },
+                                "src": "2333:16:95",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "id": 39042,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "TupleExpression",
+                            "src": "2332:18:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "id": 39043,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "unsafeSub",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 1921,
+                          "src": "2332:28:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                            "typeString": "function (uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 39045,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2332:33:95",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "hexValue": "74727565",
+                        "id": 39046,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2367:4:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "expression": {
+                        "id": 39026,
+                        "name": "FullMath",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1878,
+                        "src": "2288:8:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FullMath_$1878_$",
+                          "typeString": "type(library FullMath)"
+                        }
+                      },
+                      "id": 39027,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mulDiv",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1747,
+                      "src": "2288:15:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_bool_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256,uint256,bool) pure returns (uint256)"
+                      }
+                    },
+                    "id": 39047,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2288:84:95",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 39025,
+                  "id": 39048,
+                  "nodeType": "Return",
+                  "src": "2281:91:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 39017,
+              "nodeType": "StructuredDocumentation",
+              "src": "2063:125:95",
+              "text": "@dev Adds the fees to the amount.\n @param amount The original amount.\n @param fee The transaction fee rate."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addFees",
+            "nameLocation": "2202:7:95",
+            "parameters": {
+              "id": 39022,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39019,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2218:6:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39050,
+                  "src": "2210:14:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39018,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2210:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 39021,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "2234:3:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39050,
+                  "src": "2226:11:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39020,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2226:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2209:29:95"
+            },
+            "returnParameters": {
+              "id": 39025,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39024,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39050,
+                  "src": "2262:7:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39023,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2262:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2261:9:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 39083,
+            "nodeType": "FunctionDefinition",
+            "src": "2520:188:95",
+            "nodes": [],
+            "body": {
+              "id": 39082,
+              "nodeType": "Block",
+              "src": "2601:107:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 39062,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39053,
+                        "src": "2634:6:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "id": 39071,
+                            "name": "fee",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39055,
+                            "src": "2671:3:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "components": [
+                              {
+                                "commonType": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                "id": 39068,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "leftExpression": {
+                                  "arguments": [
+                                    {
+                                      "hexValue": "31",
+                                      "id": 39065,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "kind": "number",
+                                      "lValueRequested": false,
+                                      "nodeType": "Literal",
+                                      "src": "2651:1:95",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_1_by_1",
+                                        "typeString": "int_const 1"
+                                      },
+                                      "value": "1"
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_rational_1_by_1",
+                                        "typeString": "int_const 1"
+                                      }
+                                    ],
+                                    "id": 39064,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "lValueRequested": false,
+                                    "nodeType": "ElementaryTypeNameExpression",
+                                    "src": "2643:7:95",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_uint256_$",
+                                      "typeString": "type(uint256)"
+                                    },
+                                    "typeName": {
+                                      "id": 39063,
+                                      "name": "uint256",
+                                      "nodeType": "ElementaryTypeName",
+                                      "src": "2643:7:95",
+                                      "typeDescriptions": {}
+                                    }
+                                  },
+                                  "id": 39066,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "typeConversion",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "2643:10:95",
+                                  "tryCall": false,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "nodeType": "BinaryOperation",
+                                "operator": "<<",
+                                "rightExpression": {
+                                  "hexValue": "3136",
+                                  "id": 39067,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "2657:2:95",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_16_by_1",
+                                    "typeString": "int_const 16"
+                                  },
+                                  "value": "16"
+                                },
+                                "src": "2643:16:95",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "id": 39069,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "TupleExpression",
+                            "src": "2642:18:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "id": 39070,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "unsafeSub",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 1921,
+                          "src": "2642:28:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                            "typeString": "function (uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 39072,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "2642:33:95",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 39078,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [
+                            {
+                              "hexValue": "31",
+                              "id": 39075,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "2685:1:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              },
+                              "value": "1"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              }
+                            ],
+                            "id": 39074,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "2677:7:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": {
+                              "id": 39073,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "2677:7:95",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 39076,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2677:10:95",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<<",
+                        "rightExpression": {
+                          "hexValue": "3136",
+                          "id": 39077,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2691:2:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_16_by_1",
+                            "typeString": "int_const 16"
+                          },
+                          "value": "16"
+                        },
+                        "src": "2677:16:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "hexValue": "66616c7365",
+                        "id": 39079,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "2695:5:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "false"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "expression": {
+                        "id": 39060,
+                        "name": "FullMath",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1878,
+                        "src": "2618:8:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FullMath_$1878_$",
+                          "typeString": "type(library FullMath)"
+                        }
+                      },
+                      "id": 39061,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mulDiv",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1747,
+                      "src": "2618:15:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_bool_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256,uint256,bool) pure returns (uint256)"
+                      }
+                    },
+                    "id": 39080,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2618:83:95",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 39059,
+                  "id": 39081,
+                  "nodeType": "Return",
+                  "src": "2611:90:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 39051,
+              "nodeType": "StructuredDocumentation",
+              "src": "2385:130:95",
+              "text": "@dev Removes the fees from the amount.\n @param amount The original amount.\n @param fee The transaction fee rate."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeFees",
+            "nameLocation": "2529:10:95",
+            "parameters": {
+              "id": 39056,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39053,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2548:6:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39083,
+                  "src": "2540:14:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39052,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2540:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 39055,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "2564:3:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39083,
+                  "src": "2556:11:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39054,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2556:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2539:29:95"
+            },
+            "returnParameters": {
+              "id": 39059,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39058,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39083,
+                  "src": "2592:7:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39057,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2592:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2591:9:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 39107,
+            "nodeType": "FunctionDefinition",
+            "src": "2855:161:95",
+            "nodes": [],
+            "body": {
+              "id": 39106,
+              "nodeType": "Block",
+              "src": "2940:76:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 39095,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39086,
+                        "src": "2973:6:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 39096,
+                        "name": "fee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39088,
+                        "src": "2981:3:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 39102,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [
+                            {
+                              "hexValue": "31",
+                              "id": 39099,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "2994:1:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              },
+                              "value": "1"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              }
+                            ],
+                            "id": 39098,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "2986:7:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": {
+                              "id": 39097,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "2986:7:95",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 39100,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "2986:10:95",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<<",
+                        "rightExpression": {
+                          "hexValue": "3136",
+                          "id": 39101,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "3000:2:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_16_by_1",
+                            "typeString": "int_const 16"
+                          },
+                          "value": "16"
+                        },
+                        "src": "2986:16:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "hexValue": "74727565",
+                        "id": 39103,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3004:4:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "expression": {
+                        "id": 39093,
+                        "name": "FullMath",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1878,
+                        "src": "2957:8:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FullMath_$1878_$",
+                          "typeString": "type(library FullMath)"
+                        }
+                      },
+                      "id": 39094,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mulDiv",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1747,
+                      "src": "2957:15:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_bool_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256,uint256,bool) pure returns (uint256)"
+                      }
+                    },
+                    "id": 39104,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2957:52:95",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 39092,
+                  "id": 39105,
+                  "nodeType": "Return",
+                  "src": "2950:59:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 39084,
+              "nodeType": "StructuredDocumentation",
+              "src": "2714:136:95",
+              "text": "@dev Get the fees from an amount with fees.\n @param amount The amount with fees.\n @param fee The transaction fee rate."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFeesRemoval",
+            "nameLocation": "2864:14:95",
+            "parameters": {
+              "id": 39089,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39086,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "2887:6:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39107,
+                  "src": "2879:14:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39085,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2879:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 39088,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "2903:3:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39107,
+                  "src": "2895:11:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39087,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2895:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2878:29:95"
+            },
+            "returnParameters": {
+              "id": 39092,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39091,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39107,
+                  "src": "2931:7:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39090,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2931:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2930:9:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 39135,
+            "nodeType": "FunctionDefinition",
+            "src": "3153:181:95",
+            "nodes": [],
+            "body": {
+              "id": 39134,
+              "nodeType": "Block",
+              "src": "3241:93:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 39119,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39110,
+                        "src": "3274:6:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 39120,
+                        "name": "fee",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39112,
+                        "src": "3282:3:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "id": 39129,
+                            "name": "fee",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 39112,
+                            "src": "3316:3:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "components": [
+                              {
+                                "commonType": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                "id": 39126,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "leftExpression": {
+                                  "arguments": [
+                                    {
+                                      "hexValue": "31",
+                                      "id": 39123,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "kind": "number",
+                                      "lValueRequested": false,
+                                      "nodeType": "Literal",
+                                      "src": "3296:1:95",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_rational_1_by_1",
+                                        "typeString": "int_const 1"
+                                      },
+                                      "value": "1"
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_rational_1_by_1",
+                                        "typeString": "int_const 1"
+                                      }
+                                    ],
+                                    "id": 39122,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "lValueRequested": false,
+                                    "nodeType": "ElementaryTypeNameExpression",
+                                    "src": "3288:7:95",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_uint256_$",
+                                      "typeString": "type(uint256)"
+                                    },
+                                    "typeName": {
+                                      "id": 39121,
+                                      "name": "uint256",
+                                      "nodeType": "ElementaryTypeName",
+                                      "src": "3288:7:95",
+                                      "typeDescriptions": {}
+                                    }
+                                  },
+                                  "id": 39124,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "typeConversion",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "3288:10:95",
+                                  "tryCall": false,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                },
+                                "nodeType": "BinaryOperation",
+                                "operator": "<<",
+                                "rightExpression": {
+                                  "hexValue": "3136",
+                                  "id": 39125,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "3302:2:95",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_16_by_1",
+                                    "typeString": "int_const 16"
+                                  },
+                                  "value": "16"
+                                },
+                                "src": "3288:16:95",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "id": 39127,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "TupleExpression",
+                            "src": "3287:18:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "id": 39128,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "unsafeSub",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 1921,
+                          "src": "3287:28:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
+                            "typeString": "function (uint256,uint256) pure returns (uint256)"
+                          }
+                        },
+                        "id": 39130,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "3287:33:95",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "hexValue": "74727565",
+                        "id": 39131,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3322:4:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "expression": {
+                        "id": 39117,
+                        "name": "FullMath",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1878,
+                        "src": "3258:8:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FullMath_$1878_$",
+                          "typeString": "type(library FullMath)"
+                        }
+                      },
+                      "id": 39118,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mulDiv",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1747,
+                      "src": "3258:15:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_bool_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256,uint256,bool) pure returns (uint256)"
+                      }
+                    },
+                    "id": 39132,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3258:69:95",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 39116,
+                  "id": 39133,
+                  "nodeType": "Return",
+                  "src": "3251:76:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 39108,
+              "nodeType": "StructuredDocumentation",
+              "src": "3022:126:95",
+              "text": "@dev Get the fees from an amount.\n @param amount The amount with fees.\n @param fee The transaction fee rate."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFeesAdditional",
+            "nameLocation": "3162:17:95",
+            "parameters": {
+              "id": 39113,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39110,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "3188:6:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39135,
+                  "src": "3180:14:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39109,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3180:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 39112,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "3204:3:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39135,
+                  "src": "3196:11:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39111,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3196:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3179:29:95"
+            },
+            "returnParameters": {
+              "id": 39116,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39115,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39135,
+                  "src": "3232:7:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39114,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3232:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3231:9:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 39159,
+            "nodeType": "FunctionDefinition",
+            "src": "3474:179:95",
+            "nodes": [],
+            "body": {
+              "id": 39158,
+              "nodeType": "Block",
+              "src": "3566:87:95",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 39147,
+                        "name": "feeAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39138,
+                        "src": "3599:9:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 39153,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "arguments": [
+                            {
+                              "hexValue": "31",
+                              "id": 39150,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "3618:1:95",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              },
+                              "value": "1"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_1_by_1",
+                                "typeString": "int_const 1"
+                              }
+                            ],
+                            "id": 39149,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "3610:7:95",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_uint256_$",
+                              "typeString": "type(uint256)"
+                            },
+                            "typeName": {
+                              "id": 39148,
+                              "name": "uint256",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "3610:7:95",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 39151,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "3610:10:95",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "<<",
+                        "rightExpression": {
+                          "hexValue": "313238",
+                          "id": 39152,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "3624:3:95",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_128_by_1",
+                            "typeString": "int_const 128"
+                          },
+                          "value": "128"
+                        },
+                        "src": "3610:17:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "id": 39154,
+                        "name": "liquidity",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39140,
+                        "src": "3629:9:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint160",
+                          "typeString": "uint160"
+                        }
+                      },
+                      {
+                        "hexValue": "66616c7365",
+                        "id": 39155,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "3640:5:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "false"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint160",
+                          "typeString": "uint160"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "expression": {
+                        "id": 39145,
+                        "name": "FullMath",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1878,
+                        "src": "3583:8:95",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FullMath_$1878_$",
+                          "typeString": "type(library FullMath)"
+                        }
+                      },
+                      "id": 39146,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mulDiv",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1747,
+                      "src": "3583:15:95",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_uint256_$_t_uint256_$_t_bool_$returns$_t_uint256_$",
+                        "typeString": "function (uint256,uint256,uint256,bool) pure returns (uint256)"
+                      }
+                    },
+                    "id": 39156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "3583:63:95",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 39144,
+                  "id": 39157,
+                  "nodeType": "Return",
+                  "src": "3576:70:95"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 39136,
+              "nodeType": "StructuredDocumentation",
+              "src": "3340:129:95",
+              "text": "@dev Get the fee growth.\n @param feeAmount The fee amount.\n @param liquidity The current liquidity in the pool."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFeeGrowth",
+            "nameLocation": "3483:12:95",
+            "parameters": {
+              "id": 39141,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39138,
+                  "mutability": "mutable",
+                  "name": "feeAmount",
+                  "nameLocation": "3504:9:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39159,
+                  "src": "3496:17:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39137,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3496:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 39140,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "3523:9:95",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39159,
+                  "src": "3515:17:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint160",
+                    "typeString": "uint160"
+                  },
+                  "typeName": {
+                    "id": 39139,
+                    "name": "uint160",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3515:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3495:38:95"
+            },
+            "returnParameters": {
+              "id": 39144,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 39143,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39159,
+                  "src": "3557:7:95",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 39142,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3557:7:95",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3556:9:95"
+            },
+            "scope": 39160,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 38923,
+          "nodeType": "StructuredDocumentation",
+          "src": "193:48:95",
+          "text": "@title library for fees related calculations"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          39160
+        ],
+        "name": "FeeCalculation",
+        "nameLocation": "249:14:95",
+        "scope": 39161,
+        "usedErrors": [
+          38929
+        ]
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 95
+}

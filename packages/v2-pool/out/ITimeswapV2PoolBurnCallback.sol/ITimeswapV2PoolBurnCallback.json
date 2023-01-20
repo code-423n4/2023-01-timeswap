@@ -1,0 +1,604 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "strike",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "maturity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long0Balance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long1Balance",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "longAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "shortAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint160",
+              "name": "liquidityAmount",
+              "type": "uint160"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct TimeswapV2PoolBurnChoiceCallbackParam",
+          "name": "param",
+          "type": "tuple"
+        }
+      ],
+      "name": "timeswapV2PoolBurnChoiceCallback",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "long0Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "long1Amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "timeswapV2PoolBurnChoiceCallback((uint256,uint256,uint256,uint256,uint256,uint256,uint160,bytes))": "bc4cee8b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"strike\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"maturity\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"long0Balance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"long1Balance\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"longAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"shortAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint160\",\"name\":\"liquidityAmount\",\"type\":\"uint160\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct TimeswapV2PoolBurnChoiceCallbackParam\",\"name\":\"param\",\"type\":\"tuple\"}],\"name\":\"timeswapV2PoolBurnChoiceCallback\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"long0Amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"long1Amount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"The interface that needs to be implemented by a contract calling the burn function.\",\"kind\":\"dev\",\"methods\":{\"timeswapV2PoolBurnChoiceCallback((uint256,uint256,uint256,uint256,uint256,uint256,uint160,bytes))\":{\"details\":\"Returns the amount of long0 position and long1 positions chosen to be withdrawn.\",\"returns\":{\"data\":\"The bytes of data to be sent to msg.sender.\",\"long0Amount\":\"Amount of long0 position to be withdrawn.\",\"long1Amount\":\"Amount of long1 position to be withdrawn.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"timeswapV2PoolBurnChoiceCallback((uint256,uint256,uint256,uint256,uint256,uint256,uint160,bytes))\":{\"notice\":\"The StrikeConversion.combine of long0 position and long1 position must be less than or equal to long amount.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/callbacks/ITimeswapV2PoolBurnCallback.sol\":\"ITimeswapV2PoolBurnCallback\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/interfaces/callbacks/ITimeswapV2PoolBurnCallback.sol\":{\"keccak256\":\"0x743ebd9bb8f80cb2a6cf30b9cc80d989625d336911c90f339116fa803c48f504\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://4029f99218a6bbc585af9f1c44d98fb3f155dd210bdb44a755d0c2c2735d6198\",\"dweb:/ipfs/QmZsPp8hTmBxH3uVePSxU8x6fMTdRtXU5KBXLr3oxm2yMQ\"]},\"src/structs/CallbackParam.sol\":{\"keccak256\":\"0xce64be6cecb979d70c11cff967cf54a5bb27cc911b57c367cad7466508ea51f0\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://d55d564bf1ae0de873f3effa610e8705d50893015264d8c1ae393a4fe8478fe5\",\"dweb:/ipfs/QmdfwxjDo5oJpmtZ6acx3yp3yciJ3hU7zBfTqQ8ioBoji5\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "struct TimeswapV2PoolBurnChoiceCallbackParam",
+              "name": "param",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "strike",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "maturity",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "long0Balance",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "long1Balance",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "longAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "shortAmount",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint160",
+                  "name": "liquidityAmount",
+                  "type": "uint160"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "timeswapV2PoolBurnChoiceCallback",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "long0Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "long1Amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "timeswapV2PoolBurnChoiceCallback((uint256,uint256,uint256,uint256,uint256,uint256,uint160,bytes))": {
+            "details": "Returns the amount of long0 position and long1 positions chosen to be withdrawn.",
+            "returns": {
+              "data": "The bytes of data to be sent to msg.sender.",
+              "long0Amount": "Amount of long0 position to be withdrawn.",
+              "long1Amount": "Amount of long1 position to be withdrawn."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "timeswapV2PoolBurnChoiceCallback((uint256,uint256,uint256,uint256,uint256,uint256,uint160,bytes))": {
+            "notice": "The StrikeConversion.combine of long0 position and long1 position must be less than or equal to long amount."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/callbacks/ITimeswapV2PoolBurnCallback.sol": "ITimeswapV2PoolBurnCallback"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/callbacks/ITimeswapV2PoolBurnCallback.sol": {
+        "keccak256": "0x743ebd9bb8f80cb2a6cf30b9cc80d989625d336911c90f339116fa803c48f504",
+        "urls": [
+          "bzz-raw://4029f99218a6bbc585af9f1c44d98fb3f155dd210bdb44a755d0c2c2735d6198",
+          "dweb:/ipfs/QmZsPp8hTmBxH3uVePSxU8x6fMTdRtXU5KBXLr3oxm2yMQ"
+        ],
+        "license": "Unlicense"
+      },
+      "src/structs/CallbackParam.sol": {
+        "keccak256": "0xce64be6cecb979d70c11cff967cf54a5bb27cc911b57c367cad7466508ea51f0",
+        "urls": [
+          "bzz-raw://d55d564bf1ae0de873f3effa610e8705d50893015264d8c1ae393a4fe8478fe5",
+          "dweb:/ipfs/QmdfwxjDo5oJpmtZ6acx3yp3yciJ3hU7zBfTqQ8ioBoji5"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/callbacks/ITimeswapV2PoolBurnCallback.sol",
+    "id": 37118,
+    "exportedSymbols": {
+      "ITimeswapV2PoolBurn2Callback": [
+        37117
+      ],
+      "ITimeswapV2PoolBurnCallback": [
+        37106
+      ],
+      "TimeswapV2PoolBurnCallbackParam": [
+        39427
+      ],
+      "TimeswapV2PoolBurnChoiceCallbackParam": [
+        39412
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1246:84",
+    "nodes": [
+      {
+        "id": 37088,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:84",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 37091,
+        "nodeType": "ImportDirective",
+        "src": "62:119:84",
+        "nodes": [],
+        "absolutePath": "src/structs/CallbackParam.sol",
+        "file": "../../structs/CallbackParam.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 37118,
+        "sourceUnit": 39493,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 37089,
+              "name": "TimeswapV2PoolBurnChoiceCallbackParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "70:37:84",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 37090,
+              "name": "TimeswapV2PoolBurnCallbackParam",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "src": "109:31:84",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 37106,
+        "nodeType": "ContractDefinition",
+        "src": "276:645:84",
+        "nodes": [
+          {
+            "id": 37105,
+            "nodeType": "FunctionDefinition",
+            "src": "744:175:84",
+            "nodes": [],
+            "documentation": {
+              "id": 37093,
+              "nodeType": "StructuredDocumentation",
+              "src": "320:419:84",
+              "text": "@dev Returns the amount of long0 position and long1 positions chosen to be withdrawn.\n @notice The StrikeConversion.combine of long0 position and long1 position must be less than or equal to long amount.\n @return long0Amount Amount of long0 position to be withdrawn.\n @return long1Amount Amount of long1 position to be withdrawn.\n @return data The bytes of data to be sent to msg.sender."
+            },
+            "functionSelector": "bc4cee8b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "timeswapV2PoolBurnChoiceCallback",
+            "nameLocation": "753:32:84",
+            "parameters": {
+              "id": 37097,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37096,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "833:5:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37105,
+                  "src": "786:52:84",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2PoolBurnChoiceCallbackParam_$39412_calldata_ptr",
+                    "typeString": "struct TimeswapV2PoolBurnChoiceCallbackParam"
+                  },
+                  "typeName": {
+                    "id": 37095,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 37094,
+                      "name": "TimeswapV2PoolBurnChoiceCallbackParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 39412,
+                      "src": "786:37:84"
+                    },
+                    "referencedDeclaration": 39412,
+                    "src": "786:37:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2PoolBurnChoiceCallbackParam_$39412_storage_ptr",
+                      "typeString": "struct TimeswapV2PoolBurnChoiceCallbackParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "785:54:84"
+            },
+            "returnParameters": {
+              "id": 37104,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37099,
+                  "mutability": "mutable",
+                  "name": "long0Amount",
+                  "nameLocation": "866:11:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37105,
+                  "src": "858:19:84",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 37098,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "858:7:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37101,
+                  "mutability": "mutable",
+                  "name": "long1Amount",
+                  "nameLocation": "887:11:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37105,
+                  "src": "879:19:84",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 37100,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "879:7:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37103,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "913:4:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37105,
+                  "src": "900:17:84",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 37102,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "900:5:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "857:61:84"
+            },
+            "scope": 37106,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 37092,
+          "nodeType": "StructuredDocumentation",
+          "src": "183:93:84",
+          "text": "@dev The interface that needs to be implemented by a contract calling the burn function."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          37106
+        ],
+        "name": "ITimeswapV2PoolBurnCallback",
+        "nameLocation": "286:27:84",
+        "scope": 37118,
+        "usedErrors": []
+      },
+      {
+        "id": 37117,
+        "nodeType": "ContractDefinition",
+        "src": "983:299:84",
+        "nodes": [
+          {
+            "id": 37116,
+            "nodeType": "FunctionDefinition",
+            "src": "1159:121:84",
+            "nodes": [],
+            "documentation": {
+              "id": 37108,
+              "nodeType": "StructuredDocumentation",
+              "src": "1028:126:84",
+              "text": "@dev Require enough liquidity position by the msg.sender.\n @return data The bytes of data to be sent to msg.sender."
+            },
+            "functionSelector": "8bb7053d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "timeswapV2PoolBurnCallback",
+            "nameLocation": "1168:26:84",
+            "parameters": {
+              "id": 37112,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37111,
+                  "mutability": "mutable",
+                  "name": "param",
+                  "nameLocation": "1236:5:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37116,
+                  "src": "1195:46:84",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_TimeswapV2PoolBurnCallbackParam_$39427_calldata_ptr",
+                    "typeString": "struct TimeswapV2PoolBurnCallbackParam"
+                  },
+                  "typeName": {
+                    "id": 37110,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 37109,
+                      "name": "TimeswapV2PoolBurnCallbackParam",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 39427,
+                      "src": "1195:31:84"
+                    },
+                    "referencedDeclaration": 39427,
+                    "src": "1195:31:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_TimeswapV2PoolBurnCallbackParam_$39427_storage_ptr",
+                      "typeString": "struct TimeswapV2PoolBurnCallbackParam"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1194:48:84"
+            },
+            "returnParameters": {
+              "id": 37115,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37114,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "1274:4:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37116,
+                  "src": "1261:17:84",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 37113,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1261:5:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1260:19:84"
+            },
+            "scope": 37117,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 37107,
+          "nodeType": "StructuredDocumentation",
+          "src": "923:60:84",
+          "text": "@dev The optional interface if flashability is desired."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          37117
+        ],
+        "name": "ITimeswapV2PoolBurn2Callback",
+        "nameLocation": "993:28:84",
+        "scope": 37118,
+        "usedErrors": []
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 84
+}

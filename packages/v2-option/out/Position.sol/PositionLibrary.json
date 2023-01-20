@@ -1,0 +1,394 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InvalidPosition",
+      "type": "error"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220dbb1d8dce987f24e9632516df4a3cee8b86817f2243eb213e36bcfe52784226d64736f6c63430008080033",
+    "sourceMap": "563:360:36:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;563:360:36;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220dbb1d8dce987f24e9632516df4a3cee8b86817f2243eb213e36bcfe52784226d64736f6c63430008080033",
+    "sourceMap": "563:360:36:-:0;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.8+commit.dddeac2f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidPosition\",\"type\":\"error\"}],\"devdoc\":{\"details\":\"Helper functions for the TimeswapOptionPosition enum.\",\"errors\":{\"InvalidPosition()\":[{\"details\":\"Reverts when the given type of position is invalid.\"}]},\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/enums/Position.sol\":\"PositionLibrary\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@ensdomains/=../../node_modules/@ensdomains/\",\":@openzeppelin/=../../node_modules/@openzeppelin/\",\":@timeswap-labs/=../\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":eth-gas-reporter/=../../node_modules/eth-gas-reporter/\",\":forge-std/=lib/forge-std/src/\",\":hardhat/=../../node_modules/hardhat/\"]},\"sources\":{\"src/enums/Position.sol\":{\"keccak256\":\"0xdf9c1566d1b90293736ff2f685890126505b8eb23c56150710d7e20b675e5eff\",\"license\":\"Unlicense\",\"urls\":[\"bzz-raw://634c3516495971a1038e6f57a1a141f4e834d88c973e843611db226cfc310713\",\"dweb:/ipfs/QmNuJR7btFoW8avGVJ98N3zdyk2tp7pQA7Ytm7EnRzjWa3\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.8+commit.dddeac2f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InvalidPosition"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@ensdomains/=../../node_modules/@ensdomains/",
+        ":@openzeppelin/=../../node_modules/@openzeppelin/",
+        ":@timeswap-labs/=../",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":eth-gas-reporter/=../../node_modules/eth-gas-reporter/",
+        ":forge-std/=lib/forge-std/src/",
+        ":hardhat/=../../node_modules/hardhat/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/enums/Position.sol": "PositionLibrary"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/enums/Position.sol": {
+        "keccak256": "0xdf9c1566d1b90293736ff2f685890126505b8eb23c56150710d7e20b675e5eff",
+        "urls": [
+          "bzz-raw://634c3516495971a1038e6f57a1a141f4e834d88c973e843611db226cfc310713",
+          "dweb:/ipfs/QmNuJR7btFoW8avGVJ98N3zdyk2tp7pQA7Ytm7EnRzjWa3"
+        ],
+        "license": "Unlicense"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/enums/Position.sol",
+    "id": 29765,
+    "exportedSymbols": {
+      "PositionLibrary": [
+        29764
+      ],
+      "TimeswapV2OptionPosition": [
+        29741
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:887:36",
+    "nodes": [
+      {
+        "id": 29737,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:36",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
+      },
+      {
+        "id": 29741,
+        "nodeType": "EnumDefinition",
+        "src": "433:65:36",
+        "nodes": [],
+        "canonicalName": "TimeswapV2OptionPosition",
+        "members": [
+          {
+            "id": 29738,
+            "name": "Long0",
+            "nameLocation": "469:5:36",
+            "nodeType": "EnumValue",
+            "src": "469:5:36"
+          },
+          {
+            "id": 29739,
+            "name": "Long1",
+            "nameLocation": "480:5:36",
+            "nodeType": "EnumValue",
+            "src": "480:5:36"
+          },
+          {
+            "id": 29740,
+            "name": "Short",
+            "nameLocation": "491:5:36",
+            "nodeType": "EnumValue",
+            "src": "491:5:36"
+          }
+        ],
+        "name": "TimeswapV2OptionPosition",
+        "nameLocation": "438:24:36"
+      },
+      {
+        "id": 29764,
+        "nodeType": "ContractDefinition",
+        "src": "563:360:36",
+        "nodes": [
+          {
+            "id": 29745,
+            "nodeType": "ErrorDefinition",
+            "src": "658:24:36",
+            "nodes": [],
+            "documentation": {
+              "id": 29743,
+              "nodeType": "StructuredDocumentation",
+              "src": "593:60:36",
+              "text": "@dev Reverts when the given type of position is invalid."
+            },
+            "name": "InvalidPosition",
+            "nameLocation": "664:15:36",
+            "parameters": {
+              "id": 29744,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "679:2:36"
+            }
+          },
+          {
+            "id": 29763,
+            "nodeType": "FunctionDefinition",
+            "src": "788:133:36",
+            "nodes": [],
+            "body": {
+              "id": 29762,
+              "nodeType": "Block",
+              "src": "852:69:36",
+              "nodes": [],
+              "statements": [
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 29757,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 29754,
+                          "name": "position",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 29749,
+                          "src": "874:8:36",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                            "typeString": "enum TimeswapV2OptionPosition"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                            "typeString": "enum TimeswapV2OptionPosition"
+                          }
+                        ],
+                        "id": 29753,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "866:7:36",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": {
+                          "id": 29752,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "866:7:36",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 29755,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "866:17:36",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "33",
+                      "id": 29756,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "887:1:36",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_3_by_1",
+                        "typeString": "int_const 3"
+                      },
+                      "value": "3"
+                    },
+                    "src": "866:22:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 29761,
+                  "nodeType": "IfStatement",
+                  "src": "862:52:36",
+                  "trueBody": {
+                    "errorCall": {
+                      "arguments": [],
+                      "expression": {
+                        "argumentTypes": [],
+                        "id": 29758,
+                        "name": "InvalidPosition",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29745,
+                        "src": "897:15:36",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_error_pure$__$returns$__$",
+                          "typeString": "function () pure"
+                        }
+                      },
+                      "id": 29759,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "897:17:36",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 29760,
+                    "nodeType": "RevertStatement",
+                    "src": "890:24:36"
+                  }
+                }
+              ]
+            },
+            "documentation": {
+              "id": 29746,
+              "nodeType": "StructuredDocumentation",
+              "src": "688:95:36",
+              "text": "@dev Checks that the position input is correct.\n @param position The position input."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "check",
+            "nameLocation": "797:5:36",
+            "parameters": {
+              "id": 29750,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 29749,
+                  "mutability": "mutable",
+                  "name": "position",
+                  "nameLocation": "828:8:36",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 29763,
+                  "src": "803:33:36",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                    "typeString": "enum TimeswapV2OptionPosition"
+                  },
+                  "typeName": {
+                    "id": 29748,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 29747,
+                      "name": "TimeswapV2OptionPosition",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 29741,
+                      "src": "803:24:36"
+                    },
+                    "referencedDeclaration": 29741,
+                    "src": "803:24:36",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$29741",
+                      "typeString": "enum TimeswapV2OptionPosition"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "802:35:36"
+            },
+            "returnParameters": {
+              "id": 29751,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "852:0:36"
+            },
+            "scope": 29764,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 29742,
+          "nodeType": "StructuredDocumentation",
+          "src": "500:63:36",
+          "text": "@dev Helper functions for the TimeswapOptionPosition enum."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          29764
+        ],
+        "name": "PositionLibrary",
+        "nameLocation": "571:15:36",
+        "scope": 29765,
+        "usedErrors": [
+          29745
+        ]
+      }
+    ],
+    "license": "Unlicense"
+  },
+  "id": 36
+}

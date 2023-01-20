@@ -29,7 +29,6 @@ _Note for C4 wardens: Anything included in the C4udit output is considered a pub
   (𝑥 + 𝑦)𝑧 =𝐿(square)
 - The token does not conform to ERC20 standard, it uses ERC1155 standard.
 - As this is a monorepo, where remappings are required for compilation there might be [issues](https://github.com/crytic/crytic-compile/issues/279) when running slither
-- [Link to Documentation](https://petal-cornflower-1db.notion.site/Timeswap-V2-Product-Spec-08ec22e83bb94c0dbb619c8d252c3dc2) (Note: this requires a notion account to view)
 - [Link to whitepaper](https://github.com/code-423n4/2022-10-timeswap/blob/main/whitepaper.pdf)
 
 # Scope
@@ -181,8 +180,6 @@ To run the tests for code in each of the directories, run the following command 
 
 ```
 yarn
-yarn hardhat clean
-yarn hardhat compile
 forge build
 forge test
 ```

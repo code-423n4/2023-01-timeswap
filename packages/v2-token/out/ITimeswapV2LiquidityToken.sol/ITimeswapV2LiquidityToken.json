@@ -1825,39 +1825,56 @@
   },
   "ast": {
     "absolutePath": "src/interfaces/ITimeswapV2LiquidityToken.sol",
-    "id": 51306,
+    "id": 51308,
     "exportedSymbols": {
-      "IERC1155Enumerable": [51188],
-      "ITimeswapV2LiquidityToken": [51305],
-      "TimeswapV2LiquidityTokenBurnParam": [51857],
-      "TimeswapV2LiquidityTokenCollectParam": [51876],
-      "TimeswapV2LiquidityTokenMintParam": [51842],
-      "TimeswapV2LiquidityTokenPosition": [52199]
+      "IERC1155Enumerable": [
+        51190
+      ],
+      "ITimeswapV2LiquidityToken": [
+        51307
+      ],
+      "TimeswapV2LiquidityTokenBurnParam": [
+        51859
+      ],
+      "TimeswapV2LiquidityTokenCollectParam": [
+        51878
+      ],
+      "TimeswapV2LiquidityTokenMintParam": [
+        51844
+      ],
+      "TimeswapV2LiquidityTokenPosition": [
+        52201
+      ]
     },
     "nodeType": "SourceUnit",
     "src": "37:3250:145",
     "nodes": [
       {
-        "id": 51190,
+        "id": 51192,
         "nodeType": "PragmaDirective",
         "src": "37:23:145",
         "nodes": [],
-        "literals": ["solidity", "=", "0.8", ".8"]
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".8"
+        ]
       },
       {
-        "id": 51192,
+        "id": 51194,
         "nodeType": "ImportDirective",
         "src": "62:60:145",
         "nodes": [],
         "absolutePath": "src/interfaces/IERC1155Enumerable.sol",
         "file": "./IERC1155Enumerable.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 51306,
-        "sourceUnit": 51189,
+        "scope": 51308,
+        "sourceUnit": 51191,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 51191,
+              "id": 51193,
               "name": "IERC1155Enumerable",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
@@ -1870,19 +1887,19 @@
         "unitAlias": ""
       },
       {
-        "id": 51194,
+        "id": 51196,
         "nodeType": "ImportDirective",
         "src": "124:73:145",
         "nodes": [],
         "absolutePath": "src/structs/Position.sol",
         "file": "../structs/Position.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 51306,
-        "sourceUnit": 52235,
+        "scope": 51308,
+        "sourceUnit": 52237,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 51193,
+              "id": 51195,
               "name": "TimeswapV2LiquidityTokenPosition",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
@@ -1895,19 +1912,19 @@
         "unitAlias": ""
       },
       {
-        "id": 51198,
+        "id": 51200,
         "nodeType": "ImportDirective",
         "src": "198:144:145",
         "nodes": [],
         "absolutePath": "src/structs/Param.sol",
         "file": "../structs/Param.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 51306,
-        "sourceUnit": 52175,
+        "scope": 51308,
+        "sourceUnit": 52177,
         "symbolAliases": [
           {
             "foreign": {
-              "id": 51195,
+              "id": 51197,
               "name": "TimeswapV2LiquidityTokenMintParam",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
@@ -1918,7 +1935,7 @@
           },
           {
             "foreign": {
-              "id": 51196,
+              "id": 51198,
               "name": "TimeswapV2LiquidityTokenBurnParam",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
@@ -1929,7 +1946,7 @@
           },
           {
             "foreign": {
-              "id": 51197,
+              "id": 51199,
               "name": "TimeswapV2LiquidityTokenCollectParam",
               "nodeType": "Identifier",
               "overloadedDeclarations": [],
@@ -1942,26 +1959,26 @@
         "unitAlias": ""
       },
       {
-        "id": 51305,
+        "id": 51307,
         "nodeType": "ContractDefinition",
         "src": "401:2885:145",
         "nodes": [
           {
-            "id": 51203,
+            "id": 51205,
             "nodeType": "ErrorDefinition",
             "src": "465:34:145",
             "nodes": [],
             "name": "NotApprovedToTransferFees",
             "nameLocation": "471:25:145",
             "parameters": {
-              "id": 51202,
+              "id": 51204,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "496:2:145"
             }
           },
           {
-            "id": 51218,
+            "id": 51220,
             "nodeType": "EventDefinition",
             "src": "505:145:145",
             "nodes": [],
@@ -1969,18 +1986,18 @@
             "name": "TransferFees",
             "nameLocation": "511:12:145",
             "parameters": {
-              "id": 51217,
+              "id": 51219,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51205,
+                  "id": 51207,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "532:4:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51218,
+                  "scope": 51220,
                   "src": "524:12:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1989,7 +2006,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51204,
+                    "id": 51206,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "524:7:145",
@@ -2003,13 +2020,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 51207,
+                  "id": 51209,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "546:2:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51218,
+                  "scope": 51220,
                   "src": "538:10:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2018,7 +2035,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51206,
+                    "id": 51208,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "538:7:145",
@@ -2032,34 +2049,34 @@
                 },
                 {
                   "constant": false,
-                  "id": 51210,
+                  "id": 51212,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "position",
                   "nameLocation": "583:8:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51218,
+                  "scope": 51220,
                   "src": "550:41:145",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_memory_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_memory_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenPosition"
                   },
                   "typeName": {
-                    "id": 51209,
+                    "id": 51211,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51208,
+                      "id": 51210,
                       "name": "TimeswapV2LiquidityTokenPosition",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 52199,
+                      "referencedDeclaration": 52201,
                       "src": "550:32:145"
                     },
-                    "referencedDeclaration": 52199,
+                    "referencedDeclaration": 52201,
                     "src": "550:32:145",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenPosition"
                     }
                   },
@@ -2067,13 +2084,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 51212,
+                  "id": 51214,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "long0Fees",
                   "nameLocation": "601:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51218,
+                  "scope": 51220,
                   "src": "593:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2082,7 +2099,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51211,
+                    "id": 51213,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "593:7:145",
@@ -2095,13 +2112,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 51214,
+                  "id": 51216,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "long1Fees",
                   "nameLocation": "620:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51218,
+                  "scope": 51220,
                   "src": "612:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2110,7 +2127,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51213,
+                    "id": 51215,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "612:7:145",
@@ -2123,13 +2140,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 51216,
+                  "id": 51218,
                   "indexed": false,
                   "mutability": "mutable",
                   "name": "shortFees",
                   "nameLocation": "639:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51218,
+                  "scope": 51220,
                   "src": "631:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2138,7 +2155,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51215,
+                    "id": 51217,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "631:7:145",
@@ -2154,12 +2171,12 @@
             }
           },
           {
-            "id": 51224,
+            "id": 51226,
             "nodeType": "FunctionDefinition",
             "src": "763:57:145",
             "nodes": [],
             "documentation": {
-              "id": 51219,
+              "id": 51221,
               "nodeType": "StructuredDocumentation",
               "src": "656:102:145",
               "text": "@dev Returns the option factory address.\n @return optionFactory The option factory address."
@@ -2171,23 +2188,23 @@
             "name": "optionFactory",
             "nameLocation": "772:13:145",
             "parameters": {
-              "id": 51220,
+              "id": 51222,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "785:2:145"
             },
             "returnParameters": {
-              "id": 51223,
+              "id": 51225,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51222,
+                  "id": 51224,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51224,
+                  "scope": 51226,
                   "src": "811:7:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2196,7 +2213,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51221,
+                    "id": 51223,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "811:7:145",
@@ -2211,18 +2228,18 @@
               ],
               "src": "810:9:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 51230,
+            "id": 51232,
             "nodeType": "FunctionDefinition",
             "src": "927:55:145",
             "nodes": [],
             "documentation": {
-              "id": 51225,
+              "id": 51227,
               "nodeType": "StructuredDocumentation",
               "src": "826:96:145",
               "text": "@dev Returns the pool factory address.\n @return poolFactory The pool factory address."
@@ -2234,23 +2251,23 @@
             "name": "poolFactory",
             "nameLocation": "936:11:145",
             "parameters": {
-              "id": 51226,
+              "id": 51228,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "947:2:145"
             },
             "returnParameters": {
-              "id": 51229,
+              "id": 51231,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51228,
+                  "id": 51230,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51230,
+                  "scope": 51232,
                   "src": "973:7:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2259,7 +2276,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51227,
+                    "id": 51229,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "973:7:145",
@@ -2274,18 +2291,18 @@
               ],
               "src": "972:9:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 51241,
+            "id": 51243,
             "nodeType": "FunctionDefinition",
             "src": "1134:126:145",
             "nodes": [],
             "documentation": {
-              "id": 51231,
+              "id": 51233,
               "nodeType": "StructuredDocumentation",
               "src": "988:141:145",
               "text": "@dev Returns the position Balance of the owner\n @param owner The owner of the token\n @param position The liquidity position"
@@ -2297,17 +2314,17 @@
             "name": "positionOf",
             "nameLocation": "1143:10:145",
             "parameters": {
-              "id": 51237,
+              "id": 51239,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51233,
+                  "id": 51235,
                   "mutability": "mutable",
                   "name": "owner",
                   "nameLocation": "1162:5:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51241,
+                  "scope": 51243,
                   "src": "1154:13:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2316,7 +2333,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51232,
+                    "id": 51234,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1154:7:145",
@@ -2330,33 +2347,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 51236,
+                  "id": 51238,
                   "mutability": "mutable",
                   "name": "position",
                   "nameLocation": "1211:8:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51241,
+                  "scope": 51243,
                   "src": "1169:50:145",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_calldata_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_calldata_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenPosition"
                   },
                   "typeName": {
-                    "id": 51235,
+                    "id": 51237,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51234,
+                      "id": 51236,
                       "name": "TimeswapV2LiquidityTokenPosition",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 52199,
+                      "referencedDeclaration": 52201,
                       "src": "1169:32:145"
                     },
-                    "referencedDeclaration": 52199,
+                    "referencedDeclaration": 52201,
                     "src": "1169:32:145",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenPosition"
                     }
                   },
@@ -2366,17 +2383,17 @@
               "src": "1153:67:145"
             },
             "returnParameters": {
-              "id": 51240,
+              "id": 51242,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51239,
+                  "id": 51241,
                   "mutability": "mutable",
                   "name": "amount",
                   "nameLocation": "1252:6:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51241,
+                  "scope": 51243,
                   "src": "1244:14:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2385,7 +2402,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51238,
+                    "id": 51240,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "1244:7:145",
@@ -2399,18 +2416,18 @@
               ],
               "src": "1243:16:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 51254,
+            "id": 51256,
             "nodeType": "FunctionDefinition",
             "src": "1611:147:145",
             "nodes": [],
             "documentation": {
-              "id": 51242,
+              "id": 51244,
               "nodeType": "StructuredDocumentation",
               "src": "1266:340:145",
               "text": "@dev Transfers position token TimeswapV2Token from `from` to `to`\n @param from The address to transfer position token from\n @param to The address to transfer position token to\n @param position The TimeswapV2Token Position to transfer\n @param liquidityAmount The amount of TimeswapV2Token Position to transfer"
@@ -2422,17 +2439,17 @@
             "name": "transferTokenPositionFrom",
             "nameLocation": "1620:25:145",
             "parameters": {
-              "id": 51252,
+              "id": 51254,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51244,
+                  "id": 51246,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "1654:4:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51254,
+                  "scope": 51256,
                   "src": "1646:12:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2441,7 +2458,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51243,
+                    "id": 51245,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1646:7:145",
@@ -2455,12 +2472,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51246,
+                  "id": 51248,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "1668:2:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51254,
+                  "scope": 51256,
                   "src": "1660:10:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2469,7 +2486,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51245,
+                    "id": 51247,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1660:7:145",
@@ -2483,33 +2500,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 51249,
+                  "id": 51251,
                   "mutability": "mutable",
                   "name": "position",
                   "nameLocation": "1714:8:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51254,
+                  "scope": 51256,
                   "src": "1672:50:145",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_calldata_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_calldata_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenPosition"
                   },
                   "typeName": {
-                    "id": 51248,
+                    "id": 51250,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51247,
+                      "id": 51249,
                       "name": "TimeswapV2LiquidityTokenPosition",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 52199,
+                      "referencedDeclaration": 52201,
                       "src": "1672:32:145"
                     },
-                    "referencedDeclaration": 52199,
+                    "referencedDeclaration": 52201,
                     "src": "1672:32:145",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenPosition"
                     }
                   },
@@ -2517,12 +2534,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51251,
+                  "id": 51253,
                   "mutability": "mutable",
                   "name": "liquidityAmount",
                   "nameLocation": "1732:15:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51254,
+                  "scope": 51256,
                   "src": "1724:23:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2531,7 +2548,7 @@
                     "typeString": "uint160"
                   },
                   "typeName": {
-                    "id": 51250,
+                    "id": 51252,
                     "name": "uint160",
                     "nodeType": "ElementaryTypeName",
                     "src": "1724:7:145",
@@ -2546,23 +2563,23 @@
               "src": "1645:103:145"
             },
             "returnParameters": {
-              "id": 51253,
+              "id": 51255,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1757:0:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 51271,
+            "id": 51273,
             "nodeType": "FunctionDefinition",
             "src": "2167:170:145",
             "nodes": [],
             "documentation": {
-              "id": 51255,
+              "id": 51257,
               "nodeType": "StructuredDocumentation",
               "src": "1764:398:145",
               "text": "@dev Transfers fees from `from` to `to`\n @param from The address to transfer fees from\n @param to The address to transfer fees to\n @param position The TimeswapV2Token Position to transfer\n @param long0Fees The amount of long0 fees to transfer\n @param long1Fees The amount of long1 fees to transfer\n @param shortFees The amount of short fees to transfer"
@@ -2574,17 +2591,17 @@
             "name": "transferFeesFrom",
             "nameLocation": "2176:16:145",
             "parameters": {
-              "id": 51269,
+              "id": 51271,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51257,
+                  "id": 51259,
                   "mutability": "mutable",
                   "name": "from",
                   "nameLocation": "2201:4:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51271,
+                  "scope": 51273,
                   "src": "2193:12:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2593,7 +2610,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51256,
+                    "id": 51258,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2193:7:145",
@@ -2607,12 +2624,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51259,
+                  "id": 51261,
                   "mutability": "mutable",
                   "name": "to",
                   "nameLocation": "2215:2:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51271,
+                  "scope": 51273,
                   "src": "2207:10:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2621,7 +2638,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 51258,
+                    "id": 51260,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "2207:7:145",
@@ -2635,33 +2652,33 @@
                 },
                 {
                   "constant": false,
-                  "id": 51262,
+                  "id": 51264,
                   "mutability": "mutable",
                   "name": "position",
                   "nameLocation": "2261:8:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51271,
+                  "scope": 51273,
                   "src": "2219:50:145",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_calldata_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_calldata_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenPosition"
                   },
                   "typeName": {
-                    "id": 51261,
+                    "id": 51263,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51260,
+                      "id": 51262,
                       "name": "TimeswapV2LiquidityTokenPosition",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 52199,
+                      "referencedDeclaration": 52201,
                       "src": "2219:32:145"
                     },
-                    "referencedDeclaration": 52199,
+                    "referencedDeclaration": 52201,
                     "src": "2219:32:145",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52199_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenPosition_$52201_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenPosition"
                     }
                   },
@@ -2669,12 +2686,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51264,
+                  "id": 51266,
                   "mutability": "mutable",
                   "name": "long0Fees",
                   "nameLocation": "2279:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51271,
+                  "scope": 51273,
                   "src": "2271:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2683,7 +2700,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51263,
+                    "id": 51265,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2271:7:145",
@@ -2696,12 +2713,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51266,
+                  "id": 51268,
                   "mutability": "mutable",
                   "name": "long1Fees",
                   "nameLocation": "2298:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51271,
+                  "scope": 51273,
                   "src": "2290:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2710,7 +2727,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51265,
+                    "id": 51267,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2290:7:145",
@@ -2723,12 +2740,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51268,
+                  "id": 51270,
                   "mutability": "mutable",
                   "name": "shortFees",
                   "nameLocation": "2317:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51271,
+                  "scope": 51273,
                   "src": "2309:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2737,7 +2754,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51267,
+                    "id": 51269,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "2309:7:145",
@@ -2752,23 +2769,23 @@
               "src": "2192:135:145"
             },
             "returnParameters": {
-              "id": 51270,
+              "id": 51272,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "2336:0:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 51280,
+            "id": 51282,
             "nodeType": "FunctionDefinition",
             "src": "2508:101:145",
             "nodes": [],
             "documentation": {
-              "id": 51272,
+              "id": 51274,
               "nodeType": "StructuredDocumentation",
               "src": "2343:160:145",
               "text": "@dev mints TimeswapV2LiquidityToken as per the liqudityAmount\n @param param The TimeswapV2LiquidityTokenMintParam\n @return data Arbitrary data"
@@ -2780,38 +2797,38 @@
             "name": "mint",
             "nameLocation": "2517:4:145",
             "parameters": {
-              "id": 51276,
+              "id": 51278,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51275,
+                  "id": 51277,
                   "mutability": "mutable",
                   "name": "param",
                   "nameLocation": "2565:5:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51280,
+                  "scope": 51282,
                   "src": "2522:48:145",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenMintParam_$51842_calldata_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenMintParam_$51844_calldata_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenMintParam"
                   },
                   "typeName": {
-                    "id": 51274,
+                    "id": 51276,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51273,
+                      "id": 51275,
                       "name": "TimeswapV2LiquidityTokenMintParam",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 51842,
+                      "referencedDeclaration": 51844,
                       "src": "2522:33:145"
                     },
-                    "referencedDeclaration": 51842,
+                    "referencedDeclaration": 51844,
                     "src": "2522:33:145",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenMintParam_$51842_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenMintParam_$51844_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenMintParam"
                     }
                   },
@@ -2821,17 +2838,17 @@
               "src": "2521:50:145"
             },
             "returnParameters": {
-              "id": 51279,
+              "id": 51281,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51278,
+                  "id": 51280,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "2603:4:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51280,
+                  "scope": 51282,
                   "src": "2590:17:145",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2840,7 +2857,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 51277,
+                    "id": 51279,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2590:5:145",
@@ -2854,18 +2871,18 @@
               ],
               "src": "2589:19:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 51289,
+            "id": 51291,
             "nodeType": "FunctionDefinition",
             "src": "2780:101:145",
             "nodes": [],
             "documentation": {
-              "id": 51281,
+              "id": 51283,
               "nodeType": "StructuredDocumentation",
               "src": "2615:160:145",
               "text": "@dev burns TimeswapV2LiquidityToken as per the liqudityAmount\n @param param The TimeswapV2LiquidityTokenBurnParam\n @return data Arbitrary data"
@@ -2877,38 +2894,38 @@
             "name": "burn",
             "nameLocation": "2789:4:145",
             "parameters": {
-              "id": 51285,
+              "id": 51287,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51284,
+                  "id": 51286,
                   "mutability": "mutable",
                   "name": "param",
                   "nameLocation": "2837:5:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51289,
+                  "scope": 51291,
                   "src": "2794:48:145",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenBurnParam_$51857_calldata_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenBurnParam_$51859_calldata_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenBurnParam"
                   },
                   "typeName": {
-                    "id": 51283,
+                    "id": 51285,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51282,
+                      "id": 51284,
                       "name": "TimeswapV2LiquidityTokenBurnParam",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 51857,
+                      "referencedDeclaration": 51859,
                       "src": "2794:33:145"
                     },
-                    "referencedDeclaration": 51857,
+                    "referencedDeclaration": 51859,
                     "src": "2794:33:145",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenBurnParam_$51857_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenBurnParam_$51859_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenBurnParam"
                     }
                   },
@@ -2918,17 +2935,17 @@
               "src": "2793:50:145"
             },
             "returnParameters": {
-              "id": 51288,
+              "id": 51290,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51287,
+                  "id": 51289,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "2875:4:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51289,
+                  "scope": 51291,
                   "src": "2862:17:145",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2937,7 +2954,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 51286,
+                    "id": 51288,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "2862:5:145",
@@ -2951,18 +2968,18 @@
               ],
               "src": "2861:19:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "id": 51304,
+            "id": 51306,
             "nodeType": "FunctionDefinition",
             "src": "3120:164:145",
             "nodes": [],
             "documentation": {
-              "id": 51290,
+              "id": 51292,
               "nodeType": "StructuredDocumentation",
               "src": "2887:228:145",
               "text": "@dev collects fees as per the fees desired\n @param param The TimeswapV2LiquidityTokenBurnParam\n @return long0Fees Fees for long0\n @return long1Fees Fees for long1\n @return shortFees Fees for short"
@@ -2974,38 +2991,38 @@
             "name": "collect",
             "nameLocation": "3129:7:145",
             "parameters": {
-              "id": 51294,
+              "id": 51296,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51293,
+                  "id": 51295,
                   "mutability": "mutable",
                   "name": "param",
                   "nameLocation": "3183:5:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51304,
+                  "scope": 51306,
                   "src": "3137:51:145",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenCollectParam_$51876_calldata_ptr",
+                    "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenCollectParam_$51878_calldata_ptr",
                     "typeString": "struct TimeswapV2LiquidityTokenCollectParam"
                   },
                   "typeName": {
-                    "id": 51292,
+                    "id": 51294,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 51291,
+                      "id": 51293,
                       "name": "TimeswapV2LiquidityTokenCollectParam",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 51876,
+                      "referencedDeclaration": 51878,
                       "src": "3137:36:145"
                     },
-                    "referencedDeclaration": 51876,
+                    "referencedDeclaration": 51878,
                     "src": "3137:36:145",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenCollectParam_$51876_storage_ptr",
+                      "typeIdentifier": "t_struct$_TimeswapV2LiquidityTokenCollectParam_$51878_storage_ptr",
                       "typeString": "struct TimeswapV2LiquidityTokenCollectParam"
                     }
                   },
@@ -3015,17 +3032,17 @@
               "src": "3136:53:145"
             },
             "returnParameters": {
-              "id": 51303,
+              "id": 51305,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 51296,
+                  "id": 51298,
                   "mutability": "mutable",
                   "name": "long0Fees",
                   "nameLocation": "3216:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51304,
+                  "scope": 51306,
                   "src": "3208:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3034,7 +3051,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51295,
+                    "id": 51297,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3208:7:145",
@@ -3047,12 +3064,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51298,
+                  "id": 51300,
                   "mutability": "mutable",
                   "name": "long1Fees",
                   "nameLocation": "3235:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51304,
+                  "scope": 51306,
                   "src": "3227:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3061,7 +3078,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51297,
+                    "id": 51299,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3227:7:145",
@@ -3074,12 +3091,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51300,
+                  "id": 51302,
                   "mutability": "mutable",
                   "name": "shortFees",
                   "nameLocation": "3254:9:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51304,
+                  "scope": 51306,
                   "src": "3246:17:145",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3088,7 +3105,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 51299,
+                    "id": 51301,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "3246:7:145",
@@ -3101,12 +3118,12 @@
                 },
                 {
                   "constant": false,
-                  "id": 51302,
+                  "id": 51304,
                   "mutability": "mutable",
                   "name": "data",
                   "nameLocation": "3278:4:145",
                   "nodeType": "VariableDeclaration",
-                  "scope": 51304,
+                  "scope": 51306,
                   "src": "3265:17:145",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3115,7 +3132,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 51301,
+                    "id": 51303,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "3265:5:145",
@@ -3129,7 +3146,7 @@
               ],
               "src": "3207:76:145"
             },
-            "scope": 51305,
+            "scope": 51307,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -3139,13 +3156,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 51200,
+              "id": 51202,
               "name": "IERC1155Enumerable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 51188,
+              "referencedDeclaration": 51190,
               "src": "440:18:145"
             },
-            "id": 51201,
+            "id": 51203,
             "nodeType": "InheritanceSpecifier",
             "src": "440:18:145"
           }
@@ -3153,17 +3170,24 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "documentation": {
-          "id": 51199,
+          "id": 51201,
           "nodeType": "StructuredDocumentation",
           "src": "344:57:145",
           "text": "@title An interface for TS-V2 liquidity token system"
         },
         "fullyImplemented": false,
-        "linearizedBaseContracts": [51305, 51188, 1344, 53201],
+        "linearizedBaseContracts": [
+          51307,
+          51190,
+          1344,
+          54067
+        ],
         "name": "ITimeswapV2LiquidityToken",
         "nameLocation": "411:25:145",
-        "scope": 51306,
-        "usedErrors": [51203]
+        "scope": 51308,
+        "usedErrors": [
+          51205
+        ]
       }
     ],
     "license": "Unlicense"
