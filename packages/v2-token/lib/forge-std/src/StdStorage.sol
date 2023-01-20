@@ -47,17 +47,14 @@ library stdStorageSafe {
             fdat = bytesToBytes32(rdat, 32 * field_depth);
         }
 
-        (bytes32[] memory reads,) = vm.accesses(address(who));
+        (bytes32[] memory reads, ) = vm.accesses(address(who));
         if (reads.length == 1) {
             bytes32 curr = vm.load(who, reads[0]);
             if (curr == bytes32(0)) {
                 emit WARNING_UninitedSlot(who, uint256(reads[0]));
             }
             if (fdat != curr) {
-                require(
-                    false,
-                    "stdStorage find(StdStorage): Packed slot. This would cause dangerous overwriting and currently isn't supported."
-                );
+                require(false, "stdStorage find(StdStorage): Packed slot. This would cause dangerous overwriting and currently isn't supported.");
             }
             emit SlotFound(who, fsig, keccak256(abi.encodePacked(ins, field_depth)), uint256(reads[0]));
             self.slots[who][fsig][keccak256(abi.encodePacked(ins, field_depth))] = uint256(reads[0]);
@@ -91,10 +88,7 @@ library stdStorageSafe {
             revert("stdStorage find(StdStorage): No storage use detected for target.");
         }
 
-        require(
-            self.finds[who][fsig][keccak256(abi.encodePacked(ins, field_depth))],
-            "stdStorage find(StdStorage): Slot(s) not found."
-        );
+        require(self.finds[who][fsig][keccak256(abi.encodePacked(ins, field_depth))], "stdStorage find(StdStorage): Slot(s) not found.");
 
         delete self._target;
         delete self._sig;
@@ -268,10 +262,7 @@ library stdStorage {
         bytes32 curr = vm.load(who, slot);
 
         if (fdat != curr) {
-            require(
-                false,
-                "stdStorage find(StdStorage): Packed slot. This would cause dangerous overwriting and currently isn't supported."
-            );
+            require(false, "stdStorage find(StdStorage): Packed slot. This would cause dangerous overwriting and currently isn't supported.");
         }
         vm.store(who, slot, set);
         delete self._target;

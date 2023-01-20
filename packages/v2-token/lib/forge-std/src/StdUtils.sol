@@ -15,10 +15,8 @@ abstract contract StdUtils {
     IMulticall3 private constant multicall = IMulticall3(0xcA11bde05977b3631167028862bE2a173976CA11);
     VmSafe private constant vm = VmSafe(address(uint160(uint256(keccak256("hevm cheat code")))));
     address private constant CONSOLE2_ADDRESS = 0x000000000000000000636F6e736F6c652e6c6f67;
-    uint256 private constant INT256_MIN_ABS =
-        57896044618658097711785492504343953926634992332820282019728792003956564819968;
-    uint256 private constant UINT256_MAX =
-        115792089237316195423570985008687907853269984665640564039457584007913129639935;
+    uint256 private constant INT256_MIN_ABS = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
+    uint256 private constant UINT256_MAX = 115792089237316195423570985008687907853269984665640564039457584007913129639935;
 
     /*//////////////////////////////////////////////////////////////////////////
                                  INTERNAL FUNCTIONS
@@ -88,13 +86,13 @@ abstract contract StdUtils {
         // forgefmt: disable-start
         // The integer zero is treated as an empty byte string, and as a result it only has a length prefix, 0x80, computed via 0x80 + 0.
         // A one byte integer uses its own value as its length prefix, there is no additional "0x80 + length" prefix that comes before it.
-        if (nonce == 0x00)      return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd6), bytes1(0x94), deployer, bytes1(0x80))));
-        if (nonce <= 0x7f)      return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd6), bytes1(0x94), deployer, uint8(nonce))));
+        if (nonce == 0x00) return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd6), bytes1(0x94), deployer, bytes1(0x80))));
+        if (nonce <= 0x7f) return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd6), bytes1(0x94), deployer, uint8(nonce))));
 
         // Nonces greater than 1 byte all follow a consistent encoding scheme, where each value is preceded by a prefix of 0x80 + length.
-        if (nonce <= 2**8 - 1)  return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd7), bytes1(0x94), deployer, bytes1(0x81), uint8(nonce))));
-        if (nonce <= 2**16 - 1) return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd8), bytes1(0x94), deployer, bytes1(0x82), uint16(nonce))));
-        if (nonce <= 2**24 - 1) return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd9), bytes1(0x94), deployer, bytes1(0x83), uint24(nonce))));
+        if (nonce <= 2 ** 8 - 1) return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd7), bytes1(0x94), deployer, bytes1(0x81), uint8(nonce))));
+        if (nonce <= 2 ** 16 - 1) return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd8), bytes1(0x94), deployer, bytes1(0x82), uint16(nonce))));
+        if (nonce <= 2 ** 24 - 1) return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xd9), bytes1(0x94), deployer, bytes1(0x83), uint24(nonce))));
         // forgefmt: disable-end
 
         // More details about RLP encoding can be found here: https://eth.wiki/fundamentals/rlp
@@ -102,26 +100,15 @@ abstract contract StdUtils {
         // 0x94 = 0x80 + 0x14 (0x14 = the length of an address, 20 bytes, in hex)
         // 0x84 = 0x80 + 0x04 (0x04 = the bytes length of the nonce, 4 bytes, in hex)
         // We assume nobody can have a nonce large enough to require more than 32 bytes.
-        return addressFromLast20Bytes(
-            keccak256(abi.encodePacked(bytes1(0xda), bytes1(0x94), deployer, bytes1(0x84), uint32(nonce)))
-        );
+        return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xda), bytes1(0x94), deployer, bytes1(0x84), uint32(nonce))));
     }
 
-    function computeCreate2Address(bytes32 salt, bytes32 initcodeHash, address deployer)
-        internal
-        pure
-        virtual
-        returns (address)
-    {
+    function computeCreate2Address(bytes32 salt, bytes32 initcodeHash, address deployer) internal pure virtual returns (address) {
         return addressFromLast20Bytes(keccak256(abi.encodePacked(bytes1(0xff), deployer, salt, initcodeHash)));
     }
 
     // Performs a single call with Multicall3 to query the ERC-20 token balances of the given addresses.
-    function getTokenBalances(address token, address[] memory addresses)
-        internal
-        virtual
-        returns (uint256[] memory balances)
-    {
+    function getTokenBalances(address token, address[] memory addresses) internal virtual returns (uint256[] memory balances) {
         uint256 tokenCodeSize;
         assembly {
             tokenCodeSize := extcodesize(token)
@@ -157,12 +144,12 @@ abstract contract StdUtils {
     // Used to prevent the compilation of console, which shortens the compilation time when console is not used elsewhere.
 
     function console2_log(string memory p0, uint256 p1) private view {
-        (bool status,) = address(CONSOLE2_ADDRESS).staticcall(abi.encodeWithSignature("log(string,uint256)", p0, p1));
+        (bool status, ) = address(CONSOLE2_ADDRESS).staticcall(abi.encodeWithSignature("log(string,uint256)", p0, p1));
         status;
     }
 
     function console2_log(string memory p0, string memory p1) private view {
-        (bool status,) = address(CONSOLE2_ADDRESS).staticcall(abi.encodeWithSignature("log(string,string)", p0, p1));
+        (bool status, ) = address(CONSOLE2_ADDRESS).staticcall(abi.encodeWithSignature("log(string,string)", p0, p1));
         status;
     }
 }

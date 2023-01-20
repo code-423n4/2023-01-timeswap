@@ -16,9 +16,7 @@ interface IERC1155 is IERC165 {
     /// - The `_value` argument MUST be the number of tokens the holder balance is decreased by and match what the recipient balance is increased by.
     /// - When minting/creating tokens, the `_from` argument MUST be set to `0x0` (i.e. zero address).
     /// - When burning/destroying tokens, the `_to` argument MUST be set to `0x0` (i.e. zero address).
-    event TransferSingle(
-        address indexed _operator, address indexed _from, address indexed _to, uint256 _id, uint256 _value
-    );
+    event TransferSingle(address indexed _operator, address indexed _from, address indexed _to, uint256 _id, uint256 _value);
 
     /// @dev
     /// - Either `TransferSingle` or `TransferBatch` MUST emit when tokens are transferred, including zero value transfers as well as minting or burning (see "Safe Transfer Rules" section of the standard).
@@ -29,9 +27,7 @@ interface IERC1155 is IERC165 {
     /// - The `_values` argument MUST be the list of number of tokens (matching the list and order of tokens specified in _ids) the holder balance is decreased by and match what the recipient balance is increased by.
     /// - When minting/creating tokens, the `_from` argument MUST be set to `0x0` (i.e. zero address).
     /// - When burning/destroying tokens, the `_to` argument MUST be set to `0x0` (i.e. zero address).
-    event TransferBatch(
-        address indexed _operator, address indexed _from, address indexed _to, uint256[] _ids, uint256[] _values
-    );
+    event TransferBatch(address indexed _operator, address indexed _from, address indexed _to, uint256[] _ids, uint256[] _values);
 
     /// @dev MUST emit when approval for a second party/operator address to manage all tokens for an owner address is enabled or disabled (absence of an event assumes disabled).
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
@@ -68,13 +64,7 @@ interface IERC1155 is IERC165 {
     /// @param _ids IDs of each token type (order and length must match _values array)
     /// @param _values Transfer amounts per token type (order and length must match _ids array)
     /// @param _data Additional data with no specified format, MUST be sent unaltered in call to the `ERC1155TokenReceiver` hook(s) on `_to`
-    function safeBatchTransferFrom(
-        address _from,
-        address _to,
-        uint256[] calldata _ids,
-        uint256[] calldata _values,
-        bytes calldata _data
-    ) external;
+    function safeBatchTransferFrom(address _from, address _to, uint256[] calldata _ids, uint256[] calldata _values, bytes calldata _data) external;
 
     /// @notice Get the balance of an account's tokens.
     /// @param _owner The address of the token holder
@@ -86,10 +76,7 @@ interface IERC1155 is IERC165 {
     /// @param _owners The addresses of the token holders
     /// @param _ids ID of the tokens
     /// @return The _owner's balance of the token types requested (i.e. balance for each (owner, id) pair)
-    function balanceOfBatch(address[] calldata _owners, uint256[] calldata _ids)
-        external
-        view
-        returns (uint256[] memory);
+    function balanceOfBatch(address[] calldata _owners, uint256[] calldata _ids) external view returns (uint256[] memory);
 
     /// @notice Enable or disable approval for a third party ("operator") to manage all of the caller's tokens.
     /// @dev MUST emit the ApprovalForAll event on success.

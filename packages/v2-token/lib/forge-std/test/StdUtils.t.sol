@@ -5,10 +5,7 @@ import "../src/Test.sol";
 
 contract StdUtilsMock is StdUtils {
     // We deploy a mock version so we can properly test expected reverts.
-    function getTokenBalances_(address token, address[] memory addresses)
-        external
-        returns (uint256[] memory balances)
-    {
+    function getTokenBalances_(address token, address[] memory addresses) external returns (uint256[] memory balances) {
         return getTokenBalances(token, addresses);
     }
 }
@@ -46,7 +43,7 @@ contract StdUtilsTest is Test {
     }
 
     function testBound_DistributionIsEven(uint256 min, uint256 size) public {
-        size = size % 100 + 1;
+        size = (size % 100) + 1;
         min = bound(min, UINT256_MAX / 2, UINT256_MAX / 2 + size);
         uint256 max = min + size - 1;
         uint256 result;
@@ -54,10 +51,10 @@ contract StdUtilsTest is Test {
         for (uint256 i = 1; i <= size * 4; ++i) {
             // x > max
             result = bound(max + i, min, max);
-            assertEq(result, min + (i - 1) % size);
+            assertEq(result, min + ((i - 1) % size));
             // x < min
             result = bound(min - i, min, max);
-            assertEq(result, max - (i - 1) % size);
+            assertEq(result, max - ((i - 1) % size));
         }
     }
 
@@ -129,7 +126,7 @@ contract StdUtilsTest is Test {
     }
 
     function testBoundInt_DistributionIsEven(int256 min, uint256 size) public {
-        size = size % 100 + 1;
+        size = (size % 100) + 1;
         min = bound(min, -int256(size / 2), int256(size - size / 2));
         int256 max = min + int256(size) - 1;
         int256 result;

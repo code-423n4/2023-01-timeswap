@@ -6,7 +6,6 @@ import "forge-std/console.sol";
 import "../wrappedContracts/FeeExt.sol";
 
 contract Fee is Test {
-
     // reverts when fee is greater than max of uint16
     function testCheck() public {
         vm.expectRevert();
@@ -15,7 +14,7 @@ contract Fee is Test {
     }
 
     // returns the input 'fee' when the input 'fee' is less than or equal to the maximum value of 'uint16'
-    function testCheck2() pure public {
+    function testCheck2() public pure {
         uint256 fee = type(uint16).max;
         FeeExt.check(fee);
     }

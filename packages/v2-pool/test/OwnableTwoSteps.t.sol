@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity =0.8.8;
 
-import 'forge-std/Test.sol';
-import 'forge-std/console.sol';
+import "forge-std/Test.sol";
+import "forge-std/console.sol";
 
 import "../src/base/OwnableTwoSteps.sol";
 
-contract OwnableTwoStepsTest is Test{
+contract OwnableTwoStepsTest is Test {
     OwnableTwoSteps ownableTwoSteps;
 
     function setUp() public {
@@ -24,5 +24,4 @@ contract OwnableTwoStepsTest is Test{
         ownableTwoSteps.acceptOwner();
         assertEq(ownableTwoSteps.owner(), address(1));
     }
-
 }
