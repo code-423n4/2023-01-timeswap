@@ -162,12 +162,12 @@
   ],
   "bytecode": {
     "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220de90aa70baf7fddc3687d679ea226ec8c59d2e99c0387215bb3077ab4c0bd08964736f6c63430008080033",
-    "sourceMap": "93:5672:8:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;93:5672:8;;;;;;;;;;;;;;;;;",
+    "sourceMap": "93:5672:15:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;93:5672:15;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220de90aa70baf7fddc3687d679ea226ec8c59d2e99c0387215bb3077ab4c0bd08964736f6c63430008080033",
-    "sourceMap": "93:5672:8:-:0;;;;;;;;",
+    "sourceMap": "93:5672:15:-:0;;;;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
@@ -386,19 +386,19 @@
   },
   "ast": {
     "absolutePath": "../v2-library/src/Error.sol",
-    "id": 1593,
+    "id": 2590,
     "exportedSymbols": {
       "Error": [
-        1592
+        2589
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "37:5729:8",
+    "src": "37:5729:15",
     "nodes": [
       {
-        "id": 1346,
+        "id": 2343,
         "nodeType": "PragmaDirective",
-        "src": "37:23:8",
+        "src": "37:23:15",
         "nodes": [],
         "literals": [
           "solidity",
@@ -408,96 +408,96 @@
         ]
       },
       {
-        "id": 1592,
+        "id": 2589,
         "nodeType": "ContractDefinition",
-        "src": "93:5672:8",
+        "src": "93:5672:15",
         "nodes": [
           {
-            "id": 1350,
+            "id": 2347,
             "nodeType": "ErrorDefinition",
-            "src": "154:18:8",
+            "src": "154:18:15",
             "nodes": [],
             "documentation": {
-              "id": 1348,
+              "id": 2345,
               "nodeType": "StructuredDocumentation",
-              "src": "113:36:8",
+              "src": "113:36:15",
               "text": "@dev Reverts when input is zero."
             },
             "name": "ZeroInput",
-            "nameLocation": "160:9:8",
+            "nameLocation": "160:9:15",
             "parameters": {
-              "id": 1349,
+              "id": 2346,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "169:2:8"
+              "src": "169:2:15"
             }
           },
           {
-            "id": 1353,
+            "id": 2350,
             "nodeType": "ErrorDefinition",
-            "src": "220:19:8",
+            "src": "220:19:15",
             "nodes": [],
             "documentation": {
-              "id": 1351,
+              "id": 2348,
               "nodeType": "StructuredDocumentation",
-              "src": "178:37:8",
+              "src": "178:37:15",
               "text": "@dev Reverts when output is zero."
             },
             "name": "ZeroOutput",
-            "nameLocation": "226:10:8",
+            "nameLocation": "226:10:15",
             "parameters": {
-              "id": 1352,
+              "id": 2349,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "236:2:8"
+              "src": "236:2:15"
             }
           },
           {
-            "id": 1356,
+            "id": 2353,
             "nodeType": "ErrorDefinition",
-            "src": "295:21:8",
+            "src": "295:21:15",
             "nodes": [],
             "documentation": {
-              "id": 1354,
+              "id": 2351,
               "nodeType": "StructuredDocumentation",
-              "src": "245:45:8",
+              "src": "245:45:15",
               "text": "@dev Reverts when a value cannot be zero."
             },
             "name": "CannotBeZero",
-            "nameLocation": "301:12:8",
+            "nameLocation": "301:12:15",
             "parameters": {
-              "id": 1355,
+              "id": 2352,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "313:2:8"
+              "src": "313:2:15"
             }
           },
           {
-            "id": 1361,
+            "id": 2358,
             "nodeType": "ErrorDefinition",
-            "src": "459:46:8",
+            "src": "459:46:15",
             "nodes": [],
             "documentation": {
-              "id": 1357,
+              "id": 2354,
               "nodeType": "StructuredDocumentation",
-              "src": "322:132:8",
+              "src": "322:132:15",
               "text": "@dev Reverts when a pool already have liquidity.\n @param liquidity The liquidity amount that already existed in the pool."
             },
             "name": "AlreadyHaveLiquidity",
-            "nameLocation": "465:20:8",
+            "nameLocation": "465:20:15",
             "parameters": {
-              "id": 1360,
+              "id": 2357,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1359,
+                  "id": 2356,
                   "mutability": "mutable",
                   "name": "liquidity",
-                  "nameLocation": "494:9:8",
+                  "nameLocation": "494:9:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1361,
-                  "src": "486:17:8",
+                  "scope": 2358,
+                  "src": "486:17:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -505,10 +505,10 @@
                     "typeString": "uint160"
                   },
                   "typeName": {
-                    "id": 1358,
+                    "id": 2355,
                     "name": "uint160",
                     "nodeType": "ElementaryTypeName",
-                    "src": "486:7:8",
+                    "src": "486:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint160",
                       "typeString": "uint160"
@@ -517,75 +517,75 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "485:19:8"
+              "src": "485:19:15"
             }
           },
           {
-            "id": 1364,
+            "id": 2361,
             "nodeType": "ErrorDefinition",
-            "src": "564:25:8",
+            "src": "564:25:15",
             "nodes": [],
             "documentation": {
-              "id": 1362,
+              "id": 2359,
               "nodeType": "StructuredDocumentation",
-              "src": "511:48:8",
+              "src": "511:48:15",
               "text": "@dev Reverts when a pool requires liquidity."
             },
             "name": "RequireLiquidity",
-            "nameLocation": "570:16:8",
+            "nameLocation": "570:16:15",
             "parameters": {
-              "id": 1363,
+              "id": 2360,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "586:2:8"
+              "src": "586:2:15"
             }
           },
           {
-            "id": 1367,
+            "id": 2364,
             "nodeType": "ErrorDefinition",
-            "src": "658:20:8",
+            "src": "658:20:15",
             "nodes": [],
             "documentation": {
-              "id": 1365,
+              "id": 2362,
               "nodeType": "StructuredDocumentation",
-              "src": "595:58:8",
+              "src": "595:58:15",
               "text": "@dev Reverts when a given address is the zero address."
             },
             "name": "ZeroAddress",
-            "nameLocation": "664:11:8",
+            "nameLocation": "664:11:15",
             "parameters": {
-              "id": 1366,
+              "id": 2363,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "675:2:8"
+              "src": "675:2:15"
             }
           },
           {
-            "id": 1372,
+            "id": 2369,
             "nodeType": "ErrorDefinition",
-            "src": "805:42:8",
+            "src": "805:42:15",
             "nodes": [],
             "documentation": {
-              "id": 1368,
+              "id": 2365,
               "nodeType": "StructuredDocumentation",
-              "src": "684:116:8",
+              "src": "684:116:15",
               "text": "@dev Reverts when the maturity given is not withing uint96.\n @param maturity The maturity being inquired."
             },
             "name": "IncorrectMaturity",
-            "nameLocation": "811:17:8",
+            "nameLocation": "811:17:15",
             "parameters": {
-              "id": 1371,
+              "id": 2368,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1370,
+                  "id": 2367,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "837:8:8",
+                  "nameLocation": "837:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1372,
-                  "src": "829:16:8",
+                  "scope": 2369,
+                  "src": "829:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -593,10 +593,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1369,
+                    "id": 2366,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "829:7:8",
+                    "src": "829:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -605,35 +605,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "828:18:8"
+              "src": "828:18:15"
             }
           },
           {
-            "id": 1379,
+            "id": 2376,
             "nodeType": "ErrorDefinition",
-            "src": "1023:55:8",
+            "src": "1023:55:15",
             "nodes": [],
             "documentation": {
-              "id": 1373,
+              "id": 2370,
               "nodeType": "StructuredDocumentation",
-              "src": "853:165:8",
+              "src": "853:165:15",
               "text": "@dev Reverts when an option of given strike and maturity is still inactive.\n @param strike The chosen strike.\n @param maturity The chosen maturity."
             },
             "name": "InactiveOption",
-            "nameLocation": "1029:14:8",
+            "nameLocation": "1029:14:15",
             "parameters": {
-              "id": 1378,
+              "id": 2375,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1375,
+                  "id": 2372,
                   "mutability": "mutable",
                   "name": "strike",
-                  "nameLocation": "1052:6:8",
+                  "nameLocation": "1052:6:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1379,
-                  "src": "1044:14:8",
+                  "scope": 2376,
+                  "src": "1044:14:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -641,10 +641,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1374,
+                    "id": 2371,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1044:7:8",
+                    "src": "1044:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -654,13 +654,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1377,
+                  "id": 2374,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "1068:8:8",
+                  "nameLocation": "1068:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1379,
-                  "src": "1060:16:8",
+                  "scope": 2376,
+                  "src": "1060:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -668,10 +668,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1376,
+                    "id": 2373,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1060:7:8",
+                    "src": "1060:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -680,35 +680,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1043:34:8"
+              "src": "1043:34:15"
             }
           },
           {
-            "id": 1386,
+            "id": 2383,
             "nodeType": "ErrorDefinition",
-            "src": "1251:53:8",
+            "src": "1251:53:15",
             "nodes": [],
             "documentation": {
-              "id": 1380,
+              "id": 2377,
               "nodeType": "StructuredDocumentation",
-              "src": "1084:162:8",
+              "src": "1084:162:15",
               "text": "@dev Reverts when a pool of given strike and maturity is still inactive.\n @param strike The chosen strike.\n @param maturity The chosen maturity."
             },
             "name": "InactivePool",
-            "nameLocation": "1257:12:8",
+            "nameLocation": "1257:12:15",
             "parameters": {
-              "id": 1385,
+              "id": 2382,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1382,
+                  "id": 2379,
                   "mutability": "mutable",
                   "name": "strike",
-                  "nameLocation": "1278:6:8",
+                  "nameLocation": "1278:6:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1386,
-                  "src": "1270:14:8",
+                  "scope": 2383,
+                  "src": "1270:14:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -716,10 +716,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1381,
+                    "id": 2378,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1270:7:8",
+                    "src": "1270:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -729,13 +729,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1384,
+                  "id": 2381,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "1294:8:8",
+                  "nameLocation": "1294:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1386,
-                  "src": "1286:16:8",
+                  "scope": 2383,
+                  "src": "1286:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -743,10 +743,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1383,
+                    "id": 2380,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1286:7:8",
+                    "src": "1286:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -755,55 +755,55 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1269:34:8"
+              "src": "1269:34:15"
             }
           },
           {
-            "id": 1389,
+            "id": 2386,
             "nodeType": "ErrorDefinition",
-            "src": "1367:37:8",
+            "src": "1367:37:15",
             "nodes": [],
             "documentation": {
-              "id": 1387,
+              "id": 2384,
               "nodeType": "StructuredDocumentation",
-              "src": "1310:52:8",
+              "src": "1310:52:15",
               "text": "@dev Reverts when a liquidity token is inactive."
             },
             "name": "InactiveLiquidityTokenChoice",
-            "nameLocation": "1373:28:8",
+            "nameLocation": "1373:28:15",
             "parameters": {
-              "id": 1388,
+              "id": 2385,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1401:2:8"
+              "src": "1401:2:15"
             }
           },
           {
-            "id": 1396,
+            "id": 2393,
             "nodeType": "ErrorDefinition",
-            "src": "1561:61:8",
+            "src": "1561:61:15",
             "nodes": [],
             "documentation": {
-              "id": 1390,
+              "id": 2387,
               "nodeType": "StructuredDocumentation",
-              "src": "1410:146:8",
+              "src": "1410:146:15",
               "text": "@dev Reverts when the square root interest rate is zero.\n @param strike The chosen strike.\n @param maturity The chosen maturity."
             },
             "name": "ZeroSqrtInterestRate",
-            "nameLocation": "1567:20:8",
+            "nameLocation": "1567:20:15",
             "parameters": {
-              "id": 1395,
+              "id": 2392,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1392,
+                  "id": 2389,
                   "mutability": "mutable",
                   "name": "strike",
-                  "nameLocation": "1596:6:8",
+                  "nameLocation": "1596:6:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1396,
-                  "src": "1588:14:8",
+                  "scope": 2393,
+                  "src": "1588:14:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -811,10 +811,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1391,
+                    "id": 2388,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1588:7:8",
+                    "src": "1588:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -824,13 +824,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1394,
+                  "id": 2391,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "1612:8:8",
+                  "nameLocation": "1612:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1396,
-                  "src": "1604:16:8",
+                  "scope": 2393,
+                  "src": "1604:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -838,10 +838,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1393,
+                    "id": 2390,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1604:7:8",
+                    "src": "1604:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -850,35 +850,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1587:34:8"
+              "src": "1587:34:15"
             }
           },
           {
-            "id": 1403,
+            "id": 2400,
             "nodeType": "ErrorDefinition",
-            "src": "1784:62:8",
+            "src": "1784:62:15",
             "nodes": [],
             "documentation": {
-              "id": 1397,
+              "id": 2394,
               "nodeType": "StructuredDocumentation",
-              "src": "1628:151:8",
+              "src": "1628:151:15",
               "text": "@dev Reverts when the maturity is already matured.\n @param maturity The maturity.\n @param blockTimestamp The current block timestamp."
             },
             "name": "AlreadyMatured",
-            "nameLocation": "1790:14:8",
+            "nameLocation": "1790:14:15",
             "parameters": {
-              "id": 1402,
+              "id": 2399,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1399,
+                  "id": 2396,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "1813:8:8",
+                  "nameLocation": "1813:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1403,
-                  "src": "1805:16:8",
+                  "scope": 2400,
+                  "src": "1805:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -886,10 +886,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1398,
+                    "id": 2395,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1805:7:8",
+                    "src": "1805:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -899,13 +899,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1401,
+                  "id": 2398,
                   "mutability": "mutable",
                   "name": "blockTimestamp",
-                  "nameLocation": "1830:14:8",
+                  "nameLocation": "1830:14:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1403,
-                  "src": "1823:21:8",
+                  "scope": 2400,
+                  "src": "1823:21:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -913,10 +913,10 @@
                     "typeString": "uint96"
                   },
                   "typeName": {
-                    "id": 1400,
+                    "id": 2397,
                     "name": "uint96",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1823:6:8",
+                    "src": "1823:6:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint96",
                       "typeString": "uint96"
@@ -925,35 +925,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1804:41:8"
+              "src": "1804:41:15"
             }
           },
           {
-            "id": 1410,
+            "id": 2407,
             "nodeType": "ErrorDefinition",
-            "src": "2005:59:8",
+            "src": "2005:59:15",
             "nodes": [],
             "documentation": {
-              "id": 1404,
+              "id": 2401,
               "nodeType": "StructuredDocumentation",
-              "src": "1852:148:8",
+              "src": "1852:148:15",
               "text": "@dev Reverts when the maturity is still active.\n @param maturity The maturity.\n @param blockTimestamp The current block timestamp."
             },
             "name": "StillActive",
-            "nameLocation": "2011:11:8",
+            "nameLocation": "2011:11:15",
             "parameters": {
-              "id": 1409,
+              "id": 2406,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1406,
+                  "id": 2403,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "2031:8:8",
+                  "nameLocation": "2031:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1410,
-                  "src": "2023:16:8",
+                  "scope": 2407,
+                  "src": "2023:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -961,10 +961,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1405,
+                    "id": 2402,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2023:7:8",
+                    "src": "2023:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -974,13 +974,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1408,
+                  "id": 2405,
                   "mutability": "mutable",
                   "name": "blockTimestamp",
-                  "nameLocation": "2048:14:8",
+                  "nameLocation": "2048:14:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1410,
-                  "src": "2041:21:8",
+                  "scope": 2407,
+                  "src": "2041:21:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -988,10 +988,10 @@
                     "typeString": "uint96"
                   },
                   "typeName": {
-                    "id": 1407,
+                    "id": 2404,
                     "name": "uint96",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2041:6:8",
+                    "src": "2041:6:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint96",
                       "typeString": "uint96"
@@ -1000,35 +1000,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2022:41:8"
+              "src": "2022:41:15"
             }
           },
           {
-            "id": 1417,
+            "id": 2414,
             "nodeType": "ErrorDefinition",
-            "src": "2212:61:8",
+            "src": "2212:61:15",
             "nodes": [],
             "documentation": {
-              "id": 1411,
+              "id": 2408,
               "nodeType": "StructuredDocumentation",
-              "src": "2070:137:8",
+              "src": "2070:137:15",
               "text": "@dev Token amount not received.\n @param minuend The amount being subtracted.\n @param subtrahend The amount subtracting."
             },
             "name": "NotEnoughReceived",
-            "nameLocation": "2218:17:8",
+            "nameLocation": "2218:17:15",
             "parameters": {
-              "id": 1416,
+              "id": 2413,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1413,
+                  "id": 2410,
                   "mutability": "mutable",
                   "name": "minuend",
-                  "nameLocation": "2244:7:8",
+                  "nameLocation": "2244:7:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1417,
-                  "src": "2236:15:8",
+                  "scope": 2414,
+                  "src": "2236:15:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1036,10 +1036,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1412,
+                    "id": 2409,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2236:7:8",
+                    "src": "2236:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1049,13 +1049,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1415,
+                  "id": 2412,
                   "mutability": "mutable",
                   "name": "subtrahend",
-                  "nameLocation": "2261:10:8",
+                  "nameLocation": "2261:10:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1417,
-                  "src": "2253:18:8",
+                  "scope": 2414,
+                  "src": "2253:18:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1063,10 +1063,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1414,
+                    "id": 2411,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2253:7:8",
+                    "src": "2253:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1075,35 +1075,35 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2235:37:8"
+              "src": "2235:37:15"
             }
           },
           {
-            "id": 1422,
+            "id": 2419,
             "nodeType": "ErrorDefinition",
-            "src": "2382:40:8",
+            "src": "2382:40:15",
             "nodes": [],
             "documentation": {
-              "id": 1418,
+              "id": 2415,
               "nodeType": "StructuredDocumentation",
-              "src": "2279:98:8",
+              "src": "2279:98:15",
               "text": "@dev The deadline of a transaction has been reached.\n @param deadline The deadline set."
             },
             "name": "DeadlineReached",
-            "nameLocation": "2388:15:8",
+            "nameLocation": "2388:15:15",
             "parameters": {
-              "id": 1421,
+              "id": 2418,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1420,
+                  "id": 2417,
                   "mutability": "mutable",
                   "name": "deadline",
-                  "nameLocation": "2412:8:8",
+                  "nameLocation": "2412:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1422,
-                  "src": "2404:16:8",
+                  "scope": 2419,
+                  "src": "2404:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1111,10 +1111,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1419,
+                    "id": 2416,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2404:7:8",
+                    "src": "2404:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1123,18 +1123,18 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2403:18:8"
+              "src": "2403:18:15"
             }
           },
           {
-            "id": 1430,
+            "id": 2427,
             "nodeType": "FunctionDefinition",
-            "src": "2469:70:8",
+            "src": "2469:70:15",
             "nodes": [],
             "body": {
-              "id": 1429,
+              "id": 2426,
               "nodeType": "Block",
-              "src": "2504:35:8",
+              "src": "2504:35:15",
               "nodes": [],
               "statements": [
                 {
@@ -1142,18 +1142,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1426,
+                      "id": 2423,
                       "name": "ZeroInput",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1350,
-                      "src": "2521:9:8",
+                      "referencedDeclaration": 2347,
+                      "src": "2521:9:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1427,
+                    "id": 2424,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1161,56 +1161,56 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2521:11:8",
+                    "src": "2521:11:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1428,
+                  "id": 2425,
                   "nodeType": "RevertStatement",
-                  "src": "2514:18:8"
+                  "src": "2514:18:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1423,
+              "id": 2420,
               "nodeType": "StructuredDocumentation",
-              "src": "2428:36:8",
+              "src": "2428:36:15",
               "text": "@dev Reverts when input is zero."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "zeroInput",
-            "nameLocation": "2478:9:8",
+            "nameLocation": "2478:9:15",
             "parameters": {
-              "id": 1424,
+              "id": 2421,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2487:2:8"
+              "src": "2487:2:15"
             },
             "returnParameters": {
-              "id": 1425,
+              "id": 2422,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2504:0:8"
+              "src": "2504:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1438,
+            "id": 2435,
             "nodeType": "FunctionDefinition",
-            "src": "2587:72:8",
+            "src": "2587:72:15",
             "nodes": [],
             "body": {
-              "id": 1437,
+              "id": 2434,
               "nodeType": "Block",
-              "src": "2623:36:8",
+              "src": "2623:36:15",
               "nodes": [],
               "statements": [
                 {
@@ -1218,18 +1218,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1434,
+                      "id": 2431,
                       "name": "ZeroOutput",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1353,
-                      "src": "2640:10:8",
+                      "referencedDeclaration": 2350,
+                      "src": "2640:10:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1435,
+                    "id": 2432,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1237,56 +1237,56 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2640:12:8",
+                    "src": "2640:12:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1436,
+                  "id": 2433,
                   "nodeType": "RevertStatement",
-                  "src": "2633:19:8"
+                  "src": "2633:19:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1431,
+              "id": 2428,
               "nodeType": "StructuredDocumentation",
-              "src": "2545:37:8",
+              "src": "2545:37:15",
               "text": "@dev Reverts when output is zero."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "zeroOutput",
-            "nameLocation": "2596:10:8",
+            "nameLocation": "2596:10:15",
             "parameters": {
-              "id": 1432,
+              "id": 2429,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2606:2:8"
+              "src": "2606:2:15"
             },
             "returnParameters": {
-              "id": 1433,
+              "id": 2430,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2623:0:8"
+              "src": "2623:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1446,
+            "id": 2443,
             "nodeType": "FunctionDefinition",
-            "src": "2715:76:8",
+            "src": "2715:76:15",
             "nodes": [],
             "body": {
-              "id": 1445,
+              "id": 2442,
               "nodeType": "Block",
-              "src": "2753:38:8",
+              "src": "2753:38:15",
               "nodes": [],
               "statements": [
                 {
@@ -1294,18 +1294,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1442,
+                      "id": 2439,
                       "name": "CannotBeZero",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1356,
-                      "src": "2770:12:8",
+                      "referencedDeclaration": 2353,
+                      "src": "2770:12:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1443,
+                    "id": 2440,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1313,68 +1313,68 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "2770:14:8",
+                    "src": "2770:14:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1444,
+                  "id": 2441,
                   "nodeType": "RevertStatement",
-                  "src": "2763:21:8"
+                  "src": "2763:21:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1439,
+              "id": 2436,
               "nodeType": "StructuredDocumentation",
-              "src": "2665:45:8",
+              "src": "2665:45:15",
               "text": "@dev Reverts when a value cannot be zero."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "cannotBeZero",
-            "nameLocation": "2724:12:8",
+            "nameLocation": "2724:12:15",
             "parameters": {
-              "id": 1440,
+              "id": 2437,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2736:2:8"
+              "src": "2736:2:15"
             },
             "returnParameters": {
-              "id": 1441,
+              "id": 2438,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2753:0:8"
+              "src": "2753:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1457,
+            "id": 2454,
             "nodeType": "FunctionDefinition",
-            "src": "2934:118:8",
+            "src": "2934:118:15",
             "nodes": [],
             "body": {
-              "id": 1456,
+              "id": 2453,
               "nodeType": "Block",
-              "src": "2997:55:8",
+              "src": "2997:55:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1453,
+                        "id": 2450,
                         "name": "liquidity",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1449,
-                        "src": "3035:9:8",
+                        "referencedDeclaration": 2446,
+                        "src": "3035:9:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint160",
                           "typeString": "uint160"
@@ -1388,18 +1388,18 @@
                           "typeString": "uint160"
                         }
                       ],
-                      "id": 1452,
+                      "id": 2449,
                       "name": "AlreadyHaveLiquidity",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1361,
-                      "src": "3014:20:8",
+                      "referencedDeclaration": 2358,
+                      "src": "3014:20:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint160_$returns$__$",
                         "typeString": "function (uint160) pure"
                       }
                     },
-                    "id": 1454,
+                    "id": 2451,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1407,43 +1407,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3014:31:8",
+                    "src": "3014:31:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1455,
+                  "id": 2452,
                   "nodeType": "RevertStatement",
-                  "src": "3007:38:8"
+                  "src": "3007:38:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1447,
+              "id": 2444,
               "nodeType": "StructuredDocumentation",
-              "src": "2797:132:8",
+              "src": "2797:132:15",
               "text": "@dev Reverts when a pool already have liquidity.\n @param liquidity The liquidity amount that already existed in the pool."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "alreadyHaveLiquidity",
-            "nameLocation": "2943:20:8",
+            "nameLocation": "2943:20:15",
             "parameters": {
-              "id": 1450,
+              "id": 2447,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1449,
+                  "id": 2446,
                   "mutability": "mutable",
                   "name": "liquidity",
-                  "nameLocation": "2972:9:8",
+                  "nameLocation": "2972:9:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1457,
-                  "src": "2964:17:8",
+                  "scope": 2454,
+                  "src": "2964:17:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1451,10 +1451,10 @@
                     "typeString": "uint160"
                   },
                   "typeName": {
-                    "id": 1448,
+                    "id": 2445,
                     "name": "uint160",
                     "nodeType": "ElementaryTypeName",
-                    "src": "2964:7:8",
+                    "src": "2964:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint160",
                       "typeString": "uint160"
@@ -1463,28 +1463,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "2963:19:8"
+              "src": "2963:19:15"
             },
             "returnParameters": {
-              "id": 1451,
+              "id": 2448,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "2997:0:8"
+              "src": "2997:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1465,
+            "id": 2462,
             "nodeType": "FunctionDefinition",
-            "src": "3111:84:8",
+            "src": "3111:84:15",
             "nodes": [],
             "body": {
-              "id": 1464,
+              "id": 2461,
               "nodeType": "Block",
-              "src": "3153:42:8",
+              "src": "3153:42:15",
               "nodes": [],
               "statements": [
                 {
@@ -1492,18 +1492,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1461,
+                      "id": 2458,
                       "name": "RequireLiquidity",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1364,
-                      "src": "3170:16:8",
+                      "referencedDeclaration": 2361,
+                      "src": "3170:16:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1462,
+                    "id": 2459,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1511,56 +1511,56 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3170:18:8",
+                    "src": "3170:18:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1463,
+                  "id": 2460,
                   "nodeType": "RevertStatement",
-                  "src": "3163:25:8"
+                  "src": "3163:25:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1458,
+              "id": 2455,
               "nodeType": "StructuredDocumentation",
-              "src": "3058:48:8",
+              "src": "3058:48:15",
               "text": "@dev Reverts when a pool requires liquidity."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "requireLiquidity",
-            "nameLocation": "3120:16:8",
+            "nameLocation": "3120:16:15",
             "parameters": {
-              "id": 1459,
+              "id": 2456,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3136:2:8"
+              "src": "3136:2:15"
             },
             "returnParameters": {
-              "id": 1460,
+              "id": 2457,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3153:0:8"
+              "src": "3153:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1473,
+            "id": 2470,
             "nodeType": "FunctionDefinition",
-            "src": "3264:74:8",
+            "src": "3264:74:15",
             "nodes": [],
             "body": {
-              "id": 1472,
+              "id": 2469,
               "nodeType": "Block",
-              "src": "3301:37:8",
+              "src": "3301:37:15",
               "nodes": [],
               "statements": [
                 {
@@ -1568,18 +1568,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1469,
+                      "id": 2466,
                       "name": "ZeroAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1367,
-                      "src": "3318:11:8",
+                      "referencedDeclaration": 2364,
+                      "src": "3318:11:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1470,
+                    "id": 2467,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1587,68 +1587,68 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3318:13:8",
+                    "src": "3318:13:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1471,
+                  "id": 2468,
                   "nodeType": "RevertStatement",
-                  "src": "3311:20:8"
+                  "src": "3311:20:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1466,
+              "id": 2463,
               "nodeType": "StructuredDocumentation",
-              "src": "3201:58:8",
+              "src": "3201:58:15",
               "text": "@dev Reverts when a given address is the zero address."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "zeroAddress",
-            "nameLocation": "3273:11:8",
+            "nameLocation": "3273:11:15",
             "parameters": {
-              "id": 1467,
+              "id": 2464,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3284:2:8"
+              "src": "3284:2:15"
             },
             "returnParameters": {
-              "id": 1468,
+              "id": 2465,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3301:0:8"
+              "src": "3301:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1484,
+            "id": 2481,
             "nodeType": "FunctionDefinition",
-            "src": "3465:110:8",
+            "src": "3465:110:15",
             "nodes": [],
             "body": {
-              "id": 1483,
+              "id": 2480,
               "nodeType": "Block",
-              "src": "3524:51:8",
+              "src": "3524:51:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1480,
+                        "id": 2477,
                         "name": "maturity",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1476,
-                        "src": "3559:8:8",
+                        "referencedDeclaration": 2473,
+                        "src": "3559:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1662,18 +1662,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1479,
+                      "id": 2476,
                       "name": "IncorrectMaturity",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1372,
-                      "src": "3541:17:8",
+                      "referencedDeclaration": 2369,
+                      "src": "3541:17:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
                         "typeString": "function (uint256) pure"
                       }
                     },
-                    "id": 1481,
+                    "id": 2478,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1681,43 +1681,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3541:27:8",
+                    "src": "3541:27:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1482,
+                  "id": 2479,
                   "nodeType": "RevertStatement",
-                  "src": "3534:34:8"
+                  "src": "3534:34:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1474,
+              "id": 2471,
               "nodeType": "StructuredDocumentation",
-              "src": "3344:116:8",
+              "src": "3344:116:15",
               "text": "@dev Reverts when the maturity given is not withing uint96.\n @param maturity The maturity being inquired."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "incorrectMaturity",
-            "nameLocation": "3474:17:8",
+            "nameLocation": "3474:17:15",
             "parameters": {
-              "id": 1477,
+              "id": 2474,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1476,
+                  "id": 2473,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "3500:8:8",
+                  "nameLocation": "3500:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1484,
-                  "src": "3492:16:8",
+                  "scope": 2481,
+                  "src": "3492:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1725,10 +1725,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1475,
+                    "id": 2472,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3492:7:8",
+                    "src": "3492:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1737,52 +1737,52 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3491:18:8"
+              "src": "3491:18:15"
             },
             "returnParameters": {
-              "id": 1478,
+              "id": 2475,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3524:0:8"
+              "src": "3524:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1498,
+            "id": 2495,
             "nodeType": "FunctionDefinition",
-            "src": "3737:143:8",
+            "src": "3737:143:15",
             "nodes": [],
             "body": {
-              "id": 1497,
+              "id": 2494,
               "nodeType": "Block",
-              "src": "3816:64:8",
+              "src": "3816:64:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1493,
+                        "id": 2490,
                         "name": "maturity",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1487,
-                        "src": "3848:8:8",
+                        "referencedDeclaration": 2484,
+                        "src": "3848:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 1494,
+                        "id": 2491,
                         "name": "blockTimestamp",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1489,
-                        "src": "3858:14:8",
+                        "referencedDeclaration": 2486,
+                        "src": "3858:14:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint96",
                           "typeString": "uint96"
@@ -1800,18 +1800,18 @@
                           "typeString": "uint96"
                         }
                       ],
-                      "id": 1492,
+                      "id": 2489,
                       "name": "AlreadyMatured",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1403,
-                      "src": "3833:14:8",
+                      "referencedDeclaration": 2400,
+                      "src": "3833:14:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint96_$returns$__$",
                         "typeString": "function (uint256,uint96) pure"
                       }
                     },
-                    "id": 1495,
+                    "id": 2492,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1819,43 +1819,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "3833:40:8",
+                    "src": "3833:40:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1496,
+                  "id": 2493,
                   "nodeType": "RevertStatement",
-                  "src": "3826:47:8"
+                  "src": "3826:47:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1485,
+              "id": 2482,
               "nodeType": "StructuredDocumentation",
-              "src": "3581:151:8",
+              "src": "3581:151:15",
               "text": "@dev Reverts when the maturity is already matured.\n @param maturity The maturity.\n @param blockTimestamp The current block timestamp."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "alreadyMatured",
-            "nameLocation": "3746:14:8",
+            "nameLocation": "3746:14:15",
             "parameters": {
-              "id": 1490,
+              "id": 2487,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1487,
+                  "id": 2484,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "3769:8:8",
+                  "nameLocation": "3769:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1498,
-                  "src": "3761:16:8",
+                  "scope": 2495,
+                  "src": "3761:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1863,10 +1863,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1486,
+                    "id": 2483,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3761:7:8",
+                    "src": "3761:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1876,13 +1876,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1489,
+                  "id": 2486,
                   "mutability": "mutable",
                   "name": "blockTimestamp",
-                  "nameLocation": "3786:14:8",
+                  "nameLocation": "3786:14:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1498,
-                  "src": "3779:21:8",
+                  "scope": 2495,
+                  "src": "3779:21:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1890,10 +1890,10 @@
                     "typeString": "uint96"
                   },
                   "typeName": {
-                    "id": 1488,
+                    "id": 2485,
                     "name": "uint96",
                     "nodeType": "ElementaryTypeName",
-                    "src": "3779:6:8",
+                    "src": "3779:6:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint96",
                       "typeString": "uint96"
@@ -1902,52 +1902,52 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "3760:41:8"
+              "src": "3760:41:15"
             },
             "returnParameters": {
-              "id": 1491,
+              "id": 2488,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "3816:0:8"
+              "src": "3816:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1512,
+            "id": 2509,
             "nodeType": "FunctionDefinition",
-            "src": "4039:137:8",
+            "src": "4039:137:15",
             "nodes": [],
             "body": {
-              "id": 1511,
+              "id": 2508,
               "nodeType": "Block",
-              "src": "4115:61:8",
+              "src": "4115:61:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1507,
+                        "id": 2504,
                         "name": "maturity",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1501,
-                        "src": "4144:8:8",
+                        "referencedDeclaration": 2498,
+                        "src": "4144:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 1508,
+                        "id": 2505,
                         "name": "blockTimestamp",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1503,
-                        "src": "4154:14:8",
+                        "referencedDeclaration": 2500,
+                        "src": "4154:14:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint96",
                           "typeString": "uint96"
@@ -1965,18 +1965,18 @@
                           "typeString": "uint96"
                         }
                       ],
-                      "id": 1506,
+                      "id": 2503,
                       "name": "StillActive",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1410,
-                      "src": "4132:11:8",
+                      "referencedDeclaration": 2407,
+                      "src": "4132:11:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint96_$returns$__$",
                         "typeString": "function (uint256,uint96) pure"
                       }
                     },
-                    "id": 1509,
+                    "id": 2506,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1984,43 +1984,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4132:37:8",
+                    "src": "4132:37:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1510,
+                  "id": 2507,
                   "nodeType": "RevertStatement",
-                  "src": "4125:44:8"
+                  "src": "4125:44:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1499,
+              "id": 2496,
               "nodeType": "StructuredDocumentation",
-              "src": "3886:148:8",
+              "src": "3886:148:15",
               "text": "@dev Reverts when the maturity is still active.\n @param maturity The maturity.\n @param blockTimestamp The current block timestamp."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "stillActive",
-            "nameLocation": "4048:11:8",
+            "nameLocation": "4048:11:15",
             "parameters": {
-              "id": 1504,
+              "id": 2501,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1501,
+                  "id": 2498,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "4068:8:8",
+                  "nameLocation": "4068:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1512,
-                  "src": "4060:16:8",
+                  "scope": 2509,
+                  "src": "4060:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2028,10 +2028,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1500,
+                    "id": 2497,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4060:7:8",
+                    "src": "4060:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2041,13 +2041,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1503,
+                  "id": 2500,
                   "mutability": "mutable",
                   "name": "blockTimestamp",
-                  "nameLocation": "4085:14:8",
+                  "nameLocation": "4085:14:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1512,
-                  "src": "4078:21:8",
+                  "scope": 2509,
+                  "src": "4078:21:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2055,10 +2055,10 @@
                     "typeString": "uint96"
                   },
                   "typeName": {
-                    "id": 1502,
+                    "id": 2499,
                     "name": "uint96",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4078:6:8",
+                    "src": "4078:6:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint96",
                       "typeString": "uint96"
@@ -2067,40 +2067,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4059:41:8"
+              "src": "4059:41:15"
             },
             "returnParameters": {
-              "id": 1505,
+              "id": 2502,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4115:0:8"
+              "src": "4115:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1523,
+            "id": 2520,
             "nodeType": "FunctionDefinition",
-            "src": "4285:106:8",
+            "src": "4285:106:15",
             "nodes": [],
             "body": {
-              "id": 1522,
+              "id": 2519,
               "nodeType": "Block",
-              "src": "4342:49:8",
+              "src": "4342:49:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1519,
+                        "id": 2516,
                         "name": "deadline",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1515,
-                        "src": "4375:8:8",
+                        "referencedDeclaration": 2512,
+                        "src": "4375:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2114,18 +2114,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1518,
+                      "id": 2515,
                       "name": "DeadlineReached",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1422,
-                      "src": "4359:15:8",
+                      "referencedDeclaration": 2419,
+                      "src": "4359:15:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint256_$returns$__$",
                         "typeString": "function (uint256) pure"
                       }
                     },
-                    "id": 1520,
+                    "id": 2517,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2133,43 +2133,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4359:25:8",
+                    "src": "4359:25:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1521,
+                  "id": 2518,
                   "nodeType": "RevertStatement",
-                  "src": "4352:32:8"
+                  "src": "4352:32:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1513,
+              "id": 2510,
               "nodeType": "StructuredDocumentation",
-              "src": "4182:98:8",
+              "src": "4182:98:15",
               "text": "@dev The deadline of a transaction has been reached.\n @param deadline The deadline set."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "deadlineReached",
-            "nameLocation": "4294:15:8",
+            "nameLocation": "4294:15:15",
             "parameters": {
-              "id": 1516,
+              "id": 2513,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1515,
+                  "id": 2512,
                   "mutability": "mutable",
                   "name": "deadline",
-                  "nameLocation": "4318:8:8",
+                  "nameLocation": "4318:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1523,
-                  "src": "4310:16:8",
+                  "scope": 2520,
+                  "src": "4310:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2177,10 +2177,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1514,
+                    "id": 2511,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4310:7:8",
+                    "src": "4310:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2189,52 +2189,52 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4309:18:8"
+              "src": "4309:18:15"
             },
             "returnParameters": {
-              "id": 1517,
+              "id": 2514,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4342:0:8"
+              "src": "4342:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1537,
+            "id": 2534,
             "nodeType": "FunctionDefinition",
-            "src": "4522:134:8",
+            "src": "4522:134:15",
             "nodes": [],
             "body": {
-              "id": 1536,
+              "id": 2533,
               "nodeType": "Block",
-              "src": "4600:56:8",
+              "src": "4600:56:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1532,
+                        "id": 2529,
                         "name": "strike",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1526,
-                        "src": "4632:6:8",
+                        "referencedDeclaration": 2523,
+                        "src": "4632:6:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 1533,
+                        "id": 2530,
                         "name": "maturity",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1528,
-                        "src": "4640:8:8",
+                        "referencedDeclaration": 2525,
+                        "src": "4640:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2252,18 +2252,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1531,
+                      "id": 2528,
                       "name": "InactiveOption",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1379,
-                      "src": "4617:14:8",
+                      "referencedDeclaration": 2376,
+                      "src": "4617:14:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256) pure"
                       }
                     },
-                    "id": 1534,
+                    "id": 2531,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2271,43 +2271,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4617:32:8",
+                    "src": "4617:32:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1535,
+                  "id": 2532,
                   "nodeType": "RevertStatement",
-                  "src": "4610:39:8"
+                  "src": "4610:39:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1524,
+              "id": 2521,
               "nodeType": "StructuredDocumentation",
-              "src": "4397:120:8",
+              "src": "4397:120:15",
               "text": "@dev Reverts when an option of given strike and maturity is still inactive.\n @param strike The chosen strike."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "inactiveOptionChoice",
-            "nameLocation": "4531:20:8",
+            "nameLocation": "4531:20:15",
             "parameters": {
-              "id": 1529,
+              "id": 2526,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1526,
+                  "id": 2523,
                   "mutability": "mutable",
                   "name": "strike",
-                  "nameLocation": "4560:6:8",
+                  "nameLocation": "4560:6:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1537,
-                  "src": "4552:14:8",
+                  "scope": 2534,
+                  "src": "4552:14:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2315,10 +2315,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1525,
+                    "id": 2522,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4552:7:8",
+                    "src": "4552:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2328,13 +2328,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1528,
+                  "id": 2525,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "4576:8:8",
+                  "nameLocation": "4576:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1537,
-                  "src": "4568:16:8",
+                  "scope": 2534,
+                  "src": "4568:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2342,10 +2342,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1527,
+                    "id": 2524,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4568:7:8",
+                    "src": "4568:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2354,52 +2354,52 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4551:34:8"
+              "src": "4551:34:15"
             },
             "returnParameters": {
-              "id": 1530,
+              "id": 2527,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4600:0:8"
+              "src": "4600:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1551,
+            "id": 2548,
             "nodeType": "FunctionDefinition",
-            "src": "4829:130:8",
+            "src": "4829:130:15",
             "nodes": [],
             "body": {
-              "id": 1550,
+              "id": 2547,
               "nodeType": "Block",
-              "src": "4905:54:8",
+              "src": "4905:54:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1546,
+                        "id": 2543,
                         "name": "strike",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1540,
-                        "src": "4935:6:8",
+                        "referencedDeclaration": 2537,
+                        "src": "4935:6:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 1547,
+                        "id": 2544,
                         "name": "maturity",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1542,
-                        "src": "4943:8:8",
+                        "referencedDeclaration": 2539,
+                        "src": "4943:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2417,18 +2417,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1545,
+                      "id": 2542,
                       "name": "InactivePool",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1386,
-                      "src": "4922:12:8",
+                      "referencedDeclaration": 2383,
+                      "src": "4922:12:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256) pure"
                       }
                     },
-                    "id": 1548,
+                    "id": 2545,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2436,43 +2436,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "4922:30:8",
+                    "src": "4922:30:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1549,
+                  "id": 2546,
                   "nodeType": "RevertStatement",
-                  "src": "4915:37:8"
+                  "src": "4915:37:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1538,
+              "id": 2535,
               "nodeType": "StructuredDocumentation",
-              "src": "4662:162:8",
+              "src": "4662:162:15",
               "text": "@dev Reverts when a pool of given strike and maturity is still inactive.\n @param strike The chosen strike.\n @param maturity The chosen maturity."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "inactivePoolChoice",
-            "nameLocation": "4838:18:8",
+            "nameLocation": "4838:18:15",
             "parameters": {
-              "id": 1543,
+              "id": 2540,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1540,
+                  "id": 2537,
                   "mutability": "mutable",
                   "name": "strike",
-                  "nameLocation": "4865:6:8",
+                  "nameLocation": "4865:6:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1551,
-                  "src": "4857:14:8",
+                  "scope": 2548,
+                  "src": "4857:14:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2480,10 +2480,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1539,
+                    "id": 2536,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4857:7:8",
+                    "src": "4857:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2493,13 +2493,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1542,
+                  "id": 2539,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "4881:8:8",
+                  "nameLocation": "4881:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1551,
-                  "src": "4873:16:8",
+                  "scope": 2548,
+                  "src": "4873:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2507,10 +2507,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1541,
+                    "id": 2538,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "4873:7:8",
+                    "src": "4873:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2519,52 +2519,52 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "4856:34:8"
+              "src": "4856:34:15"
             },
             "returnParameters": {
-              "id": 1544,
+              "id": 2541,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "4905:0:8"
+              "src": "4905:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1565,
+            "id": 2562,
             "nodeType": "FunctionDefinition",
-            "src": "5116:140:8",
+            "src": "5116:140:15",
             "nodes": [],
             "body": {
-              "id": 1564,
+              "id": 2561,
               "nodeType": "Block",
-              "src": "5194:62:8",
+              "src": "5194:62:15",
               "nodes": [],
               "statements": [
                 {
                   "errorCall": {
                     "arguments": [
                       {
-                        "id": 1560,
+                        "id": 2557,
                         "name": "strike",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1554,
-                        "src": "5232:6:8",
+                        "referencedDeclaration": 2551,
+                        "src": "5232:6:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
                       {
-                        "id": 1561,
+                        "id": 2558,
                         "name": "maturity",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1556,
-                        "src": "5240:8:8",
+                        "referencedDeclaration": 2553,
+                        "src": "5240:8:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -2582,18 +2582,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1559,
+                      "id": 2556,
                       "name": "ZeroSqrtInterestRate",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1396,
-                      "src": "5211:20:8",
+                      "referencedDeclaration": 2393,
+                      "src": "5211:20:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint256_$returns$__$",
                         "typeString": "function (uint256,uint256) pure"
                       }
                     },
-                    "id": 1562,
+                    "id": 2559,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2601,43 +2601,43 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "5211:38:8",
+                    "src": "5211:38:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1563,
+                  "id": 2560,
                   "nodeType": "RevertStatement",
-                  "src": "5204:45:8"
+                  "src": "5204:45:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1552,
+              "id": 2549,
               "nodeType": "StructuredDocumentation",
-              "src": "4965:146:8",
+              "src": "4965:146:15",
               "text": "@dev Reverts when the square root interest rate is zero.\n @param strike The chosen strike.\n @param maturity The chosen maturity."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "zeroSqrtInterestRate",
-            "nameLocation": "5125:20:8",
+            "nameLocation": "5125:20:15",
             "parameters": {
-              "id": 1557,
+              "id": 2554,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1554,
+                  "id": 2551,
                   "mutability": "mutable",
                   "name": "strike",
-                  "nameLocation": "5154:6:8",
+                  "nameLocation": "5154:6:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1565,
-                  "src": "5146:14:8",
+                  "scope": 2562,
+                  "src": "5146:14:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2645,10 +2645,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1553,
+                    "id": 2550,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5146:7:8",
+                    "src": "5146:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2658,13 +2658,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1556,
+                  "id": 2553,
                   "mutability": "mutable",
                   "name": "maturity",
-                  "nameLocation": "5170:8:8",
+                  "nameLocation": "5170:8:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1565,
-                  "src": "5162:16:8",
+                  "scope": 2562,
+                  "src": "5162:16:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2672,10 +2672,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1555,
+                    "id": 2552,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5162:7:8",
+                    "src": "5162:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2684,28 +2684,28 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5145:34:8"
+              "src": "5145:34:15"
             },
             "returnParameters": {
-              "id": 1558,
+              "id": 2555,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5194:0:8"
+              "src": "5194:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1573,
+            "id": 2570,
             "nodeType": "FunctionDefinition",
-            "src": "5319:108:8",
+            "src": "5319:108:15",
             "nodes": [],
             "body": {
-              "id": 1572,
+              "id": 2569,
               "nodeType": "Block",
-              "src": "5373:54:8",
+              "src": "5373:54:15",
               "nodes": [],
               "statements": [
                 {
@@ -2713,18 +2713,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1569,
+                      "id": 2566,
                       "name": "InactiveLiquidityTokenChoice",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1389,
-                      "src": "5390:28:8",
+                      "referencedDeclaration": 2386,
+                      "src": "5390:28:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_error_pure$__$returns$__$",
                         "typeString": "function () pure"
                       }
                     },
-                    "id": 1570,
+                    "id": 2567,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2732,56 +2732,56 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "5390:30:8",
+                    "src": "5390:30:15",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1571,
+                  "id": 2568,
                   "nodeType": "RevertStatement",
-                  "src": "5383:37:8"
+                  "src": "5383:37:15"
                 }
               ]
             },
             "documentation": {
-              "id": 1566,
+              "id": 2563,
               "nodeType": "StructuredDocumentation",
-              "src": "5262:52:8",
+              "src": "5262:52:15",
               "text": "@dev Reverts when a liquidity token is inactive."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "inactiveLiquidityTokenChoice",
-            "nameLocation": "5328:28:8",
+            "nameLocation": "5328:28:15",
             "parameters": {
-              "id": 1567,
+              "id": 2564,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5356:2:8"
+              "src": "5356:2:15"
             },
             "returnParameters": {
-              "id": 1568,
+              "id": 2565,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5373:0:8"
+              "src": "5373:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
           },
           {
-            "id": 1591,
+            "id": 2588,
             "nodeType": "FunctionDefinition",
-            "src": "5594:169:8",
+            "src": "5594:169:15",
             "nodes": [],
             "body": {
-              "id": 1590,
+              "id": 2587,
               "nodeType": "Block",
-              "src": "5669:94:8",
+              "src": "5669:94:15",
               "nodes": [],
               "statements": [
                 {
@@ -2790,18 +2790,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1583,
+                    "id": 2580,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 1581,
+                      "id": 2578,
                       "name": "balance",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1576,
-                      "src": "5683:7:8",
+                      "referencedDeclaration": 2573,
+                      "src": "5683:7:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -2810,48 +2810,48 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<",
                     "rightExpression": {
-                      "id": 1582,
+                      "id": 2579,
                       "name": "balanceTarget",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1578,
-                      "src": "5693:13:8",
+                      "referencedDeclaration": 2575,
+                      "src": "5693:13:15",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "5683:23:8",
+                    "src": "5683:23:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 1589,
+                  "id": 2586,
                   "nodeType": "IfStatement",
-                  "src": "5679:77:8",
+                  "src": "5679:77:15",
                   "trueBody": {
                     "errorCall": {
                       "arguments": [
                         {
-                          "id": 1585,
+                          "id": 2582,
                           "name": "balance",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1576,
-                          "src": "5733:7:8",
+                          "referencedDeclaration": 2573,
+                          "src": "5733:7:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
                         {
-                          "id": 1586,
+                          "id": 2583,
                           "name": "balanceTarget",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 1578,
-                          "src": "5742:13:8",
+                          "referencedDeclaration": 2575,
+                          "src": "5742:13:15",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -2869,18 +2869,18 @@
                             "typeString": "uint256"
                           }
                         ],
-                        "id": 1584,
+                        "id": 2581,
                         "name": "NotEnoughReceived",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1417,
-                        "src": "5715:17:8",
+                        "referencedDeclaration": 2414,
+                        "src": "5715:17:15",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$_t_uint256_$_t_uint256_$returns$__$",
                           "typeString": "function (uint256,uint256) pure"
                         }
                       },
-                      "id": 1587,
+                      "id": 2584,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2888,44 +2888,44 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "5715:41:8",
+                      "src": "5715:41:15",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_tuple$__$",
                         "typeString": "tuple()"
                       }
                     },
-                    "id": 1588,
+                    "id": 2585,
                     "nodeType": "RevertStatement",
-                    "src": "5708:48:8"
+                    "src": "5708:48:15"
                   }
                 }
               ]
             },
             "documentation": {
-              "id": 1574,
+              "id": 2571,
               "nodeType": "StructuredDocumentation",
-              "src": "5433:156:8",
+              "src": "5433:156:15",
               "text": "@dev Reverts when token amount not received.\n @param balance The balance amount being subtracted.\n @param balanceTarget The amount target."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "checkEnough",
-            "nameLocation": "5603:11:8",
+            "nameLocation": "5603:11:15",
             "parameters": {
-              "id": 1579,
+              "id": 2576,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1576,
+                  "id": 2573,
                   "mutability": "mutable",
                   "name": "balance",
-                  "nameLocation": "5623:7:8",
+                  "nameLocation": "5623:7:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1591,
-                  "src": "5615:15:8",
+                  "scope": 2588,
+                  "src": "5615:15:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2933,10 +2933,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1575,
+                    "id": 2572,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5615:7:8",
+                    "src": "5615:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2946,13 +2946,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 1578,
+                  "id": 2575,
                   "mutability": "mutable",
                   "name": "balanceTarget",
-                  "nameLocation": "5640:13:8",
+                  "nameLocation": "5640:13:15",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1591,
-                  "src": "5632:21:8",
+                  "scope": 2588,
+                  "src": "5632:21:15",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2960,10 +2960,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1577,
+                    "id": 2574,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "5632:7:8",
+                    "src": "5632:7:15",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2972,15 +2972,15 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "5614:40:8"
+              "src": "5614:40:15"
             },
             "returnParameters": {
-              "id": 1580,
+              "id": 2577,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "5669:0:8"
+              "src": "5669:0:15"
             },
-            "scope": 1592,
+            "scope": 2589,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
@@ -2991,38 +2991,38 @@
         "contractDependencies": [],
         "contractKind": "library",
         "documentation": {
-          "id": 1347,
+          "id": 2344,
           "nodeType": "StructuredDocumentation",
-          "src": "62:31:8",
+          "src": "62:31:15",
           "text": "@dev Common error messages"
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          1592
+          2589
         ],
         "name": "Error",
-        "nameLocation": "101:5:8",
-        "scope": 1593,
+        "nameLocation": "101:5:15",
+        "scope": 2590,
         "usedErrors": [
-          1350,
-          1353,
-          1356,
-          1361,
-          1364,
-          1367,
-          1372,
-          1379,
-          1386,
-          1389,
-          1396,
-          1403,
-          1410,
-          1417,
-          1422
+          2347,
+          2350,
+          2353,
+          2358,
+          2361,
+          2364,
+          2369,
+          2376,
+          2383,
+          2386,
+          2393,
+          2400,
+          2407,
+          2414,
+          2419
         ]
       }
     ],
     "license": "Unlicense"
   },
-  "id": 8
+  "id": 15
 }

@@ -8,12 +8,12 @@
   ],
   "bytecode": {
     "object": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122003f4c9b7b497f45b81e4ea2d03b0d0ee7414593c28df794bcfb6797551c799b464736f6c63430008080033",
-    "sourceMap": "563:360:11:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;563:360:11;;;;;;;;;;;;;;;;;",
+    "sourceMap": "563:360:25:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;563:360:25;;;;;;;;;;;;;;;;;",
     "linkReferences": {}
   },
   "deployedBytecode": {
     "object": "0x73000000000000000000000000000000000000000030146080604052600080fdfea264697066735822122003f4c9b7b497f45b81e4ea2d03b0d0ee7414593c28df794bcfb6797551c799b464736f6c63430008080033",
-    "sourceMap": "563:360:11:-:0;;;;;;;;",
+    "sourceMap": "563:360:25:-:0;;;;;;;;",
     "linkReferences": {}
   },
   "methodIdentifiers": {},
@@ -78,22 +78,22 @@
   },
   "ast": {
     "absolutePath": "../v2-option/src/enums/Position.sol",
-    "id": 2536,
+    "id": 4050,
     "exportedSymbols": {
       "PositionLibrary": [
-        2535
+        4049
       ],
       "TimeswapV2OptionPosition": [
-        2512
+        4026
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "37:887:11",
+    "src": "37:887:25",
     "nodes": [
       {
-        "id": 2508,
+        "id": 4022,
         "nodeType": "PragmaDirective",
-        "src": "37:23:11",
+        "src": "37:23:25",
         "nodes": [],
         "literals": [
           "solidity",
@@ -103,71 +103,71 @@
         ]
       },
       {
-        "id": 2512,
+        "id": 4026,
         "nodeType": "EnumDefinition",
-        "src": "433:65:11",
+        "src": "433:65:25",
         "nodes": [],
         "canonicalName": "TimeswapV2OptionPosition",
         "members": [
           {
-            "id": 2509,
+            "id": 4023,
             "name": "Long0",
-            "nameLocation": "469:5:11",
+            "nameLocation": "469:5:25",
             "nodeType": "EnumValue",
-            "src": "469:5:11"
+            "src": "469:5:25"
           },
           {
-            "id": 2510,
+            "id": 4024,
             "name": "Long1",
-            "nameLocation": "480:5:11",
+            "nameLocation": "480:5:25",
             "nodeType": "EnumValue",
-            "src": "480:5:11"
+            "src": "480:5:25"
           },
           {
-            "id": 2511,
+            "id": 4025,
             "name": "Short",
-            "nameLocation": "491:5:11",
+            "nameLocation": "491:5:25",
             "nodeType": "EnumValue",
-            "src": "491:5:11"
+            "src": "491:5:25"
           }
         ],
         "name": "TimeswapV2OptionPosition",
-        "nameLocation": "438:24:11"
+        "nameLocation": "438:24:25"
       },
       {
-        "id": 2535,
+        "id": 4049,
         "nodeType": "ContractDefinition",
-        "src": "563:360:11",
+        "src": "563:360:25",
         "nodes": [
           {
-            "id": 2516,
+            "id": 4030,
             "nodeType": "ErrorDefinition",
-            "src": "658:24:11",
+            "src": "658:24:25",
             "nodes": [],
             "documentation": {
-              "id": 2514,
+              "id": 4028,
               "nodeType": "StructuredDocumentation",
-              "src": "593:60:11",
+              "src": "593:60:25",
               "text": "@dev Reverts when the given type of position is invalid."
             },
             "name": "InvalidPosition",
-            "nameLocation": "664:15:11",
+            "nameLocation": "664:15:25",
             "parameters": {
-              "id": 2515,
+              "id": 4029,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "679:2:11"
+              "src": "679:2:25"
             }
           },
           {
-            "id": 2534,
+            "id": 4048,
             "nodeType": "FunctionDefinition",
-            "src": "788:133:11",
+            "src": "788:133:25",
             "nodes": [],
             "body": {
-              "id": 2533,
+              "id": 4047,
               "nodeType": "Block",
-              "src": "852:69:11",
+              "src": "852:69:25",
               "nodes": [],
               "statements": [
                 {
@@ -176,7 +176,7 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 2528,
+                    "id": 4042,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -184,14 +184,14 @@
                     "leftExpression": {
                       "arguments": [
                         {
-                          "id": 2525,
+                          "id": 4039,
                           "name": "position",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2520,
-                          "src": "874:8:11",
+                          "referencedDeclaration": 4034,
+                          "src": "874:8:25",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$2512",
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$4026",
                             "typeString": "enum TimeswapV2OptionPosition"
                           }
                         }
@@ -199,30 +199,30 @@
                       "expression": {
                         "argumentTypes": [
                           {
-                            "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$2512",
+                            "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$4026",
                             "typeString": "enum TimeswapV2OptionPosition"
                           }
                         ],
-                        "id": 2524,
+                        "id": 4038,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
                         "lValueRequested": false,
                         "nodeType": "ElementaryTypeNameExpression",
-                        "src": "866:7:11",
+                        "src": "866:7:25",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_uint256_$",
                           "typeString": "type(uint256)"
                         },
                         "typeName": {
-                          "id": 2523,
+                          "id": 4037,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
-                          "src": "866:7:11",
+                          "src": "866:7:25",
                           "typeDescriptions": {}
                         }
                       },
-                      "id": 2526,
+                      "id": 4040,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -230,7 +230,7 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "866:17:11",
+                      "src": "866:17:25",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -241,46 +241,46 @@
                     "operator": ">=",
                     "rightExpression": {
                       "hexValue": "33",
-                      "id": 2527,
+                      "id": 4041,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "887:1:11",
+                      "src": "887:1:25",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_3_by_1",
                         "typeString": "int_const 3"
                       },
                       "value": "3"
                     },
-                    "src": "866:22:11",
+                    "src": "866:22:25",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 2532,
+                  "id": 4046,
                   "nodeType": "IfStatement",
-                  "src": "862:52:11",
+                  "src": "862:52:25",
                   "trueBody": {
                     "errorCall": {
                       "arguments": [],
                       "expression": {
                         "argumentTypes": [],
-                        "id": 2529,
+                        "id": 4043,
                         "name": "InvalidPosition",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2516,
-                        "src": "897:15:11",
+                        "referencedDeclaration": 4030,
+                        "src": "897:15:25",
                         "typeDescriptions": {
                           "typeIdentifier": "t_function_error_pure$__$returns$__$",
                           "typeString": "function () pure"
                         }
                       },
-                      "id": 2530,
+                      "id": 4044,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -288,79 +288,79 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "897:17:11",
+                      "src": "897:17:25",
                       "tryCall": false,
                       "typeDescriptions": {
                         "typeIdentifier": "t_tuple$__$",
                         "typeString": "tuple()"
                       }
                     },
-                    "id": 2531,
+                    "id": 4045,
                     "nodeType": "RevertStatement",
-                    "src": "890:24:11"
+                    "src": "890:24:25"
                   }
                 }
               ]
             },
             "documentation": {
-              "id": 2517,
+              "id": 4031,
               "nodeType": "StructuredDocumentation",
-              "src": "688:95:11",
+              "src": "688:95:25",
               "text": "@dev Checks that the position input is correct.\n @param position The position input."
             },
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "check",
-            "nameLocation": "797:5:11",
+            "nameLocation": "797:5:25",
             "parameters": {
-              "id": 2521,
+              "id": 4035,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2520,
+                  "id": 4034,
                   "mutability": "mutable",
                   "name": "position",
-                  "nameLocation": "828:8:11",
+                  "nameLocation": "828:8:25",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2534,
-                  "src": "803:33:11",
+                  "scope": 4048,
+                  "src": "803:33:25",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$2512",
+                    "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$4026",
                     "typeString": "enum TimeswapV2OptionPosition"
                   },
                   "typeName": {
-                    "id": 2519,
+                    "id": 4033,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 2518,
+                      "id": 4032,
                       "name": "TimeswapV2OptionPosition",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 2512,
-                      "src": "803:24:11"
+                      "referencedDeclaration": 4026,
+                      "src": "803:24:25"
                     },
-                    "referencedDeclaration": 2512,
-                    "src": "803:24:11",
+                    "referencedDeclaration": 4026,
+                    "src": "803:24:25",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$2512",
+                      "typeIdentifier": "t_enum$_TimeswapV2OptionPosition_$4026",
                       "typeString": "enum TimeswapV2OptionPosition"
                     }
                   },
                   "visibility": "internal"
                 }
               ],
-              "src": "802:35:11"
+              "src": "802:35:25"
             },
             "returnParameters": {
-              "id": 2522,
+              "id": 4036,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "852:0:11"
+              "src": "852:0:25"
             },
-            "scope": 2535,
+            "scope": 4049,
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "internal"
@@ -371,24 +371,24 @@
         "contractDependencies": [],
         "contractKind": "library",
         "documentation": {
-          "id": 2513,
+          "id": 4027,
           "nodeType": "StructuredDocumentation",
-          "src": "500:63:11",
+          "src": "500:63:25",
           "text": "@dev Helper functions for the TimeswapOptionPosition enum."
         },
         "fullyImplemented": true,
         "linearizedBaseContracts": [
-          2535
+          4049
         ],
         "name": "PositionLibrary",
-        "nameLocation": "571:15:11",
-        "scope": 2536,
+        "nameLocation": "571:15:25",
+        "scope": 4050,
         "usedErrors": [
-          2516
+          4030
         ]
       }
     ],
     "license": "Unlicense"
   },
-  "id": 11
+  "id": 25
 }
