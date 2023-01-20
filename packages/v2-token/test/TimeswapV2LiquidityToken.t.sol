@@ -9,7 +9,7 @@ import "../src/TimeswapV2LiquidityToken.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@timeswap-labs/v2-option/src/TimeswapV2OptionFactory.sol";
 import "@timeswap-labs/v2-option/src/interfaces/ITimeswapV2Option.sol";
-
+import {TimeswapV2LiquidityTokenCollectParam} from "../src/structs/Param.sol";
 import "@timeswap-labs/v2-pool/src/TimeswapV2PoolFactory.sol";
 import "@timeswap-labs/v2-pool/src/interfaces/ITimeswapV2Pool.sol";
 import {TimeswapV2PoolMintParam} from "@timeswap-labs/v2-pool/src/structs/Param.sol";
@@ -98,6 +98,12 @@ contract TimeswapV2LiquidityTokenTest is Test, ERC1155Holder {
         token.transfer(msg.sender, param.isLong0ToLong1 ? param.token1AndLong1Amount : param.token0AndLong0Amount);
     }
 
+    function timeswapV2LiquidityTokenMintCallback(TimeswapV2LiquidityTokenMintCallbackParam calldata param) external returns (bytes memory data) {
+        pool.transferLiquidity(param.strike, param.maturity, msg.sender, param.liquidityAmount);
+
+        data = bytes("");
+    }
+
     function isMulDivPossible(uint256 multiplicand, uint256 multiplier, uint256 divisor) internal returns (bool) {
         (uint256 product0, uint256 product1) = FullMath.mul512(multiplicand, multiplier);
         if (divisor <= product1 || (product1 == 0 && product0 < divisor)) {
@@ -139,14 +145,16 @@ contract TimeswapV2LiquidityTokenTest is Test, ERC1155Holder {
                 strike != 0 &&
                 delta != 0 &&
                 maturity > block.timestamp &&
+                maturity > 10000 &&
                 isMulDivPossible(delta, uint256(1) << 192, uint256(rate) * DurationCalculation.unsafeDurationFromNowToMaturity(maturity, uint96(block.timestamp))) &&
                 FullMath.mulDiv(delta, uint256(1) << 192, uint256(rate) * DurationCalculation.unsafeDurationFromNowToMaturity(maturity, uint96(block.timestamp)), true) < type(uint160).max &&
                 (uint256(FullMath.mulDiv(delta, uint256(1) << 192, uint256(rate) * DurationCalculation.unsafeDurationFromNowToMaturity(maturity, uint96(block.timestamp)), true)) << 96) > rate
         );
+
         console.log("init");
         pool.initialize(strike, maturity, rate);
 
-        TimeswapV2PoolMintParam memory param = TimeswapV2PoolMintParam({strike: strike, maturity: maturity, to: msg.sender, transaction: TimeswapV2PoolMint.GivenLiquidity, delta: amt, data: ""});
+        TimeswapV2PoolMintParam memory param = TimeswapV2PoolMintParam({strike: strike, maturity: maturity, to: address(this), transaction: TimeswapV2PoolMint.GivenLiquidity, delta: amt, data: ""});
 
         MintOutput memory response;
         (response.liquidityAmount, response.long0Amount, response.long1Amount, response.shortAmount, response.data) = pool.mint(param);
@@ -156,22 +164,45 @@ contract TimeswapV2LiquidityTokenTest is Test, ERC1155Holder {
             token1: address(token1),
             strike: strike,
             maturity: maturity,
-            to: msg.sender,
+            to: address(this),
             liquidityAmount: amt,
             data: ""
         });
 
-        // mockLiquidityToken.mint(liqTokenMintParam);
+        mockLiquidityToken.mint(liqTokenMintParam);
         console.log("yo");
-        uint256 liqAmt = mockLiquidityToken.positionOf(msg.sender, TimeswapV2LiquidityTokenPosition({token0: address(token0), token1: address(token1), strike: strike, maturity: maturity}));
-        console.log("liqAmt", liqAmt);
-        // assertGe(liqAmt, 1);
+        uint256 liqAmt = mockLiquidityToken.positionOf(address(this), TimeswapV2LiquidityTokenPosition({token0: address(token0), token1: address(token1), strike: strike, maturity: maturity}));
+        vm.warp(maturity - 100);
+        assertGe(pool.totalLiquidity(strike, maturity), 1);
+        TimeswapV2LiquidityTokenCollectParam memory collectParam = TimeswapV2LiquidityTokenCollectParam({
+            token0: address(token0),
+            token1: address(token1),
+            strike: strike,
+            maturity: maturity,
+            to: address(this),
+            long0FeesDesired: 1,
+            long1FeesDesired: 0,
+            shortFeesDesired: 0,
+            data: ""
+        });
+        // mockLiquidityToken.collect(collectParam);
+
+        TimeswapV2LiquidityTokenBurnParam memory burnParam = TimeswapV2LiquidityTokenBurnParam({
+            token0: address(token0),
+            token1: address(token1),
+            strike: strike,
+            maturity: maturity,
+            to: address(this),
+            liquidityAmount: amt,
+            data: ""
+        });
+        mockLiquidityToken.burn(burnParam);
     }
 
-    // function testPositionOf(uint256 _strike, uint256 _maturity) public {
-    //     setUp();
-    //     TimeswapV2LiquidityTokenPosition memory liquidityPosition = TimeswapV2LiquidityTokenPosition({token0: address(token0), token1: address(token1), strike: _strike, maturity: _maturity});
-    //     uint256 liqAmt = mockLiquidityToken.positionOf(msg.sender, liquidityPosition);
-    //     assertEq(liqAmt, 0);
-    // }
+    function testPositionOf(uint256 _strike, uint256 _maturity) public {
+        setUp();
+        TimeswapV2LiquidityTokenPosition memory liquidityPosition = TimeswapV2LiquidityTokenPosition({token0: address(token0), token1: address(token1), strike: _strike, maturity: _maturity});
+        uint256 liqAmt = mockLiquidityToken.positionOf(address(this), liquidityPosition);
+        // assertEq(liqAmt, 0);
+    }
 }
