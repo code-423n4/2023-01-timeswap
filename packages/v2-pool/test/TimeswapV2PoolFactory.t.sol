@@ -29,4 +29,21 @@ contract TimeswapV2PoolFactoryTest is Test {
     assertEq(ITimeswapV2Pool(pool).protocolFee(), chosenProtocolFee);
     assertEq(ITimeswapV2Pool(pool).optionPair(), opPair);
   }
+
+  function testGet() public {
+    address token0 = address(1);
+    address token1 = address(2);
+    address opPair = optionFactory.create(token0, token1);
+    address pool = poolFactory.create(opPair);
+    address poolPair = poolFactory.get(opPair);
+    assertEq(poolPair, pool);
+  }
+
+  function testNumberOfPairs() public {
+    address token0 = address(1);
+    address token1 = address(2);
+    address opPair = optionFactory.create(token0, token1);
+    address pool = poolFactory.create(opPair);
+    assertEq(poolFactory.numberOfPairs(), 1);
+  }
 }
