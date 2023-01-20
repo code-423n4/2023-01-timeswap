@@ -106,41 +106,6 @@ The C4audit output for the contest can be found [here](add link to report) withi
 | [packages/v2-option/src/enums/Position.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Position.sol) | 12 | Option position types enum |  |
 | [packages/v2-option/src/TimeswapV2Option.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/TimeswapV2Option.sol) | 234 | Different transaction types enum  | "openzeppelin/*" , "@timeswap-labs/v2-library/"   |
 
-### V2-Pool
-| Contract | Library/Struct |
-| --- | --- |
-| [packages/v2-pool/src/enums/Transaction.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/enums/Transaction.sol) | Library |
-| [packages/v2-pool/src/libraries/ConstantProduct.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/ConstantProduct.sol) | Library |
-| [packages/v2-pool/src/libraries/ConstantSum.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/ConstantSum.sol) | Library |
-| [packages/v2-pool/src/libraries/Duration.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/Duration.sol) | Library |
-| [packages/v2-pool/src/libraries/DurationCalculation.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/DurationCalculation.sol) | Library |
-| [packages/v2-pool/src/libraries/DurationWeight.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/DurationWeight.sol) | Library |
-| [packages/v2-pool/src/libraries/Fee.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/Fee.sol) | Library |
-| [packages/v2-pool/src/libraries/FeeCalculation.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/FeeCalculation.sol) | Library |
-| [packages/v2-pool/src/libraries/PoolFactory.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/PoolFactory.sol) | Library |
-| [packages/v2-pool/src/libraries/PoolPair.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/PoolPair.sol) | Library |
-| [packages/v2-pool/src/libraries/ReentrancyGuard.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/ReentrancyGuard.sol) | Library |
-| [packages/v2-pool/src/structs/CallbackParam.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/CallbackParam.sol) | Struct |
-| [packages/v2-pool/src/structs/LiquidityPosition.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/LiquidityPosition.sol) | Struct |
-| [packages/v2-pool/src/structs/Param.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/Param.sol) | Library |
-| [packages/v2-pool/src/structs/Pool.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/Pool.sol) | Library |
-
-
-
-### V2-Option
-| Contract | Library/Struct  | 
-| ----------- | ----------- |
-| [packages/v2-option/src/structs/Process.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Process.sol) | Library |
-| [packages/v2-option/src/structs/CallbackParam.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/CallbackParam.sol) | Struct |
-| [packages/v2-option/src/structs/StrikeAndMaturity.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/StrikeAndMaturity.sol) | Struct |
-| [packages/v2-option/src/structs/Option.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Option.sol) | Library |
-| [packages/v2-option/src/structs/Param.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Param.sol) | Library | 
-| [packages/v2-option/src/libraries/Proportion.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/Proportion.sol) | Library |
-| [packages/v2-option/src/libraries/OptionPair.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionPair.sol) | Library | 
-| [packages/v2-option/src/libraries/OptionFactory.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionFactory.sol) | Library |
-| [packages/v2-option/src/enums/Transaction.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Transaction.sol) | Library |
-| [packages/v2-option/src/enums/Position.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Position.sol) | Library | 
-
 
 ## Out of scope
 
@@ -237,3 +202,40 @@ Do note that the method employed by forge to calculate the coverage isn't very a
 | [packages/v2-pool/src/TimeswapV2Pool.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/TimeswapV2Pool.sol) | `burn` | Main logic behind `burn`|
 | [packages/v2-pool/src/TimeswapV2Pool.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/TimeswapV2Pool.sol) | `deleverage` | Main logic behind `deleverage`|
 | [packages/v2-pool/src/TimeswapV2Pool.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/TimeswapV2Pool.sol) | `leverage` | Main logic behind `leverage`|
+
+### Libraries and abstract contracts are also currently not entirely covered
+
+### V2-Pool
+| Contract | Library/Struct |
+| --- | --- |
+| [packages/v2-pool/src/enums/Transaction.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/enums/Transaction.sol) | Library |
+| [packages/v2-pool/src/libraries/ConstantProduct.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/ConstantProduct.sol) | Library |
+| [packages/v2-pool/src/libraries/ConstantSum.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/ConstantSum.sol) | Library |
+| [packages/v2-pool/src/libraries/Duration.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/Duration.sol) | Library |
+| [packages/v2-pool/src/libraries/DurationCalculation.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/DurationCalculation.sol) | Library |
+| [packages/v2-pool/src/libraries/DurationWeight.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/DurationWeight.sol) | Library |
+| [packages/v2-pool/src/libraries/Fee.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/Fee.sol) | Library |
+| [packages/v2-pool/src/libraries/FeeCalculation.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/FeeCalculation.sol) | Library |
+| [packages/v2-pool/src/libraries/PoolFactory.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/PoolFactory.sol) | Library |
+| [packages/v2-pool/src/libraries/PoolPair.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/PoolPair.sol) | Library |
+| [packages/v2-pool/src/libraries/ReentrancyGuard.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/libraries/ReentrancyGuard.sol) | Library |
+| [packages/v2-pool/src/structs/CallbackParam.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/CallbackParam.sol) | Struct |
+| [packages/v2-pool/src/structs/LiquidityPosition.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/LiquidityPosition.sol) | Struct |
+| [packages/v2-pool/src/structs/Param.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/Param.sol) | Library |
+| [packages/v2-pool/src/structs/Pool.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-pool/src/structs/Pool.sol) | Library |
+
+
+
+### V2-Option
+| Contract | Library/Struct  | 
+| ----------- | ----------- |
+| [packages/v2-option/src/structs/Process.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Process.sol) | Library |
+| [packages/v2-option/src/structs/CallbackParam.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/CallbackParam.sol) | Struct |
+| [packages/v2-option/src/structs/StrikeAndMaturity.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/StrikeAndMaturity.sol) | Struct |
+| [packages/v2-option/src/structs/Option.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Option.sol) | Library |
+| [packages/v2-option/src/structs/Param.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/structs/Param.sol) | Library | 
+| [packages/v2-option/src/libraries/Proportion.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/Proportion.sol) | Library |
+| [packages/v2-option/src/libraries/OptionPair.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionPair.sol) | Library | 
+| [packages/v2-option/src/libraries/OptionFactory.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/libraries/OptionFactory.sol) | Library |
+| [packages/v2-option/src/enums/Transaction.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Transaction.sol) | Library |
+| [packages/v2-option/src/enums/Position.sol](https://github.com/code-423n4/2022-10-timeswap/blob/main/packages/v2-option/src/enums/Position.sol) | Library | 
