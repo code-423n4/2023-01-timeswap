@@ -143,11 +143,7 @@ library FullMath {
 
         if (roundUp) {
             (uint256 productA0, uint256 productA1) = mul512(quotient, divisor);
-            if (dividend1 > productA1 || dividend0 > productA0) {
-                revert DivOverflow(dividend0, dividend1, divisor);
-            } else {
-                quotient++;
-            }
+            if (dividend1 > productA1 || dividend0 > productA0) quotient++;
         }
     }
 
@@ -166,8 +162,10 @@ library FullMath {
             (uint256 productA0, uint256 productA1) = mul512(quotient0, divisor);
             productA1 += (quotient1 * divisor);
             if (dividend1 > productA1 || dividend0 > productA0) {
-                if (dividend1 == 1 && dividend0 == 0) (quotient0, quotient1) = (0, 1);
-                else quotient0++;
+                if (quotient0 == type(uint256).max) {
+                    quotient0 = 0;
+                    quotient1++;
+                } else quotient0++;
             }
         }
     }

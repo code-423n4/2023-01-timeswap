@@ -2,6 +2,7 @@
 pragma solidity ^0.8.8;
 
 import {ERC1155} from "@openzeppelin/contracts/token/ERC1155/ERC1155.sol";
+import "forge-std/console.sol";
 
 import {ITimeswapV2Option} from "@timeswap-labs/v2-option/src/interfaces/ITimeswapV2Option.sol";
 
@@ -105,6 +106,7 @@ contract TimeswapV2Token is ITimeswapV2Token, ERC1155Enumerable {
             }
 
             // mint the TimeswapV2Token long0 position
+            console.log("reaches right before mint in timeswapv2Tokne::mint");
             _mint(param.long0To, id, (param.long0Amount), bytes(""));
         }
 
@@ -165,7 +167,7 @@ contract TimeswapV2Token is ITimeswapV2Token, ERC1155Enumerable {
             // mint the TimeswapV2Token short position
             _mint(param.shortTo, id, (param.shortAmount), bytes(""));
         }
-
+        // console.log()
         // ask the msg.sender to transfer the long0/long1/short amount to the this contract
         data = ITimeswapV2TokenMintCallback(msg.sender).timeswapV2TokenMintCallback(
             TimeswapV2TokenMintCallbackParam({
