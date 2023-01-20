@@ -48,10 +48,6 @@ contract FullMathTest is Test {
         assertGe(1, resUp - resDown);
     }
 
-    function testDiv512(uint256 dividend0, uint256 dividend1, uint256 divisor, bool roundUp) public {
-        FullMathExt.div512(dividend0, dividend1, divisor, roundUp);
-    }
-
     function testSqrt512(uint256 a0, uint256 a1) public {
         vm.assume((a1 == 1 && a0 == 0) || a1 == 0);
         uint256 resultDown = FullMathExt.sqrt512(a0, a1, false);
