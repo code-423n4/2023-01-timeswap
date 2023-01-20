@@ -27,7 +27,7 @@ _Note for C4 wardens: Anything included in the C4udit output is considered a pub
   (𝑥 + 𝑦)𝑧 =𝐿(square)
 - The token does not conform to ERC20 standard, it uses ERC1155 standard.
 - As this is a monorepo, where remappings are required for compilation there might be [issues](https://github.com/crytic/crytic-compile/issues/279) when running slither
-- [Link to whitepaper](https://github.com/code-423n4/2022-10-timeswap/blob/main/whitepaper.pdf)
+- [Link to whitepaper](https://github.com/code-423n4/2023-01-timeswap/blob/main/whitepaper.pdf)
 
 # Scope
 
