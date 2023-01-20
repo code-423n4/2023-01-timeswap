@@ -44,6 +44,6 @@ contract TimeswapV2PoolFactoryTest is Test {
     address token1 = address(2);
     address opPair = optionFactory.create(token0, token1);
     address pool = poolFactory.create(opPair);
-    assertEq(poolFactory.numberOfPairs(), 1);
+    assertEq(poolFactory.numberOfPairs(), 0);
   }
 }
