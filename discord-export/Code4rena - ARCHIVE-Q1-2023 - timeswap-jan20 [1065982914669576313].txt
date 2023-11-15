@@ -1,0 +1,733 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2023 / timeswap-jan20
+==============================================================
+
+[01/20/2023 14:39] itsmetechjay (pinned)
+👋 Hello and welcome to the contest channel for the $90,500 USDC **Timeswap** contest!
+
+📆 Contest opens Friday, 20 January 2023 20:00 (20:00 UTC) and runs through Friday, 27 January 2023 20:00 (20:00 UTC) (7 days).
+
+Please give a warm welcome to the Timeswap team, particularly @Ameeth || Timeswap and @vhawk19, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2023-01-timeswap-contest
+
+{Embed}
+https://code4rena.com/contests/2023-01-timeswap-contest
+Code4rena Timeswap contest
+$90,500 USDC
+20 January 2023—27 January 2023
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+🫡 (9) 🚀 🎉 
+
+[01/20/2023 14:39] itsmetechjay
+Pinned a message.
+
+
+[01/20/2023 20:03] prcolaco
+let's go! 🚀
+
+
+[01/20/2023 20:20] Cryptor#9119
+getting the following message when I clone the repo: the following paths have collided (e.g. case-sensitive paths
+on a case-insensitive filesystem) and only one from the same
+colliding group is in the working tree:
+
+  'packages/v2-token/out/Test.sol/Test.json'
+  'packages/v2-token/out/test.sol/Test.json'
+
+{Reactions}
+same (2) 
+
+[01/20/2023 20:25] thepicodes (pinned)
+**Automated Findings:** https://gist.github.com/Picodes/fc7e32b12e195bcacdcc829dd80d44cc
+
+{Reactions}
+🥰 
+
+[01/20/2023 20:26] liveactionllamac4 (pinned)
+Wardens, please note that the automated findings output has been posted and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings:** https://gist.github.com/Picodes/fc7e32b12e195bcacdcc829dd80d44cc
+
+
+[01/20/2023 20:30] vhawk19
+Could you elaborate?
+
+
+[01/20/2023 20:33] riksucks
+Hi! This is because forge standard library has both files Test.sol and test.sol, both serving different purposes, that we make use of, while testing. So you would need a case sensitive fs
+
+
+[01/20/2023 20:34] riksucks
+What you can do is, essentially delete the out directory if you have no interest in building or running tests. And only compile the contracts and not the test contracts
+
+{Reactions}
+👍 (3) 
+
+[01/21/2023 09:50] 0x42069x
+Hey all, I'm Ameeth one of the co-founders of Timeswap :TimeswapLogoDiscord: 
+
+Excited to be back for yet another contest :pepecheer: 
+
+Feel free to DM @vhawk19 with any queries!
+
+
+[01/21/2023 09:53] pavankv
+Whitepaper link is not working
+
+
+[01/21/2023 10:03] illilli000
+can you refresh the page? that was fixed yesterday
+
+
+[01/21/2023 10:15] pavankv
+when i click download .
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/Screenshot_from_2023-01-21_15-48-10-5E1D6.png
+
+
+[01/21/2023 10:15] illilli000
+you have to download the file to view it
+
+
+[01/21/2023 10:16] pavankv
+when i click download button it will load but not download show like this
+
+
+[01/21/2023 13:18] peakbolt
+is it possible to run the propery-based tests once, instead of fuzzing it?
+
+
+[01/21/2023 14:16] peakbolt
+the codebase is very well organized and documented. neat! 👍
+
+{Reactions}
+💯 
+
+[01/21/2023 17:17] rickardlarsson6
+Anyone managed to run slither?
+
+
+[01/21/2023 21:17] 0xgusmccrae
+i can get it do a partial run if I do "slither ." in the individual workspaces (actually only v2-library and v2-option)
+
+
+[01/21/2023 21:18] 0xgusmccrae
+but it runs into issues when it tries to access files in ../../node_modules since crytic-compile can't access parent directories
+
+
+[01/21/2023 21:19] 0xgusmccrae
+probably can just make a copy of the whole project and paste node_modules into the individual workspaces and then edit the imports for each file to get a full run
+
+
+[01/21/2023 21:19] 0xgusmccrae
+I'm gonna try that
+
+
+[01/21/2023 22:13] 0xgusmccrae
+Yeah, I've now got full slither runs on v2-library and v2-option, but I'm getting an assertion error for v2-pool and v2-token
+
+
+[01/21/2023 22:13] 0xgusmccrae
+but if you paste the openzeppelin and timeswap libraries into v2-option you can get a full run
+
+
+[01/21/2023 23:00] 0xgusmccrae
+made small edit to slither so it skipped the thing that was throwing the error, now I've got it working on all 4 workspaces
+
+
+[01/22/2023 14:23] giwerutee#2579
+Are tests hanging for anyone else on v2-pool?
+
+
+[01/22/2023 14:48] riksucks
+Yup, slither suggests symlinking node modules folder for ease of running the tests. No need to copy dir.
+
+{Reactions}
+❤️‍🔥 
+
+[01/22/2023 14:49] riksucks
+So the test conditions are kinda time intensive because right random numbers (or fuzz input) needs to be generated, to run the tests
+
+
+[01/22/2023 14:50] riksucks
+Since the conditions are pretty large for pool, compared to options/library, hence it takes time. Do make sure that you have decent compute to run few of those tests
+
+
+[01/22/2023 14:55] riksucks
+What you can do is, create a new test function and call the fuzzed test function with your desired set of inputs.
+
+And if you want to run only the test you wrote urself, use `--match-test` flag
+
+
+[01/22/2023 14:55] peakbolt
+gd point. i created my own test. thanks!
+
+{Reactions}
+🚀 
+
+[01/23/2023 09:55] saksham#7993
+Anyone from the team available for a DM?
+
+
+[01/23/2023 10:32] harshitatimeswap
+Hi 
+
+You can DM @vhawk19 for any queries
+
+
+[01/23/2023 10:59] vhawk19
+Hey @sakshamguruji, Would love to chat in detail if required 🙂
+
+
+[01/23/2023 11:49] saksham#7993
+sure
+
+
+[01/23/2023 14:14] adriro
+@vhawk19dmed
+
+
+[01/23/2023 14:25] cergyk
+@vhawk19 why are there delegate call guards? `noDelegateCall`
+
+
+[01/23/2023 14:49] vhawk19
+its to prevent delegate call happening to methods in a child contract
+
+
+[01/23/2023 14:52] cergyk
+What do you mean by child contract? What would be the impact of somebody doing a delegate call?
+
+
+[01/23/2023 15:40] vhawk19
+To prevent Circumventing the licensing by creating a wrapper contracts which delegates call to timeswap contracts?
+
+
+[01/23/2023 15:43] cergyk
+Okay thanks for the explanation 👍
+
+
+[01/23/2023 17:56] rickardlarsson6
+Very much appreciated!
+
+
+[01/23/2023 18:45] parsely.
+I have read through the documentation, Please may I check, the token0 address < token1 address, is that just by convention (a way to standardize pairs) or is there more to understand. For my own understanding just checking how would a user know which pair to request to have a valid pair option?
+
+
+[01/23/2023 19:27] vhawk19
+Its just a convention as is followed in uniswap.
+
+
+[01/23/2023 23:54] chaduke3730
+what is the difference between mint() of TimeswapV2Token.sol and mint() of TimeswapV2Option.sol?
+
+
+[01/24/2023 04:34] reentrant
+Notes from a late-comer
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/Canvas-B309E.png
+
+{Reactions}
+👍 (5) 🤝 👀 ❤️‍🔥 
+
+[01/24/2023 06:06] vhawk19
+V2Token is  in a sense wrapper ontop of V2, to wrap liquidity positions such that it can easily be transferred as an ERC1155. V2Token::mint mints the ERC1155 token on transferring the required liquidity token to the token contract.
+
+
+[01/24/2023 08:40] jm217
+@vhawk19 could you share a link to documentation other than the whitepaper?
+
+
+[01/24/2023 08:40] jm217
+where is this from
+
+
+[01/24/2023 08:58] vhawk19
+Currently the documentation in the `Readme.md` and whitepaper is what is prepared, we are working on more documentation.
+
+
+[01/24/2023 08:59] jm217
+OK
+
+
+[01/24/2023 12:19] matrix_0wl
+Running 4naly3er script I got an error RuntimeError: abort(TypeError: Cannot read property 'contents' of undefined). Build with -s ASSERTIONS=1 for more info in node_modules/solc-0.8.8/soljson.js:1:13012. It occurs when I run script against v2-option, v2-pool and v2-token. I don't have error in v2-library. What am I doing wrong? I am newbie – try to learn and understand.
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/2023-01-24_13-12-CC2EF.png
+
+
+[01/24/2023 12:44] saksham#7993
+Thanks for sharing:hi5:
+
+
+[01/24/2023 16:35] jm217
+I can't find any explanation about the fee growth in the whitepaper
+
+
+[01/24/2023 16:35] jm217
+@vhawk19 please provide a brief context of how the fees are calculated
+
+{Reactions}
+👍 
+
+[01/24/2023 16:54] dadekuma
+I'm also interested
+
+
+[01/24/2023 17:11] kartoonjoy (pinned)
+**REMINDER:** Using ChatGPT, GPT-3, or similar tools for contest submissions is prohibited, and will result in all of your contest submissions being ruled invalidated. Additional penalties may also be applied at the discretion of judges and C4 staff.
+
+
+[01/24/2023 17:11] kartoonjoy
+Pinned a message.
+
+
+[01/24/2023 17:30] Aeros#7185
+Here's the Timeswap docs (from their site): https://timeswap.gitbook.io/timeswap/
+
+{Embed}
+https://timeswap.gitbook.io/timeswap/
+Introduction
+First fully decentralized AMM based money market protocol
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/-MIPZkDBEvwedF77USHq-945BF.png
+
+
+[01/24/2023 17:31] Aeros#7185
+There's a good general overview and technical details on how the specific implementation works, but there isn't much detail on the contracts themselves (e.g. the execution flow between contracts/functions, which parts EOAs directly interact with, etc.)
+
+
+[01/24/2023 17:34] jm217
+I believe this documentation is for V1, while the contest is for V2
+
+{Reactions}
+🚀 
+
+[01/24/2023 17:34] Aeros#7185
+Ahhh, good clarification 👍
+
+
+[01/24/2023 19:49] .qeew
+wow, this is insightful...is this all ?
+
+
+[01/24/2023 20:26] reentrant
+Appreciate it!
+
+
+[01/24/2023 20:27] reentrant
+Will post more tonight
+
+{Reactions}
+❤️ 
+
+[01/24/2023 21:27] reentrant
+What are you interested in?
+
+
+[01/24/2023 21:27] reentrant
+More Qs, structure?
+
+
+[01/24/2023 23:31] CharlesPal#0309
+A recommendation to the C4 team: you might consider extending the length for contests like these. I assume many top tier auditors are generally quite busy. With other audits on top, it’s almost impossible to get 100% audit coverage within that time.
+
+
+[01/25/2023 00:41] Cryptor#9119
+Shouldn't that be a good thing? This allows other auditors to earn more rewards. If sponsors devs want top tier auditors, they can contact them directly
+
+{Reactions}
+✅ 
+
+[01/25/2023 01:25] CharlesPal#0309
+Yeah but as sponsor you don’t care if other auditors earn more rewards. You want the best coverage for your code.
+
+
+[01/25/2023 01:36] Cryptor#9119
+Again, if sponsors want to make sure that top auditors working on their codebase, they can contact them directly for a private audit. I am not understanding your point, so we'll agree to disagree
+
+
+[01/25/2023 02:09] .qeew
+both sir...i sent you a friend request
+
+
+[01/25/2023 02:48] chaduke3730
+Both LiqudityPosition and FeesPosition record (long0FeeGrowth, long1FeeGrowth, ShortFeeGRowth, Long0Fees, Long1Fees, ShortFees). What is their difference?
+
+
+[01/25/2023 05:35] .0xdave
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/2023-01-25_2.35.18-2A9AB.png
+
+
+[01/25/2023 05:36] .0xdave
+I typed `yarn` first
+
+
+[01/25/2023 13:54] dadekuma
+is anyone available for DM?
+
+
+[01/25/2023 16:18] vhawk19
+You can DM me
+
+
+[01/25/2023 16:36] 0xdevPed#2322
+What application did you use for this?
+
+
+[01/25/2023 17:10] reentrant
+Obsidian's Canvas feature w/ plantuml
+
+
+[01/25/2023 17:47] vhawk19
+Sharing the formula spec sheet,with detailed explanations of how the fees is taken into account for calculation, as there is a lot of queries with regards to fees
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/Complete_Formula_Specification-89D64.pdf
+
+{Reactions}
+👍 (5) 
+
+[01/25/2023 19:09] parsely.
+Hi All, I have tried to search on google, but could not find an answer. My question is, in which scenario would a user use the transferPosition call?
+
+
+[01/26/2023 08:03] vhawk19
+To transfer the user position, be it short/long0/long1 from one user to another user?
+
+
+[01/26/2023 08:14] parsely.
+@vhawk19 may I perhaps DM please?
+
+
+[01/26/2023 08:15] vhawk19
+Most certainly
+
+
+[01/26/2023 22:03] acegawd
+I'm trying to run this test and nothing happens.
+
+
+[01/26/2023 22:03] acegawd
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/Screenshot_20230126_170323-58E15.jpg
+
+
+[01/26/2023 22:04] acegawd
+Does anyone know what the issue might be?
+
+
+[01/26/2023 22:11] saksham#7993
+Any sponsor online?
+
+
+[01/27/2023 01:20] codeislight
+@vhawk19 i have sent a dm
+
+{Reactions}
+👍 
+
+[01/27/2023 04:34] 0kage
+Bit confused on timeline - is this contest ending on 27th or 28th? this msg seems to indicate 28'th and timer on website is as per 27th..
+
+
+[01/27/2023 06:16] dewaxindo
+Hi, can someone explain what is `uint96 durationForward` is?
+
+
+[01/27/2023 07:08] vhawk19
+Its used for view/quoter contracts with time being advanced.
+
+{Reactions}
+👍🏻 
+
+[01/27/2023 08:09] parsely.
+I think the test is just running for a long time I changed the value in the foundry.toml file ```[profile.default.fuzz]
+#max_test_rejects = 100000000
+max_test_rejects = 10``` not sure if that might help
+
+{Reactions}
+👍 
+
+[01/27/2023 09:10] Bjorn_Bug#3314
+@vhawk19 can you check your DM please
+
+{Reactions}
+👍 
+
+[01/27/2023 10:02] saksham#7993
+@vhawk19 mine too
+
+
+[01/27/2023 10:09] dewaxindo
+pls kindly check DM sir
+
+{Reactions}
+👍 
+
+[01/27/2023 11:28] 0xsorrynotsorry
+hi, any dev available to DM?
+
+
+[01/27/2023 13:25] vhawk19
+I am available
+
+
+[01/27/2023 14:12] itsmetechjay
+The contest ends in ~5.5 hours.  The message above shows the time in your local time zone.
+
+{Reactions}
+👍 
+
+[01/27/2023 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens  The **Timeswap **contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+yay (6) 🫡 (6) 
+
+[01/27/2023 20:04] dadekuma
+Solid codebase, good luck everyone 🔥
+
+
+[01/27/2023 20:04] parsely.
+Thank you for the opportunity to participate
+
+
+[01/27/2023 20:08] saksham#7993
+Was it just me who found nothing good 🥹
+
+
+[01/27/2023 20:24] chaduke3730
+good luck to all
+
+{Reactions}
+hi5 
+
+[01/28/2023 04:56] abhijits
+Thanks
+
+
+[01/28/2023 18:27] Aeros#7185
+This one was fun, interesting project for sure 👏
+
+
+[02/03/2023 23:14] abuzay#1524
+Any update ?
+
+
+[02/14/2023 23:33] xyzbtchunt
+Amy update?
+
+{Reactions}
+👍 (2) 
+
+[02/17/2023 15:43] praise95
+👀
+
+{Reactions}
+👀 (2) 
+
+[02/17/2023 22:01] praise95
+https://tenor.com/view/sad-pablo-lonely-alone-gif-12928789
+
+{Embed}
+https://tenor.com/view/sad-pablo-lonely-alone-gif-12928789
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/sad-pablo-lonely-712AA.png
+
+
+[02/22/2023 08:51] ahmet5611
+https://github.com/code-423n4/code423n4.com/pull/7700/commits/5e11676235ccadfe28f4d68a89db3343644532b6
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/7700/commits/5e11676235ccadfe28f4d68a89db3343644532b6
+Add 206 to Leaderboard by liveactionllama · Pull Request #7700 · co...
+Code4rena - ARCHIVE-Q1-2023 - timeswap-jan20 [1065982914669576313].txt_Files/98446738-1A1F9
+
+{Reactions}
+👀 (6) 🎉 (5) 👍 (7) 
+
+[02/22/2023 16:30] itsmetechjay
+:C4Keycap:  💸 🎉 Awards for **Timeswap**:
+
+$21,290.00 USDC » @hansfriese 
+$7,471.29 USDC » @mookim 
+$7,423.71 USDC » @chaduke 
+$4,626.00 USDC » @0Kage 
+$4,626.00 USDC » @codeislight 
+$4,626.00 USDC » @sorryNotsorry 
+$3,809.64 USDC » @adriro 
+$3,251.16 USDC » @Beepidibop 
+$3,202.62 USDC » @0xcm 
+$2,548.64 USDC » @eierina 
+$1,760.69 USDC » @RaymondFam 
+$1,678.01 USDC » @0xSmartContract  
+$1,301.90 USDC » @rbserver 
+$886.35 USDC » @IllIllI 
+$837.80 USDC » @btk 
+$837.80 USDC » @brgltd 
+$646.31 USDC » @c3phas 
+$326.64 USDC » @0xSurena 
+$326.64 USDC » @Rolezn 
+$278.10 USDC » @mert_eren 
+$261.29 USDC » @Kaden 
+$212.75 USDC » @ICP 
+$212.75 USDC » @nadin 
+$113.89 USDC » @descharre 
+$113.89 USDC » @Viktor_Cortess 
+$113.89 USDC » @fatherOfBlocks 
+$113.89 USDC » @0x1f8b 
+$113.89 USDC » @shark 
+$113.89 USDC » @matrix_0wl 
+$113.89 USDC » @Udsen 
+$65.35 USDC » @Ruhum 
+$65.35 USDC » @martin | Founder @ ShieldifySec 
+$65.35 USDC » @georgits 
+$65.35 USDC » @popular00 
+$65.35 USDC » @0xGusMcCrae 
+$65.35 USDC » @DadeKuma 
+$65.35 USDC » @Moksha 
+$65.35 USDC » @lukris02 
+$65.35 USDC » @oberon 
+$65.35 USDC » @ELLAR 
+$65.35 USDC » @gerdusx 
+$65.35 USDC » @cryptonue 
+$65.35 USDC » @Awesome 
+$65.35 USDC » @delfin454000 
+$65.35 USDC » @tnevler 
+$65.35 USDC » @Diana 
+$65.35 USDC » @luxartvinsec 
+$65.35 USDC » @Josiah 
+$65.35 USDC » @0xAgro 
+$65.35 USDC » @Breeje 
+$65.35 USDC » @ddimitrov22 
+$48.54 USDC » @MaanVad3r 
+$48.54 USDC » @Iurii3 
+$48.54 USDC » @ReyAdmirado 
+$48.54 USDC » @0xackerman 
+$48.54 USDC » @W_Max 
+$48.54 USDC » @code-cipher 
+$48.54 USDC » @atharvasama 
+$48.54 USDC » @Rageur
+
+🏁 Findings summary
+---------------------------
+High risk findings: 6 total, 3 unique
+Med risk findings: 20 total, 7 unique
+Gas reports: 24 
+QA reports: 40 
+
+Awards will be distributed on Polygon within the next week. Congratulations, everyone! 💸 💸 💸
+
+*If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+C4Keycap (5) 👍 🎉 
+
+[02/22/2023 16:35] johnyboy8854
+My first 50 bucks 🤑
+
+{Reactions}
+hi5 (5) 🔥 
+
+[02/22/2023 16:36] viktor_cortess
+My 3rd report and first 3 digits😀
+
+{Reactions}
+Clap (8) 🔥 
+
+[02/22/2023 16:37] dadekuma
+Second report, submitted just a QA but got paid, hooray! 🎉
+
+{Reactions}
+hi5 (4) 
+
+[02/22/2023 16:59] c3phas.
+Nicely done @chaduke
+
+
+[02/22/2023 17:00] chaduke3730
+@c3phasthanks, worked hard and then lucky (found some rare ones)
+
+
+[02/22/2023 17:00] chaduke3730
+@Iurii3@Viktor_Cortesscheers, spend it today!
+
+{Reactions}
+❤️ 
+
+[02/22/2023 17:01] chaduke3730
+@DadeKuma
+
+{Reactions}
+❤️ 
+
+[02/22/2023 17:03] matin6517
+@chaduke has the potential to be the next Trust!
+Well done🎉
+
+{Reactions}
+💯 (2) 
+
+[02/22/2023 17:19] chaduke3730
+@MatinThanks for your encouragement 😉
+
+
+[02/22/2023 17:20] matrix_0wl
+My 1st report and got a 3 digit payout 🎉 !
+
+{Reactions}
+hi5 (5) 
+
+[02/22/2023 18:26] adriro
+@chaduke congrats!
+
+
+[02/22/2023 18:57] chaduke3730
+@adriroThanks!
+
+
+[02/22/2023 18:58] chaduke3730
+congratulations to you too!
+
+
+[02/22/2023 22:17] codeislight
+my first time among top 5 🤍
+
+{Reactions}
+hi5 (8) 🎉 (6) 
+
+[02/23/2023 00:35] beepidibop
+first high risk report!
+
+{Reactions}
+hi5 (8) 
+
+[02/23/2023 02:36] 0xsorrynotsorry
+Hey @chaduke , check your DM mate.
+
+
+[02/23/2023 02:44] chaduke3730
+@sorryNotsorryGot it thanks
+
+
+==============================================================
+Exported 129 message(s)
+==============================================================
