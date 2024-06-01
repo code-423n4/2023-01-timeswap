@@ -143,7 +143,7 @@ library FullMath {
 
         if (roundUp) {
             (uint256 productA0, uint256 productA1) = mul512(quotient, divisor);
-            if (dividend1 > productA1 || dividend0 > productA0) quotient++;
+            if (dividend1 > productA1 || dividend0 > productA0) ++quotient;
         }
     }
 
