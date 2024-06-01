@@ -48,7 +48,7 @@ library Math {
     function div(uint256 dividend, uint256 divisor, bool roundUp) internal pure returns (uint256 quotient) {
         quotient = dividend / divisor;
 
-        if (roundUp && dividend % divisor != 0) quotient++;
+        if (roundUp && dividend % divisor != 0) ++quotient;
     }
 
     /// @dev Shift right a uint256 number.
@@ -59,7 +59,7 @@ library Math {
     function shr(uint256 dividend, uint8 divisorBit, bool roundUp) internal pure returns (uint256 quotient) {
         quotient = dividend >> divisorBit;
 
-        if (roundUp && dividend % (1 << divisorBit) != 0) quotient++;
+        if (roundUp && dividend % (1 << divisorBit) != 0) ++quotient;
     }
 
     /// @dev Gets the square root of a value.
@@ -78,7 +78,7 @@ library Math {
             }
         }
 
-        if (roundUp && value % result != 0) result++;
+        if (roundUp && value % result != 0) ++result;
     }
 
     /// @dev Gets the min of two uint256 number.
